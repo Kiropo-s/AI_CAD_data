@@ -1,0 +1,103 @@
+{
+  "ir_version": "0.1",
+  "kind": "part",
+  "units": "mm",
+  "tolerance": {
+    "length": 1e-6,
+    "angle_deg": 1e-6
+  },
+  "entities": {
+    "sketch_hole": {
+      "type": "SketchPlane",
+      "op": "sketch.plane",
+      "inputs": [],
+      "params": {
+        "frame": {
+          "origin": [0.0, 0.0, 0.0],
+          "x_axis": [1.0, 0.0, 0.0],
+          "y_axis": [0.0, 1.0, 0.0],
+          "z_axis": [0.0, 0.0, 1.0]
+        }
+      }
+    },
+    "curve_hole_l1": {
+      "type": "SketchLine",
+      "op": "sketch.line",
+      "inputs": [],
+      "params": {"start": [0.0, 0.0], "end": [20.0, 0.0]}
+    },
+    "curve_hole_l2": {
+      "type": "SketchLine",
+      "op": "sketch.line",
+      "inputs": [],
+      "params": {"start": [20.0, 0.0], "end": [20.0, 20.0]}
+    },
+    "curve_hole_l3": {
+      "type": "SketchLine",
+      "op": "sketch.line",
+      "inputs": [],
+      "params": {"start": [20.0, 20.0], "end": [0.0, 20.0]}
+    },
+    "curve_hole_l4": {
+      "type": "SketchLine",
+      "op": "sketch.line",
+      "inputs": [],
+      "params": {"start": [0.0, 20.0], "end": [0.0, 0.0]}
+    },
+    "curve_hole_c1": {
+      "type": "SketchCircle",
+      "op": "sketch.circle",
+      "inputs": [],
+      "params": {"center": [10.0, 10.0], "radius": 5.0}
+    },
+    "loop_hole_outer": {
+      "type": "SketchLoop",
+      "op": "sketch.loop",
+      "inputs": [
+        "curve_hole_l1",
+        "curve_hole_l2",
+        "curve_hole_l3",
+        "curve_hole_l4"
+      ],
+      "params": {"is_outer": true, "closed": true}
+    },
+    "loop_hole_inner": {
+      "type": "SketchLoop",
+      "op": "sketch.loop",
+      "inputs": ["curve_hole_c1"],
+      "params": {"is_outer": false, "closed": true}
+    },
+    "profile_hole_p1": {
+      "type": "SketchProfile",
+      "op": "sketch.profile",
+      "inputs": ["loop_hole_outer", "loop_hole_inner"],
+      "params": {
+        "plane": "sketch_hole",
+        "closed": true,
+        "regions": [{"outer": "loop_hole_outer", "holes": ["loop_hole_inner"]}]
+      }
+    },
+    "extrude_hole": {
+      "type": "ExtrudeFeature",
+      "op": "feature.extrude",
+      "inputs": ["profile_hole_p1"],
+      "params": {
+        "distance": 5.0,
+        "direction": [0.0, 0.0, 1.0],
+        "extent": "one_side",
+        "operation": "new",
+        "start": "profile_plane",
+        "taper": 0.0
+      }
+    }
+  },
+  "sequence": ["sketch_hole", "extrude_hole"],
+  "results": ["extrude_hole"],
+  "extensions": {
+    "source": {
+      "format": "synthetic",
+      "file": "examples/plate_with_hole.ir.json"
+    }
+  },
+  "unsupported": []
+}

@@ -1,0 +1,187 @@
+test_concentric_source_outer_flags_still_create_a_hole (test_compare_metrics.GeometryMetricsTests.test_concentric_source_outer_flags_still_create_a_hole) ... ok
+test_identical_and_different_cylinders (test_compare_metrics.GeometryMetricsTests.test_identical_and_different_cylinders) ... ok
+
+*******************************************************************
+******        Statistics on Transfer (Write)                 ******
+
+*******************************************************************
+******        Transfer Mode = 0  I.E.  As Is       ******
+******        Transferring Shape, ShapeType = 2                      ******
+** WorkSession : Sending all data
+ Step File Name : C:\Users\m1835\AppData\Local\Temp\tmpctruyksz\reference.step(118 ents)  Write  Done
+
+*******************************************************************
+******        Statistics on Transfer (Write)                 ******
+
+*******************************************************************
+******        Transfer Mode = 0  I.E.  As Is       ******
+******        Transferring Shape, ShapeType = 2                      ******
+** WorkSession : Sending all data
+ Step File Name : C:\Users\m1835\AppData\Local\Temp\tmpctruyksz\candidate.step(118 ents)  Write  Done
+test_report_rejects_modified_generated_model (test_compare_metrics.GeometryMetricsTests.test_report_rejects_modified_generated_model) ... ok
+corpus: 1 cases -> C:\Users\m1835\AppData\Local\Temp\tmpnuff4k2p
+[1/1 100.0% elapsed=0:07 eta=0:00 00000007: rejected (independent_comparison)]
+test_bad_readable_code_never_enters_training_export (test_corpus.CorpusGeometryTests.test_bad_readable_code_never_enters_training_export) ... ok
+test_editing_circle_and_arc_dimensions_changes_model (test_corpus.CorpusGeometryTests.test_editing_circle_and_arc_dimensions_changes_model) ... ok
+corpus: 1 cases -> C:\Users\m1835\AppData\Local\Temp\tmpil7csx_l
+[1/1 100.0% elapsed=0:03 eta=0:00 00000007: provisional (reference)]
+test_missing_reference_process_stays_provisional (test_corpus.CorpusGeometryTests.test_missing_reference_process_stays_provisional) ... ok
+
+*******************************************************************
+******        Statistics on Transfer (Write)                 ******
+
+*******************************************************************
+******        Transfer Mode = 0  I.E.  As Is       ******
+******        Transferring Shape, ShapeType = 2                      ******
+** WorkSession : Sending all data
+ Step File Name : C:\Users\m1835\AppData\Local\Temp\tmpna65hhco\00000061.step(434 ents)  Write  Done
+
+*******************************************************************
+******        Statistics on Transfer (Write)                 ******
+
+*******************************************************************
+******        Transfer Mode = 0  I.E.  As Is       ******
+******        Transferring Shape, ShapeType = 0                      ******
+** WorkSession : Sending all data
+ Step File Name : C:\Users\m1835\AppData\Local\Temp\tmpna65hhco\00000062.step(9140 ents)  Write  Done
+test_official_reference_handles_arc_and_rejects_bad_step (test_corpus.CorpusGeometryTests.test_official_reference_handles_arc_and_rejects_bad_step) ... ok
+test_official_reference_rejects_nonzero_taper (test_corpus.CorpusGeometryTests.test_official_reference_rejects_nonzero_taper) ... ok
+corpus: 1 cases -> C:\Users\m1835\AppData\Local\Temp\tmpxba020jr
+[1/1 100.0% elapsed=0:06 eta=0:00 00000007: train_ready (independent_comparison)]
+test_only_independently_accepted_code_is_exported (test_corpus.CorpusGeometryTests.test_only_independently_accepted_code_is_exported) ... ok
+corpus: 2 cases -> C:\Users\m1835\AppData\Local\Temp\tmpat5lgqky\corpus
+[1/2  50.0% elapsed=0:00 eta=0:00 ready: train_ready (independent_comparison)]
+[2/2 100.0% elapsed=0:00 eta=0:00 pending: provisional (independent_comparison)]
+test_export_contains_only_train_ready_and_current_provenance (test_corpus.ReadableSourceTests.test_export_contains_only_train_ready_and_current_provenance) ... ok
+corpus: 2 cases -> C:\Users\m1835\AppData\Local\Temp\tmp4c9nyd1w\corpus
+[1/2  50.0% elapsed=0:00 eta=0:00 ready: train_ready (independent_comparison)]
+[2/2 100.0% elapsed=0:00 eta=0:00 bad: rejected (independent_comparison)]
+log-only: artifacts discarded; analysis=C:\Users\m1835\AppData\Local\Temp\tmp4c9nyd1w\corpus\errors.csv
+test_log_only_discards_case_artifacts_and_writes_analysis (test_corpus.ReadableSourceTests.test_log_only_discards_case_artifacts_and_writes_analysis) ... ok
+test_only_readable_is_available_and_deterministic (test_corpus.ReadableSourceTests.test_only_readable_is_available_and_deterministic) ... ok
+test_arc_orientation_major_arc_and_translation (test_ir_preparation.PreparationTests.test_arc_orientation_major_arc_and_translation) ... ok
+test_asymmetric_active_taper_is_rejected (test_ir_preparation.PreparationTests.test_asymmetric_active_taper_is_rejected) ... ok
+test_auxiliary_arc_conflicts_are_strictly_rejected (test_ir_preparation.PreparationTests.test_auxiliary_arc_conflicts_are_strictly_rejected) ... ok
+test_circle_contact_intersection_and_island (test_ir_preparation.PreparationTests.test_circle_contact_intersection_and_island) ... ok
+test_close_distinct_loops_are_not_snapped (test_ir_preparation.PreparationTests.test_close_distinct_loops_are_not_snapped) ... ok
+test_exact_ir_is_idempotent_and_input_is_unchanged (test_ir_preparation.PreparationTests.test_exact_ir_is_idempotent_and_input_is_unchanged) ... ok
+test_gaps_are_bounded_recorded_and_all_entrypoints_prepare (test_ir_preparation.PreparationTests.test_gaps_are_bounded_recorded_and_all_entrypoints_prepare) ... ok
+test_line_arc_containment (test_ir_preparation.PreparationTests.test_line_arc_containment) ... ok
+test_midpoint_perturbation_cannot_be_silently_ignored (test_ir_preparation.PreparationTests.test_midpoint_perturbation_cannot_be_silently_ignored) ... ok
+test_near_boundary_circle_hole_is_valid (test_ir_preparation.PreparationTests.test_near_boundary_circle_hole_is_valid) ... ok
+test_no_source_and_deterministic_roundtrip_numbers (test_ir_preparation.PreparationTests.test_no_source_and_deterministic_roundtrip_numbers) ... ok
+test_outside_tolerance_is_rejected (test_ir_preparation.PreparationTests.test_outside_tolerance_is_rejected) ... ok
+test_source_metadata_does_not_change_geometric_preparation (test_ir_preparation.PreparationTests.test_source_metadata_does_not_change_geometric_preparation) ... ok
+test_transitive_shared_endpoint_cluster_is_not_overmerged (test_ir_preparation.PreparationTests.test_transitive_shared_endpoint_cluster_is_not_overmerged) ... ok
+test_two_semicircles_and_adjacent_overlap (test_ir_preparation.PreparationTests.test_two_semicircles_and_adjacent_overlap) ... ok
+test_zero_edge_and_self_crossing_are_rejected (test_ir_preparation.PreparationTests.test_zero_edge_and_self_crossing_are_rejected) ... ok
+test_gap_builds_and_midpoint_changes_geometry (test_ir_preparation.PreparedGeometryTests.test_gap_builds_and_midpoint_changes_geometry) ... ok
+test_near_boundary_hole_builds_with_expected_volume (test_ir_preparation.PreparedGeometryTests.test_near_boundary_hole_builds_with_expected_volume) ... ok
+test_codegen_import_does_not_eagerly_load_cad_kernel (test_module_layout.ModuleLayoutTests.test_codegen_import_does_not_eagerly_load_cad_kernel) ... ok
+test_compatibility_entries_share_module_state (test_module_layout.ModuleLayoutTests.test_compatibility_entries_share_module_state) ... ok
+test_resources_still_point_to_project_locations (test_module_layout.ModuleLayoutTests.test_resources_still_point_to_project_locations) ... ok
+test_script_and_module_generation_agree_from_different_working_directories (test_module_layout.ModuleLayoutTests.test_script_and_module_generation_agree_from_different_working_directories) ... ok
+test_boolean_errors_are_not_silenced (test_mvp.DeepCADIRTests.test_boolean_errors_are_not_silenced) ... ok
+test_default_cli_outputs_share_one_case_directory (test_mvp.DeepCADIRTests.test_default_cli_outputs_share_one_case_directory) ... ok
+test_ftc_emitter_requires_normalized_complete_ir (test_mvp.DeepCADIRTests.test_ftc_emitter_requires_normalized_complete_ir) ... ok
+test_missing_initial_body_is_not_recovered_as_join (test_mvp.DeepCADIRTests.test_missing_initial_body_is_not_recovered_as_join) ... ok
+test_non_new_feature_needs_prior_body (test_mvp.DeepCADIRTests.test_non_new_feature_needs_prior_body) ... ok
+test_outer_loop_is_selected_by_role_not_list_position (test_mvp.DeepCADIRTests.test_outer_loop_is_selected_by_role_not_list_position) ... ok
+test_profile_region_roles_must_match_geometry (test_mvp.DeepCADIRTests.test_profile_region_roles_must_match_geometry) ... ok
+test_profile_regions_must_cover_each_loop_once (test_mvp.DeepCADIRTests.test_profile_regions_must_cover_each_loop_once) ... ok
+test_real_json_to_ir_to_python_source (test_mvp.DeepCADIRTests.test_real_json_to_ir_to_python_source) ... ok
+test_results_identify_final_body_set_state (test_mvp.DeepCADIRTests.test_results_identify_final_body_set_state) ... ok
+test_sequence_must_include_all_features (test_mvp.DeepCADIRTests.test_sequence_must_include_all_features) ... ok
+test_batch_preserves_artifacts_and_failure_stage (test_mvp.VerificationLabelsTests.test_batch_preserves_artifacts_and_failure_stage) ... ok
+test_independent_boolean_failure_cannot_be_accepted (test_mvp.VerificationLabelsTests.test_independent_boolean_failure_cannot_be_accepted) ... ok
+test_self_consistency_is_not_independent_acceptance (test_mvp.VerificationLabelsTests.test_self_consistency_is_not_independent_acceptance) ... ok
+test_disjoint_islands (test_profile_regions.ProfileRegionTests.test_disjoint_islands) ... ok
+test_hole_mislabeled_as_outer (test_profile_regions.ProfileRegionTests.test_hole_mislabeled_as_outer) ... ok
+test_intersecting_contours_fail (test_profile_regions.ProfileRegionTests.test_intersecting_contours_fail) ... ok
+test_island_inside_hole (test_profile_regions.ProfileRegionTests.test_island_inside_hole) ... ok
+test_real_deepcad_ring_has_hole (test_profile_regions.ProfileRegionTests.test_real_deepcad_ring_has_hole) ... ok
+test_build_reads_edited_top_level_distance_at_call_time (test_readable_codegen.ReadableGeometryTests.test_build_reads_edited_top_level_distance_at_call_time) ... ok
+test_region_holes_and_two_sided_geometry (test_readable_codegen.ReadableGeometryTests.test_region_holes_and_two_sided_geometry) ... ok
+test_build_contains_only_explicit_feature_flow (test_readable_codegen.ReadableStructureTests.test_build_contains_only_explicit_feature_flow) ... ok
+test_conflicting_arc_auxiliary_is_rejected (test_readable_codegen.ReadableStructureTests.test_conflicting_arc_auxiliary_is_rejected) ... ok
+test_equal_unrelated_dimensions_are_not_aliased (test_readable_codegen.ReadableStructureTests.test_equal_unrelated_dimensions_are_not_aliased) ... ok
+test_functions_preserve_extrusion_and_boolean_trace (test_readable_codegen.ReadableStructureTests.test_functions_preserve_extrusion_and_boolean_trace) ... ok
+test_provenance_fields_are_validated_but_not_required (test_readable_codegen.ReadableStructureTests.test_provenance_fields_are_validated_but_not_required) ... ok
+test_source_optional_and_noncontiguous_groups_stay_separate (test_readable_codegen.ReadableStructureTests.test_source_optional_and_noncontiguous_groups_stay_separate) ... ok
+test_axis_rounding_is_normalized_without_flipping_orientation (test_readable_only_adapter.AdapterRulesTests.test_axis_rounding_is_normalized_without_flipping_orientation) ... ok
+test_nonplanar_input_and_signed_taper_are_not_silently_repaired (test_readable_only_adapter.AdapterRulesTests.test_nonplanar_input_and_signed_taper_are_not_silently_repaired) ... ok
+test_real_signed_and_planar_cases_validate_without_unsupported (test_readable_only_adapter.AdapterRulesTests.test_real_signed_and_planar_cases_validate_without_unsupported) ... ok
+test_signed_interval_combinations_and_zero_side (test_readable_only_adapter.AdapterRulesTests.test_signed_interval_combinations_and_zero_side) ... ok
+test_signed_circle_geometry_matches_analytic_volume (test_readable_only_adapter.ReadableOnlyKernelTests.test_signed_circle_geometry_matches_analytic_volume) ... ok
+test_source_frame_restoration_preserves_negative_x_normal (test_readable_only_adapter.ReadableOnlyKernelTests.test_source_frame_restoration_preserves_negative_x_normal) ... ok
+test_confirmed_failure_has_priority (test_similarity_evaluation.PolicyTests.test_confirmed_failure_has_priority) ... ok
+test_optional_failure_does_not_block_training (test_similarity_evaluation.PolicyTests.test_optional_failure_does_not_block_training) ... ok
+test_three_hard_metrics_and_threshold_directions (test_similarity_evaluation.PolicyTests.test_three_hard_metrics_and_threshold_directions) ... ok
+test_chiral_mirror_is_not_accepted (test_similarity_evaluation.SimilarityTests.test_chiral_mirror_is_not_accepted) ... ok
+test_compound_union_and_relative_placement (test_similarity_evaluation.SimilarityTests.test_compound_union_and_relative_placement) ... ok
+test_contradictory_boolean_measurements_stay_provisional (test_similarity_evaluation.SimilarityTests.test_contradictory_boolean_measurements_stay_provisional) ... ok
+test_degenerate_registration_failure_stays_unresolved (test_similarity_evaluation.SimilarityTests.test_degenerate_registration_failure_stays_unresolved) ... ok
+test_empty_boolean_results_and_required_iou_error (test_similarity_evaluation.SimilarityTests.test_empty_boolean_results_and_required_iou_error) ... ok
+test_hole_location_and_wall_thickness_changes (test_similarity_evaluation.SimilarityTests.test_hole_location_and_wall_thickness_changes) ... ok
+test_iou_roundoff_requires_independent_verification (test_similarity_evaluation.SimilarityTests.test_iou_roundoff_requires_independent_verification) ... ok
+test_nonuniform_scale_and_missing_feature_not_accepted (test_similarity_evaluation.SimilarityTests.test_nonuniform_scale_and_missing_feature_not_accepted) ... ok
+test_optional_local_diagnostic_failure_does_not_block (test_similarity_evaluation.SimilarityTests.test_optional_local_diagnostic_failure_does_not_block) ... ok
+test_similarity_transforms_and_determinism (test_similarity_evaluation.SimilarityTests.test_similarity_transforms_and_determinism) ... ok
+test_small_missing_component_produces_local_warning (test_similarity_evaluation.SimilarityTests.test_small_missing_component_produces_local_warning) ... ok
+
+*******************************************************************
+******        Statistics on Transfer (Write)                 ******
+
+*******************************************************************
+******        Transfer Mode = 0  I.E.  As Is       ******
+******        Transferring Shape, ShapeType = 2                      ******
+** WorkSession : Sending all data
+ Step File Name : C:\Users\m1835\AppData\Local\Temp\tmp0p98svmd\model.step(352 ents)  Write  Done
+
+*******************************************************************
+******        Statistics on Transfer (Write)                 ******
+
+*******************************************************************
+******        Transfer Mode = 0  I.E.  As Is       ******
+******        Transferring Shape, ShapeType = 2                      ******
+** WorkSession : Sending all data
+ Step File Name : C:\Users\m1835\AppData\Local\Temp\tmp0p98svmd\bad.step(352 ents)  Write  Done
+
+*******************************************************************
+******        Statistics on Transfer (Write)                 ******
+
+*******************************************************************
+******        Transfer Mode = 0  I.E.  As Is       ******
+******        Transferring Shape, ShapeType = 2                      ******
+** WorkSession : Sending all data
+ Step File Name : C:\Users\m1835\AppData\Local\Temp\tmp0p98svmd\bad.step(352 ents)  Write  Done
+
+*******************************************************************
+******        Statistics on Transfer (Write)                 ******
+
+*******************************************************************
+******        Transfer Mode = 0  I.E.  As Is       ******
+******        Transferring Shape, ShapeType = 2                      ******
+** WorkSession : Sending all data
+ Step File Name : C:\Users\m1835\AppData\Local\Temp\tmp0p98svmd\bad.step(352 ents)  Write  Done
+test_step_roundtrip_and_error_attribution (test_similarity_evaluation.SimilarityTests.test_step_roundtrip_and_error_attribution) ... ok
+test_symmetric_shapes (test_similarity_evaluation.SimilarityTests.test_symmetric_shapes) ... ok
+
+----------------------------------------------------------------------
+Ran 83 tests in 54.764s
+
+OK
+C:\Users\m1835\AppData\Local\Temp\tmpnmr3dol7\model.ir.json -> C:\Users\m1835\AppData\Local\Temp\tmpnmr3dol7\model.readable.ftc.py (110 lines)
+F:\AI_CAD\datasets\DeepCAD\cad_json\0000\00000007.json -> C:\Users\m1835\AppData\Local\Temp\tmp36hw_d0z\00000007\model.ir.json (6 entities, 0 unsupported)
+C:\Users\m1835\AppData\Local\Temp\tmp36hw_d0z\00000007\model.ir.json -> C:\Users\m1835\AppData\Local\Temp\tmp36hw_d0z\00000007\model.readable.ftc.py (72 lines)
+[1/1] 00000007: emitter_error FAIL
+  - ValueError: deliberate emit error
+
+=== MVP batch summary ===
+total=1 success=0 failure=1 rate=0.0% elapsed=0.001s
+by status: emitter_error=1
+failures:
+  - 00000007: emitter_error
+    ValueError: deliberate emit error
+summary: C:\Users\m1835\AppData\Local\Temp\tmpt8gtl8uq\batch\batch_summary.json
+csv:     C:\Users\m1835\AppData\Local\Temp\tmpt8gtl8uq\batch\batch_results.csv

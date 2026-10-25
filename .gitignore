@@ -1,0 +1,10 @@
+# Generated artifacts; keep the output-layout documentation versioned.
+/out/*
+!/out/README.md
+!/out/.gitignore
+
+# Runtime caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.simplecad/

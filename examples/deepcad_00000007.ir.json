@@ -1,0 +1,106 @@
+{
+  "ir_version": "0.1",
+  "kind": "part",
+  "units": "mm",
+  "tolerance": {
+    "length": 1e-6,
+    "angle_deg": 1e-6
+  },
+  "entities": {
+    "sketch_FQgWGf8WhgalpUy": {
+      "type": "SketchPlane",
+      "op": "sketch.plane",
+      "inputs": [],
+      "params": {
+        "frame": {
+          "origin": [0.0, 0.0, 0.0],
+          "x_axis": [1.0, 0.0, 0.0],
+          "y_axis": [0.0, 1.0, 0.0],
+          "z_axis": [0.0, 0.0, 1.0]
+        }
+      }
+    },
+    "curve_FQgWGf8WhgalpUy_JGB": {
+      "type": "SketchCircle",
+      "op": "sketch.circle",
+      "inputs": [],
+      "params": {
+        "center": [0.0, 0.0],
+        "radius": 91.04851
+      }
+    },
+    "loop_FQgWGf8WhgalpUy_JGC_0": {
+      "type": "SketchLoop",
+      "op": "sketch.loop",
+      "inputs": ["curve_FQgWGf8WhgalpUy_JGB"],
+      "params": {
+        "is_outer": true,
+        "closed": true
+      }
+    },
+    "profile_FQgWGf8WhgalpUy_JGC": {
+      "type": "SketchProfile",
+      "op": "sketch.profile",
+      "inputs": ["loop_FQgWGf8WhgalpUy_JGC_0"],
+      "params": {
+        "plane": "sketch_FQgWGf8WhgalpUy",
+        "closed": true,
+        "regions": [{"outer": "loop_FQgWGf8WhgalpUy_JGC_0", "holes": []}]
+      }
+    },
+    "extrude_FI4bCL9y0XvsF52": {
+      "type": "ExtrudeFeature",
+      "op": "feature.extrude",
+      "inputs": ["profile_FQgWGf8WhgalpUy_JGC"],
+      "params": {
+        "distance": 25.4,
+        "direction": [0.0, 0.0, 1.0],
+        "extent": "one_side",
+        "operation": "new",
+        "start": "profile_plane",
+        "taper": 0.0
+      }
+    }
+  },
+  "sequence": [
+    "sketch_FQgWGf8WhgalpUy",
+    "extrude_FI4bCL9y0XvsF52"
+  ],
+  "results": [
+    "extrude_FI4bCL9y0XvsF52"
+  ],
+  "extensions": {
+    "source": {
+      "format": "deepcad-1",
+      "file": "datasets/DeepCAD/cad_json/0000/00000007.json",
+      "units": "m",
+      "entity_ids": {
+        "sketch": "FQgWGf8WhgalpUy",
+        "profile": "JGC",
+        "curve": "JGB",
+        "extrude": "FI4bCL9y0XvsF52"
+      },
+      "bounding_box_m": [
+        -0.09104851445359824,
+        -0.09104851445359824,
+        0.0,
+        0.09104851445359824,
+        0.09104851445359824,
+        0.025400000000000002
+      ]
+    }
+  },
+  "unsupported": [],
+  "evidence": {
+    "bounding_box_mm": [
+      -91.04851445359824,
+      -91.04851445359824,
+      0.0,
+      91.04851445359824,
+      91.04851445359824,
+      25.400000000000002
+    ],
+    "source_radius_m": 0.09104851,
+    "radius_mm": 91.04851
+  }
+}

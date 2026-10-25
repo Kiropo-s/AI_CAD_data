@@ -1,0 +1,8 @@
+tmp/*
+!tmp/.gitkeep
+corpus/*
+!corpus/.gitkeep
+**/.work/
+.simplecad/
+__pycache__/
+*.pyc
