@@ -1,0 +1,191 @@
+{
+  "date": "2026-10-26",
+  "tests": {
+    "count": 15,
+    "result": "passed"
+  },
+  "abc": {
+    "input_count": 20,
+    "counts": {
+      "provisional": 15,
+      "train_ready": 5
+    },
+    "cases": [
+      {
+        "id": "00000000",
+        "status": "provisional",
+        "reason": "unsupported_geometry",
+        "input_sha256": "73411ebbcc0afa5fa742b331ce1be4450b34c9b367b75aedccc47e21798fb6dc",
+        "report": "F:\\AI_CAD\\step2code\\out\\abc-first20-v1\\cases\\00000000_290a9120f9f249a7a05cfe9c_step_000\\report.json"
+      },
+      {
+        "id": "00000001",
+        "status": "provisional",
+        "reason": "unsupported_geometry",
+        "input_sha256": "8f27522538b086ecc9bfb6e458207bea0f8f9715b2d76bb8dbd93a5083e8a018",
+        "report": "F:\\AI_CAD\\step2code\\out\\abc-first20-v1\\cases\\00000001_1ffb81a71e5b402e966b9341_step_000\\report.json"
+      },
+      {
+        "id": "00000002",
+        "status": "provisional",
+        "reason": "unsupported_geometry",
+        "input_sha256": "c190144c83c811a48c1a7892c299fc60a85332ee21535c630518637d9f325688",
+        "report": "F:\\AI_CAD\\step2code\\out\\abc-first20-v1\\cases\\00000002_1ffb81a71e5b402e966b9341_step_001\\report.json"
+      },
+      {
+        "id": "00000003",
+        "status": "provisional",
+        "reason": "unsupported_geometry",
+        "input_sha256": "532f0f0687407346f43f9a28e7934c9927df0d269dd4d097864be1e060368734",
+        "report": "F:\\AI_CAD\\step2code\\out\\abc-first20-v1\\cases\\00000003_1ffb81a71e5b402e966b9341_step_002\\report.json"
+      },
+      {
+        "id": "00000004",
+        "status": "provisional",
+        "reason": "unsupported_geometry",
+        "input_sha256": "a7be17878aea45cc9a1aa0b68901756a8ad70d6988a9c42fb2ee6c8525a32195",
+        "report": "F:\\AI_CAD\\step2code\\out\\abc-first20-v1\\cases\\00000004_1ffb81a71e5b402e966b9341_step_003\\report.json"
+      },
+      {
+        "id": "00000005",
+        "status": "train_ready",
+        "reason": "accepted",
+        "input_sha256": "7a970a7f10b5f7ef783e20a8713358f3a8c9cd005cf4355a586a19e72ca32de5",
+        "report": "F:\\AI_CAD\\step2code\\out\\abc-first20-v1\\cases\\00000005_d4fe04f0f5f84b52bd4f10e4_step_000\\report.json",
+        "features": 10,
+        "chamfer_mean_mm": 2.439057424491979,
+        "chamfer_relative": 0.0036915844518392027,
+        "volume_iou": 0.9999999997850367,
+        "reference_volume_mm3": 4812995.156538845,
+        "candidate_volume_mm3": 4812995.157573459,
+        "volume_relative_error": 2.1496254724364833e-10
+      },
+      {
+        "id": "00000006",
+        "status": "provisional",
+        "reason": "unsupported_geometry",
+        "input_sha256": "5b0a309b468874e023681903bd6208479f6ea80064d9c17e08873e921732a0fe",
+        "report": "F:\\AI_CAD\\step2code\\out\\abc-first20-v1\\cases\\00000006_d4fe04f0f5f84b52bd4f10e4_step_001\\report.json"
+      },
+      {
+        "id": "00000007",
+        "status": "train_ready",
+        "reason": "accepted",
+        "input_sha256": "02616fa80edaf4d8a1aa03619e3488fa42158da3874ccca3289b9af700fe07cf",
+        "report": "F:\\AI_CAD\\step2code\\out\\abc-first20-v1\\cases\\00000007_b33a147f86da49879455d286_step_000\\report.json",
+        "features": 1,
+        "chamfer_mean_mm": 1.3399763294668678,
+        "chamfer_relative": 0.005969667606586087,
+        "volume_iou": 1.0,
+        "reference_volume_mm3": 661499.1923056485,
+        "candidate_volume_mm3": 661499.1923056486,
+        "volume_relative_error": 1.7598709594968732e-16
+      },
+      {
+        "id": "00000008",
+        "status": "provisional",
+        "reason": "unsupported_geometry",
+        "input_sha256": "84c7687d1acf464c406a6648e379893f21f0c9ed358ea0dee92be7e10b882f47",
+        "report": "F:\\AI_CAD\\step2code\\out\\abc-first20-v1\\cases\\00000008_9b3d6a97e8de4aa193b81000_step_000\\report.json"
+      },
+      {
+        "id": "00000009",
+        "status": "provisional",
+        "reason": "unsupported_geometry",
+        "input_sha256": "34a7b399bef7d25ce7b85357d06210ec7c06fe6a39a6b20bc7369dc1abd40b77",
+        "report": "F:\\AI_CAD\\step2code\\out\\abc-first20-v1\\cases\\00000009_9b3d6a97e8de4aa193b81000_step_001\\report.json"
+      },
+      {
+        "id": "00000010",
+        "status": "provisional",
+        "reason": "unsupported_geometry",
+        "input_sha256": "79a1916b709d95e5aa5b79694f9d988bcd97c1c1c2e9abb9eaa428f2a22026b6",
+        "report": "F:\\AI_CAD\\step2code\\out\\abc-first20-v1\\cases\\00000010_b4b99d35e04b4277931f9a9c_step_000\\report.json"
+      },
+      {
+        "id": "00000011",
+        "status": "provisional",
+        "reason": "unsupported_geometry",
+        "input_sha256": "490701d7fca1db71dc912bc6e1d7a3a1ef1792aeb030cfb1ead764abcf7e6920",
+        "report": "F:\\AI_CAD\\step2code\\out\\abc-first20-v1\\cases\\00000011_e909f412cda24521865fac0f_step_000\\report.json"
+      },
+      {
+        "id": "00000012",
+        "status": "provisional",
+        "reason": "unsupported_geometry",
+        "input_sha256": "29da96fd0b52e262036807b162b8c5d02cb74ab640dbef47d373433ad80ca046",
+        "report": "F:\\AI_CAD\\step2code\\out\\abc-first20-v1\\cases\\00000012_f16882934f314832b639ffc0_step_000\\report.json"
+      },
+      {
+        "id": "00000013",
+        "status": "provisional",
+        "reason": "unsupported_geometry",
+        "input_sha256": "0af8f4f012b3355dd0f2232b9f04df45cdd2ee13c5d36368176b0a50e5c5a5e6",
+        "report": "F:\\AI_CAD\\step2code\\out\\abc-first20-v1\\cases\\00000013_c2f4d27f35ed4c138caf5c18_step_000\\report.json"
+      },
+      {
+        "id": "00000014",
+        "status": "provisional",
+        "reason": "unsupported_geometry",
+        "input_sha256": "7c7190f868acd93951fd6302313d1f818828f44da6a5716b7434c0059e0802b0",
+        "report": "F:\\AI_CAD\\step2code\\out\\abc-first20-v1\\cases\\00000014_5b1c2f8a8c6f40fdaae1e69d_step_000\\report.json"
+      },
+      {
+        "id": "00000015",
+        "status": "provisional",
+        "reason": "unsupported_geometry",
+        "input_sha256": "4460d2d68643db57c164e1ede21817a037fcb9881a974943906348ca31aa7e40",
+        "report": "F:\\AI_CAD\\step2code\\out\\abc-first20-v1\\cases\\00000015_b08aa818955948c690fd9b6d_step_000\\report.json"
+      },
+      {
+        "id": "00000016",
+        "status": "provisional",
+        "reason": "unsupported_geometry",
+        "input_sha256": "767992134bf890032be8ef450710d7ddbd69b1bc49a11904b29e0fae328e286a",
+        "report": "F:\\AI_CAD\\step2code\\out\\abc-first20-v1\\cases\\00000016_b08aa818955948c690fd9b6d_step_001\\report.json"
+      },
+      {
+        "id": "00000017",
+        "status": "train_ready",
+        "reason": "accepted",
+        "input_sha256": "ff5d59a91a341035c7604987eb5e54503710bfedf4962608c658f4d985ea0112",
+        "report": "F:\\AI_CAD\\step2code\\out\\abc-first20-v1\\cases\\00000017_e8e79d1385fd4c78be414f6c_step_000\\report.json",
+        "features": 64,
+        "chamfer_mean_mm": 1.6688021182943809,
+        "chamfer_relative": 0.0038710409272820403,
+        "volume_iou": 1.0,
+        "reference_volume_mm3": 589934.3039999997,
+        "candidate_volume_mm3": 589934.3039999997,
+        "volume_relative_error": 0.0
+      },
+      {
+        "id": "00000018",
+        "status": "train_ready",
+        "reason": "accepted",
+        "input_sha256": "a446e05fcda2dba53fcea363e826fe497130aa9a68ed16a00f3d2bad90c04a3a",
+        "report": "F:\\AI_CAD\\step2code\\out\\abc-first20-v1\\cases\\00000018_e8e79d1385fd4c78be414f6c_step_001\\report.json",
+        "features": 16,
+        "chamfer_mean_mm": 1.2029734663996154,
+        "chamfer_relative": 0.003800384333329401,
+        "volume_iou": 1.0000000000042333,
+        "reference_volume_mm3": 527311.7555529868,
+        "candidate_volume_mm3": 527311.7555507547,
+        "volume_relative_error": 4.232848863851161e-12
+      },
+      {
+        "id": "00000019",
+        "status": "train_ready",
+        "reason": "accepted",
+        "input_sha256": "605617ea94f22724a0689faf740f6bf8767cf12604a6cfb162115c1016bbd83e",
+        "report": "F:\\AI_CAD\\step2code\\out\\abc-first20-v1\\cases\\00000019_e8e79d1385fd4c78be414f6c_step_002\\report.json",
+        "features": 16,
+        "chamfer_mean_mm": 1.2029734663996154,
+        "chamfer_relative": 0.003800384333329401,
+        "volume_iou": 1.0000000000042333,
+        "reference_volume_mm3": 527311.7555529868,
+        "candidate_volume_mm3": 527311.7555507547,
+        "volume_relative_error": 4.232848863851161e-12
+      }
+    ]
+  }
+}

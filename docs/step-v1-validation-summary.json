@@ -1,0 +1,2421 @@
+{
+  "date": "2026-10-26",
+  "tool_version": "0.2.0",
+  "code_structure_spec": "step-readable-v1",
+  "tests": {
+    "count": 26,
+    "result": "passed",
+    "log": "../out/step-readable-v1-unittest.log"
+  },
+  "abc": {
+    "status": "pass",
+    "input_directory": "F:\\AI_CAD\\datasets\\abc\\step\\abc_0000",
+    "sample_selection": "first N STEP files sorted by filename; no recursive search",
+    "samples": 8192,
+    "validation_mode": "world",
+    "source_count": 20,
+    "counts": {
+      "provisional": 15,
+      "train_ready": 5
+    },
+    "baseline": "step2code\\out\\abc-first20-v1\\summary.json",
+    "regressions": [],
+    "cases": [
+      {
+        "input": "F:\\AI_CAD\\datasets\\abc\\step\\abc_0000\\00000000_290a9120f9f249a7a05cfe9c_step_000.step",
+        "status": "provisional",
+        "baseline_status": "provisional",
+        "baseline_comparison": "same_status",
+        "parameter_edit_status": "not_run",
+        "geometry_validated": null,
+        "structure": null,
+        "report": "F:\\AI_CAD\\step2code\\out\\abc-step-readable-v1-regression\\cases\\00000000_290a9120f9f249a7a05cfe9c_step_000\\report.json"
+      },
+      {
+        "input": "F:\\AI_CAD\\datasets\\abc\\step\\abc_0000\\00000001_1ffb81a71e5b402e966b9341_step_000.step",
+        "status": "provisional",
+        "baseline_status": "provisional",
+        "baseline_comparison": "same_status",
+        "parameter_edit_status": "not_run",
+        "geometry_validated": null,
+        "structure": null,
+        "report": "F:\\AI_CAD\\step2code\\out\\abc-step-readable-v1-regression\\cases\\00000001_1ffb81a71e5b402e966b9341_step_000\\report.json"
+      },
+      {
+        "input": "F:\\AI_CAD\\datasets\\abc\\step\\abc_0000\\00000002_1ffb81a71e5b402e966b9341_step_001.step",
+        "status": "provisional",
+        "baseline_status": "provisional",
+        "baseline_comparison": "same_status",
+        "parameter_edit_status": "not_run",
+        "geometry_validated": null,
+        "structure": null,
+        "report": "F:\\AI_CAD\\step2code\\out\\abc-step-readable-v1-regression\\cases\\00000002_1ffb81a71e5b402e966b9341_step_001\\report.json"
+      },
+      {
+        "input": "F:\\AI_CAD\\datasets\\abc\\step\\abc_0000\\00000003_1ffb81a71e5b402e966b9341_step_002.step",
+        "status": "provisional",
+        "baseline_status": "provisional",
+        "baseline_comparison": "same_status",
+        "parameter_edit_status": "not_run",
+        "geometry_validated": null,
+        "structure": null,
+        "report": "F:\\AI_CAD\\step2code\\out\\abc-step-readable-v1-regression\\cases\\00000003_1ffb81a71e5b402e966b9341_step_002\\report.json"
+      },
+      {
+        "input": "F:\\AI_CAD\\datasets\\abc\\step\\abc_0000\\00000004_1ffb81a71e5b402e966b9341_step_003.step",
+        "status": "provisional",
+        "baseline_status": "provisional",
+        "baseline_comparison": "same_status",
+        "parameter_edit_status": "not_run",
+        "geometry_validated": null,
+        "structure": null,
+        "report": "F:\\AI_CAD\\step2code\\out\\abc-step-readable-v1-regression\\cases\\00000004_1ffb81a71e5b402e966b9341_step_003\\report.json"
+      },
+      {
+        "input": "F:\\AI_CAD\\datasets\\abc\\step\\abc_0000\\00000005_d4fe04f0f5f84b52bd4f10e4_step_000.step",
+        "status": "train_ready",
+        "baseline_status": "train_ready",
+        "baseline_comparison": "same_status",
+        "parameter_edit_status": "partial",
+        "geometry_validated": true,
+        "structure": {
+          "lines": 395,
+          "function_count": 21,
+          "build_lines": 16,
+          "max_function_lines": 16,
+          "feature_count": 10,
+          "profile_count": 10,
+          "template_count": 9,
+          "instance_count": 10,
+          "independent_parameter_count": 60,
+          "polyline_helper": false
+        },
+        "report": "F:\\AI_CAD\\step2code\\out\\abc-step-readable-v1-regression\\cases\\00000005_d4fe04f0f5f84b52bd4f10e4_step_000\\report.json"
+      },
+      {
+        "input": "F:\\AI_CAD\\datasets\\abc\\step\\abc_0000\\00000006_d4fe04f0f5f84b52bd4f10e4_step_001.step",
+        "status": "provisional",
+        "baseline_status": "provisional",
+        "baseline_comparison": "same_status",
+        "parameter_edit_status": "not_run",
+        "geometry_validated": null,
+        "structure": null,
+        "report": "F:\\AI_CAD\\step2code\\out\\abc-step-readable-v1-regression\\cases\\00000006_d4fe04f0f5f84b52bd4f10e4_step_001\\report.json"
+      },
+      {
+        "input": "F:\\AI_CAD\\datasets\\abc\\step\\abc_0000\\00000007_b33a147f86da49879455d286_step_000.step",
+        "status": "train_ready",
+        "baseline_status": "train_ready",
+        "baseline_comparison": "same_status",
+        "parameter_edit_status": "partial",
+        "geometry_validated": true,
+        "structure": {
+          "lines": 72,
+          "function_count": 5,
+          "build_lines": 7,
+          "max_function_lines": 13,
+          "feature_count": 1,
+          "profile_count": 1,
+          "template_count": 1,
+          "instance_count": 1,
+          "independent_parameter_count": 5,
+          "polyline_helper": false
+        },
+        "report": "F:\\AI_CAD\\step2code\\out\\abc-step-readable-v1-regression\\cases\\00000007_b33a147f86da49879455d286_step_000\\report.json"
+      },
+      {
+        "input": "F:\\AI_CAD\\datasets\\abc\\step\\abc_0000\\00000008_9b3d6a97e8de4aa193b81000_step_000.step",
+        "status": "provisional",
+        "baseline_status": "provisional",
+        "baseline_comparison": "same_status",
+        "parameter_edit_status": "not_run",
+        "geometry_validated": null,
+        "structure": null,
+        "report": "F:\\AI_CAD\\step2code\\out\\abc-step-readable-v1-regression\\cases\\00000008_9b3d6a97e8de4aa193b81000_step_000\\report.json"
+      },
+      {
+        "input": "F:\\AI_CAD\\datasets\\abc\\step\\abc_0000\\00000009_9b3d6a97e8de4aa193b81000_step_001.step",
+        "status": "provisional",
+        "baseline_status": "provisional",
+        "baseline_comparison": "same_status",
+        "parameter_edit_status": "not_run",
+        "geometry_validated": null,
+        "structure": null,
+        "report": "F:\\AI_CAD\\step2code\\out\\abc-step-readable-v1-regression\\cases\\00000009_9b3d6a97e8de4aa193b81000_step_001\\report.json"
+      },
+      {
+        "input": "F:\\AI_CAD\\datasets\\abc\\step\\abc_0000\\00000010_b4b99d35e04b4277931f9a9c_step_000.step",
+        "status": "provisional",
+        "baseline_status": "provisional",
+        "baseline_comparison": "same_status",
+        "parameter_edit_status": "not_run",
+        "geometry_validated": null,
+        "structure": null,
+        "report": "F:\\AI_CAD\\step2code\\out\\abc-step-readable-v1-regression\\cases\\00000010_b4b99d35e04b4277931f9a9c_step_000\\report.json"
+      },
+      {
+        "input": "F:\\AI_CAD\\datasets\\abc\\step\\abc_0000\\00000011_e909f412cda24521865fac0f_step_000.step",
+        "status": "provisional",
+        "baseline_status": "provisional",
+        "baseline_comparison": "same_status",
+        "parameter_edit_status": "not_run",
+        "geometry_validated": null,
+        "structure": null,
+        "report": "F:\\AI_CAD\\step2code\\out\\abc-step-readable-v1-regression\\cases\\00000011_e909f412cda24521865fac0f_step_000\\report.json"
+      },
+      {
+        "input": "F:\\AI_CAD\\datasets\\abc\\step\\abc_0000\\00000012_f16882934f314832b639ffc0_step_000.step",
+        "status": "provisional",
+        "baseline_status": "provisional",
+        "baseline_comparison": "same_status",
+        "parameter_edit_status": "not_run",
+        "geometry_validated": null,
+        "structure": null,
+        "report": "F:\\AI_CAD\\step2code\\out\\abc-step-readable-v1-regression\\cases\\00000012_f16882934f314832b639ffc0_step_000\\report.json"
+      },
+      {
+        "input": "F:\\AI_CAD\\datasets\\abc\\step\\abc_0000\\00000013_c2f4d27f35ed4c138caf5c18_step_000.step",
+        "status": "provisional",
+        "baseline_status": "provisional",
+        "baseline_comparison": "same_status",
+        "parameter_edit_status": "not_run",
+        "geometry_validated": null,
+        "structure": null,
+        "report": "F:\\AI_CAD\\step2code\\out\\abc-step-readable-v1-regression\\cases\\00000013_c2f4d27f35ed4c138caf5c18_step_000\\report.json"
+      },
+      {
+        "input": "F:\\AI_CAD\\datasets\\abc\\step\\abc_0000\\00000014_5b1c2f8a8c6f40fdaae1e69d_step_000.step",
+        "status": "provisional",
+        "baseline_status": "provisional",
+        "baseline_comparison": "same_status",
+        "parameter_edit_status": "not_run",
+        "geometry_validated": null,
+        "structure": null,
+        "report": "F:\\AI_CAD\\step2code\\out\\abc-step-readable-v1-regression\\cases\\00000014_5b1c2f8a8c6f40fdaae1e69d_step_000\\report.json"
+      },
+      {
+        "input": "F:\\AI_CAD\\datasets\\abc\\step\\abc_0000\\00000015_b08aa818955948c690fd9b6d_step_000.step",
+        "status": "provisional",
+        "baseline_status": "provisional",
+        "baseline_comparison": "same_status",
+        "parameter_edit_status": "not_run",
+        "geometry_validated": null,
+        "structure": null,
+        "report": "F:\\AI_CAD\\step2code\\out\\abc-step-readable-v1-regression\\cases\\00000015_b08aa818955948c690fd9b6d_step_000\\report.json"
+      },
+      {
+        "input": "F:\\AI_CAD\\datasets\\abc\\step\\abc_0000\\00000016_b08aa818955948c690fd9b6d_step_001.step",
+        "status": "provisional",
+        "baseline_status": "provisional",
+        "baseline_comparison": "same_status",
+        "parameter_edit_status": "not_run",
+        "geometry_validated": null,
+        "structure": null,
+        "report": "F:\\AI_CAD\\step2code\\out\\abc-step-readable-v1-regression\\cases\\00000016_b08aa818955948c690fd9b6d_step_001\\report.json"
+      },
+      {
+        "input": "F:\\AI_CAD\\datasets\\abc\\step\\abc_0000\\00000017_e8e79d1385fd4c78be414f6c_step_000.step",
+        "status": "train_ready",
+        "baseline_status": "train_ready",
+        "baseline_comparison": "same_status",
+        "parameter_edit_status": "partial",
+        "geometry_validated": true,
+        "structure": {
+          "lines": 903,
+          "function_count": 42,
+          "build_lines": 62,
+          "max_function_lines": 62,
+          "feature_count": 64,
+          "profile_count": 64,
+          "template_count": 15,
+          "instance_count": 64,
+          "independent_parameter_count": 256,
+          "polyline_helper": true
+        },
+        "report": "F:\\AI_CAD\\step2code\\out\\abc-step-readable-v1-regression\\cases\\00000017_e8e79d1385fd4c78be414f6c_step_000\\report.json"
+      },
+      {
+        "input": "F:\\AI_CAD\\datasets\\abc\\step\\abc_0000\\00000018_e8e79d1385fd4c78be414f6c_step_001.step",
+        "status": "train_ready",
+        "baseline_status": "train_ready",
+        "baseline_comparison": "same_status",
+        "parameter_edit_status": "partial",
+        "geometry_validated": true,
+        "structure": {
+          "lines": 589,
+          "function_count": 36,
+          "build_lines": 22,
+          "max_function_lines": 29,
+          "feature_count": 16,
+          "profile_count": 16,
+          "template_count": 16,
+          "instance_count": 16,
+          "independent_parameter_count": 66,
+          "polyline_helper": true
+        },
+        "report": "F:\\AI_CAD\\step2code\\out\\abc-step-readable-v1-regression\\cases\\00000018_e8e79d1385fd4c78be414f6c_step_001\\report.json"
+      },
+      {
+        "input": "F:\\AI_CAD\\datasets\\abc\\step\\abc_0000\\00000019_e8e79d1385fd4c78be414f6c_step_002.step",
+        "status": "train_ready",
+        "baseline_status": "train_ready",
+        "baseline_comparison": "same_status",
+        "parameter_edit_status": "partial",
+        "geometry_validated": true,
+        "structure": {
+          "lines": 589,
+          "function_count": 36,
+          "build_lines": 22,
+          "max_function_lines": 29,
+          "feature_count": 16,
+          "profile_count": 16,
+          "template_count": 16,
+          "instance_count": 16,
+          "independent_parameter_count": 66,
+          "polyline_helper": true
+        },
+        "report": "F:\\AI_CAD\\step2code\\out\\abc-step-readable-v1-regression\\cases\\00000019_e8e79d1385fd4c78be414f6c_step_002\\report.json"
+      }
+    ]
+  },
+  "supported_cases": [
+    {
+      "id": "00000005",
+      "geometry": {
+        "evaluation_version": "fixed-frame-shape-v1",
+        "metric_implementation": "json2scapi/similarity-shape-v4",
+        "coordinate_policy": "source world frame; one shared numerical conditioning transform",
+        "units": {
+          "length": "mm",
+          "volume": "mm^3",
+          "squared_cd": "mm^2"
+        },
+        "thresholds": {
+          "volume_relative_error": 0.001,
+          "volume_iou": 0.999,
+          "chamfer_relative": 0.01
+        },
+        "checks": {
+          "volume_relative_error": "pass",
+          "volume_iou": "pass",
+          "chamfer_relative": "pass"
+        },
+        "metric_errors": [],
+        "warnings": [],
+        "diagnostics": [
+          "volume_iou_roundoff_verified"
+        ],
+        "registration": {
+          "status": "resolved",
+          "method": "fixed_source_frame",
+          "candidate_to_reference": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        },
+        "cd_sampling": {
+          "points_per_shape": 8192,
+          "seed": 0,
+          "protocol": "area-weighted-triangle-surface",
+          "relative_mesh_deflection": 0.001,
+          "definition": "CD2=mean(d(A,B)^2)+mean(d(B,A)^2); CD=mean of both one-way mean distances"
+        },
+        "raw": {
+          "reference": {
+            "volume_mm3": 4812995.156538845,
+            "bbox_mm": [
+              -15.8775728,
+              -252.75139000000001,
+              0.0,
+              608.6063704633709,
+              0.0,
+              31.7551456391812
+            ],
+            "solid_count": 10
+          },
+          "candidate": {
+            "volume_mm3": 4812995.1555949515,
+            "bbox_mm": [
+              -15.8775728,
+              -252.75139,
+              -2.6645352591e-15,
+              608.60637046337,
+              0.0,
+              31.755145619591
+            ],
+            "solid_count": 10
+          }
+        },
+        "volume_relative_error": 1.961135500926657e-10,
+        "measurement": {
+          "volume_relative_error": 1.961130029095683e-10,
+          "symmetric_difference_relative": 0.0,
+          "chamfer_relative": 0.003820653352621112,
+          "symmetric_difference_volume_mm3": 0.0,
+          "chamfer_mean_mm": 0.38206533526211117,
+          "chamfer_distance_mm2": 0.5226525053380147,
+          "area_relative_error": null,
+          "bbox_max_relative_error": null,
+          "volume_iou": 1.0000000001961133,
+          "checks": {
+            "volume_relative_error": "pass",
+            "volume_iou": "pass",
+            "chamfer_relative": "pass"
+          },
+          "metric_errors": [],
+          "warnings": [],
+          "diagnostics": [
+            "volume_iou_roundoff_verified"
+          ],
+          "reference_volume_mm3": 16687.365299520425,
+          "candidate_volume_mm3": 16687.365296247815,
+          "reference_bbox_mm": [
+            -46.57288669538579,
+            -19.12732951949847,
+            -2.40311689118815,
+            47.944576986489764,
+            19.12732951949847,
+            2.40311689118815
+          ],
+          "candidate_bbox_mm": [
+            -46.57288669538579,
+            -19.12732951949847,
+            -2.4031168911881506,
+            47.94457698648962,
+            19.12732951949847,
+            2.4031168882231166
+          ],
+          "volume_iou_roundoff_tolerance": 1e-08
+        },
+        "comparison_frame": {
+          "centroid_mm": [
+            291.8329687204851,
+            -126.37569500000002,
+            15.877572819590602
+          ],
+          "characteristic_length_mm": 660.7074702779192,
+          "scale_to_normalized": 0.151352912595246,
+          "target_length_mm": 100.0,
+          "matrix": [
+            [
+              0.151352912595246,
+              0.0,
+              0.0,
+              -44.16976980716274
+            ],
+            [
+              0.0,
+              0.151352912595246,
+              0.0,
+              19.12732951949847
+            ],
+            [
+              0.0,
+              0.0,
+              0.151352912595246,
+              -2.40311689118815
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "inverse_matrix": [
+            [
+              6.607074702779192,
+              0.0,
+              0.0,
+              291.8329687204851
+            ],
+            [
+              0.0,
+              6.607074702779192,
+              0.0,
+              -126.37569500000002
+            ],
+            [
+              0.0,
+              0.0,
+              6.607074702779192,
+              15.877572819590604
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "principal_moments": [
+            2067173.5493657037,
+            11871087.21595088,
+            13874014.733884137
+          ],
+          "principal_axes_degenerate": false,
+          "effective_source_deflection_mm": 0.6607074702779192,
+          "volume_scaling_consistency_relative": 4.360159607935551e-16
+        },
+        "reference_volume_mm3": 4812995.156538845,
+        "candidate_volume_mm3": 4812995.1555949515,
+        "volume_iou": 1.0000000001961133,
+        "chamfer_relative": 0.003820653352621112,
+        "chamfer_mean_mm": 2.5243342114191454,
+        "chamfer_distance_mm2": 22.81557775896695,
+        "symmetric_difference_volume_mm3": 0.0,
+        "decision": {
+          "status": "train_ready",
+          "reason": "accepted",
+          "failed_checks": []
+        }
+      },
+      "structure": {
+        "lines": 395,
+        "function_count": 21,
+        "build_lines": 16,
+        "max_function_lines": 16,
+        "feature_count": 10,
+        "profile_count": 10,
+        "template_count": 9,
+        "instance_count": 10,
+        "independent_parameter_count": 60,
+        "polyline_helper": false
+      },
+      "old_structure": {
+        "lines": 598,
+        "function_count": 22,
+        "build_lines": 66,
+        "max_function_lines": 66,
+        "feature_count": 10,
+        "profile_count": 10,
+        "polyline_helper": false
+      },
+      "parameter_edit_validation": {
+        "status": "partial",
+        "tested_parameter_count": 2,
+        "public_parameter_count": 60,
+        "scope": "first instance distance x1.1 and origin +(3,-4,8) mm; other parameters not tested",
+        "all_recorded_checks_passed": true,
+        "tests": [
+          {
+            "parameter": "FEATURE_01_DISTANCE_MM",
+            "original_value": 252.75139000000001,
+            "test_value": 278.02652900000004,
+            "actual_volume_ratios": [
+              1.1,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "expected_volume_ratios": [
+              1.1,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "topology_valid": true,
+            "other_bodies_unchanged": true,
+            "placement_matches": true,
+            "status": "pass"
+          },
+          {
+            "parameter": "BODY_01_ORIGIN_MM",
+            "original_value": [
+              548.64,
+              -252.75139000000001,
+              15.8775728195906
+            ],
+            "test_value": [
+              551.64,
+              -256.75139,
+              23.8775728195906
+            ],
+            "actual_volume_ratios": [
+              0.9999999999999999,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "expected_volume_ratios": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "topology_valid": true,
+            "other_bodies_unchanged": true,
+            "placement_matches": true,
+            "status": "pass"
+          }
+        ]
+      },
+      "coverage_status": "pass",
+      "input_sha256": "7a970a7f10b5f7ef783e20a8713358f3a8c9cd005cf4355a586a19e72ca32de5",
+      "report": "F:\\AI_CAD\\step2code\\out\\abc-step-readable-v1-regression\\cases\\00000005_d4fe04f0f5f84b52bd4f10e4_step_000\\report.json"
+    },
+    {
+      "id": "00000007",
+      "geometry": {
+        "evaluation_version": "fixed-frame-shape-v1",
+        "metric_implementation": "json2scapi/similarity-shape-v4",
+        "coordinate_policy": "source world frame; one shared numerical conditioning transform",
+        "units": {
+          "length": "mm",
+          "volume": "mm^3",
+          "squared_cd": "mm^2"
+        },
+        "thresholds": {
+          "volume_relative_error": 0.001,
+          "volume_iou": 0.999,
+          "chamfer_relative": 0.01
+        },
+        "checks": {
+          "volume_relative_error": "pass",
+          "volume_iou": "pass",
+          "chamfer_relative": "pass"
+        },
+        "metric_errors": [],
+        "warnings": [],
+        "diagnostics": [],
+        "registration": {
+          "status": "resolved",
+          "method": "fixed_source_frame",
+          "candidate_to_reference": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        },
+        "cd_sampling": {
+          "points_per_shape": 8192,
+          "seed": 0,
+          "protocol": "area-weighted-triangle-surface",
+          "relative_mesh_deflection": 0.001,
+          "definition": "CD2=mean(d(A,B)^2)+mean(d(B,A)^2); CD=mean of both one-way mean distances"
+        },
+        "raw": {
+          "reference": {
+            "volume_mm3": 661499.1923056485,
+            "bbox_mm": [
+              -91.04851459999999,
+              -91.04851459999999,
+              -1e-07,
+              91.04851459999999,
+              91.04851459999999,
+              25.400000100000003
+            ],
+            "solid_count": 1
+          },
+          "candidate": {
+            "volume_mm3": 661499.1923056486,
+            "bbox_mm": [
+              -91.0485145,
+              -91.0485145,
+              0.0,
+              91.0485145,
+              91.0485145,
+              25.4
+            ],
+            "solid_count": 1
+          }
+        },
+        "volume_relative_error": 1.7598709594968732e-16,
+        "measurement": {
+          "volume_relative_error": 1.2439466986182905e-16,
+          "symmetric_difference_relative": null,
+          "chamfer_relative": 0.005969667606586087,
+          "symmetric_difference_volume_mm3": null,
+          "chamfer_mean_mm": 0.5969667606586087,
+          "chamfer_distance_mm2": 0.9524178261170657,
+          "area_relative_error": null,
+          "bbox_max_relative_error": null,
+          "volume_iou": 1.0,
+          "checks": {
+            "volume_relative_error": "pass",
+            "volume_iou": "pass",
+            "chamfer_relative": "pass"
+          },
+          "metric_errors": [],
+          "warnings": [],
+          "diagnostics": [],
+          "reference_volume_mm3": 58490.91140532927,
+          "candidate_volume_mm3": 58490.91140532928,
+          "reference_bbox_mm": [
+            -40.56260972868545,
+            -40.562609728685445,
+            -5.657919343529284,
+            40.56260972868544,
+            40.562609728685445,
+            5.657919343529289
+          ],
+          "candidate_bbox_mm": [
+            -40.56260962868545,
+            -40.56260962868544,
+            -5.6579192435292835,
+            40.562609628685436,
+            40.56260962868544,
+            5.657919243529287
+          ]
+        },
+        "comparison_frame": {
+          "centroid_mm": [
+            8.447380605584991e-15,
+            1.319260490406469e-15,
+            12.699999999999996
+          ],
+          "characteristic_length_mm": 224.46414403182644,
+          "scale_to_normalized": 0.4455054522464004,
+          "target_length_mm": 100.0,
+          "matrix": [
+            [
+              0.4455054522464004,
+              0.0,
+              0.0,
+              -3.763354116988613e-15
+            ],
+            [
+              0.0,
+              0.4455054522464004,
+              0.0,
+              -5.87737741409342e-16
+            ],
+            [
+              0.0,
+              0.0,
+              0.4455054522464004,
+              -5.6579192435292835
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "inverse_matrix": [
+            [
+              2.244641440318264,
+              0.0,
+              0.0,
+              8.447380605584991e-15
+            ],
+            [
+              0.0,
+              2.244641440318264,
+              0.0,
+              1.3192604904064688e-15
+            ],
+            [
+              0.0,
+              0.0,
+              2.244641440318264,
+              12.699999999999994
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "principal_moments": [
+            24683282.083916992,
+            24683282.08391744,
+            48118288.17438112
+          ],
+          "principal_axes_degenerate": true,
+          "effective_source_deflection_mm": 0.22446414403182646,
+          "volume_scaling_consistency_relative": 1.2439466986182902e-16
+        },
+        "reference_volume_mm3": 661499.1923056485,
+        "candidate_volume_mm3": 661499.1923056486,
+        "volume_iou": 1.0,
+        "chamfer_relative": 0.005969667606586087,
+        "chamfer_mean_mm": 1.3399763294668678,
+        "chamfer_distance_mm2": 4.798676447662878,
+        "symmetric_difference_volume_mm3": null,
+        "decision": {
+          "status": "train_ready",
+          "reason": "accepted",
+          "failed_checks": []
+        }
+      },
+      "structure": {
+        "lines": 72,
+        "function_count": 5,
+        "build_lines": 7,
+        "max_function_lines": 13,
+        "feature_count": 1,
+        "profile_count": 1,
+        "template_count": 1,
+        "instance_count": 1,
+        "independent_parameter_count": 5,
+        "polyline_helper": false
+      },
+      "old_structure": {
+        "lines": 72,
+        "function_count": 4,
+        "build_lines": 11,
+        "max_function_lines": 16,
+        "feature_count": 1,
+        "profile_count": 1,
+        "polyline_helper": false
+      },
+      "parameter_edit_validation": {
+        "status": "partial",
+        "tested_parameter_count": 2,
+        "public_parameter_count": 5,
+        "scope": "first instance distance x1.1 and origin +(3,-4,8) mm; other parameters not tested",
+        "all_recorded_checks_passed": true,
+        "tests": [
+          {
+            "parameter": "FEATURE_01_DISTANCE_MM",
+            "original_value": 25.4,
+            "test_value": 27.94,
+            "actual_volume_ratios": [
+              1.1
+            ],
+            "expected_volume_ratios": [
+              1.1
+            ],
+            "topology_valid": true,
+            "other_bodies_unchanged": true,
+            "placement_matches": true,
+            "status": "pass"
+          },
+          {
+            "parameter": "BODY_01_ORIGIN_MM",
+            "original_value": [
+              0,
+              0,
+              0
+            ],
+            "test_value": [
+              3.0,
+              -4.0,
+              8.0
+            ],
+            "actual_volume_ratios": [
+              1.0
+            ],
+            "expected_volume_ratios": [
+              1.0
+            ],
+            "topology_valid": true,
+            "other_bodies_unchanged": true,
+            "placement_matches": true,
+            "status": "pass"
+          }
+        ]
+      },
+      "coverage_status": "pass",
+      "input_sha256": "02616fa80edaf4d8a1aa03619e3488fa42158da3874ccca3289b9af700fe07cf",
+      "report": "F:\\AI_CAD\\step2code\\out\\abc-step-readable-v1-regression\\cases\\00000007_b33a147f86da49879455d286_step_000\\report.json"
+    },
+    {
+      "id": "00000017",
+      "geometry": {
+        "evaluation_version": "fixed-frame-shape-v1",
+        "metric_implementation": "json2scapi/similarity-shape-v4",
+        "coordinate_policy": "source world frame; one shared numerical conditioning transform",
+        "units": {
+          "length": "mm",
+          "volume": "mm^3",
+          "squared_cd": "mm^2"
+        },
+        "thresholds": {
+          "volume_relative_error": 0.001,
+          "volume_iou": 0.999,
+          "chamfer_relative": 0.01
+        },
+        "checks": {
+          "volume_relative_error": "pass",
+          "volume_iou": "pass",
+          "chamfer_relative": "pass"
+        },
+        "metric_errors": [],
+        "warnings": [],
+        "diagnostics": [],
+        "registration": {
+          "status": "resolved",
+          "method": "fixed_source_frame",
+          "candidate_to_reference": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        },
+        "cd_sampling": {
+          "points_per_shape": 8192,
+          "seed": 0,
+          "protocol": "area-weighted-triangle-surface",
+          "relative_mesh_deflection": 0.001,
+          "definition": "CD2=mean(d(A,B)^2)+mean(d(B,A)^2); CD=mean of both one-way mean distances"
+        },
+        "raw": {
+          "reference": {
+            "volume_mm3": 589934.3039999997,
+            "bbox_mm": [
+              -19.05,
+              -19.05,
+              0.0,
+              285.75,
+              285.75,
+              6.35
+            ],
+            "solid_count": 1
+          },
+          "candidate": {
+            "volume_mm3": 589934.3039999997,
+            "bbox_mm": [
+              -19.05,
+              -19.05,
+              0.0,
+              285.75,
+              285.75,
+              6.35
+            ],
+            "solid_count": 1
+          }
+        },
+        "volume_relative_error": 0.0,
+        "measurement": {
+          "volume_relative_error": 1.2351729179430742e-16,
+          "symmetric_difference_relative": null,
+          "chamfer_relative": 0.0037257599060091656,
+          "symmetric_difference_volume_mm3": null,
+          "chamfer_mean_mm": 0.37257599060091656,
+          "chamfer_distance_mm2": 0.5282971572058752,
+          "area_relative_error": null,
+          "bbox_max_relative_error": null,
+          "volume_iou": 1.0,
+          "checks": {
+            "volume_relative_error": "pass",
+            "volume_iou": "pass",
+            "chamfer_relative": "pass"
+          },
+          "metric_errors": [],
+          "warnings": [],
+          "diagnostics": [],
+          "reference_volume_mm3": 7363.298600227603,
+          "candidate_volume_mm3": 7363.298600227604,
+          "reference_bbox_mm": [
+            -35.35150338380114,
+            -35.351503383801166,
+            -0.7364896538291901,
+            35.351503383801116,
+            35.351503383801095,
+            0.7364896538291901
+          ],
+          "candidate_bbox_mm": [
+            -35.35150338380114,
+            -35.351503383801166,
+            -0.7364896538291901,
+            35.35150338380112,
+            35.351503383801095,
+            0.7364896538291901
+          ]
+        },
+        "comparison_frame": {
+          "centroid_mm": [
+            133.35000000000005,
+            133.35000000000016,
+            3.175
+          ],
+          "characteristic_length_mm": 431.09906344133924,
+          "scale_to_normalized": 0.2319652453005323,
+          "target_length_mm": 100.0,
+          "matrix": [
+            [
+              0.2319652453005323,
+              0.0,
+              0.0,
+              -30.932565460825995
+            ],
+            [
+              0.0,
+              0.2319652453005323,
+              0.0,
+              -30.932565460826023
+            ],
+            [
+              0.0,
+              0.0,
+              0.2319652453005323,
+              -0.7364896538291901
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "inverse_matrix": [
+            [
+              4.310990634413392,
+              0.0,
+              0.0,
+              133.35000000000005
+            ],
+            [
+              0.0,
+              4.310990634413392,
+              0.0,
+              133.35000000000016
+            ],
+            [
+              0.0,
+              0.0,
+              4.310990634413392,
+              3.175
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "principal_moments": [
+            3068706.7464968306,
+            3068706.746496831,
+            6134750.840719049
+          ],
+          "principal_axes_degenerate": true,
+          "effective_source_deflection_mm": 0.4310990634413393,
+          "volume_scaling_consistency_relative": 1.852759376914608e-15
+        },
+        "reference_volume_mm3": 589934.3039999997,
+        "candidate_volume_mm3": 589934.3039999997,
+        "volume_iou": 1.0,
+        "chamfer_relative": 0.0037257599060091656,
+        "chamfer_mean_mm": 1.6061716060878435,
+        "chamfer_distance_mm2": 9.818212611768878,
+        "symmetric_difference_volume_mm3": null,
+        "decision": {
+          "status": "train_ready",
+          "reason": "accepted",
+          "failed_checks": []
+        }
+      },
+      "structure": {
+        "lines": 903,
+        "function_count": 42,
+        "build_lines": 62,
+        "max_function_lines": 62,
+        "feature_count": 64,
+        "profile_count": 64,
+        "template_count": 15,
+        "instance_count": 64,
+        "independent_parameter_count": 256,
+        "polyline_helper": true
+      },
+      "old_structure": {
+        "lines": 2859,
+        "function_count": 131,
+        "build_lines": 262,
+        "max_function_lines": 262,
+        "feature_count": 64,
+        "profile_count": 64,
+        "polyline_helper": true
+      },
+      "parameter_edit_validation": {
+        "status": "partial",
+        "tested_parameter_count": 2,
+        "public_parameter_count": 256,
+        "scope": "first instance distance x1.1 and origin +(3,-4,8) mm; other parameters not tested",
+        "all_recorded_checks_passed": true,
+        "tests": [
+          {
+            "parameter": "FEATURE_01_DISTANCE_MM",
+            "original_value": 6.35,
+            "test_value": 6.985,
+            "actual_volume_ratios": [
+              1.0999999999999999,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "expected_volume_ratios": [
+              1.1,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "topology_valid": true,
+            "other_bodies_unchanged": true,
+            "placement_matches": true,
+            "status": "pass"
+          },
+          {
+            "parameter": "BODY_01_ORIGIN_MM",
+            "original_value": [
+              247.65,
+              285.75,
+              0
+            ],
+            "test_value": [
+              250.65,
+              281.75,
+              8.0
+            ],
+            "actual_volume_ratios": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "expected_volume_ratios": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "topology_valid": true,
+            "other_bodies_unchanged": true,
+            "placement_matches": true,
+            "status": "pass"
+          }
+        ]
+      },
+      "coverage_status": "pass",
+      "input_sha256": "ff5d59a91a341035c7604987eb5e54503710bfedf4962608c658f4d985ea0112",
+      "report": "F:\\AI_CAD\\step2code\\out\\abc-step-readable-v1-regression\\cases\\00000017_e8e79d1385fd4c78be414f6c_step_000\\report.json"
+    },
+    {
+      "id": "00000018",
+      "geometry": {
+        "evaluation_version": "fixed-frame-shape-v1",
+        "metric_implementation": "json2scapi/similarity-shape-v4",
+        "coordinate_policy": "source world frame; one shared numerical conditioning transform",
+        "units": {
+          "length": "mm",
+          "volume": "mm^3",
+          "squared_cd": "mm^2"
+        },
+        "thresholds": {
+          "volume_relative_error": 0.001,
+          "volume_iou": 0.999,
+          "chamfer_relative": 0.01
+        },
+        "checks": {
+          "volume_relative_error": "pass",
+          "volume_iou": "pass",
+          "chamfer_relative": "pass"
+        },
+        "metric_errors": [],
+        "warnings": [],
+        "diagnostics": [
+          "volume_iou_roundoff_verified"
+        ],
+        "registration": {
+          "status": "resolved",
+          "method": "fixed_source_frame",
+          "candidate_to_reference": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        },
+        "cd_sampling": {
+          "points_per_shape": 8192,
+          "seed": 0,
+          "protocol": "area-weighted-triangle-surface",
+          "relative_mesh_deflection": 0.001,
+          "definition": "CD2=mean(d(A,B)^2)+mean(d(B,A)^2); CD=mean of both one-way mean distances"
+        },
+        "raw": {
+          "reference": {
+            "volume_mm3": 527311.7555529868,
+            "bbox_mm": [
+              -266.7000000000004,
+              -25.4,
+              0.0,
+              25.400000000000034,
+              38.1,
+              70.07408142089875
+            ],
+            "solid_count": 16
+          },
+          "candidate": {
+            "volume_mm3": 527311.7555389523,
+            "bbox_mm": [
+              -266.7,
+              -25.4,
+              0.0,
+              25.400000000003665,
+              38.1,
+              70.074081420898
+            ],
+            "solid_count": 16
+          }
+        },
+        "volume_relative_error": 2.6615088654961495e-11,
+        "measurement": {
+          "volume_relative_error": 2.661366728963923e-11,
+          "symmetric_difference_relative": 0.0,
+          "chamfer_relative": 0.0038106168470912445,
+          "symmetric_difference_volume_mm3": 0.0,
+          "chamfer_mean_mm": 0.38106168470912444,
+          "chamfer_distance_mm2": 0.5493119433448435,
+          "area_relative_error": null,
+          "bbox_max_relative_error": null,
+          "volume_iou": 1.000000000026615,
+          "checks": {
+            "volume_relative_error": "pass",
+            "volume_iou": "pass",
+            "chamfer_relative": "pass"
+          },
+          "metric_errors": [],
+          "warnings": [],
+          "diagnostics": [
+            "volume_iou_roundoff_verified"
+          ],
+          "reference_volume_mm3": 16625.77372655412,
+          "candidate_volume_mm3": 16625.773726111645,
+          "reference_bbox_mm": [
+            -46.134565215655165,
+            -10.87805201978906,
+            -8.502123062011728,
+            46.14446626522359,
+            9.182606997793249,
+            13.635392738853616
+          ],
+          "candidate_bbox_mm": [
+            -46.13456521565504,
+            -10.87805201978906,
+            -8.502123062011728,
+            46.144466265224736,
+            9.182606997793249,
+            13.635392738853378
+          ],
+          "volume_iou_roundoff_tolerance": 1e-08
+        },
+        "comparison_frame": {
+          "centroid_mm": [
+            -120.66567038867096,
+            9.033380411440474,
+            26.91261607929026
+          ],
+          "characteristic_length_mm": 316.53994988073407,
+          "scale_to_normalized": 0.3159158900406663,
+          "target_length_mm": 100.0,
+          "matrix": [
+            [
+              0.3159158900406663,
+              0.0,
+              0.0,
+              38.12020265819066
+            ],
+            [
+              0.0,
+              0.3159158900406663,
+              0.0,
+              -2.8537884127561375
+            ],
+            [
+              0.0,
+              0.0,
+              0.3159158900406663,
+              -8.502123062011728
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "inverse_matrix": [
+            [
+              3.1653994988073406,
+              0.0,
+              0.0,
+              -120.66567038867096
+            ],
+            [
+              0.0,
+              3.1653994988073406,
+              0.0,
+              9.033380411440474
+            ],
+            [
+              0.0,
+              0.0,
+              3.1653994988073406,
+              26.912616079290256
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "principal_moments": [
+            1145191.6773910988,
+            13131984.908473674,
+            13432446.291725483
+          ],
+          "principal_axes_degenerate": false,
+          "effective_source_deflection_mm": 0.3165399498807341,
+          "volume_scaling_consistency_relative": 1.3128936554506041e-15
+        },
+        "reference_volume_mm3": 527311.7555529868,
+        "candidate_volume_mm3": 527311.7555389523,
+        "volume_iou": 1.000000000026615,
+        "chamfer_relative": 0.0038106168470912445,
+        "chamfer_mean_mm": 1.2062124657929434,
+        "chamfer_distance_mm2": 5.50397053446355,
+        "symmetric_difference_volume_mm3": 0.0,
+        "decision": {
+          "status": "train_ready",
+          "reason": "accepted",
+          "failed_checks": []
+        }
+      },
+      "structure": {
+        "lines": 589,
+        "function_count": 36,
+        "build_lines": 22,
+        "max_function_lines": 29,
+        "feature_count": 16,
+        "profile_count": 16,
+        "template_count": 16,
+        "instance_count": 16,
+        "independent_parameter_count": 66,
+        "polyline_helper": true
+      },
+      "old_structure": {
+        "lines": 894,
+        "function_count": 35,
+        "build_lines": 72,
+        "max_function_lines": 72,
+        "feature_count": 16,
+        "profile_count": 16,
+        "polyline_helper": true
+      },
+      "parameter_edit_validation": {
+        "status": "partial",
+        "tested_parameter_count": 2,
+        "public_parameter_count": 66,
+        "scope": "first instance distance x1.1 and origin +(3,-4,8) mm; other parameters not tested",
+        "all_recorded_checks_passed": true,
+        "tests": [
+          {
+            "parameter": "FEATURE_01_DISTANCE_MM",
+            "original_value": 25.400000000000002,
+            "test_value": 27.940000000000005,
+            "actual_volume_ratios": [
+              1.0999999999999994,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "expected_volume_ratios": [
+              1.1,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "topology_valid": true,
+            "other_bodies_unchanged": true,
+            "placement_matches": true,
+            "status": "pass"
+          },
+          {
+            "parameter": "BODY_01_ORIGIN_MM",
+            "original_value": [
+              25.4,
+              38.1,
+              0
+            ],
+            "test_value": [
+              28.4,
+              34.1,
+              8.0
+            ],
+            "actual_volume_ratios": [
+              0.9999999999999998,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "expected_volume_ratios": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "topology_valid": true,
+            "other_bodies_unchanged": true,
+            "placement_matches": true,
+            "status": "pass"
+          }
+        ]
+      },
+      "coverage_status": "pass",
+      "input_sha256": "a446e05fcda2dba53fcea363e826fe497130aa9a68ed16a00f3d2bad90c04a3a",
+      "report": "F:\\AI_CAD\\step2code\\out\\abc-step-readable-v1-regression\\cases\\00000018_e8e79d1385fd4c78be414f6c_step_001\\report.json"
+    },
+    {
+      "id": "00000019",
+      "geometry": {
+        "evaluation_version": "fixed-frame-shape-v1",
+        "metric_implementation": "json2scapi/similarity-shape-v4",
+        "coordinate_policy": "source world frame; one shared numerical conditioning transform",
+        "units": {
+          "length": "mm",
+          "volume": "mm^3",
+          "squared_cd": "mm^2"
+        },
+        "thresholds": {
+          "volume_relative_error": 0.001,
+          "volume_iou": 0.999,
+          "chamfer_relative": 0.01
+        },
+        "checks": {
+          "volume_relative_error": "pass",
+          "volume_iou": "pass",
+          "chamfer_relative": "pass"
+        },
+        "metric_errors": [],
+        "warnings": [],
+        "diagnostics": [
+          "volume_iou_roundoff_verified"
+        ],
+        "registration": {
+          "status": "resolved",
+          "method": "fixed_source_frame",
+          "candidate_to_reference": [
+            [
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ]
+        },
+        "cd_sampling": {
+          "points_per_shape": 8192,
+          "seed": 0,
+          "protocol": "area-weighted-triangle-surface",
+          "relative_mesh_deflection": 0.001,
+          "definition": "CD2=mean(d(A,B)^2)+mean(d(B,A)^2); CD=mean of both one-way mean distances"
+        },
+        "raw": {
+          "reference": {
+            "volume_mm3": 527311.7555529868,
+            "bbox_mm": [
+              -266.7000000000004,
+              -25.4,
+              0.0,
+              25.400000000000034,
+              38.1,
+              70.07408142089875
+            ],
+            "solid_count": 16
+          },
+          "candidate": {
+            "volume_mm3": 527311.7555389523,
+            "bbox_mm": [
+              -266.7,
+              -25.4,
+              0.0,
+              25.400000000003665,
+              38.1,
+              70.074081420898
+            ],
+            "solid_count": 16
+          }
+        },
+        "volume_relative_error": 2.6615088654961495e-11,
+        "measurement": {
+          "volume_relative_error": 2.661366728963923e-11,
+          "symmetric_difference_relative": 0.0,
+          "chamfer_relative": 0.0038106168470912445,
+          "symmetric_difference_volume_mm3": 0.0,
+          "chamfer_mean_mm": 0.38106168470912444,
+          "chamfer_distance_mm2": 0.5493119433448435,
+          "area_relative_error": null,
+          "bbox_max_relative_error": null,
+          "volume_iou": 1.000000000026615,
+          "checks": {
+            "volume_relative_error": "pass",
+            "volume_iou": "pass",
+            "chamfer_relative": "pass"
+          },
+          "metric_errors": [],
+          "warnings": [],
+          "diagnostics": [
+            "volume_iou_roundoff_verified"
+          ],
+          "reference_volume_mm3": 16625.77372655412,
+          "candidate_volume_mm3": 16625.773726111645,
+          "reference_bbox_mm": [
+            -46.134565215655165,
+            -10.87805201978906,
+            -8.502123062011728,
+            46.14446626522359,
+            9.182606997793249,
+            13.635392738853616
+          ],
+          "candidate_bbox_mm": [
+            -46.13456521565504,
+            -10.87805201978906,
+            -8.502123062011728,
+            46.144466265224736,
+            9.182606997793249,
+            13.635392738853378
+          ],
+          "volume_iou_roundoff_tolerance": 1e-08
+        },
+        "comparison_frame": {
+          "centroid_mm": [
+            -120.66567038867096,
+            9.033380411440474,
+            26.91261607929026
+          ],
+          "characteristic_length_mm": 316.53994988073407,
+          "scale_to_normalized": 0.3159158900406663,
+          "target_length_mm": 100.0,
+          "matrix": [
+            [
+              0.3159158900406663,
+              0.0,
+              0.0,
+              38.12020265819066
+            ],
+            [
+              0.0,
+              0.3159158900406663,
+              0.0,
+              -2.8537884127561375
+            ],
+            [
+              0.0,
+              0.0,
+              0.3159158900406663,
+              -8.502123062011728
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "inverse_matrix": [
+            [
+              3.1653994988073406,
+              0.0,
+              0.0,
+              -120.66567038867096
+            ],
+            [
+              0.0,
+              3.1653994988073406,
+              0.0,
+              9.033380411440474
+            ],
+            [
+              0.0,
+              0.0,
+              3.1653994988073406,
+              26.912616079290256
+            ],
+            [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ]
+          ],
+          "principal_moments": [
+            1145191.6773910988,
+            13131984.908473674,
+            13432446.291725483
+          ],
+          "principal_axes_degenerate": false,
+          "effective_source_deflection_mm": 0.3165399498807341,
+          "volume_scaling_consistency_relative": 1.3128936554506041e-15
+        },
+        "reference_volume_mm3": 527311.7555529868,
+        "candidate_volume_mm3": 527311.7555389523,
+        "volume_iou": 1.000000000026615,
+        "chamfer_relative": 0.0038106168470912445,
+        "chamfer_mean_mm": 1.2062124657929434,
+        "chamfer_distance_mm2": 5.50397053446355,
+        "symmetric_difference_volume_mm3": 0.0,
+        "decision": {
+          "status": "train_ready",
+          "reason": "accepted",
+          "failed_checks": []
+        }
+      },
+      "structure": {
+        "lines": 589,
+        "function_count": 36,
+        "build_lines": 22,
+        "max_function_lines": 29,
+        "feature_count": 16,
+        "profile_count": 16,
+        "template_count": 16,
+        "instance_count": 16,
+        "independent_parameter_count": 66,
+        "polyline_helper": true
+      },
+      "old_structure": {
+        "lines": 894,
+        "function_count": 35,
+        "build_lines": 72,
+        "max_function_lines": 72,
+        "feature_count": 16,
+        "profile_count": 16,
+        "polyline_helper": true
+      },
+      "parameter_edit_validation": {
+        "status": "partial",
+        "tested_parameter_count": 2,
+        "public_parameter_count": 66,
+        "scope": "first instance distance x1.1 and origin +(3,-4,8) mm; other parameters not tested",
+        "all_recorded_checks_passed": true,
+        "tests": [
+          {
+            "parameter": "FEATURE_01_DISTANCE_MM",
+            "original_value": 25.400000000000002,
+            "test_value": 27.940000000000005,
+            "actual_volume_ratios": [
+              1.0999999999999994,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "expected_volume_ratios": [
+              1.1,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "topology_valid": true,
+            "other_bodies_unchanged": true,
+            "placement_matches": true,
+            "status": "pass"
+          },
+          {
+            "parameter": "BODY_01_ORIGIN_MM",
+            "original_value": [
+              25.4,
+              38.1,
+              0
+            ],
+            "test_value": [
+              28.4,
+              34.1,
+              8.0
+            ],
+            "actual_volume_ratios": [
+              0.9999999999999998,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "expected_volume_ratios": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "topology_valid": true,
+            "other_bodies_unchanged": true,
+            "placement_matches": true,
+            "status": "pass"
+          }
+        ]
+      },
+      "coverage_status": "pass",
+      "input_sha256": "605617ea94f22724a0689faf740f6bf8767cf12604a6cfb162115c1016bbd83e",
+      "report": "F:\\AI_CAD\\step2code\\out\\abc-step-readable-v1-regression\\cases\\00000019_e8e79d1385fd4c78be414f6c_step_002\\report.json"
+    }
+  ],
+  "fixture_review": [
+    {
+      "name": "annulus",
+      "status": "train_ready",
+      "code_sha256": "a930c78710c4e840ef7572de363cdffc39bae453947171fc38bf2ded31db8256",
+      "imports": [
+        "simplecadapi"
+      ],
+      "placement": "explicit profile arguments; one world placement",
+      "coverage": "pass",
+      "structure": {
+        "lines": 75,
+        "function_count": 5,
+        "build_lines": 7,
+        "max_function_lines": 13,
+        "feature_count": 1,
+        "profile_count": 1,
+        "template_count": 1,
+        "instance_count": 1,
+        "independent_parameter_count": 6,
+        "polyline_helper": false
+      },
+      "profile_functions": [
+        "make_profile_01"
+      ],
+      "parameter_count": 6
+    },
+    {
+      "name": "box",
+      "status": "train_ready",
+      "code_sha256": "97ea5b67dc3c117b4a0ea7181e8de43af140b68bac1211f11aa0cf173270d40a",
+      "imports": [
+        "simplecadapi"
+      ],
+      "placement": "explicit profile arguments; one world placement",
+      "coverage": "pass",
+      "structure": {
+        "lines": 85,
+        "function_count": 6,
+        "build_lines": 7,
+        "max_function_lines": 13,
+        "feature_count": 1,
+        "profile_count": 1,
+        "template_count": 1,
+        "instance_count": 1,
+        "independent_parameter_count": 4,
+        "polyline_helper": true
+      },
+      "profile_functions": [
+        "make_profile_01"
+      ],
+      "parameter_count": 4
+    },
+    {
+      "name": "box_with_hole",
+      "status": "train_ready",
+      "code_sha256": "6a8127eae84f9059b3c8571e05123cb0f126d489d1ee21c8993f65728ab7e3f2",
+      "imports": [
+        "simplecadapi"
+      ],
+      "placement": "explicit profile arguments; one world placement",
+      "coverage": "pass",
+      "structure": {
+        "lines": 88,
+        "function_count": 6,
+        "build_lines": 7,
+        "max_function_lines": 13,
+        "feature_count": 1,
+        "profile_count": 1,
+        "template_count": 1,
+        "instance_count": 1,
+        "independent_parameter_count": 5,
+        "polyline_helper": true
+      },
+      "profile_functions": [
+        "make_profile_01"
+      ],
+      "parameter_count": 5
+    },
+    {
+      "name": "cylinder",
+      "status": "train_ready",
+      "code_sha256": "5d74355e5d783788a67f63269be31e4a3b2b0b25ff7a5a5d2060d17559215eb5",
+      "imports": [
+        "simplecadapi"
+      ],
+      "placement": "explicit profile arguments; one world placement",
+      "coverage": "pass",
+      "structure": {
+        "lines": 72,
+        "function_count": 5,
+        "build_lines": 7,
+        "max_function_lines": 13,
+        "feature_count": 1,
+        "profile_count": 1,
+        "template_count": 1,
+        "instance_count": 1,
+        "independent_parameter_count": 5,
+        "polyline_helper": false
+      },
+      "profile_functions": [
+        "make_profile_01"
+      ],
+      "parameter_count": 5
+    },
+    {
+      "name": "disjoint",
+      "status": "train_ready",
+      "code_sha256": "2910370fb861ea7970fef7a48673cf9eceaf36a1f807c76fc6b1e33641d2fafb",
+      "imports": [
+        "simplecadapi"
+      ],
+      "placement": "explicit profile arguments; one world placement",
+      "coverage": "pass",
+      "structure": {
+        "lines": 114,
+        "function_count": 8,
+        "build_lines": 8,
+        "max_function_lines": 13,
+        "feature_count": 2,
+        "profile_count": 2,
+        "template_count": 2,
+        "instance_count": 2,
+        "independent_parameter_count": 9,
+        "polyline_helper": true
+      },
+      "profile_functions": [
+        "make_profile_01",
+        "make_profile_02"
+      ],
+      "parameter_count": 9
+    },
+    {
+      "name": "line_arc",
+      "status": "train_ready",
+      "code_sha256": "70702240d1c498597b037307e5c7f95124ce657ef50bf529d5a84729e834d491",
+      "imports": [
+        "simplecadapi"
+      ],
+      "placement": "explicit profile arguments; one world placement",
+      "coverage": "pass",
+      "structure": {
+        "lines": 79,
+        "function_count": 5,
+        "build_lines": 7,
+        "max_function_lines": 14,
+        "feature_count": 1,
+        "profile_count": 1,
+        "template_count": 1,
+        "instance_count": 1,
+        "independent_parameter_count": 5,
+        "polyline_helper": false
+      },
+      "profile_functions": [
+        "make_profile_01"
+      ],
+      "parameter_count": 5
+    },
+    {
+      "name": "major_arc",
+      "status": "train_ready",
+      "code_sha256": "66cdee33fb0b88496364194ba2c7062a5c180fded30c6b29c84623a399e9909f",
+      "imports": [
+        "simplecadapi"
+      ],
+      "placement": "explicit profile arguments; one world placement",
+      "coverage": "pass",
+      "structure": {
+        "lines": 75,
+        "function_count": 5,
+        "build_lines": 7,
+        "max_function_lines": 13,
+        "feature_count": 1,
+        "profile_count": 1,
+        "template_count": 1,
+        "instance_count": 1,
+        "independent_parameter_count": 5,
+        "polyline_helper": false
+      },
+      "profile_functions": [
+        "make_profile_01"
+      ],
+      "parameter_count": 5
+    },
+    {
+      "name": "oblique_annulus",
+      "status": "train_ready",
+      "code_sha256": "a5c89fa2b1b055e01ea8b609abfcde1c638ded8f71b51583f7d0d3dfad84d5a5",
+      "imports": [
+        "simplecadapi"
+      ],
+      "placement": "explicit profile arguments; one world placement",
+      "coverage": "pass",
+      "structure": {
+        "lines": 75,
+        "function_count": 5,
+        "build_lines": 7,
+        "max_function_lines": 13,
+        "feature_count": 1,
+        "profile_count": 1,
+        "template_count": 1,
+        "instance_count": 1,
+        "independent_parameter_count": 6,
+        "polyline_helper": false
+      },
+      "profile_functions": [
+        "make_profile_01"
+      ],
+      "parameter_count": 6
+    },
+    {
+      "name": "oblique_box",
+      "status": "train_ready",
+      "code_sha256": "9adb3c325b36ddf8f3e38dd7ba3f55f902c180cb6db6d6945e469448d571e0b7",
+      "imports": [
+        "simplecadapi"
+      ],
+      "placement": "explicit profile arguments; one world placement",
+      "coverage": "pass",
+      "structure": {
+        "lines": 85,
+        "function_count": 6,
+        "build_lines": 7,
+        "max_function_lines": 13,
+        "feature_count": 1,
+        "profile_count": 1,
+        "template_count": 1,
+        "instance_count": 1,
+        "independent_parameter_count": 4,
+        "polyline_helper": true
+      },
+      "profile_functions": [
+        "make_profile_01"
+      ],
+      "parameter_count": 4
+    },
+    {
+      "name": "offset_cylinder",
+      "status": "train_ready",
+      "code_sha256": "25db4f1b7e07626f01716eeab1d2697eb1fccc83f24abfae71be9ab944e2ca2e",
+      "imports": [
+        "simplecadapi"
+      ],
+      "placement": "explicit profile arguments; one world placement",
+      "coverage": "pass",
+      "structure": {
+        "lines": 72,
+        "function_count": 5,
+        "build_lines": 7,
+        "max_function_lines": 13,
+        "feature_count": 1,
+        "profile_count": 1,
+        "template_count": 1,
+        "instance_count": 1,
+        "independent_parameter_count": 5,
+        "polyline_helper": false
+      },
+      "profile_functions": [
+        "make_profile_01"
+      ],
+      "parameter_count": 5
+    },
+    {
+      "name": "overlapping_bodies",
+      "status": "train_ready",
+      "code_sha256": "1920dee7be303177c4135924584741eeaf974eef6dd06ab159fcfb3dba17cfc0",
+      "imports": [
+        "simplecadapi"
+      ],
+      "placement": "explicit profile arguments; one world placement",
+      "coverage": "pass",
+      "structure": {
+        "lines": 93,
+        "function_count": 6,
+        "build_lines": 8,
+        "max_function_lines": 13,
+        "feature_count": 2,
+        "profile_count": 2,
+        "template_count": 1,
+        "instance_count": 2,
+        "independent_parameter_count": 8,
+        "polyline_helper": true
+      },
+      "profile_functions": [
+        "make_profile_01"
+      ],
+      "parameter_count": 8
+    },
+    {
+      "name": "two_holes",
+      "status": "train_ready",
+      "code_sha256": "4353e304bdd390d6e5866c3542483e82037f33818aa7480b557c451791bf89a8",
+      "imports": [
+        "simplecadapi"
+      ],
+      "placement": "explicit profile arguments; one world placement",
+      "coverage": "pass",
+      "structure": {
+        "lines": 91,
+        "function_count": 6,
+        "build_lines": 7,
+        "max_function_lines": 13,
+        "feature_count": 1,
+        "profile_count": 1,
+        "template_count": 1,
+        "instance_count": 1,
+        "independent_parameter_count": 6,
+        "polyline_helper": true
+      },
+      "profile_functions": [
+        "make_profile_01"
+      ],
+      "parameter_count": 6
+    }
+  ]
+}

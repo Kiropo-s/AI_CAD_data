@@ -1,0 +1,3238 @@
+{
+  "date": "2026-10-26",
+  "tool": "step2scapi",
+  "version": "0.4.0",
+  "recognizer": "analytic-prism-revolution-csg-v4",
+  "code_structure_spec": "step-readable-v1",
+  "scope": "existing prisms/full revolutions plus bounded analytic CSG, verified native residuals, and planar partitions; geometry reconstruction only",
+  "runtime_versions": {
+    "python": "3.13.14",
+    "simplecadapi": "2.2.6",
+    "cadquery-ocp": "7.9.3.1.1",
+    "numpy": "2.5.4",
+    "scipy": "1.18.1"
+  },
+  "code_sha256": {
+    "__init__.py": "6d334e9af5d9581891f2b02f2654de74a446cf50165f1acd2957b71672cc47ba",
+    "recognition.py": "a5e003e382e11f4f13880e5b20ce736734ab3ce0fb0d6639833f8624a1a80e34",
+    "csg.py": "12007f5a74bf3885003389777a52e0e2e1fa3f6536710d56e2524c5b6779d79c",
+    "csg_partition.py": "ae74c66f2a74bf84adbb1f83c49a2f1e99389c74ca8c844003d975338b264390",
+    "csg_codegen.py": "dd6b49ac55957daceca960b0d8c3ecdce157905ba0dd4b421c8590dd4027c518",
+    "composite_codegen.py": "5f41ae97515283ee8cccfcca300a61a67b3dfbd73267da903b957264bd48bc17",
+    "validation.py": "3a58ebee532f799ec16aba847c86542b4f9d2393b99f3156a44f6ac30f579e91",
+    "cli.py": "1896febdfc92ae08dfd0fd4468368f292e8ecdd22388ab73c5db530fc017f482",
+    "tests/test_csg.py": "f2789f9c756047dcffdec53643a0d9591230c122abcb3549a3178ca1c787ed9b",
+    "tests/test_revolution.py": "42b5ef66201f905884a7f2ed4e0e0911162212425224ba4634304d9657c0ff30",
+    "tests/test_step2scapi.py": "10a7bfabc45a102f773b43ad793bca523f7ba8352f85cf55c031568d0b9ab842"
+  },
+  "tests": {
+    "unit_tests": 44,
+    "status": "pass",
+    "elapsed_seconds": 19.813,
+    "log": "../out/csg-unittest-final.log",
+    "capability_fixtures": {
+      "count": 4,
+      "counts": {
+        "train_ready": 4
+      },
+      "summary": "../out/csg-review-v4/run/summary.json",
+      "cases": [
+        {
+          "name": "blind_hole",
+          "status": "train_ready",
+          "source_coverage": "pass",
+          "metrics": {
+            "chamfer_mean_mm": 0.07213198767178185,
+            "chamfer_relative": 0.0027310696403702937,
+            "volume_iou": 0.9999999999999998,
+            "volume_relative_error": 0
+          }
+        },
+        {
+          "name": "crossed_blind_holes",
+          "status": "train_ready",
+          "source_coverage": "pass",
+          "metrics": {
+            "chamfer_mean_mm": 0.08091705267647278,
+            "chamfer_relative": 0.003051446881149066,
+            "volume_iou": 1.0000000000000024,
+            "volume_relative_error": 3.707889078173178e-15
+          }
+        },
+        {
+          "name": "localized_boss",
+          "status": "train_ready",
+          "source_coverage": "pass",
+          "metrics": {
+            "chamfer_mean_mm": 0.14704666877984987,
+            "chamfer_relative": 0.0055900959131017,
+            "volume_iou": 1,
+            "volume_relative_error": 0
+          }
+        },
+        {
+          "name": "tapered_polygon",
+          "status": "train_ready",
+          "source_coverage": "pass",
+          "metrics": {
+            "chamfer_mean_mm": 0.028233307601895675,
+            "chamfer_relative": 0.003284048750672547,
+            "volume_iou": 0.9999999970309038,
+            "volume_relative_error": 1.8378912096801036e-12
+          }
+        }
+      ]
+    }
+  },
+  "artifact_audit": {
+    "status": "pass",
+    "syntax_files": 20,
+    "source_hash_checks": 24,
+    "accepted_artifacts": 12,
+    "report": "../out/abc-csg-v4-regression/artifact-audit.json"
+  },
+  "real_abc": {
+    "directory": "F:/AI_CAD/datasets/abc/step/abc_0000",
+    "selection": "first 20 STEP files sorted by filename, nonrecursive; no full dataset extrapolation",
+    "baseline": "../out/abc-expanded-v3-verified/summary.json",
+    "baseline_version": "0.3.0",
+    "baseline_counts": {
+      "train_ready": 6,
+      "provisional": 14,
+      "rejected": 0
+    },
+    "counts": {
+      "train_ready": 8,
+      "provisional": 12,
+      "rejected": 0
+    },
+    "sample_acceptance_fraction": {
+      "before": 0.3,
+      "after": 0.4,
+      "absolute_percentage_point_change": 10,
+      "new_accepted_count": 2
+    },
+    "new_train_ready": [
+      "00000006",
+      "00000008"
+    ],
+    "lost_train_ready": 0,
+    "matching_source_sha256": 20,
+    "regression_status": "pass",
+    "regressions": [],
+    "worker_errors": 0,
+    "provisional_reasons": {
+      "unsupported_geometry": 12
+    },
+    "summary": "../out/abc-csg-v4-regression/summary.json",
+    "regression": "../out/abc-csg-v4-regression/regression.json",
+    "parameter_edit_checks": 16,
+    "parameter_edit_checks_passed": 16,
+    "parameter_edit_status": "partial: first instance scale/distance and origin only; all public parameters not covered",
+    "cases": [
+      {
+        "id": "00000000",
+        "input_sha256": "73411ebbcc0afa5fa742b331ce1be4450b34c9b367b75aedccc47e21798fb6dc",
+        "status": "provisional",
+        "reason": "unsupported_geometry",
+        "elapsed_seconds": 2.186546199955046,
+        "report": "F:\\AI_CAD\\step2code\\out\\abc-csg-v4-regression\\cases\\00000000_290a9120f9f249a7a05cfe9c_step_000\\report.json",
+        "failed_solid_index": 4,
+        "recognized_solid_count": 3,
+        "csg_diagnostics": {
+          "solid_index": 4,
+          "method": "verified_bounded_csg",
+          "attempts": [],
+          "limits": {
+            "candidates": 96,
+            "steps": 32,
+            "faces": 80,
+            "seconds": 15
+          },
+          "reason": "CSG fallback currently requires bounded analytic boundary surfaces"
+        }
+      },
+      {
+        "id": "00000001",
+        "input_sha256": "8f27522538b086ecc9bfb6e458207bea0f8f9715b2d76bb8dbd93a5083e8a018",
+        "status": "provisional",
+        "reason": "unsupported_geometry",
+        "elapsed_seconds": 1.0185914000030607,
+        "report": "F:\\AI_CAD\\step2code\\out\\abc-csg-v4-regression\\cases\\00000001_1ffb81a71e5b402e966b9341_step_000\\report.json",
+        "failed_solid_index": 1,
+        "recognized_solid_count": 0,
+        "csg_diagnostics": {
+          "solid_index": 1,
+          "method": "verified_bounded_csg",
+          "attempts": [],
+          "limits": {
+            "candidates": 96,
+            "steps": 32,
+            "faces": 80,
+            "seconds": 15
+          },
+          "reason": "CSG fallback currently requires bounded analytic boundary surfaces"
+        }
+      },
+      {
+        "id": "00000002",
+        "input_sha256": "c190144c83c811a48c1a7892c299fc60a85332ee21535c630518637d9f325688",
+        "status": "provisional",
+        "reason": "unsupported_geometry",
+        "elapsed_seconds": 15.646659800084308,
+        "report": "F:\\AI_CAD\\step2code\\out\\abc-csg-v4-regression\\cases\\00000002_1ffb81a71e5b402e966b9341_step_001\\report.json",
+        "failed_solid_index": 1,
+        "recognized_solid_count": 0,
+        "csg_diagnostics": {
+          "solid_index": 1,
+          "method": "verified_bounded_csg",
+          "attempts": [
+            {
+              "face_index": 30,
+              "status": "tool_error",
+              "reason": "cone with negative or too small radius"
+            },
+            {
+              "stock_id": "tool_014",
+              "missing_relative": 0.9982066099084151
+            },
+            {
+              "stock_id": "tool_012",
+              "missing_relative": 0.9982066099084151
+            },
+            {
+              "stock_id": "tool_015",
+              "missing_relative": 0.9982066099084151
+            },
+            {
+              "stock_id": "tool_013",
+              "missing_relative": 0.9982066099084151
+            },
+            {
+              "stock_id": "tool_010",
+              "missing_relative": 0.9682575071685602
+            },
+            {
+              "stock_id": "tool_007",
+              "missing_relative": 0.968260124196986
+            },
+            {
+              "stock_id": "tool_006",
+              "missing_relative": 0.951152035087931
+            },
+            {
+              "stock_id": "tool_005",
+              "missing_relative": 0.9093192675428633
+            },
+            {
+              "stock_id": "tool_003",
+              "missing_relative": 0.9093192675428633
+            },
+            {
+              "stock_id": "tool_002",
+              "missing_relative": 0.7526588124951245
+            },
+            {
+              "stock_id": "tool_004",
+              "missing_relative": 0.7526588124951245
+            },
+            {
+              "stock_id": "tool_011",
+              "missing_relative": 0.7033676151795288
+            },
+            {
+              "stock_id": "tool_009",
+              "missing_relative": 0.7033702273966169
+            },
+            {
+              "stock_id": "tool_008",
+              "missing_relative": 0.5360957014771663
+            },
+            {
+              "stock_id": "tool_001",
+              "missing_relative": 0
+            }
+          ],
+          "limits": {
+            "candidates": 96,
+            "steps": 32,
+            "faces": 80,
+            "seconds": 15
+          },
+          "candidate_count": 57,
+          "stock_count": 15,
+          "tool_count": 42,
+          "elapsed_seconds": 15.057902100030333,
+          "strategy": "source_contained_prism_union",
+          "final_volume_relative_error": 0.9982065833269068,
+          "reason": "Bounded CSG candidates did not reconstruct the complete source solid",
+          "partition": {
+            "status": "not_recognized",
+            "attempted_parts": 0,
+            "attempts": [],
+            "elapsed_seconds": 15.064921799814329,
+            "reason": "bounded native-feature partition incomplete"
+          }
+        }
+      },
+      {
+        "id": "00000003",
+        "input_sha256": "532f0f0687407346f43f9a28e7934c9927df0d269dd4d097864be1e060368734",
+        "status": "provisional",
+        "reason": "unsupported_geometry",
+        "elapsed_seconds": 0.8496814998798072,
+        "report": "F:\\AI_CAD\\step2code\\out\\abc-csg-v4-regression\\cases\\00000003_1ffb81a71e5b402e966b9341_step_002\\report.json",
+        "failed_solid_index": 1,
+        "recognized_solid_count": 0,
+        "csg_diagnostics": {
+          "solid_index": 1,
+          "method": "verified_bounded_csg",
+          "attempts": [],
+          "limits": {
+            "candidates": 96,
+            "steps": 32,
+            "faces": 80,
+            "seconds": 15
+          },
+          "reason": "CSG fallback currently requires bounded analytic boundary surfaces"
+        }
+      },
+      {
+        "id": "00000004",
+        "input_sha256": "a7be17878aea45cc9a1aa0b68901756a8ad70d6988a9c42fb2ee6c8525a32195",
+        "status": "provisional",
+        "reason": "unsupported_geometry",
+        "elapsed_seconds": 0.49153089988976717,
+        "report": "F:\\AI_CAD\\step2code\\out\\abc-csg-v4-regression\\cases\\00000004_1ffb81a71e5b402e966b9341_step_003\\report.json",
+        "failed_solid_index": 1,
+        "recognized_solid_count": 0,
+        "csg_diagnostics": {
+          "solid_index": 1,
+          "method": "verified_bounded_csg",
+          "attempts": [],
+          "limits": {
+            "candidates": 96,
+            "steps": 32,
+            "faces": 80,
+            "seconds": 15
+          },
+          "reason": "CSG fallback currently requires bounded analytic boundary surfaces"
+        }
+      },
+      {
+        "id": "00000005",
+        "input_sha256": "7a970a7f10b5f7ef783e20a8713358f3a8c9cd005cf4355a586a19e72ca32de5",
+        "status": "train_ready",
+        "reason": "accepted",
+        "elapsed_seconds": 3.0484436000697315,
+        "report": "F:\\AI_CAD\\step2code\\out\\abc-csg-v4-regression\\cases\\00000005_d4fe04f0f5f84b52bd4f10e4_step_000\\report.json",
+        "metrics": {
+          "chamfer_mean_mm": 2.5243342114191454,
+          "chamfer_relative": 0.003820653352621112,
+          "volume_iou": 1.0000000001961133,
+          "volume_relative_error": 1.961135500926657e-10
+        },
+        "structure": {
+          "lines": 395,
+          "function_count": 21,
+          "build_lines": 16,
+          "max_function_lines": 16,
+          "feature_count": 10,
+          "profile_count": 10,
+          "template_count": 9,
+          "instance_count": 10,
+          "independent_parameter_count": 60,
+          "polyline_helper": false
+        },
+        "recognition": [
+          {
+            "method": "analytic_cap_prism",
+            "selected": {
+              "face_index": 3,
+              "face_area_mm2": 1904.24082516789,
+              "distance_origin_kind": "measured",
+              "distance_method": "parallel_cap_separation",
+              "opposite_face_index": 2,
+              "status": "recognized",
+              "distance_mm": 252.75139000000001,
+              "symmetric_difference_relative": 0
+            }
+          },
+          {
+            "method": "analytic_cap_prism",
+            "selected": {
+              "face_index": 3,
+              "face_area_mm2": 1904.240825167891,
+              "distance_origin_kind": "measured",
+              "distance_method": "parallel_cap_separation",
+              "opposite_face_index": 2,
+              "status": "recognized",
+              "distance_mm": 252.75139000000001,
+              "symmetric_difference_relative": 0
+            }
+          },
+          {
+            "method": "analytic_cap_prism",
+            "selected": {
+              "face_index": 3,
+              "face_area_mm2": 1904.2408251678849,
+              "distance_origin_kind": "measured",
+              "distance_method": "parallel_cap_separation",
+              "opposite_face_index": 2,
+              "status": "recognized",
+              "distance_mm": 252.75139000000001,
+              "symmetric_difference_relative": 0
+            }
+          },
+          {
+            "method": "analytic_cap_prism",
+            "selected": {
+              "face_index": 3,
+              "face_area_mm2": 1904.2408251679153,
+              "distance_origin_kind": "measured",
+              "distance_method": "parallel_cap_separation",
+              "opposite_face_index": 2,
+              "status": "recognized",
+              "distance_mm": 252.75139000000001,
+              "symmetric_difference_relative": 0
+            }
+          },
+          {
+            "method": "analytic_cap_prism",
+            "selected": {
+              "face_index": 3,
+              "face_area_mm2": 1904.2408251679178,
+              "distance_origin_kind": "measured",
+              "distance_method": "parallel_cap_separation",
+              "opposite_face_index": 2,
+              "status": "recognized",
+              "distance_mm": 252.75139000000001,
+              "symmetric_difference_relative": 0
+            }
+          },
+          {
+            "method": "analytic_cap_prism",
+            "selected": {
+              "face_index": 3,
+              "face_area_mm2": 1904.2408251679174,
+              "distance_origin_kind": "measured",
+              "distance_method": "parallel_cap_separation",
+              "opposite_face_index": 2,
+              "status": "recognized",
+              "distance_mm": 252.75139000000001,
+              "symmetric_difference_relative": 0
+            }
+          },
+          {
+            "method": "analytic_cap_prism",
+            "selected": {
+              "face_index": 3,
+              "face_area_mm2": 1904.2408251679178,
+              "distance_origin_kind": "measured",
+              "distance_method": "parallel_cap_separation",
+              "opposite_face_index": 2,
+              "status": "recognized",
+              "distance_mm": 252.75139000000001,
+              "symmetric_difference_relative": 0
+            }
+          },
+          {
+            "method": "analytic_cap_prism",
+            "selected": {
+              "face_index": 3,
+              "face_area_mm2": 1904.2408251678853,
+              "distance_origin_kind": "measured",
+              "distance_method": "parallel_cap_separation",
+              "opposite_face_index": 2,
+              "status": "recognized",
+              "distance_mm": 252.75139000000001,
+              "symmetric_difference_relative": 0
+            }
+          },
+          {
+            "method": "analytic_cap_prism",
+            "selected": {
+              "face_index": 3,
+              "face_area_mm2": 1904.2408251678846,
+              "distance_origin_kind": "measured",
+              "distance_method": "parallel_cap_separation",
+              "opposite_face_index": 2,
+              "status": "recognized",
+              "distance_mm": 252.75139000000001,
+              "symmetric_difference_relative": 0
+            }
+          },
+          {
+            "method": "analytic_cap_prism",
+            "selected": {
+              "face_index": 3,
+              "face_area_mm2": 1904.2408251678953,
+              "distance_origin_kind": "measured",
+              "distance_method": "parallel_cap_separation",
+              "opposite_face_index": 2,
+              "status": "recognized",
+              "distance_mm": 252.75139000000001,
+              "symmetric_difference_relative": 0
+            }
+          }
+        ],
+        "source_coverage": "pass",
+        "roundtrip": {
+          "status": "train_ready",
+          "reason": "accepted",
+          "failed_checks": []
+        },
+        "parameter_edit_validation": {
+          "status": "partial",
+          "tested_parameter_count": 2,
+          "public_parameter_count": 60,
+          "scope": "first instance distance x1.1 and origin +(3,-4,8) mm; other parameters not tested",
+          "all_recorded_checks_passed": true,
+          "tests": [
+            {
+              "parameter": "FEATURE_01_DISTANCE_MM",
+              "original_value": 252.75139000000001,
+              "test_value": 278.02652900000004,
+              "actual_volume_ratios": [
+                1.1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1
+              ],
+              "expected_volume_ratios": [
+                1.1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1
+              ],
+              "topology_valid": true,
+              "other_bodies_unchanged": true,
+              "placement_matches": true,
+              "status": "pass"
+            },
+            {
+              "parameter": "BODY_01_ORIGIN_MM",
+              "original_value": [
+                548.64,
+                -252.75139000000001,
+                15.8775728195906
+              ],
+              "test_value": [
+                551.64,
+                -256.75139,
+                23.8775728195906
+              ],
+              "actual_volume_ratios": [
+                0.9999999999999999,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1
+              ],
+              "expected_volume_ratios": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1
+              ],
+              "topology_valid": true,
+              "other_bodies_unchanged": true,
+              "placement_matches": true,
+              "status": "pass"
+            }
+          ]
+        },
+        "assembly_validation": {
+          "status": "unsupported",
+          "scope": "flattened solids; source hierarchy not recovered"
+        },
+        "history_recovered": false
+      },
+      {
+        "id": "00000006",
+        "input_sha256": "5b0a309b468874e023681903bd6208479f6ea80064d9c17e08873e921732a0fe",
+        "status": "train_ready",
+        "reason": "accepted",
+        "elapsed_seconds": 2.1614827001467347,
+        "report": "F:\\AI_CAD\\step2code\\out\\abc-csg-v4-regression\\cases\\00000006_d4fe04f0f5f84b52bd4f10e4_step_001\\report.json",
+        "metrics": {
+          "chamfer_mean_mm": 0.029066966602133426,
+          "chamfer_relative": 0.00412726934087494,
+          "volume_iou": 0.9999999443164165,
+          "volume_relative_error": 7.279607036577818e-8
+        },
+        "structure": {
+          "lines": 108,
+          "function_count": 10,
+          "build_lines": 7,
+          "max_function_lines": 13,
+          "feature_count": 1,
+          "profile_count": 1,
+          "template_count": 1,
+          "instance_count": 1,
+          "independent_parameter_count": 4,
+          "polyline_helper": false,
+          "operation_counts": {
+            "new_prism": 0,
+            "full_revolution": 0,
+            "bounded_csg": 1
+          }
+        },
+        "recognition": [
+          {
+            "method": "verified_bounded_csg",
+            "selected": {
+              "status": "recognized",
+              "strategy": "enclosing_stock_monotone_cuts",
+              "symmetric_difference_relative": 0,
+              "node_count": 3,
+              "boolean_count": 1
+            }
+          }
+        ],
+        "source_coverage": "pass",
+        "roundtrip": {
+          "status": "train_ready",
+          "reason": "accepted",
+          "failed_checks": []
+        },
+        "parameter_edit_validation": {
+          "status": "partial",
+          "tested_parameter_count": 2,
+          "public_parameter_count": 4,
+          "scope": "first instance profile_scale x1.1 and origin +(3,-4,8) mm; other parameters not tested",
+          "all_recorded_checks_passed": true,
+          "tests": [
+            {
+              "parameter": "FEATURE_01_PROFILE_SCALE",
+              "original_value": 1,
+              "test_value": 1.1,
+              "actual_volume_ratios": [
+                1.3310000000000004
+              ],
+              "expected_volume_ratios": [
+                1.3310000000000004
+              ],
+              "topology_valid": true,
+              "other_bodies_unchanged": true,
+              "placement_matches": true,
+              "status": "pass"
+            },
+            {
+              "parameter": "BODY_01_ORIGIN_MM",
+              "original_value": [
+                0,
+                0,
+                0.7937500000000101
+              ],
+              "test_value": [
+                3,
+                -4,
+                8.79375000000001
+              ],
+              "actual_volume_ratios": [
+                1.0000000000000007
+              ],
+              "expected_volume_ratios": [
+                1
+              ],
+              "topology_valid": true,
+              "other_bodies_unchanged": true,
+              "placement_matches": true,
+              "status": "pass"
+            }
+          ]
+        },
+        "assembly_validation": {
+          "status": "unsupported",
+          "scope": "flattened solids; source hierarchy not recovered"
+        },
+        "history_recovered": false
+      },
+      {
+        "id": "00000007",
+        "input_sha256": "02616fa80edaf4d8a1aa03619e3488fa42158da3874ccca3289b9af700fe07cf",
+        "status": "train_ready",
+        "reason": "accepted",
+        "elapsed_seconds": 0.7400507999118418,
+        "report": "F:\\AI_CAD\\step2code\\out\\abc-csg-v4-regression\\cases\\00000007_b33a147f86da49879455d286_step_000\\report.json",
+        "metrics": {
+          "chamfer_mean_mm": 1.3399763294668678,
+          "chamfer_relative": 0.005969667606586087,
+          "volume_iou": 1,
+          "volume_relative_error": 1.7598709594968732e-16
+        },
+        "structure": {
+          "lines": 72,
+          "function_count": 5,
+          "build_lines": 7,
+          "max_function_lines": 13,
+          "feature_count": 1,
+          "profile_count": 1,
+          "template_count": 1,
+          "instance_count": 1,
+          "independent_parameter_count": 5,
+          "polyline_helper": false
+        },
+        "recognition": [
+          {
+            "method": "analytic_cap_prism",
+            "selected": {
+              "face_index": 1,
+              "face_area_mm2": 26043.275287623954,
+              "distance_origin_kind": "measured",
+              "distance_method": "parallel_cap_separation",
+              "opposite_face_index": 2,
+              "status": "recognized",
+              "distance_mm": 25.4,
+              "symmetric_difference_relative": 0
+            }
+          }
+        ],
+        "source_coverage": "pass",
+        "roundtrip": {
+          "status": "train_ready",
+          "reason": "accepted",
+          "failed_checks": []
+        },
+        "parameter_edit_validation": {
+          "status": "partial",
+          "tested_parameter_count": 2,
+          "public_parameter_count": 5,
+          "scope": "first instance distance x1.1 and origin +(3,-4,8) mm; other parameters not tested",
+          "all_recorded_checks_passed": true,
+          "tests": [
+            {
+              "parameter": "FEATURE_01_DISTANCE_MM",
+              "original_value": 25.4,
+              "test_value": 27.94,
+              "actual_volume_ratios": [
+                1.1
+              ],
+              "expected_volume_ratios": [
+                1.1
+              ],
+              "topology_valid": true,
+              "other_bodies_unchanged": true,
+              "placement_matches": true,
+              "status": "pass"
+            },
+            {
+              "parameter": "BODY_01_ORIGIN_MM",
+              "original_value": [
+                0,
+                0,
+                0
+              ],
+              "test_value": [
+                3,
+                -4,
+                8
+              ],
+              "actual_volume_ratios": [
+                1
+              ],
+              "expected_volume_ratios": [
+                1
+              ],
+              "topology_valid": true,
+              "other_bodies_unchanged": true,
+              "placement_matches": true,
+              "status": "pass"
+            }
+          ]
+        },
+        "assembly_validation": {
+          "status": "unsupported",
+          "scope": "flattened solids; source hierarchy not recovered"
+        },
+        "history_recovered": false
+      },
+      {
+        "id": "00000008",
+        "input_sha256": "84c7687d1acf464c406a6648e379893f21f0c9ed358ea0dee92be7e10b882f47",
+        "status": "train_ready",
+        "reason": "accepted",
+        "elapsed_seconds": 46.52129189996049,
+        "report": "F:\\AI_CAD\\step2code\\out\\abc-csg-v4-regression\\cases\\00000008_9b3d6a97e8de4aa193b81000_step_000\\report.json",
+        "metrics": {
+          "chamfer_mean_mm": 0.7026531670335422,
+          "chamfer_relative": 0.006525213351754107,
+          "volume_iou": 1.000000001258186,
+          "volume_relative_error": 1.800929706508815e-9
+        },
+        "structure": {
+          "lines": 596,
+          "function_count": 62,
+          "build_lines": 7,
+          "max_function_lines": 50,
+          "feature_count": 1,
+          "profile_count": 23,
+          "template_count": 1,
+          "instance_count": 1,
+          "independent_parameter_count": 4,
+          "polyline_helper": false,
+          "operation_counts": {
+            "new_prism": 0,
+            "full_revolution": 0,
+            "bounded_csg": 1
+          }
+        },
+        "recognition": [
+          {
+            "method": "verified_partition_csg",
+            "selected": {
+              "status": "recognized",
+              "strategy": "verified_planar_partition_union",
+              "symmetric_difference_relative": 0,
+              "part_count": 12,
+              "node_count": 43,
+              "boolean_count": 26
+            }
+          }
+        ],
+        "source_coverage": "pass",
+        "roundtrip": {
+          "status": "train_ready",
+          "reason": "accepted",
+          "failed_checks": []
+        },
+        "parameter_edit_validation": {
+          "status": "partial",
+          "tested_parameter_count": 2,
+          "public_parameter_count": 4,
+          "scope": "first instance profile_scale x1.1 and origin +(3,-4,8) mm; other parameters not tested",
+          "all_recorded_checks_passed": true,
+          "tests": [
+            {
+              "parameter": "FEATURE_01_PROFILE_SCALE",
+              "original_value": 1,
+              "test_value": 1.1,
+              "actual_volume_ratios": [
+                1.3310000000000084
+              ],
+              "expected_volume_ratios": [
+                1.3310000000000004
+              ],
+              "topology_valid": true,
+              "other_bodies_unchanged": true,
+              "placement_matches": true,
+              "status": "pass"
+            },
+            {
+              "parameter": "BODY_01_ORIGIN_MM",
+              "original_value": [
+                0,
+                0,
+                5.079999999999999
+              ],
+              "test_value": [
+                3,
+                -4,
+                13.079999999999998
+              ],
+              "actual_volume_ratios": [
+                0.999999999999999
+              ],
+              "expected_volume_ratios": [
+                1
+              ],
+              "topology_valid": true,
+              "other_bodies_unchanged": true,
+              "placement_matches": true,
+              "status": "pass"
+            }
+          ]
+        },
+        "assembly_validation": {
+          "status": "unsupported",
+          "scope": "flattened solids; source hierarchy not recovered"
+        },
+        "history_recovered": false
+      },
+      {
+        "id": "00000009",
+        "input_sha256": "34a7b399bef7d25ce7b85357d06210ec7c06fe6a39a6b20bc7369dc1abd40b77",
+        "status": "train_ready",
+        "reason": "accepted",
+        "elapsed_seconds": 0.9667181000113487,
+        "report": "F:\\AI_CAD\\step2code\\out\\abc-csg-v4-regression\\cases\\00000009_9b3d6a97e8de4aa193b81000_step_001\\report.json",
+        "metrics": {
+          "chamfer_mean_mm": 1.184687672781083,
+          "chamfer_relative": 0.007617369824654041,
+          "volume_iou": 0.9999999999844705,
+          "volume_relative_error": 1.6915155605036092e-11
+        },
+        "structure": {
+          "lines": 87,
+          "function_count": 6,
+          "build_lines": 7,
+          "max_function_lines": 13,
+          "feature_count": 1,
+          "profile_count": 1,
+          "template_count": 1,
+          "instance_count": 1,
+          "independent_parameter_count": 4,
+          "polyline_helper": false,
+          "operation_counts": {
+            "new_prism": 0,
+            "full_revolution": 1
+          }
+        },
+        "recognition": [
+          {
+            "method": "verified_meridian_revolution",
+            "selected": {
+              "axis_source_face_index": 2,
+              "origin_mm": [
+                0,
+                0,
+                0
+              ],
+              "axis": [
+                0,
+                0,
+                1
+              ],
+              "bbox_error_mm": 1.0000000116860974e-7,
+              "coarse_bbox_rejection_tolerance_mm": 0.14986000034237296,
+              "coarse_volume_relative_error": 8.825342429173758e-16,
+              "status": "recognized",
+              "symmetric_difference_relative": 0,
+              "section_face_count": 1,
+              "section_profile_ids": [
+                "solid_01_section_01_profile"
+              ]
+            }
+          }
+        ],
+        "source_coverage": "pass",
+        "roundtrip": {
+          "status": "train_ready",
+          "reason": "accepted",
+          "failed_checks": []
+        },
+        "parameter_edit_validation": {
+          "status": "partial",
+          "tested_parameter_count": 2,
+          "public_parameter_count": 4,
+          "scope": "first instance profile_scale x1.1 and origin +(3,-4,8) mm; other parameters not tested",
+          "all_recorded_checks_passed": true,
+          "tests": [
+            {
+              "parameter": "FEATURE_01_PROFILE_SCALE",
+              "original_value": 1,
+              "test_value": 1.1,
+              "actual_volume_ratios": [
+                1.3309999999999973
+              ],
+              "expected_volume_ratios": [
+                1.3310000000000004
+              ],
+              "topology_valid": true,
+              "other_bodies_unchanged": true,
+              "placement_matches": true,
+              "status": "pass"
+            },
+            {
+              "parameter": "BODY_01_ORIGIN_MM",
+              "original_value": [
+                0,
+                0,
+                0
+              ],
+              "test_value": [
+                3,
+                -4,
+                8
+              ],
+              "actual_volume_ratios": [
+                0.9999999999999994
+              ],
+              "expected_volume_ratios": [
+                1
+              ],
+              "topology_valid": true,
+              "other_bodies_unchanged": true,
+              "placement_matches": true,
+              "status": "pass"
+            }
+          ]
+        },
+        "assembly_validation": {
+          "status": "unsupported",
+          "scope": "flattened solids; source hierarchy not recovered"
+        },
+        "history_recovered": false
+      },
+      {
+        "id": "00000010",
+        "input_sha256": "79a1916b709d95e5aa5b79694f9d988bcd97c1c1c2e9abb9eaa428f2a22026b6",
+        "status": "provisional",
+        "reason": "unsupported_geometry",
+        "elapsed_seconds": 1.7540796999819577,
+        "report": "F:\\AI_CAD\\step2code\\out\\abc-csg-v4-regression\\cases\\00000010_b4b99d35e04b4277931f9a9c_step_000\\report.json",
+        "failed_solid_index": 1,
+        "recognized_solid_count": 0,
+        "csg_diagnostics": {
+          "solid_index": 1,
+          "method": "verified_bounded_csg",
+          "attempts": [],
+          "limits": {
+            "candidates": 96,
+            "steps": 32,
+            "faces": 80,
+            "seconds": 15
+          },
+          "reason": "CSG fallback currently requires bounded analytic boundary surfaces"
+        }
+      },
+      {
+        "id": "00000011",
+        "input_sha256": "490701d7fca1db71dc912bc6e1d7a3a1ef1792aeb030cfb1ead764abcf7e6920",
+        "status": "provisional",
+        "reason": "unsupported_geometry",
+        "elapsed_seconds": 16.793182800058275,
+        "report": "F:\\AI_CAD\\step2code\\out\\abc-csg-v4-regression\\cases\\00000011_e909f412cda24521865fac0f_step_000\\report.json",
+        "failed_solid_index": 1,
+        "recognized_solid_count": 0,
+        "csg_diagnostics": {
+          "solid_index": 1,
+          "method": "verified_bounded_csg",
+          "attempts": [],
+          "limits": {
+            "candidates": 96,
+            "steps": 32,
+            "faces": 80,
+            "seconds": 15
+          },
+          "reason": "CSG fallback currently requires bounded analytic boundary surfaces"
+        }
+      },
+      {
+        "id": "00000012",
+        "input_sha256": "29da96fd0b52e262036807b162b8c5d02cb74ab640dbef47d373433ad80ca046",
+        "status": "provisional",
+        "reason": "unsupported_geometry",
+        "elapsed_seconds": 17.746032200055197,
+        "report": "F:\\AI_CAD\\step2code\\out\\abc-csg-v4-regression\\cases\\00000012_f16882934f314832b639ffc0_step_000\\report.json",
+        "failed_solid_index": 1,
+        "recognized_solid_count": 0,
+        "csg_diagnostics": {
+          "solid_index": 1,
+          "method": "verified_bounded_csg",
+          "attempts": [],
+          "limits": {
+            "candidates": 96,
+            "steps": 32,
+            "faces": 80,
+            "seconds": 15
+          },
+          "reason": "CSG fallback currently requires bounded analytic boundary surfaces"
+        }
+      },
+      {
+        "id": "00000013",
+        "input_sha256": "0af8f4f012b3355dd0f2232b9f04df45cdd2ee13c5d36368176b0a50e5c5a5e6",
+        "status": "provisional",
+        "reason": "unsupported_geometry",
+        "elapsed_seconds": 0.8953821000177413,
+        "report": "F:\\AI_CAD\\step2code\\out\\abc-csg-v4-regression\\cases\\00000013_c2f4d27f35ed4c138caf5c18_step_000\\report.json",
+        "failed_solid_index": 1,
+        "recognized_solid_count": 0,
+        "csg_diagnostics": {
+          "solid_index": 1,
+          "method": "verified_bounded_csg",
+          "attempts": [],
+          "limits": {
+            "candidates": 96,
+            "steps": 32,
+            "faces": 80,
+            "seconds": 15
+          },
+          "reason": "CSG fallback currently requires bounded analytic boundary surfaces"
+        }
+      },
+      {
+        "id": "00000014",
+        "input_sha256": "7c7190f868acd93951fd6302313d1f818828f44da6a5716b7434c0059e0802b0",
+        "status": "provisional",
+        "reason": "unsupported_geometry",
+        "elapsed_seconds": 1.1001810999587178,
+        "report": "F:\\AI_CAD\\step2code\\out\\abc-csg-v4-regression\\cases\\00000014_5b1c2f8a8c6f40fdaae1e69d_step_000\\report.json",
+        "failed_solid_index": 3,
+        "recognized_solid_count": 2,
+        "csg_diagnostics": {
+          "solid_index": 3,
+          "method": "verified_bounded_csg",
+          "attempts": [],
+          "limits": {
+            "candidates": 96,
+            "steps": 32,
+            "faces": 80,
+            "seconds": 15
+          },
+          "reason": "CSG fallback currently requires bounded analytic boundary surfaces"
+        }
+      },
+      {
+        "id": "00000015",
+        "input_sha256": "4460d2d68643db57c164e1ede21817a037fcb9881a974943906348ca31aa7e40",
+        "status": "provisional",
+        "reason": "unsupported_geometry",
+        "elapsed_seconds": 3.375018500024453,
+        "report": "F:\\AI_CAD\\step2code\\out\\abc-csg-v4-regression\\cases\\00000015_b08aa818955948c690fd9b6d_step_000\\report.json",
+        "failed_solid_index": 1,
+        "recognized_solid_count": 0,
+        "csg_diagnostics": {
+          "solid_index": 1,
+          "method": "verified_bounded_csg",
+          "attempts": [],
+          "limits": {
+            "candidates": 96,
+            "steps": 32,
+            "faces": 80,
+            "seconds": 15
+          },
+          "reason": "CSG fallback currently requires bounded analytic boundary surfaces"
+        }
+      },
+      {
+        "id": "00000016",
+        "input_sha256": "767992134bf890032be8ef450710d7ddbd69b1bc49a11904b29e0fae328e286a",
+        "status": "provisional",
+        "reason": "unsupported_geometry",
+        "elapsed_seconds": 4.920184100046754,
+        "report": "F:\\AI_CAD\\step2code\\out\\abc-csg-v4-regression\\cases\\00000016_b08aa818955948c690fd9b6d_step_001\\report.json",
+        "failed_solid_index": 2,
+        "recognized_solid_count": 1,
+        "csg_diagnostics": {
+          "solid_index": 2,
+          "method": "verified_bounded_csg",
+          "attempts": [
+            {
+              "stock_id": "tool_017",
+              "missing_relative": 0.9260859493075752
+            },
+            {
+              "stock_id": "tool_020",
+              "missing_relative": 0.9260859493075752
+            },
+            {
+              "stock_id": "tool_015",
+              "missing_relative": 0.8410210980825767
+            },
+            {
+              "stock_id": "tool_014",
+              "missing_relative": 0.8410211339058633
+            },
+            {
+              "stock_id": "tool_012",
+              "missing_relative": 0.8150032135392613
+            },
+            {
+              "stock_id": "tool_009",
+              "missing_relative": 0.8150032526178597
+            },
+            {
+              "stock_id": "tool_006",
+              "missing_relative": 0.7469791344149657
+            },
+            {
+              "stock_id": "tool_007",
+              "missing_relative": 0.7333129760956438
+            },
+            {
+              "stock_id": "tool_003",
+              "missing_relative": 0.6824788891467994
+            },
+            {
+              "stock_id": "tool_005",
+              "missing_relative": 0.6824788891468
+            },
+            {
+              "stock_id": "tool_002",
+              "missing_relative": 0
+            }
+          ],
+          "limits": {
+            "candidates": 96,
+            "steps": 32,
+            "faces": 80,
+            "seconds": 15
+          },
+          "candidate_count": 37,
+          "stock_count": 20,
+          "tool_count": 17,
+          "elapsed_seconds": 1.0174984999466687,
+          "strategy": "source_contained_prism_union",
+          "final_volume_relative_error": 0.6159562435236181,
+          "reason": "Bounded CSG candidates did not reconstruct the complete source solid",
+          "partition": {
+            "status": "not_recognized",
+            "attempted_parts": 7,
+            "attempts": [
+              {
+                "depth": 0,
+                "axis": [
+                  0.7062512564540012,
+                  0,
+                  0.7079612720743592
+                ],
+                "positions_mm": [
+                  -83.24980857955806,
+                  -24.365118923569586,
+                  -21.86511892356958,
+                  19.376055664039995,
+                  21.876055664039995,
+                  80.76074532002838
+                ]
+              },
+              {
+                "depth": 1,
+                "axis": [
+                  0.7079612720743592,
+                  0,
+                  -0.7062512564540012
+                ],
+                "positions_mm": [
+                  23.05626986526417,
+                  24.306267210072445,
+                  142.0759888987841,
+                  143.32598624359227
+                ]
+              },
+              {
+                "depth": 0,
+                "axis": [
+                  0.7079612720743592,
+                  0,
+                  -0.7062512564540012
+                ],
+                "positions_mm": [
+                  1.1857465244120577,
+                  24.306267210072445,
+                  26.80626721007245,
+                  139.57598889878403,
+                  142.0759888987841,
+                  165.19650958444427
+                ]
+              },
+              {
+                "depth": 1,
+                "axis": [
+                  0.7062512564540012,
+                  0,
+                  0.7079612720743592
+                ],
+                "positions_mm": [
+                  -80.74981588994162,
+                  -24.365118923569586,
+                  -21.86511892356958,
+                  19.376055664039995,
+                  21.876055664039995,
+                  78.26075263041207
+                ]
+              },
+              {
+                "depth": 1,
+                "axis": [
+                  0,
+                  1,
+                  0
+                ],
+                "positions_mm": [
+                  -50.000001100000006,
+                  -27.5,
+                  -24.999998899999998
+                ]
+              },
+              {
+                "depth": 2,
+                "axis": [
+                  0.7062512564540012,
+                  0,
+                  0.7079612720743592
+                ],
+                "positions_mm": [
+                  -80.74981588994164,
+                  -24.365118923569586,
+                  -21.86511892356958,
+                  19.376055664039995,
+                  21.876055664039995,
+                  78.26075263041209
+                ]
+              }
+            ],
+            "elapsed_seconds": 4.64076770003885,
+            "reason": "bounded native-feature partition incomplete"
+          }
+        }
+      },
+      {
+        "id": "00000017",
+        "input_sha256": "ff5d59a91a341035c7604987eb5e54503710bfedf4962608c658f4d985ea0112",
+        "status": "train_ready",
+        "reason": "accepted",
+        "elapsed_seconds": 9.4699729999993,
+        "report": "F:\\AI_CAD\\step2code\\out\\abc-csg-v4-regression\\cases\\00000017_e8e79d1385fd4c78be414f6c_step_000\\report.json",
+        "metrics": {
+          "chamfer_mean_mm": 1.6061716060878435,
+          "chamfer_relative": 0.0037257599060091656,
+          "volume_iou": 1,
+          "volume_relative_error": 0
+        },
+        "structure": {
+          "lines": 903,
+          "function_count": 42,
+          "build_lines": 62,
+          "max_function_lines": 62,
+          "feature_count": 64,
+          "profile_count": 64,
+          "template_count": 15,
+          "instance_count": 64,
+          "independent_parameter_count": 256,
+          "polyline_helper": true
+        },
+        "recognition": [
+          {
+            "method": "analytic_cap_prism",
+            "selected": {
+              "face_index": 5,
+              "face_area_mm2": 1451.6099999999997,
+              "distance_origin_kind": "measured",
+              "distance_method": "parallel_cap_separation",
+              "opposite_face_index": 6,
+              "status": "recognized",
+              "distance_mm": 6.35,
+              "symmetric_difference_relative": 0
+            }
+          },
+          {
+            "method": "analytic_cap_prism",
+            "selected": {
+              "face_index": 5,
+              "face_area_mm2": 1451.6100000000006,
+              "distance_origin_kind": "measured",
+              "distance_method": "parallel_cap_separation",
+              "opposite_face_index": 6,
+              "status": "recognized",
+              "distance_mm": 6.35,
+              "symmetric_difference_relative": 0
+            }
+          },
+          {
+            "method": "analytic_cap_prism",
+            "selected": {
+              "face_index": 5,
+              "face_area_mm2": 1451.6099999999997,
+              "distance_origin_kind": "measured",
+              "distance_method": "parallel_cap_separation",
+              "opposite_face_index": 6,
+              "status": "recognized",
+              "distance_mm": 6.35,
+              "symmetric_difference_relative": 0
+            }
+          },
+          {
+            "method": "analytic_cap_prism",
+            "selected": {
+              "face_index": 5,
+              "face_area_mm2": 1451.6099999999997,
+              "distance_origin_kind": "measured",
+              "distance_method": "parallel_cap_separation",
+              "opposite_face_index": 6,
+              "status": "recognized",
+              "distance_mm": 6.35,
+              "symmetric_difference_relative": 0
+            }
+          },
+          {
+            "method": "analytic_cap_prism",
+            "selected": {
+              "face_index": 5,
+              "face_area_mm2": 1451.6099999999997,
+              "distance_origin_kind": "measured",
+              "distance_method": "parallel_cap_separation",
+              "opposite_face_index": 6,
+              "status": "recognized",
+              "distance_mm": 6.35,
+              "symmetric_difference_relative": 0
+            }
+          },
+          {
+            "method": "analytic_cap_prism",
+            "selected": {
+              "face_index": 5,
+              "face_area_mm2": 1451.61,
+              "distance_origin_kind": "measured",
+              "distance_method": "parallel_cap_separation",
+              "opposite_face_index": 6,
+              "status": "recognized",
+              "distance_mm": 6.35,
+              "symmetric_difference_relative": 0
+            }
+          },
+          {
+            "method": "analytic_cap_prism",
+            "selected": {
+              "face_index": 5,
+              "face_area_mm2": 1451.6099999999997,
+              "distance_origin_kind": "measured",
+              "distance_method": "parallel_cap_separation",
+              "opposite_face_index": 6,
+              "status": "recognized",
+              "distance_mm": 6.35,
+              "symmetric_difference_relative": 0
+            }
+          },
+          {
+            "method": "analytic_cap_prism",
+            "selected": {
+              "face_index": 5,
+              "face_area_mm2": 1451.61,
+              "distance_origin_kind": "measured",
+              "distance_method": "parallel_cap_separation",
+              "opposite_face_index": 6,
+              "status": "recognized",
+              "distance_mm": 6.35,
+              "symmetric_difference_relative": 0
+            }
+          },
+          {
+            "method": "analytic_cap_prism",
+            "selected": {
+              "face_index": 5,
+              "face_area_mm2": 1451.6100000000006,
+              "distance_origin_kind": "measured",
+              "distance_method": "parallel_cap_separation",
+              "opposite_face_index": 6,
+              "status": "recognized",
+              "distance_mm": 6.35,
+              "symmetric_difference_relative": 0
+            }
+          },
+          {
+            "method": "analytic_cap_prism",
+            "selected": {
+              "face_index": 5,
+              "face_area_mm2": 1451.6100000000017,
+              "distance_origin_kind": "measured",
+              "distance_method": "parallel_cap_separation",
+              "opposite_face_index": 6,
+              "status": "recognized",
+              "distance_mm": 6.35,
+              "symmetric_difference_relative": 0
+            }
+          },
+          {
+            "method": "analytic_cap_prism",
+            "selected": {
+              "face_index": 5,
+              "face_area_mm2": 1451.6100000000006,
+              "distance_origin_kind": "measured",
+              "distance_method": "parallel_cap_separation",
+              "opposite_face_index": 6,
+              "status": "recognized",
+              "distance_mm": 6.35,
+              "symmetric_difference_relative": 0
+            }
+          },
+          {
+            "method": "analytic_cap_prism",
+            "selected": {
+              "face_index": 5,
+              "face_area_mm2": 1451.6100000000006,
+              "distance_origin_kind": "measured",
+              "distance_method": "parallel_cap_separation",
+              "opposite_face_index": 6,
+              "status": "recognized",
+              "distance_mm": 6.35,
+              "symmetric_difference_relative": 0
+            }
+          },
+          {
+            "method": "analytic_cap_prism",
+            "selected": {
+              "face_index": 5,
+              "face_area_mm2": 1451.6100000000006,
+              "distance_origin_kind": "measured",
+              "distance_method": "parallel_cap_separation",
+              "opposite_face_index": 6,
+              "status": "recognized",
+              "distance_mm": 6.35,
+              "symmetric_difference_relative": 0
+            }
+          },
+          {
+            "method": "analytic_cap_prism",
+            "selected": {
+              "face_index": 5,
+              "face_area_mm2": 1451.6100000000008,
+              "distance_origin_kind": "measured",
+              "distance_method": "parallel_cap_separation",
+              "opposite_face_index": 6,
+              "status": "recognized",
+              "distance_mm": 6.35,
+              "symmetric_difference_relative": 0
+            }
+          },
+          {
+            "method": "analytic_cap_prism",
+            "selected": {
+              "face_index": 5,
+              "face_area_mm2": 1451.6100000000006,
+              "distance_origin_kind": "measured",
+              "distance_method": "parallel_cap_separation",
+              "opposite_face_index": 6,
+              "status": "recognized",
+              "distance_mm": 6.35,
+              "symmetric_difference_relative": 0
+            }
+          },
+          {
+            "method": "analytic_cap_prism",
+            "selected": {
+              "face_index": 5,
+              "face_area_mm2": 1451.6100000000008,
+              "distance_origin_kind": "measured",
+              "distance_method": "parallel_cap_separation",
+              "opposite_face_index": 6,
+              "status": "recognized",
+              "distance_mm": 6.35,
+              "symmetric_difference_relative": 0
+            }
+          },
+          {
+            "method": "analytic_cap_prism",
+            "selected": {
+              "face_index": 5,
+              "face_area_mm2": 1451.6099999999997,
+              "distance_origin_kind": "measured",
+              "distance_method": "parallel_cap_separation",
+              "opposite_face_index": 6,
+              "status": "recognized",
+              "distance_mm": 6.35,
+              "symmetric_difference_relative": 0
+            }
+          },
+          {
+            "method": "analytic_cap_prism",
+            "selected": {
+              "face_index": 5,
+              "face_area_mm2": 1451.6100000000006,
+              "distance_origin_kind": "measured",
+              "distance_method": "parallel_cap_separation",
+              "opposite_face_index": 6,
+              "status": "recognized",
+              "distance_mm": 6.35,
+              "symmetric_difference_relative": 0
+            }
+          },
+          {
+            "method": "analytic_cap_prism",
+            "selected": {
+              "face_index": 5,
+              "face_area_mm2": 1451.6099999999997,
+              "distance_origin_kind": "measured",
+              "distance_method": "parallel_cap_separation",
+              "opposite_face_index": 6,
+              "status": "recognized",
+              "distance_mm": 6.35,
+              "symmetric_difference_relative": 0
+            }
+          },
+          {
+            "method": "analytic_cap_prism",
+            "selected": {
+              "face_index": 5,
+              "face_area_mm2": 1451.6099999999997,
+              "distance_origin_kind": "measured",
+              "distance_method": "parallel_cap_separation",
+              "opposite_face_index": 6,
+              "status": "recognized",
+              "distance_mm": 6.35,
+              "symmetric_difference_relative": 0
+            }
+          },
+          {
+            "method": "analytic_cap_prism",
+            "selected": {
+              "face_index": 5,
+              "face_area_mm2": 1451.6099999999997,
+              "distance_origin_kind": "measured",
+              "distance_method": "parallel_cap_separation",
+              "opposite_face_index": 6,
+              "status": "recognized",
+              "distance_mm": 6.35,
+              "symmetric_difference_relative": 0
+            }
+          },
+          {
+            "method": "analytic_cap_prism",
+            "selected": {
+              "face_index": 5,
+              "face_area_mm2": 1451.61,
+              "distance_origin_kind": "measured",
+              "distance_method": "parallel_cap_separation",
+              "opposite_face_index": 6,
+              "status": "recognized",
+              "distance_mm": 6.35,
+              "symmetric_difference_relative": 0
+            }
+          },
+          {
+            "method": "analytic_cap_prism",
+            "selected": {
+              "face_index": 5,
+              "face_area_mm2": 1451.6099999999997,
+              "distance_origin_kind": "measured",
+              "distance_method": "parallel_cap_separation",
+              "opposite_face_index": 6,
+              "status": "recognized",
+              "distance_mm": 6.35,
+              "symmetric_difference_relative": 0
+            }
+          },
+          {
+            "method": "analytic_cap_prism",
+            "selected": {
+              "face_index": 5,
+              "face_area_mm2": 1451.61,
+              "distance_origin_kind": "measured",
+              "distance_method": "parallel_cap_separation",
+              "opposite_face_index": 6,
+              "status": "recognized",
+              "distance_mm": 6.35,
+              "symmetric_difference_relative": 0
+            }
+          },
+          {
+            "method": "analytic_cap_prism",
+            "selected": {
+              "face_index": 5,
+              "face_area_mm2": 1451.6099999999997,
+              "distance_origin_kind": "measured",
+              "distance_method": "parallel_cap_separation",
+              "opposite_face_index": 6,
+              "status": "recognized",
+              "distance_mm": 6.35,
+              "symmetric_difference_relative": 0
+            }
+          },
+          {
+            "method": "analytic_cap_prism",
+            "selected": {
+              "face_index": 5,
+              "face_area_mm2": 1451.6100000000006,
+              "distance_origin_kind": "measured",
+              "distance_method": "parallel_cap_separation",
+              "opposite_face_index": 6,
+              "status": "recognized",
+              "distance_mm": 6.35,
+              "symmetric_difference_relative": 0
+            }
+          },
+          {
+            "method": "analytic_cap_prism",
+            "selected": {
+              "face_index": 5,
+              "face_area_mm2": 1451.6099999999997,
+              "distance_origin_kind": "measured",
+              "distance_method": "parallel_cap_separation",
+              "opposite_face_index": 6,
+              "status": "recognized",
+              "distance_mm": 6.35,
+              "symmetric_difference_relative": 0
+            }
+          },
+          {
+            "method": "analytic_cap_prism",
+            "selected": {
+              "face_index": 5,
+              "face_area_mm2": 1451.6099999999997,
+              "distance_origin_kind": "measured",
+              "distance_method": "parallel_cap_separation",
+              "opposite_face_index": 6,
+              "status": "recognized",
+              "distance_mm": 6.35,
+              "symmetric_difference_relative": 0
+            }
+          },
+          {
+            "method": "analytic_cap_prism",
+            "selected": {
+              "face_index": 5,
+              "face_area_mm2": 1451.6099999999997,
+              "distance_origin_kind": "measured",
+              "distance_method": "parallel_cap_separation",
+              "opposite_face_index": 6,
+              "status": "recognized",
+              "distance_mm": 6.35,
+              "symmetric_difference_relative": 0
+            }
+          },
+          {
+            "method": "analytic_cap_prism",
+            "selected": {
+              "face_index": 5,
+              "face_area_mm2": 1451.61,
+              "distance_origin_kind": "measured",
+              "distance_method": "parallel_cap_separation",
+              "opposite_face_index": 6,
+              "status": "recognized",
+              "distance_mm": 6.35,
+              "symmetric_difference_relative": 0
+            }
+          },
+          {
+            "method": "analytic_cap_prism",
+            "selected": {
+              "face_index": 5,
+              "face_area_mm2": 1451.6099999999997,
+              "distance_origin_kind": "measured",
+              "distance_method": "parallel_cap_separation",
+              "opposite_face_index": 6,
+              "status": "recognized",
+              "distance_mm": 6.35,
+              "symmetric_difference_relative": 0
+            }
+          },
+          {
+            "method": "analytic_cap_prism",
+            "selected": {
+              "face_index": 5,
+              "face_area_mm2": 1451.61,
+              "distance_origin_kind": "measured",
+              "distance_method": "parallel_cap_separation",
+              "opposite_face_index": 6,
+              "status": "recognized",
+              "distance_mm": 6.35,
+              "symmetric_difference_relative": 0
+            }
+          },
+          {
+            "method": "analytic_cap_prism",
+            "selected": {
+              "face_index": 5,
+              "face_area_mm2": 1451.6099999999997,
+              "distance_origin_kind": "measured",
+              "distance_method": "parallel_cap_separation",
+              "opposite_face_index": 6,
+              "status": "recognized",
+              "distance_mm": 6.35,
+              "symmetric_difference_relative": 0
+            }
+          },
+          {
+            "method": "analytic_cap_prism",
+            "selected": {
+              "face_index": 5,
+              "face_area_mm2": 1451.6100000000006,
+              "distance_origin_kind": "measured",
+              "distance_method": "parallel_cap_separation",
+              "opposite_face_index": 6,
+              "status": "recognized",
+              "distance_mm": 6.35,
+              "symmetric_difference_relative": 0
+            }
+          },
+          {
+            "method": "analytic_cap_prism",
+            "selected": {
+              "face_index": 5,
+              "face_area_mm2": 1451.6099999999997,
+              "distance_origin_kind": "measured",
+              "distance_method": "parallel_cap_separation",
+              "opposite_face_index": 6,
+              "status": "recognized",
+              "distance_mm": 6.35,
+              "symmetric_difference_relative": 0
+            }
+          },
+          {
+            "method": "analytic_cap_prism",
+            "selected": {
+              "face_index": 5,
+              "face_area_mm2": 1451.6099999999997,
+              "distance_origin_kind": "measured",
+              "distance_method": "parallel_cap_separation",
+              "opposite_face_index": 6,
+              "status": "recognized",
+              "distance_mm": 6.35,
+              "symmetric_difference_relative": 0
+            }
+          },
+          {
+            "method": "analytic_cap_prism",
+            "selected": {
+              "face_index": 5,
+              "face_area_mm2": 1451.6099999999997,
+              "distance_origin_kind": "measured",
+              "distance_method": "parallel_cap_separation",
+              "opposite_face_index": 6,
+              "status": "recognized",
+              "distance_mm": 6.35,
+              "symmetric_difference_relative": 0
+            }
+          },
+          {
+            "method": "analytic_cap_prism",
+            "selected": {
+              "face_index": 5,
+              "face_area_mm2": 1451.61,
+              "distance_origin_kind": "measured",
+              "distance_method": "parallel_cap_separation",
+              "opposite_face_index": 6,
+              "status": "recognized",
+              "distance_mm": 6.35,
+              "symmetric_difference_relative": 0
+            }
+          },
+          {
+            "method": "analytic_cap_prism",
+            "selected": {
+              "face_index": 5,
+              "face_area_mm2": 1451.6099999999997,
+              "distance_origin_kind": "measured",
+              "distance_method": "parallel_cap_separation",
+              "opposite_face_index": 6,
+              "status": "recognized",
+              "distance_mm": 6.35,
+              "symmetric_difference_relative": 0
+            }
+          },
+          {
+            "method": "analytic_cap_prism",
+            "selected": {
+              "face_index": 5,
+              "face_area_mm2": 1451.61,
+              "distance_origin_kind": "measured",
+              "distance_method": "parallel_cap_separation",
+              "opposite_face_index": 6,
+              "status": "recognized",
+              "distance_mm": 6.35,
+              "symmetric_difference_relative": 0
+            }
+          },
+          {
+            "method": "analytic_cap_prism",
+            "selected": {
+              "face_index": 5,
+              "face_area_mm2": 1451.61,
+              "distance_origin_kind": "measured",
+              "distance_method": "parallel_cap_separation",
+              "opposite_face_index": 6,
+              "status": "recognized",
+              "distance_mm": 6.35,
+              "symmetric_difference_relative": 0
+            }
+          },
+          {
+            "method": "analytic_cap_prism",
+            "selected": {
+              "face_index": 5,
+              "face_area_mm2": 1451.6100000000008,
+              "distance_origin_kind": "measured",
+              "distance_method": "parallel_cap_separation",
+              "opposite_face_index": 6,
+              "status": "recognized",
+              "distance_mm": 6.35,
+              "symmetric_difference_relative": 0
+            }
+          },
+          {
+            "method": "analytic_cap_prism",
+            "selected": {
+              "face_index": 5,
+              "face_area_mm2": 1451.61,
+              "distance_origin_kind": "measured",
+              "distance_method": "parallel_cap_separation",
+              "opposite_face_index": 6,
+              "status": "recognized",
+              "distance_mm": 6.35,
+              "symmetric_difference_relative": 0
+            }
+          },
+          {
+            "method": "analytic_cap_prism",
+            "selected": {
+              "face_index": 5,
+              "face_area_mm2": 1451.61,
+              "distance_origin_kind": "measured",
+              "distance_method": "parallel_cap_separation",
+              "opposite_face_index": 6,
+              "status": "recognized",
+              "distance_mm": 6.35,
+              "symmetric_difference_relative": 0
+            }
+          },
+          {
+            "method": "analytic_cap_prism",
+            "selected": {
+              "face_index": 5,
+              "face_area_mm2": 1451.61,
+              "distance_origin_kind": "measured",
+              "distance_method": "parallel_cap_separation",
+              "opposite_face_index": 6,
+              "status": "recognized",
+              "distance_mm": 6.35,
+              "symmetric_difference_relative": 0
+            }
+          },
+          {
+            "method": "analytic_cap_prism",
+            "selected": {
+              "face_index": 5,
+              "face_area_mm2": 1451.6100000000001,
+              "distance_origin_kind": "measured",
+              "distance_method": "parallel_cap_separation",
+              "opposite_face_index": 6,
+              "status": "recognized",
+              "distance_mm": 6.35,
+              "symmetric_difference_relative": 0
+            }
+          },
+          {
+            "method": "analytic_cap_prism",
+            "selected": {
+              "face_index": 5,
+              "face_area_mm2": 1451.61,
+              "distance_origin_kind": "measured",
+              "distance_method": "parallel_cap_separation",
+              "opposite_face_index": 6,
+              "status": "recognized",
+              "distance_mm": 6.35,
+              "symmetric_difference_relative": 0
+            }
+          },
+          {
+            "method": "analytic_cap_prism",
+            "selected": {
+              "face_index": 5,
+              "face_area_mm2": 1451.6100000000001,
+              "distance_origin_kind": "measured",
+              "distance_method": "parallel_cap_separation",
+              "opposite_face_index": 6,
+              "status": "recognized",
+              "distance_mm": 6.35,
+              "symmetric_difference_relative": 0
+            }
+          },
+          {
+            "method": "analytic_cap_prism",
+            "selected": {
+              "face_index": 5,
+              "face_area_mm2": 1451.6099999999997,
+              "distance_origin_kind": "measured",
+              "distance_method": "parallel_cap_separation",
+              "opposite_face_index": 6,
+              "status": "recognized",
+              "distance_mm": 6.35,
+              "symmetric_difference_relative": 0
+            }
+          },
+          {
+            "method": "analytic_cap_prism",
+            "selected": {
+              "face_index": 5,
+              "face_area_mm2": 1451.6100000000006,
+              "distance_origin_kind": "measured",
+              "distance_method": "parallel_cap_separation",
+              "opposite_face_index": 6,
+              "status": "recognized",
+              "distance_mm": 6.35,
+              "symmetric_difference_relative": 0
+            }
+          },
+          {
+            "method": "analytic_cap_prism",
+            "selected": {
+              "face_index": 5,
+              "face_area_mm2": 1451.6099999999997,
+              "distance_origin_kind": "measured",
+              "distance_method": "parallel_cap_separation",
+              "opposite_face_index": 6,
+              "status": "recognized",
+              "distance_mm": 6.35,
+              "symmetric_difference_relative": 0
+            }
+          },
+          {
+            "method": "analytic_cap_prism",
+            "selected": {
+              "face_index": 5,
+              "face_area_mm2": 1451.6099999999997,
+              "distance_origin_kind": "measured",
+              "distance_method": "parallel_cap_separation",
+              "opposite_face_index": 6,
+              "status": "recognized",
+              "distance_mm": 6.35,
+              "symmetric_difference_relative": 0
+            }
+          },
+          {
+            "method": "analytic_cap_prism",
+            "selected": {
+              "face_index": 5,
+              "face_area_mm2": 1451.6099999999997,
+              "distance_origin_kind": "measured",
+              "distance_method": "parallel_cap_separation",
+              "opposite_face_index": 6,
+              "status": "recognized",
+              "distance_mm": 6.35,
+              "symmetric_difference_relative": 0
+            }
+          },
+          {
+            "method": "analytic_cap_prism",
+            "selected": {
+              "face_index": 5,
+              "face_area_mm2": 1451.61,
+              "distance_origin_kind": "measured",
+              "distance_method": "parallel_cap_separation",
+              "opposite_face_index": 6,
+              "status": "recognized",
+              "distance_mm": 6.35,
+              "symmetric_difference_relative": 0
+            }
+          },
+          {
+            "method": "analytic_cap_prism",
+            "selected": {
+              "face_index": 5,
+              "face_area_mm2": 1451.6099999999997,
+              "distance_origin_kind": "measured",
+              "distance_method": "parallel_cap_separation",
+              "opposite_face_index": 6,
+              "status": "recognized",
+              "distance_mm": 6.35,
+              "symmetric_difference_relative": 0
+            }
+          },
+          {
+            "method": "analytic_cap_prism",
+            "selected": {
+              "face_index": 5,
+              "face_area_mm2": 1451.61,
+              "distance_origin_kind": "measured",
+              "distance_method": "parallel_cap_separation",
+              "opposite_face_index": 6,
+              "status": "recognized",
+              "distance_mm": 6.35,
+              "symmetric_difference_relative": 0
+            }
+          },
+          {
+            "method": "analytic_cap_prism",
+            "selected": {
+              "face_index": 5,
+              "face_area_mm2": 1451.61,
+              "distance_origin_kind": "measured",
+              "distance_method": "parallel_cap_separation",
+              "opposite_face_index": 6,
+              "status": "recognized",
+              "distance_mm": 6.35,
+              "symmetric_difference_relative": 0
+            }
+          },
+          {
+            "method": "analytic_cap_prism",
+            "selected": {
+              "face_index": 5,
+              "face_area_mm2": 1451.6100000000008,
+              "distance_origin_kind": "measured",
+              "distance_method": "parallel_cap_separation",
+              "opposite_face_index": 6,
+              "status": "recognized",
+              "distance_mm": 6.35,
+              "symmetric_difference_relative": 0
+            }
+          },
+          {
+            "method": "analytic_cap_prism",
+            "selected": {
+              "face_index": 5,
+              "face_area_mm2": 1451.61,
+              "distance_origin_kind": "measured",
+              "distance_method": "parallel_cap_separation",
+              "opposite_face_index": 6,
+              "status": "recognized",
+              "distance_mm": 6.35,
+              "symmetric_difference_relative": 0
+            }
+          },
+          {
+            "method": "analytic_cap_prism",
+            "selected": {
+              "face_index": 5,
+              "face_area_mm2": 1451.61,
+              "distance_origin_kind": "measured",
+              "distance_method": "parallel_cap_separation",
+              "opposite_face_index": 6,
+              "status": "recognized",
+              "distance_mm": 6.35,
+              "symmetric_difference_relative": 0
+            }
+          },
+          {
+            "method": "analytic_cap_prism",
+            "selected": {
+              "face_index": 5,
+              "face_area_mm2": 1451.61,
+              "distance_origin_kind": "measured",
+              "distance_method": "parallel_cap_separation",
+              "opposite_face_index": 6,
+              "status": "recognized",
+              "distance_mm": 6.35,
+              "symmetric_difference_relative": 0
+            }
+          },
+          {
+            "method": "analytic_cap_prism",
+            "selected": {
+              "face_index": 5,
+              "face_area_mm2": 1451.6100000000001,
+              "distance_origin_kind": "measured",
+              "distance_method": "parallel_cap_separation",
+              "opposite_face_index": 6,
+              "status": "recognized",
+              "distance_mm": 6.35,
+              "symmetric_difference_relative": 0
+            }
+          },
+          {
+            "method": "analytic_cap_prism",
+            "selected": {
+              "face_index": 5,
+              "face_area_mm2": 1451.61,
+              "distance_origin_kind": "measured",
+              "distance_method": "parallel_cap_separation",
+              "opposite_face_index": 6,
+              "status": "recognized",
+              "distance_mm": 6.35,
+              "symmetric_difference_relative": 0
+            }
+          },
+          {
+            "method": "analytic_cap_prism",
+            "selected": {
+              "face_index": 5,
+              "face_area_mm2": 1451.6100000000001,
+              "distance_origin_kind": "measured",
+              "distance_method": "parallel_cap_separation",
+              "opposite_face_index": 6,
+              "status": "recognized",
+              "distance_mm": 6.35,
+              "symmetric_difference_relative": 0
+            }
+          }
+        ],
+        "source_coverage": "pass",
+        "roundtrip": {
+          "status": "train_ready",
+          "reason": "accepted",
+          "failed_checks": []
+        },
+        "parameter_edit_validation": {
+          "status": "partial",
+          "tested_parameter_count": 2,
+          "public_parameter_count": 256,
+          "scope": "first instance distance x1.1 and origin +(3,-4,8) mm; other parameters not tested",
+          "all_recorded_checks_passed": true,
+          "tests": [
+            {
+              "parameter": "FEATURE_01_DISTANCE_MM",
+              "original_value": 6.35,
+              "test_value": 6.985,
+              "actual_volume_ratios": [
+                1.0999999999999999,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1
+              ],
+              "expected_volume_ratios": [
+                1.1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1
+              ],
+              "topology_valid": true,
+              "other_bodies_unchanged": true,
+              "placement_matches": true,
+              "status": "pass"
+            },
+            {
+              "parameter": "BODY_01_ORIGIN_MM",
+              "original_value": [
+                247.65,
+                285.75,
+                0
+              ],
+              "test_value": [
+                250.65,
+                281.75,
+                8
+              ],
+              "actual_volume_ratios": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1
+              ],
+              "expected_volume_ratios": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1
+              ],
+              "topology_valid": true,
+              "other_bodies_unchanged": true,
+              "placement_matches": true,
+              "status": "pass"
+            }
+          ]
+        },
+        "assembly_validation": {
+          "status": "unsupported",
+          "scope": "flattened solids; source hierarchy not recovered"
+        },
+        "history_recovered": false
+      },
+      {
+        "id": "00000018",
+        "input_sha256": "a446e05fcda2dba53fcea363e826fe497130aa9a68ed16a00f3d2bad90c04a3a",
+        "status": "train_ready",
+        "reason": "accepted",
+        "elapsed_seconds": 5.393824900034815,
+        "report": "F:\\AI_CAD\\step2code\\out\\abc-csg-v4-regression\\cases\\00000018_e8e79d1385fd4c78be414f6c_step_001\\report.json",
+        "metrics": {
+          "chamfer_mean_mm": 1.2062124657929434,
+          "chamfer_relative": 0.0038106168470912445,
+          "volume_iou": 1.000000000026615,
+          "volume_relative_error": 2.6615088654961495e-11
+        },
+        "structure": {
+          "lines": 589,
+          "function_count": 36,
+          "build_lines": 22,
+          "max_function_lines": 29,
+          "feature_count": 16,
+          "profile_count": 16,
+          "template_count": 16,
+          "instance_count": 16,
+          "independent_parameter_count": 66,
+          "polyline_helper": true
+        },
+        "recognition": [
+          {
+            "method": "analytic_cap_prism",
+            "selected": {
+              "face_index": 5,
+              "face_area_mm2": 1475.7505577467782,
+              "distance_origin_kind": "measured",
+              "distance_method": "parallel_cap_separation",
+              "opposite_face_index": 6,
+              "status": "recognized",
+              "distance_mm": 25.400000000000002,
+              "symmetric_difference_relative": 0
+            }
+          },
+          {
+            "method": "analytic_cap_prism",
+            "selected": {
+              "face_index": 6,
+              "face_area_mm2": 1568.160902363559,
+              "distance_origin_kind": "measured",
+              "distance_method": "parallel_cap_separation",
+              "opposite_face_index": 5,
+              "status": "recognized",
+              "distance_mm": 25.400000000000002,
+              "symmetric_difference_relative": 0
+            }
+          },
+          {
+            "method": "analytic_cap_prism",
+            "selected": {
+              "face_index": 10,
+              "face_area_mm2": 1360.600139904995,
+              "distance_origin_kind": "measured",
+              "distance_method": "parallel_cap_separation",
+              "opposite_face_index": 11,
+              "status": "recognized",
+              "distance_mm": 25.400000000000002,
+              "symmetric_difference_relative": 0
+            }
+          },
+          {
+            "method": "analytic_cap_prism",
+            "selected": {
+              "face_index": 6,
+              "face_area_mm2": 1508.0995437512345,
+              "distance_origin_kind": "measured",
+              "distance_method": "parallel_cap_separation",
+              "opposite_face_index": 7,
+              "status": "recognized",
+              "distance_mm": 25.400000000000002,
+              "symmetric_difference_relative": 0
+            }
+          },
+          {
+            "method": "analytic_cap_prism",
+            "selected": {
+              "face_index": 2,
+              "face_area_mm2": 1525.1768172316129,
+              "distance_origin_kind": "measured",
+              "distance_method": "parallel_cap_separation",
+              "opposite_face_index": 13,
+              "status": "recognized",
+              "distance_mm": 25.400000000000002,
+              "symmetric_difference_relative": 0
+            }
+          },
+          {
+            "method": "analytic_cap_prism",
+            "selected": {
+              "face_index": 11,
+              "face_area_mm2": 1360.60013990498,
+              "distance_origin_kind": "measured",
+              "distance_method": "parallel_cap_separation",
+              "opposite_face_index": 10,
+              "status": "recognized",
+              "distance_mm": 25.400000000000002,
+              "symmetric_difference_relative": 0
+            }
+          },
+          {
+            "method": "analytic_cap_prism",
+            "selected": {
+              "face_index": 10,
+              "face_area_mm2": 1568.1609023635515,
+              "distance_origin_kind": "measured",
+              "distance_method": "parallel_cap_separation",
+              "opposite_face_index": 9,
+              "status": "recognized",
+              "distance_mm": 25.400000000000002,
+              "symmetric_difference_relative": 0
+            }
+          },
+          {
+            "method": "analytic_cap_prism",
+            "selected": {
+              "face_index": 2,
+              "face_area_mm2": 1475.7505577467682,
+              "distance_origin_kind": "measured",
+              "distance_method": "parallel_cap_separation",
+              "opposite_face_index": 22,
+              "status": "recognized",
+              "distance_mm": 25.400000000000002,
+              "symmetric_difference_relative": 0
+            }
+          },
+          {
+            "method": "analytic_cap_prism",
+            "selected": {
+              "face_index": 9,
+              "face_area_mm2": 1114.7507217236603,
+              "distance_origin_kind": "measured",
+              "distance_method": "parallel_cap_separation",
+              "opposite_face_index": 10,
+              "status": "recognized",
+              "distance_mm": 25.4,
+              "symmetric_difference_relative": 0
+            }
+          },
+          {
+            "method": "analytic_cap_prism",
+            "selected": {
+              "face_index": 9,
+              "face_area_mm2": 1114.7507217236653,
+              "distance_origin_kind": "measured",
+              "distance_method": "parallel_cap_separation",
+              "opposite_face_index": 10,
+              "status": "recognized",
+              "distance_mm": 25.4,
+              "symmetric_difference_relative": 0
+            }
+          },
+          {
+            "method": "analytic_cap_prism",
+            "selected": {
+              "face_index": 9,
+              "face_area_mm2": 1114.750721723667,
+              "distance_origin_kind": "measured",
+              "distance_method": "parallel_cap_separation",
+              "opposite_face_index": 10,
+              "status": "recognized",
+              "distance_mm": 25.4,
+              "symmetric_difference_relative": 0
+            }
+          },
+          {
+            "method": "analytic_cap_prism",
+            "selected": {
+              "face_index": 9,
+              "face_area_mm2": 1114.7507217236462,
+              "distance_origin_kind": "measured",
+              "distance_method": "parallel_cap_separation",
+              "opposite_face_index": 10,
+              "status": "recognized",
+              "distance_mm": 25.4,
+              "symmetric_difference_relative": 0
+            }
+          },
+          {
+            "method": "analytic_cap_prism",
+            "selected": {
+              "face_index": 9,
+              "face_area_mm2": 1114.7507217236569,
+              "distance_origin_kind": "measured",
+              "distance_method": "parallel_cap_separation",
+              "opposite_face_index": 10,
+              "status": "recognized",
+              "distance_mm": 25.4,
+              "symmetric_difference_relative": 0
+            }
+          },
+          {
+            "method": "analytic_cap_prism",
+            "selected": {
+              "face_index": 9,
+              "face_area_mm2": 1114.750721723662,
+              "distance_origin_kind": "measured",
+              "distance_method": "parallel_cap_separation",
+              "opposite_face_index": 10,
+              "status": "recognized",
+              "distance_mm": 25.4,
+              "symmetric_difference_relative": 0
+            }
+          },
+          {
+            "method": "analytic_cap_prism",
+            "selected": {
+              "face_index": 10,
+              "face_area_mm2": 1114.7507217236612,
+              "distance_origin_kind": "measured",
+              "distance_method": "parallel_cap_separation",
+              "opposite_face_index": 9,
+              "status": "recognized",
+              "distance_mm": 25.4,
+              "symmetric_difference_relative": 0
+            }
+          },
+          {
+            "method": "analytic_cap_prism",
+            "selected": {
+              "face_index": 9,
+              "face_area_mm2": 1114.7507217236623,
+              "distance_origin_kind": "measured",
+              "distance_method": "parallel_cap_separation",
+              "opposite_face_index": 10,
+              "status": "recognized",
+              "distance_mm": 25.4,
+              "symmetric_difference_relative": 0
+            }
+          }
+        ],
+        "source_coverage": "pass",
+        "roundtrip": {
+          "status": "train_ready",
+          "reason": "accepted",
+          "failed_checks": []
+        },
+        "parameter_edit_validation": {
+          "status": "partial",
+          "tested_parameter_count": 2,
+          "public_parameter_count": 66,
+          "scope": "first instance distance x1.1 and origin +(3,-4,8) mm; other parameters not tested",
+          "all_recorded_checks_passed": true,
+          "tests": [
+            {
+              "parameter": "FEATURE_01_DISTANCE_MM",
+              "original_value": 25.400000000000002,
+              "test_value": 27.940000000000005,
+              "actual_volume_ratios": [
+                1.0999999999999994,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1
+              ],
+              "expected_volume_ratios": [
+                1.1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1
+              ],
+              "topology_valid": true,
+              "other_bodies_unchanged": true,
+              "placement_matches": true,
+              "status": "pass"
+            },
+            {
+              "parameter": "BODY_01_ORIGIN_MM",
+              "original_value": [
+                25.4,
+                38.1,
+                0
+              ],
+              "test_value": [
+                28.4,
+                34.1,
+                8
+              ],
+              "actual_volume_ratios": [
+                0.9999999999999998,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1
+              ],
+              "expected_volume_ratios": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1
+              ],
+              "topology_valid": true,
+              "other_bodies_unchanged": true,
+              "placement_matches": true,
+              "status": "pass"
+            }
+          ]
+        },
+        "assembly_validation": {
+          "status": "unsupported",
+          "scope": "flattened solids; source hierarchy not recovered"
+        },
+        "history_recovered": false
+      },
+      {
+        "id": "00000019",
+        "input_sha256": "605617ea94f22724a0689faf740f6bf8767cf12604a6cfb162115c1016bbd83e",
+        "status": "train_ready",
+        "reason": "accepted",
+        "elapsed_seconds": 5.044630900025368,
+        "report": "F:\\AI_CAD\\step2code\\out\\abc-csg-v4-regression\\cases\\00000019_e8e79d1385fd4c78be414f6c_step_002\\report.json",
+        "metrics": {
+          "chamfer_mean_mm": 1.2062124657929434,
+          "chamfer_relative": 0.0038106168470912445,
+          "volume_iou": 1.000000000026615,
+          "volume_relative_error": 2.6615088654961495e-11
+        },
+        "structure": {
+          "lines": 589,
+          "function_count": 36,
+          "build_lines": 22,
+          "max_function_lines": 29,
+          "feature_count": 16,
+          "profile_count": 16,
+          "template_count": 16,
+          "instance_count": 16,
+          "independent_parameter_count": 66,
+          "polyline_helper": true
+        },
+        "recognition": [
+          {
+            "method": "analytic_cap_prism",
+            "selected": {
+              "face_index": 5,
+              "face_area_mm2": 1475.7505577467782,
+              "distance_origin_kind": "measured",
+              "distance_method": "parallel_cap_separation",
+              "opposite_face_index": 6,
+              "status": "recognized",
+              "distance_mm": 25.400000000000002,
+              "symmetric_difference_relative": 0
+            }
+          },
+          {
+            "method": "analytic_cap_prism",
+            "selected": {
+              "face_index": 6,
+              "face_area_mm2": 1568.160902363559,
+              "distance_origin_kind": "measured",
+              "distance_method": "parallel_cap_separation",
+              "opposite_face_index": 5,
+              "status": "recognized",
+              "distance_mm": 25.400000000000002,
+              "symmetric_difference_relative": 0
+            }
+          },
+          {
+            "method": "analytic_cap_prism",
+            "selected": {
+              "face_index": 10,
+              "face_area_mm2": 1360.600139904995,
+              "distance_origin_kind": "measured",
+              "distance_method": "parallel_cap_separation",
+              "opposite_face_index": 11,
+              "status": "recognized",
+              "distance_mm": 25.400000000000002,
+              "symmetric_difference_relative": 0
+            }
+          },
+          {
+            "method": "analytic_cap_prism",
+            "selected": {
+              "face_index": 6,
+              "face_area_mm2": 1508.0995437512345,
+              "distance_origin_kind": "measured",
+              "distance_method": "parallel_cap_separation",
+              "opposite_face_index": 7,
+              "status": "recognized",
+              "distance_mm": 25.400000000000002,
+              "symmetric_difference_relative": 0
+            }
+          },
+          {
+            "method": "analytic_cap_prism",
+            "selected": {
+              "face_index": 2,
+              "face_area_mm2": 1525.1768172316129,
+              "distance_origin_kind": "measured",
+              "distance_method": "parallel_cap_separation",
+              "opposite_face_index": 13,
+              "status": "recognized",
+              "distance_mm": 25.400000000000002,
+              "symmetric_difference_relative": 0
+            }
+          },
+          {
+            "method": "analytic_cap_prism",
+            "selected": {
+              "face_index": 11,
+              "face_area_mm2": 1360.60013990498,
+              "distance_origin_kind": "measured",
+              "distance_method": "parallel_cap_separation",
+              "opposite_face_index": 10,
+              "status": "recognized",
+              "distance_mm": 25.400000000000002,
+              "symmetric_difference_relative": 0
+            }
+          },
+          {
+            "method": "analytic_cap_prism",
+            "selected": {
+              "face_index": 10,
+              "face_area_mm2": 1568.1609023635515,
+              "distance_origin_kind": "measured",
+              "distance_method": "parallel_cap_separation",
+              "opposite_face_index": 9,
+              "status": "recognized",
+              "distance_mm": 25.400000000000002,
+              "symmetric_difference_relative": 0
+            }
+          },
+          {
+            "method": "analytic_cap_prism",
+            "selected": {
+              "face_index": 2,
+              "face_area_mm2": 1475.7505577467682,
+              "distance_origin_kind": "measured",
+              "distance_method": "parallel_cap_separation",
+              "opposite_face_index": 22,
+              "status": "recognized",
+              "distance_mm": 25.400000000000002,
+              "symmetric_difference_relative": 0
+            }
+          },
+          {
+            "method": "analytic_cap_prism",
+            "selected": {
+              "face_index": 9,
+              "face_area_mm2": 1114.7507217236603,
+              "distance_origin_kind": "measured",
+              "distance_method": "parallel_cap_separation",
+              "opposite_face_index": 10,
+              "status": "recognized",
+              "distance_mm": 25.4,
+              "symmetric_difference_relative": 0
+            }
+          },
+          {
+            "method": "analytic_cap_prism",
+            "selected": {
+              "face_index": 9,
+              "face_area_mm2": 1114.7507217236653,
+              "distance_origin_kind": "measured",
+              "distance_method": "parallel_cap_separation",
+              "opposite_face_index": 10,
+              "status": "recognized",
+              "distance_mm": 25.4,
+              "symmetric_difference_relative": 0
+            }
+          },
+          {
+            "method": "analytic_cap_prism",
+            "selected": {
+              "face_index": 9,
+              "face_area_mm2": 1114.750721723667,
+              "distance_origin_kind": "measured",
+              "distance_method": "parallel_cap_separation",
+              "opposite_face_index": 10,
+              "status": "recognized",
+              "distance_mm": 25.4,
+              "symmetric_difference_relative": 0
+            }
+          },
+          {
+            "method": "analytic_cap_prism",
+            "selected": {
+              "face_index": 9,
+              "face_area_mm2": 1114.7507217236462,
+              "distance_origin_kind": "measured",
+              "distance_method": "parallel_cap_separation",
+              "opposite_face_index": 10,
+              "status": "recognized",
+              "distance_mm": 25.4,
+              "symmetric_difference_relative": 0
+            }
+          },
+          {
+            "method": "analytic_cap_prism",
+            "selected": {
+              "face_index": 9,
+              "face_area_mm2": 1114.7507217236569,
+              "distance_origin_kind": "measured",
+              "distance_method": "parallel_cap_separation",
+              "opposite_face_index": 10,
+              "status": "recognized",
+              "distance_mm": 25.4,
+              "symmetric_difference_relative": 0
+            }
+          },
+          {
+            "method": "analytic_cap_prism",
+            "selected": {
+              "face_index": 9,
+              "face_area_mm2": 1114.750721723662,
+              "distance_origin_kind": "measured",
+              "distance_method": "parallel_cap_separation",
+              "opposite_face_index": 10,
+              "status": "recognized",
+              "distance_mm": 25.4,
+              "symmetric_difference_relative": 0
+            }
+          },
+          {
+            "method": "analytic_cap_prism",
+            "selected": {
+              "face_index": 10,
+              "face_area_mm2": 1114.7507217236612,
+              "distance_origin_kind": "measured",
+              "distance_method": "parallel_cap_separation",
+              "opposite_face_index": 9,
+              "status": "recognized",
+              "distance_mm": 25.4,
+              "symmetric_difference_relative": 0
+            }
+          },
+          {
+            "method": "analytic_cap_prism",
+            "selected": {
+              "face_index": 9,
+              "face_area_mm2": 1114.7507217236623,
+              "distance_origin_kind": "measured",
+              "distance_method": "parallel_cap_separation",
+              "opposite_face_index": 10,
+              "status": "recognized",
+              "distance_mm": 25.4,
+              "symmetric_difference_relative": 0
+            }
+          }
+        ],
+        "source_coverage": "pass",
+        "roundtrip": {
+          "status": "train_ready",
+          "reason": "accepted",
+          "failed_checks": []
+        },
+        "parameter_edit_validation": {
+          "status": "partial",
+          "tested_parameter_count": 2,
+          "public_parameter_count": 66,
+          "scope": "first instance distance x1.1 and origin +(3,-4,8) mm; other parameters not tested",
+          "all_recorded_checks_passed": true,
+          "tests": [
+            {
+              "parameter": "FEATURE_01_DISTANCE_MM",
+              "original_value": 25.400000000000002,
+              "test_value": 27.940000000000005,
+              "actual_volume_ratios": [
+                1.0999999999999994,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1
+              ],
+              "expected_volume_ratios": [
+                1.1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1
+              ],
+              "topology_valid": true,
+              "other_bodies_unchanged": true,
+              "placement_matches": true,
+              "status": "pass"
+            },
+            {
+              "parameter": "BODY_01_ORIGIN_MM",
+              "original_value": [
+                25.4,
+                38.1,
+                0
+              ],
+              "test_value": [
+                28.4,
+                34.1,
+                8
+              ],
+              "actual_volume_ratios": [
+                0.9999999999999998,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1
+              ],
+              "expected_volume_ratios": [
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1
+              ],
+              "topology_valid": true,
+              "other_bodies_unchanged": true,
+              "placement_matches": true,
+              "status": "pass"
+            }
+          ]
+        },
+        "assembly_validation": {
+          "status": "unsupported",
+          "scope": "flattened solids; source hierarchy not recovered"
+        },
+        "history_recovered": false
+      }
+    ],
+    "previously_accepted_generated_code": [
+      {
+        "id": "00000005",
+        "codeBytesIdentical": true
+      },
+      {
+        "id": "00000007",
+        "codeBytesIdentical": true
+      },
+      {
+        "id": "00000009",
+        "codeBytesIdentical": true
+      },
+      {
+        "id": "00000017",
+        "codeBytesIdentical": true
+      },
+      {
+        "id": "00000018",
+        "codeBytesIdentical": true
+      },
+      {
+        "id": "00000019",
+        "codeBytesIdentical": true
+      }
+    ]
+  },
+  "limits": {
+    "length_tolerance": 0.000001,
+    "reconstruction_relative_tolerance": 1e-7,
+    "max_candidates": 64,
+    "max_solids": 64,
+    "max_revolve_candidates": 8,
+    "max_section_faces": 16,
+    "max_section_edges": 256,
+    "max_spline_poles": 256,
+    "max_csg_candidates": 96,
+    "max_csg_steps": 32,
+    "max_csg_faces": 80,
+    "max_csg_seconds": 15,
+    "max_csg_parts": 24,
+    "max_csg_depth": 3
+  },
+  "validation": {
+    "mode": "world",
+    "samples_per_shape": 8192,
+    "seed": 0,
+    "source_symmetric_difference_relative_max": 1e-7,
+    "thresholds": {
+      "chamfer_relative_max": 0.01,
+      "volume_iou_min": 0.999,
+      "volume_relative_error_max": 0.001
+    },
+    "no_threshold_relaxation": true
+  },
+  "limitations": [
+    "limited ordered 20-file prefix is not a full ABC benchmark",
+    "direct CSG currently requires bounded analytic boundary surfaces",
+    "bounded search is incomplete; exhaustion does not prove no solution exists",
+    "native B-spline sections may be approximate kernel representations, still gated by complete final geometry checks",
+    "CSG exposes uniform scale and placement; no original independent feature dimensions inferred",
+    "generated partition programs may be long; sample 08 has 596 lines, 62 functions, 12 parts and 26 binary-equivalent booleans",
+    "assembly hierarchy and original feature history remain unsupported"
+  ]
+}
