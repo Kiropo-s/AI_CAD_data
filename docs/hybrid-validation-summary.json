@@ -1,0 +1,164 @@
+{
+  "date": "2026-10-26",
+  "version": "0.2.0",
+  "test_count": 31,
+  "test_result": "passed",
+  "retained_hybrid_fixture_count": 12,
+  "retained_hybrid_fixture_counts": {
+    "train_ready": 12
+  },
+  "abc_count": 20,
+  "abc_counts": {
+    "provisional": 14,
+    "train_ready": 6
+  },
+  "accepted_ids": [
+    "00000005",
+    "00000007",
+    "00000009",
+    "00000017",
+    "00000018",
+    "00000019"
+  ],
+  "enabled_disabled_comparison": {
+    "matched_count": 20,
+    "baseline_counts": {
+      "provisional": 15,
+      "train_ready": 5
+    },
+    "direct_counts": {
+      "provisional": 14,
+      "train_ready": 6
+    },
+    "acceptance_rate_difference_percentage_points": 5.0
+  },
+  "new_case": {
+    "input": "F:\\AI_CAD\\datasets\\abc\\step\\abc_0000\\00000009_9b3d6a97e8de4aa193b81000_step_001.step",
+    "input_sha256": "34a7b399bef7d25ce7b85357d06210ec7c06fe6a39a6b20bc7369dc1abd40b77",
+    "status": "train_ready",
+    "reason": "accepted",
+    "report": "F:\\AI_CAD\\step2code_direct\\out\\abc-first20-hybrid-final-v2\\cases\\00010_00000009_9b3d6a97e8de4aa193b81000_step_001\\report.json",
+    "geometry_validated": true,
+    "elapsed_seconds": 3.5846908998209983,
+    "worker_wall_seconds": 5.212335699936375,
+    "chamfer_coordinate_space": "source_mm",
+    "chamfer_mean_mm": 1.1737768780184294,
+    "chamfer_relative": 0.007547214997607582,
+    "volume_iou": 0.9999999999688404,
+    "volume_relative_error": 3.241018753689771e-11,
+    "reference_volume_mm3": 57710.73894075777,
+    "candidate_volume_mm3": 57710.73894262819,
+    "function_count": 11,
+    "build_lines": 7,
+    "reconstruction_methods": "native_hybrid_csg_v1",
+    "boolean_operation_count": 2
+  },
+  "failures": [
+    {
+      "id": "00000000",
+      "reason": "unsupported_geometry",
+      "stop_reason": "no_monotone_solution_within_depth_and_operands",
+      "best_symmetric_difference_relative": 0.629085912433634,
+      "report": "F:\\AI_CAD\\step2code_direct\\out\\abc-first20-hybrid-final-v2\\cases\\00001_00000000_290a9120f9f249a7a05cfe9c_step_000\\report.json"
+    },
+    {
+      "id": "00000001",
+      "reason": "unsupported_geometry",
+      "stop_reason": "time_budget",
+      "best_symmetric_difference_relative": 0.60563578972132,
+      "report": "F:\\AI_CAD\\step2code_direct\\out\\abc-first20-hybrid-final-v2\\cases\\00002_00000001_1ffb81a71e5b402e966b9341_step_000\\report.json"
+    },
+    {
+      "id": "00000002",
+      "reason": "unsupported_geometry",
+      "stop_reason": "time_budget",
+      "best_symmetric_difference_relative": 0.7535418861453884,
+      "report": "F:\\AI_CAD\\step2code_direct\\out\\abc-first20-hybrid-final-v2\\cases\\00003_00000002_1ffb81a71e5b402e966b9341_step_001\\report.json"
+    },
+    {
+      "id": "00000003",
+      "reason": "unsupported_geometry",
+      "stop_reason": "time_budget",
+      "best_symmetric_difference_relative": 0.8601074735632581,
+      "report": "F:\\AI_CAD\\step2code_direct\\out\\abc-first20-hybrid-final-v2\\cases\\00004_00000003_1ffb81a71e5b402e966b9341_step_002\\report.json"
+    },
+    {
+      "id": "00000004",
+      "reason": "unsupported_geometry",
+      "stop_reason": "time_budget",
+      "best_symmetric_difference_relative": 0.48572839516173166,
+      "report": "F:\\AI_CAD\\step2code_direct\\out\\abc-first20-hybrid-final-v2\\cases\\00005_00000004_1ffb81a71e5b402e966b9341_step_003\\report.json"
+    },
+    {
+      "id": "00000006",
+      "reason": "unsupported_geometry",
+      "stop_reason": "time_budget",
+      "best_symmetric_difference_relative": 0.09653085319187037,
+      "report": "F:\\AI_CAD\\step2code_direct\\out\\abc-first20-hybrid-final-v2\\cases\\00007_00000006_d4fe04f0f5f84b52bd4f10e4_step_001\\report.json"
+    },
+    {
+      "id": "00000008",
+      "reason": "unsupported_geometry",
+      "stop_reason": "boolean_trial_budget",
+      "best_symmetric_difference_relative": 0.6495236528315356,
+      "report": "F:\\AI_CAD\\step2code_direct\\out\\abc-first20-hybrid-final-v2\\cases\\00009_00000008_9b3d6a97e8de4aa193b81000_step_000\\report.json"
+    },
+    {
+      "id": "00000010",
+      "reason": "unsupported_geometry",
+      "stop_reason": "time_budget",
+      "best_symmetric_difference_relative": 0.9945758548881867,
+      "report": "F:\\AI_CAD\\step2code_direct\\out\\abc-case10-hybrid-frozen-v02\\cases\\00001_00000010_b4b99d35e04b4277931f9a9c_step_000\\report.json"
+    },
+    {
+      "id": "00000011",
+      "reason": "unsupported_geometry",
+      "stop_reason": "time_budget",
+      "best_symmetric_difference_relative": null,
+      "report": "F:\\AI_CAD\\step2code_direct\\out\\abc-first20-hybrid-final-v2\\cases\\00012_00000011_e909f412cda24521865fac0f_step_000\\report.json"
+    },
+    {
+      "id": "00000012",
+      "reason": "unsupported_geometry",
+      "stop_reason": "time_budget",
+      "best_symmetric_difference_relative": null,
+      "report": "F:\\AI_CAD\\step2code_direct\\out\\abc-first20-hybrid-final-v2\\cases\\00013_00000012_f16882934f314832b639ffc0_step_000\\report.json"
+    },
+    {
+      "id": "00000013",
+      "reason": "unsupported_geometry",
+      "stop_reason": "time_budget",
+      "best_symmetric_difference_relative": 0.8350925211618209,
+      "report": "F:\\AI_CAD\\step2code_direct\\out\\abc-first20-hybrid-final-v2\\cases\\00014_00000013_c2f4d27f35ed4c138caf5c18_step_000\\report.json"
+    },
+    {
+      "id": "00000014",
+      "reason": "worker_timeout",
+      "stop_reason": null,
+      "best_symmetric_difference_relative": null,
+      "report": "F:\\AI_CAD\\step2code_direct\\out\\abc-first20-hybrid-final-v2\\cases\\00015_00000014_5b1c2f8a8c6f40fdaae1e69d_step_000\\report.json"
+    },
+    {
+      "id": "00000015",
+      "reason": "unsupported_geometry",
+      "stop_reason": "time_budget",
+      "best_symmetric_difference_relative": 0.11083898092341321,
+      "report": "F:\\AI_CAD\\step2code_direct\\out\\abc-first20-hybrid-final-v2\\cases\\00016_00000015_b08aa818955948c690fd9b6d_step_000\\report.json"
+    },
+    {
+      "id": "00000016",
+      "reason": "unsupported_geometry",
+      "stop_reason": "boolean_trial_budget",
+      "best_symmetric_difference_relative": 0.0753994162418841,
+      "report": "F:\\AI_CAD\\step2code_direct\\out\\abc-first20-hybrid-final-v2\\cases\\00017_00000016_b08aa818955948c690fd9b6d_step_001\\report.json"
+    }
+  ],
+  "export_directory": "F:\\AI_CAD\\step2code_direct\\exports\\abc-first20-hybrid-code-generated-step-v02",
+  "limits": [
+    "Only the first 20 real ABC models were evaluated.",
+    "Fourteen cases remain provisional: thirteen without a verified solution within the bounded strategy, one hard worker timeout.",
+    "General spline/freeform reconstruction and unrestricted feature decomposition are unsupported.",
+    "Hybrid addition does not isolate the causal effect of removing IR.",
+    "One source-metadata drift case was rerun with frozen sources; all 20 original inputs retained."
+  ]
+}
