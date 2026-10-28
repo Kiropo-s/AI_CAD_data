@@ -1,0 +1,810 @@
+{
+  "format": "step-report",
+  "version": 1,
+  "input": "F:\\AI_CAD\\datasets\\abc\\step\\abc_0000\\00000009_9b3d6a97e8de4aa193b81000_step_001.step",
+  "output": "F:\\AI_CAD\\step2code\\out\\abc100-p05-diagnostics-20261027-r4\\cases\\00000009_9b3d6a97e8de4aa193b81000_step_001",
+  "outcome": "accepted",
+  "stage": "geometry",
+  "reason_code": "geometry.verified",
+  "identity": {
+    "source_sha256": "34a7b399bef7d25ce7b85357d06210ec7c06fe6a39a6b20bc7369dc1abd40b77",
+    "configuration": {
+      "samples": 8192,
+      "mode": "world",
+      "recognition": {
+        "length_tolerance": 1e-06,
+        "reconstruction_relative_tolerance": 1e-07,
+        "max_candidates": 64,
+        "max_solids": 64,
+        "max_revolve_candidates": 8,
+        "max_section_faces": 16,
+        "max_section_edges": 256,
+        "max_spline_poles": 256,
+        "max_csg_candidates": 96,
+        "max_csg_steps": 32,
+        "max_csg_faces": 80,
+        "max_csg_seconds": 15.0,
+        "max_csg_parts": 24,
+        "max_csg_depth": 3
+      },
+      "hard_timeout_seconds": 120.0
+    },
+    "implementation_fingerprint": "3bdc6fd5ed474a4198cfc30d79870023b36926f6c9ed14128edeecd4972c60ca",
+    "plan_version": 1
+  },
+  "identity_hash": "75b0735f65ff3963c2b001f08f3db3fa0f057a5d181981591f4e530f26b57e40",
+  "implementation": {
+    "tool_version": "1.0.0",
+    "plan_version": 1,
+    "compiler": "scapi-plan-1",
+    "evaluator": "shape-world-1",
+    "revision": "097478e7ae2dbcee048cf77540331209094f6180",
+    "source_hashes": {
+      "cli.py": "44737f7bbe0609b0a9e1272eff0a6aa44e8cf3533359d2e0f4f49df1027e3581",
+      "pipeline.py": "aac871f71b207dd8e1072d5bb48a697b8e19aa33fd41d49a0ce466e6af1a9fb0",
+      "step2scapi.py": "5dc5b0aaa4677b04c2f4f82e858b62926fc65695a294f2b5577698ce5b87e7ae",
+      "__init__.py": "5f3a55636d5e7e6f41fd4e383e16ecb4d0893d3fb05a34facfdbf09a4aa6a5ed",
+      "__main__.py": "56f7d4004c060695c7c030c243981cb8960ce3f931f282d4a3475324e6d2c015",
+      "batch/checkpoint.py": "5ae46a4f21f1742bb13fbd99248ffb10977389e70d18a009b67d669967bbe5ff",
+      "batch/diagnostics.py": "c63119a2aa8c092499bc3880aff5593c58bdbba711fdd4b353e8853529847b16",
+      "batch/events.py": "5664da1e186871edd5919fa5064ab733cb1cf6b0529e2e0d0088f465608e5534",
+      "batch/identity.py": "8acdbff49fcf8b5e6ff4a0e3c33e7f5bda9e5b8e883bf1aca265b56d18a93338",
+      "batch/process.py": "ede4300e35e51c31781e421ea442054a72ddbe5b5802e7418f0fd453df482e6e",
+      "batch/runner.py": "2acece9a05ae57321e0158d8490d41f5a3c57af785bcc421fe0c1dcbb19e70e0",
+      "batch/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "codegen/scapi.py": "a8d86e008ec69b2fec149971fb3219cd0002d61298d5d32ef70132223cd248d2",
+      "codegen/templates.py": "cd343a28778718051db606d7c9bd5db8fb90a31509782f62d373d39776d6dc26",
+      "codegen/__init__.py": "70a4f0d98381f06d2a92fbe6c6b446c362844a7c61fe8b4976ff1f63fda9855e",
+      "kernel/curves.py": "fbb1b279ae2a6059adbea9cd25502ed7d3265846cfafb819bf75483a0934dd0b",
+      "kernel/execute.py": "cd8231fb76f9de30a42eb508bd2fa1c70a53300eea4c8f38f916af22f5146691",
+      "kernel/import_step.py": "55f55413e153d2da97a081590aa8da8c2d8137aa190a6869f07580baa7c50bd6",
+      "kernel/runtime.py": "3776c2da979c808555835207076ad28db16b09c3be5cf753df37a8207fa9501d",
+      "kernel/signatures.py": "f14662c6681b886a7cae52039a9655f24e012df5006918e16e5bb757729a4b4c",
+      "kernel/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "plan/codec.py": "9d4ab092b57de2871edb1a4df3a889749956cec53e73970d64f1a727c19389be",
+      "plan/graph.py": "f87622feeb2b6a031a3508e6adcbb5b9573c150f314f2be5d74ebb677c694d12",
+      "plan/model.py": "6ecfd9d6c0795cfd2e381683bd63a19703f91726a968912c35062966693ee2fa",
+      "plan/passes.py": "a33f22541ee8cc52e2eddb152749b1a31036c3052e218bdfadeae9bee43b9212",
+      "plan/preparation.py": "e0e8495fba25cab4a5b593182f4460d77bf125344331cc4ac9a094b568c7c3aa",
+      "plan/registry.py": "77fb1530af588c6fc436cc049e56b0bf6a2b6ecb48bc4f0beea4a017a634771e",
+      "plan/validation.py": "ec36adbf379ef0fec5e40ef0f88122a5a5d61338050a6e48d889c3def3d856b3",
+      "plan/__init__.py": "a9ba441cfcb8f8c1cf5ccac1729efde8637f6227d72efd32a15751a102687810",
+      "recognition/api.py": "23cad3a4a0568f8c4a48677444fb2fdbe4d2ebdb7b62ec01ac0d0e8a3a39bf57",
+      "recognition/context.py": "a9df83d33d7a49c4b85c6d4e1e0adf8ca60f464df23f570f9a3d7388d9669758",
+      "recognition/csg.py": "d3fa2e029cc79183eea269fbab01719563602d4fa8d2c0f519ff5514bc52c8be",
+      "recognition/partition.py": "ea9c472be000741affe5881dc6f4ad7bcf3b8b97bf67f6df2ca9be4ca0572881",
+      "recognition/prism.py": "807ae18d7c6778b086631a7614a3806d3a6a360e3d6b055cda6f4dac8ca73c05",
+      "recognition/revolution.py": "660585685f546c1b0420de3bdf69a8cb2b4096a8d6157f47cb581240f8ef2fe5",
+      "recognition/__init__.py": "421ff249e09ec1c6f254223070afe738ce3d24a70c3024e8630c5ccdae61fab4",
+      "verification/conditioning.py": "c0567a0c4efa9751be215e92281ff79bcd4636b872ce347a40ddac74f6a7d09e",
+      "verification/coverage.py": "ab5e7a77291e5404fb3e6dad291c9cbf7fab045d64552b59fb18e0f404867bba",
+      "verification/geometry.py": "3d2cbf06d047ef6bd177ccd214cb0e3ff793bdd38492cf2a4dd7656de21dd1c1",
+      "verification/measurements.py": "e16e8fb7d72fbc82373b458a6df973f4d7b3c6dad9d95466bd47bb2df9b60d46",
+      "verification/metrics.py": "3db5f84285a476e25484fcb8239e57f110b019816f882a1a9a0b218b16fa4637",
+      "verification/policy.py": "3dcb2fe25b24f8a79f53e10f17f56051bf6a814d837e8607c191763fc47e4f38",
+      "verification/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "plan/schema.json": "57b5d29c867e9752def7833b7edf5a035b8de9577bfbd89e89eb03b1cc0f6557"
+    },
+    "dependencies": {
+      "python": "3.13.14",
+      "simplecadapi": "2.2.6",
+      "cadquery-ocp": "7.9.3.1.1",
+      "numpy": "2.5.4",
+      "scipy": "1.18.1"
+    },
+    "fingerprint": "3bdc6fd5ed474a4198cfc30d79870023b36926f6c9ed14128edeecd4972c60ca"
+  },
+  "artifacts": {
+    "source": "source.json",
+    "plan": "model.plan.json",
+    "preparation": "preparation.json",
+    "provenance": "provenance.json",
+    "code": "model.scapi.py",
+    "symbols": "model.symbols.json",
+    "step": "model.step",
+    "checks": "checks.json",
+    "source_topology": "source-topology.json",
+    "recognition_diagnostics": "recognition-diagnostics.json"
+  },
+  "checks": {
+    "source_coverage": {
+      "status": "pass",
+      "reason_code": "coverage.complete",
+      "bodies": [
+        {
+          "body_id": "body_001",
+          "symmetric_difference_relative": 0.0,
+          "volume_relative_error": 1.5570929876752513e-11,
+          "status": "pass"
+        }
+      ]
+    },
+    "roundtrip": {
+      "evaluation_version": "fixed-frame-shape-v1",
+      "metric_implementation": "step2code/shape-v1",
+      "coordinate_policy": "source world frame; one shared numerical conditioning transform",
+      "units": {
+        "length": "mm",
+        "volume": "mm^3",
+        "squared_cd": "mm^2"
+      },
+      "thresholds": {
+        "volume_relative_error": 0.001,
+        "volume_iou": 0.999,
+        "chamfer_relative": 0.01
+      },
+      "checks": {
+        "volume_relative_error": "pass",
+        "volume_iou": "pass",
+        "chamfer_relative": "pass"
+      },
+      "metric_errors": [],
+      "warnings": [],
+      "diagnostics": [],
+      "coordinate_check": {
+        "status": "resolved",
+        "method": "fixed_source_frame",
+        "candidate_to_reference": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      "cd_sampling": {
+        "points_per_shape": 8192,
+        "seed": 0,
+        "protocol": "area-weighted-triangle-surface",
+        "relative_mesh_deflection": 0.001,
+        "definition": "CD2=mean(d(A,B)^2)+mean(d(B,A)^2); CD=mean of both one-way mean distances"
+      },
+      "raw": {
+        "reference": {
+          "volume_mm3": 57710.73894165638,
+          "bbox_mm": [
+            -38.10000000000001,
+            -38.10000000000001,
+            -54.6452960041715,
+            38.10000000000001,
+            38.10000000000001,
+            49.49470399582873
+          ],
+          "solid_count": 1
+        },
+        "candidate": {
+          "volume_mm3": 57710.73894173396,
+          "bbox_mm": [
+            -38.1,
+            -38.1,
+            -54.64529600417,
+            38.10000000000062,
+            38.1,
+            49.494703995829
+          ],
+          "solid_count": 1
+        }
+      },
+      "volume_relative_error": 1.3442257282626493e-12,
+      "measurement": {
+        "volume_relative_error": 1.3439760923035257e-12,
+        "symmetric_difference_relative": null,
+        "chamfer_relative": 0.007151534183980911,
+        "symmetric_difference_volume_mm3": null,
+        "chamfer_mean_mm": 0.7151534183980911,
+        "chamfer_distance_mm2": 1.3525140093106356,
+        "area_relative_error": null,
+        "bbox_max_relative_error": null,
+        "volume_iou": 0.9999999999986554,
+        "checks": {
+          "volume_relative_error": "pass",
+          "volume_iou": "pass",
+          "chamfer_relative": "pass"
+        },
+        "metric_errors": [],
+        "warnings": [],
+        "diagnostics": [],
+        "reference_volume_mm3": 15341.228915652337,
+        "candidate_volume_mm3": 15341.228915672955,
+        "reference_bbox_mm": [
+          -24.497747126814442,
+          -24.49774712672086,
+          -32.23703441124981,
+          24.497747126627285,
+          24.497747126720867,
+          34.72347440178734
+        ],
+        "candidate_bbox_mm": [
+          -24.49774712681444,
+          -24.497747126720856,
+          -32.23703441124886,
+          24.49774712662768,
+          24.497747126720864,
+          34.72347440178752
+        ]
+      },
+      "comparison_frame": {
+        "centroid_mm": [
+          1.4553846984459745e-10,
+          -2.82110079821417e-15,
+          -4.508807750158625
+        ],
+        "characteristic_length_mm": 155.5245051837543,
+        "scale_to_normalized": 0.6429854888903113,
+        "target_length_mm": 100.0,
+        "matrix": [
+          [
+            0.6429854888903113,
+            0.0,
+            0.0,
+            -9.357912418537632e-11
+          ],
+          [
+            0.0,
+            0.6429854888903113,
+            0.0,
+            1.813926875948585e-15
+          ],
+          [
+            0.0,
+            0.0,
+            0.6429854888903113,
+            2.899097955548168
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "inverse_matrix": [
+          [
+            1.555245051837543,
+            0.0,
+            0.0,
+            1.4553846984459745e-10
+          ],
+          [
+            0.0,
+            1.555245051837543,
+            0.0,
+            -2.8211007982141695e-15
+          ],
+          [
+            0.0,
+            0.0,
+            1.555245051837543,
+            -4.508807750158625
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "principal_moments": [
+          6125891.8482498005,
+          9721411.505579764,
+          9721411.505591078
+        ],
+        "principal_axes_degenerate": true,
+        "effective_source_deflection_mm": 0.1555245051837543,
+        "volume_scaling_consistency_relative": 9.485495137563473e-16
+      },
+      "reference_volume_mm3": 57710.73894165638,
+      "candidate_volume_mm3": 57710.73894173396,
+      "volume_iou": 0.9999999999986554,
+      "chamfer_relative": 0.007151534183980911,
+      "chamfer_mean_mm": 1.1122388152683351,
+      "chamfer_distance_mm2": 3.2714435346769744,
+      "symmetric_difference_volume_mm3": null,
+      "decision": {
+        "outcome": "accepted",
+        "reason_code": "geometry.verified",
+        "failed_checks": []
+      }
+    },
+    "geometry": {
+      "evaluation_version": "fixed-frame-shape-v1",
+      "metric_implementation": "step2code/shape-v1",
+      "coordinate_policy": "source world frame; one shared numerical conditioning transform",
+      "units": {
+        "length": "mm",
+        "volume": "mm^3",
+        "squared_cd": "mm^2"
+      },
+      "thresholds": {
+        "volume_relative_error": 0.001,
+        "volume_iou": 0.999,
+        "chamfer_relative": 0.01
+      },
+      "checks": {
+        "volume_relative_error": "pass",
+        "volume_iou": "pass",
+        "chamfer_relative": "pass"
+      },
+      "metric_errors": [],
+      "warnings": [],
+      "diagnostics": [],
+      "coordinate_check": {
+        "status": "resolved",
+        "method": "fixed_source_frame",
+        "candidate_to_reference": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      "cd_sampling": {
+        "points_per_shape": 8192,
+        "seed": 0,
+        "protocol": "area-weighted-triangle-surface",
+        "relative_mesh_deflection": 0.001,
+        "definition": "CD2=mean(d(A,B)^2)+mean(d(B,A)^2); CD=mean of both one-way mean distances"
+      },
+      "raw": {
+        "reference": {
+          "volume_mm3": 57710.73894075777,
+          "bbox_mm": [
+            -38.1000001,
+            -38.1000001,
+            -54.6452961041715,
+            38.1000001,
+            38.1000001,
+            49.4947040958286
+          ],
+          "solid_count": 1
+        },
+        "candidate": {
+          "volume_mm3": 57710.73894173396,
+          "bbox_mm": [
+            -38.1,
+            -38.1,
+            -54.64529600417,
+            38.10000000000062,
+            38.1,
+            49.494703995829
+          ],
+          "solid_count": 1
+        }
+      },
+      "volume_relative_error": 1.6915155605036092e-11,
+      "measurement": {
+        "volume_relative_error": 1.6913230673989484e-11,
+        "symmetric_difference_relative": null,
+        "chamfer_relative": 0.007617369824654041,
+        "symmetric_difference_volume_mm3": null,
+        "chamfer_mean_mm": 0.7617369824654041,
+        "chamfer_distance_mm2": 1.4726471070843052,
+        "area_relative_error": null,
+        "bbox_max_relative_error": null,
+        "volume_iou": 0.9999999999844705,
+        "checks": {
+          "volume_relative_error": "pass",
+          "volume_iou": "pass",
+          "chamfer_relative": "pass"
+        },
+        "metric_errors": [],
+        "warnings": [],
+        "diagnostics": [],
+        "reference_volume_mm3": 15341.22891540952,
+        "candidate_volume_mm3": 15341.22891566899,
+        "reference_bbox_mm": [
+          -24.497747226702256,
+          -24.49774722671875,
+          -32.237034511629425,
+          24.497747226735253,
+          24.497747226718758,
+          34.7234745014019
+        ],
+        "candidate_bbox_mm": [
+          -24.497747126702254,
+          -24.49774712671875,
+          -32.237034411628464,
+          24.49774712673565,
+          24.497747126718757,
+          34.72347440140216
+        ]
+      },
+      "comparison_frame": {
+        "centroid_mm": [
+          -2.5659557036502286e-11,
+          -5.134800735404283e-15,
+          -4.508807749563931
+        ],
+        "characteristic_length_mm": 155.52450518376767,
+        "scale_to_normalized": 0.642985488890256,
+        "target_length_mm": 100.0,
+        "matrix": [
+          [
+            0.642985488890256,
+            0.0,
+            0.0,
+            1.649872282582283e-11
+          ],
+          [
+            0.0,
+            0.642985488890256,
+            0.0,
+            3.3016023612079687e-15
+          ],
+          [
+            0.0,
+            0.0,
+            0.642985488890256,
+            2.899097955165539
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "inverse_matrix": [
+          [
+            1.5552450518376766,
+            0.0,
+            0.0,
+            -2.5659557036502286e-11
+          ],
+          [
+            0.0,
+            1.5552450518376766,
+            0.0,
+            -5.134800735404283e-15
+          ],
+          [
+            0.0,
+            0.0,
+            1.5552450518376766,
+            -4.508807749563931
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "principal_moments": [
+          6125891.848199531,
+          9721411.505407192,
+          9721411.505409127
+        ],
+        "principal_axes_degenerate": true,
+        "effective_source_deflection_mm": 0.15552450518376768,
+        "volume_scaling_consistency_relative": 1.185686892214202e-16
+      },
+      "reference_volume_mm3": 57710.73894075777,
+      "candidate_volume_mm3": 57710.73894173396,
+      "volume_iou": 0.9999999999844705,
+      "chamfer_relative": 0.007617369824654041,
+      "chamfer_mean_mm": 1.184687672781083,
+      "chamfer_distance_mm2": 3.5620199304168825,
+      "symmetric_difference_volume_mm3": null,
+      "decision": {
+        "outcome": "accepted",
+        "reason_code": "geometry.verified",
+        "failed_checks": []
+      }
+    }
+  },
+  "signatures": {
+    "source": {
+      "valid": true,
+      "solid_count": 1,
+      "face_count": 6,
+      "edge_occurrences": 16,
+      "volume_mm3": 57710.73894075777,
+      "bbox_mm": [
+        -38.1000001,
+        -38.1000001,
+        -54.6452961041715,
+        38.1000001,
+        38.1000001,
+        49.4947040958286
+      ],
+      "bodies": [
+        {
+          "volume_mm3": 57710.73894075777,
+          "bbox_mm": [
+            -38.1000001,
+            -38.1000001,
+            -54.6452961041715,
+            38.1000001,
+            38.1000001,
+            49.4947040958286
+          ],
+          "valid": true
+        }
+      ]
+    },
+    "native": {
+      "valid": true,
+      "solid_count": 1,
+      "face_count": 6,
+      "edge_occurrences": 16,
+      "volume_mm3": 57710.73894165638,
+      "bbox_mm": [
+        -38.10000000000001,
+        -38.10000000000001,
+        -54.6452960041715,
+        38.10000000000001,
+        38.10000000000001,
+        49.49470399582873
+      ],
+      "bodies": [
+        {
+          "volume_mm3": 57710.73894165638,
+          "bbox_mm": [
+            -38.10000000000001,
+            -38.10000000000001,
+            -54.6452960041715,
+            38.10000000000001,
+            38.10000000000001,
+            49.49470399582873
+          ],
+          "valid": true
+        }
+      ]
+    },
+    "generated_bodies": [
+      {
+        "valid": true,
+        "solid_count": 1,
+        "face_count": 6,
+        "edge_occurrences": 16,
+        "volume_mm3": 57710.73894165638,
+        "bbox_mm": [
+          -38.10000000000001,
+          -38.10000000000001,
+          -54.6452960041715,
+          38.10000000000001,
+          38.10000000000001,
+          49.49470399582873
+        ],
+        "bodies": [
+          {
+            "volume_mm3": 57710.73894165638,
+            "bbox_mm": [
+              -38.10000000000001,
+              -38.10000000000001,
+              -54.6452960041715,
+              38.10000000000001,
+              38.10000000000001,
+              49.49470399582873
+            ],
+            "valid": true
+          }
+        ]
+      }
+    ],
+    "wrapper": {
+      "valid": true,
+      "solid_count": 1,
+      "face_count": 6,
+      "edge_occurrences": 16,
+      "volume_mm3": 57710.73894165638,
+      "bbox_mm": [
+        -38.10000000000001,
+        -38.10000000000001,
+        -54.6452960041715,
+        38.10000000000001,
+        38.10000000000001,
+        49.49470399582873
+      ],
+      "bodies": [
+        {
+          "volume_mm3": 57710.73894165638,
+          "bbox_mm": [
+            -38.10000000000001,
+            -38.10000000000001,
+            -54.6452960041715,
+            38.10000000000001,
+            38.10000000000001,
+            49.49470399582873
+          ],
+          "valid": true
+        }
+      ]
+    },
+    "step_readback": {
+      "valid": true,
+      "solid_count": 1,
+      "face_count": 6,
+      "edge_occurrences": 16,
+      "volume_mm3": 57710.73894173396,
+      "bbox_mm": [
+        -38.1,
+        -38.1,
+        -54.64529600417,
+        38.10000000000062,
+        38.1,
+        49.494703995829
+      ],
+      "bodies": [
+        {
+          "volume_mm3": 57710.73894173396,
+          "bbox_mm": [
+            -38.1,
+            -38.1,
+            -54.64529600417,
+            38.10000000000062,
+            38.1,
+            49.494703995829
+          ],
+          "valid": true
+        }
+      ]
+    },
+    "wrapper_occupied": {
+      "valid": true,
+      "solid_count": 1,
+      "face_count": 6,
+      "edge_occurrences": 16,
+      "volume_mm3": 57710.73894165638,
+      "bbox_mm": [
+        -38.10000000000001,
+        -38.10000000000001,
+        -54.6452960041715,
+        38.10000000000001,
+        38.10000000000001,
+        49.49470399582873
+      ],
+      "bodies": [
+        {
+          "volume_mm3": 57710.73894165638,
+          "bbox_mm": [
+            -38.10000000000001,
+            -38.10000000000001,
+            -54.6452960041715,
+            38.10000000000001,
+            38.10000000000001,
+            49.49470399582873
+          ],
+          "valid": true
+        }
+      ]
+    },
+    "step_readback_occupied": {
+      "valid": true,
+      "solid_count": 1,
+      "face_count": 6,
+      "edge_occurrences": 16,
+      "volume_mm3": 57710.73894173396,
+      "bbox_mm": [
+        -38.1,
+        -38.1,
+        -54.64529600417,
+        38.10000000000062,
+        38.1,
+        49.494703995829
+      ],
+      "bodies": [
+        {
+          "volume_mm3": 57710.73894173396,
+          "bbox_mm": [
+            -38.1,
+            -38.1,
+            -54.64529600417,
+            38.10000000000062,
+            38.1,
+            49.494703995829
+          ],
+          "valid": true
+        }
+      ]
+    },
+    "source_occupied": {
+      "valid": true,
+      "solid_count": 1,
+      "face_count": 6,
+      "edge_occurrences": 16,
+      "volume_mm3": 57710.73894075777,
+      "bbox_mm": [
+        -38.1000001,
+        -38.1000001,
+        -54.6452961041715,
+        38.1000001,
+        38.1000001,
+        49.4947040958286
+      ],
+      "bodies": [
+        {
+          "volume_mm3": 57710.73894075777,
+          "bbox_mm": [
+            -38.1000001,
+            -38.1000001,
+            -54.6452961041715,
+            38.1000001,
+            38.1000001,
+            49.4947040958286
+          ],
+          "valid": true
+        }
+      ]
+    }
+  },
+  "eligibility": {
+    "geometry": "pass",
+    "serialization": "pass",
+    "readability": "pass",
+    "parameter_edit": "not_run",
+    "assembly": "unsupported",
+    "history": "unsupported"
+  },
+  "history_recovered": false,
+  "elapsed_seconds": 2.019795999993221,
+  "plan_hash": "f201c9dfe6a29b7186c9170c68c25f32acaef63dd3214190bcbeb27de1f9ac3b",
+  "recognition": {
+    "features": [
+      {
+        "solid_index": 1,
+        "method": "verified_meridian_revolution"
+      }
+    ],
+    "source_solid_count": 1
+  },
+  "structure": {
+    "lines": 147,
+    "profile_count": 1,
+    "body_count": 1,
+    "build_lines": 7,
+    "max_function_lines": 11
+  },
+  "artifact_hashes": {
+    "source": "24483bb97a4f8df571d1fdb427736756747981767de64f257c255fa140fae964",
+    "plan": "0498fb067dc1e005bc8ea0309b1fa6d68fc8f5aaabf211274c4b7c94376d4c5f",
+    "preparation": "8c73265be2eb01aeafd3d02fa49e20a0e94601c7093863a83efd7828cc0fa78d",
+    "provenance": "4c4153b43113c4c52f6b1950e12b23615dd8f8b10a23c6d7856426470ee87145",
+    "code": "99ec7f1fcd36f924b58fabcb65718c415f082ef3d6f1203afd3df73becbee5d1",
+    "symbols": "79e9ddbb741168b22e2295f18054f91a23abf9bbbb91f00308d2464a6165c063",
+    "step": "9f20023fdb48005b9ecde6fae620e2794ecc21bf1eab53f624bff8543aaf9c07",
+    "checks": "ae55c06a81b2a7666bdc93fce074781382cfdf821e616b2888c480957e3de6a4",
+    "source_topology": "c41fcc44eddeaf4f67d3f9874651efa1f7aa9a7d451a7fa9263b7f77f758682e",
+    "recognition_diagnostics": "84743b9e46111970578040727f221ab420457d39c7693a4b85d51d99bb07c707"
+  }
+}

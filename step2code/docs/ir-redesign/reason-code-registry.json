@@ -1,0 +1,148 @@
+{
+  "format": "step-reason-code-registry",
+  "version": 1,
+  "status": "p2a",
+  "compatibility": {
+    "historical_codes_are_preserved": true,
+    "human_error_text_is_not_machine_contract": true
+  },
+  "categories": {
+    "import": "STEP reading, transfer and source topology validity",
+    "domain": "Input shape domain problems after import",
+    "capability": "Recognized geometry outside the current feature capability",
+    "limit": "Configured entity or search size limits",
+    "search": "Strategy-level search did not produce a verified candidate",
+    "recognition": "Recognition result or native replay inconsistency",
+    "backend": "Plan execution, compilation or generated output contract",
+    "measurement": "Geometry measurement or validation evidence is unreliable",
+    "worker": "Process isolation, timeout or worker lifecycle",
+    "profile": "Exact planar profile, loop and curve capability/validity"
+  },
+  "codes": {
+    "worker.running": {
+      "category": "worker",
+      "status": "internal",
+      "description": "Case worker has started and has not reached a terminal result."
+    },
+    "geometry.verified": {
+      "category": "recognition",
+      "status": "terminal",
+      "description": "Native, serialization and geometry checks passed."
+    },
+    "import.invalid_topology": {
+      "category": "import",
+      "status": "terminal",
+      "description": "STEP could not be imported as a valid source shape."
+    },
+    "domain.no_solids": {
+      "category": "domain",
+      "status": "terminal",
+      "description": "Imported shape contains no closed solids."
+    },
+    "domain.loose_faces": {
+      "category": "domain",
+      "status": "terminal",
+      "description": "Imported shape contains faces outside the accepted solid domain."
+    },
+    "domain.loose_edges": {
+      "category": "domain",
+      "status": "terminal",
+      "description": "Imported shape contains edges outside the accepted solid domain."
+    },
+    "capability.surface_type": {
+      "category": "capability",
+      "status": "terminal",
+      "description": "A source surface type is outside the active recognition capability."
+    },
+    "capability.profile_boundary": {
+      "category": "capability",
+      "status": "candidate",
+      "description": "A source profile boundary cannot be represented by the active profile recognizer."
+    },
+    "limit.source_faces": {
+      "category": "limit",
+      "status": "terminal",
+      "description": "Source face count exceeds the configured recognition limit."
+    },
+    "limit.source_bodies": {
+      "category": "limit",
+      "status": "terminal",
+      "description": "Source solid count exceeds the configured recognition limit."
+    },
+    "search.no_verified_candidate": {
+      "category": "search",
+      "status": "legacy",
+      "description": "Historical aggregate for a strategy with no verified reconstruction."
+    },
+    "csg.no_primitive_candidates": {
+      "category": "search",
+      "status": "planned",
+      "description": "No source-supported primitive candidate was generated."
+    },
+    "csg.no_valid_operation": {
+      "category": "search",
+      "status": "planned",
+      "description": "Generated Boolean operations did not produce valid shapes."
+    },
+    "csg.candidate_budget_exhausted": {
+      "category": "search",
+      "status": "planned",
+      "description": "Candidate budget ended before a verified reconstruction was found."
+    },
+    "csg.depth_limit": {
+      "category": "search",
+      "status": "planned",
+      "description": "Search depth ended before a verified reconstruction was found."
+    },
+    "csg.topology_mismatch": {
+      "category": "search",
+      "status": "planned",
+      "description": "Candidate topology cannot explain the source topology evidence."
+    },
+    "csg.residual_too_large": {
+      "category": "search",
+      "status": "planned",
+      "description": "Remaining source residual is too large or unsupported."
+    },
+    "csg.native_boolean_failure": {
+      "category": "search",
+      "status": "planned",
+      "description": "A native Boolean operation failed or returned invalid topology."
+    },
+    "recognition.replay_mismatch": {
+      "category": "recognition",
+      "status": "terminal",
+      "description": "A recognized candidate did not replay to the expected source geometry."
+    },
+    "measurement.unreliable": {
+      "category": "measurement",
+      "status": "terminal",
+      "description": "Required geometry evidence could not be measured reliably."
+    },
+    "worker.timeout": {
+      "category": "worker",
+      "status": "terminal",
+      "description": "The isolated worker exceeded the hard case deadline."
+    },
+    "profile.open_loop": {
+      "category": "profile",
+      "status": "candidate",
+      "description": "Profile loop is empty, discontinuous or not closed."
+    },
+    "profile.self_intersection": {
+      "category": "profile",
+      "status": "candidate",
+      "description": "Profile loop or face failed exact B-rep validity checks for self-intersection or invalid topology."
+    },
+    "profile.non_planar": {
+      "category": "profile",
+      "status": "candidate",
+      "description": "Profile boundary geometry is outside the selected plane within the configured tolerance."
+    },
+    "profile.curve_unsupported": {
+      "category": "profile",
+      "status": "candidate",
+      "description": "A profile curve cannot be represented by the exact step-plan/1 and SCAPI curve contract."
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "format": "step-recognition-diagnostics",
+  "version": 1,
+  "case_id": "00000008_9b3d6a97e8de4aa193b81000_step_000",
+  "source_sha256": "84c7687d1acf464c406a6648e379893f21f0c9ed358ea0dee92be7e10b882f47",
+  "implementation_fingerprint": "3bdc6fd5ed474a4198cfc30d79870023b36926f6c9ed14128edeecd4972c60ca",
+  "outcome": "accepted",
+  "stage": "geometry",
+  "reason_code": "geometry.verified",
+  "elapsed_seconds": 61.30579340000986,
+  "source_body_count": 1,
+  "features": [
+    {
+      "solid_index": 1,
+      "method": "verified_partition_csg"
+    }
+  ],
+  "recognizer_attempts": [],
+  "last_failure": {
+    "reason_code": "geometry.verified",
+    "stage": "geometry",
+    "error": null
+  },
+  "failure_evidence": {},
+  "sidecar_only": true
+}

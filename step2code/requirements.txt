@@ -1,0 +1,8 @@
+# Runtime dependencies for step2code 1.0.
+# Versions match the reference environment (Python 3.13.14, OCP 7.9.3.1.1)
+# used for the archived 100-case regression. Generated SCAPI code additionally
+# requires simplecadapi at build time.
+numpy==2.5.4
+scipy==1.18.1
+cadquery-ocp==7.9.3.1.1
+simplecadapi==2.2.6

@@ -1,0 +1,675 @@
+{
+  "plan_hash": "f201c9dfe6a29b7186c9170c68c25f32acaef63dd3214190bcbeb27de1f9ac3b",
+  "code_sha256": "99ec7f1fcd36f924b58fabcb65718c415f082ef3d6f1203afd3df73becbee5d1",
+  "export_sha256": "9f20023fdb48005b9ecde6fae620e2794ecc21bf1eab53f624bff8543aaf9c07",
+  "checks": {
+    "source_coverage": {
+      "status": "pass",
+      "reason_code": "coverage.complete",
+      "bodies": [
+        {
+          "body_id": "body_001",
+          "symmetric_difference_relative": 0.0,
+          "volume_relative_error": 1.5570929876752513e-11,
+          "status": "pass"
+        }
+      ]
+    },
+    "roundtrip": {
+      "evaluation_version": "fixed-frame-shape-v1",
+      "metric_implementation": "step2code/shape-v1",
+      "coordinate_policy": "source world frame; one shared numerical conditioning transform",
+      "units": {
+        "length": "mm",
+        "volume": "mm^3",
+        "squared_cd": "mm^2"
+      },
+      "thresholds": {
+        "volume_relative_error": 0.001,
+        "volume_iou": 0.999,
+        "chamfer_relative": 0.01
+      },
+      "checks": {
+        "volume_relative_error": "pass",
+        "volume_iou": "pass",
+        "chamfer_relative": "pass"
+      },
+      "metric_errors": [],
+      "warnings": [],
+      "diagnostics": [],
+      "coordinate_check": {
+        "status": "resolved",
+        "method": "fixed_source_frame",
+        "candidate_to_reference": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      "cd_sampling": {
+        "points_per_shape": 8192,
+        "seed": 0,
+        "protocol": "area-weighted-triangle-surface",
+        "relative_mesh_deflection": 0.001,
+        "definition": "CD2=mean(d(A,B)^2)+mean(d(B,A)^2); CD=mean of both one-way mean distances"
+      },
+      "raw": {
+        "reference": {
+          "volume_mm3": 57710.73894165638,
+          "bbox_mm": [
+            -38.10000000000001,
+            -38.10000000000001,
+            -54.6452960041715,
+            38.10000000000001,
+            38.10000000000001,
+            49.49470399582873
+          ],
+          "solid_count": 1
+        },
+        "candidate": {
+          "volume_mm3": 57710.73894173396,
+          "bbox_mm": [
+            -38.1,
+            -38.1,
+            -54.64529600417,
+            38.10000000000062,
+            38.1,
+            49.494703995829
+          ],
+          "solid_count": 1
+        }
+      },
+      "volume_relative_error": 1.3442257282626493e-12,
+      "measurement": {
+        "volume_relative_error": 1.3439760923035257e-12,
+        "symmetric_difference_relative": null,
+        "chamfer_relative": 0.007151534183980911,
+        "symmetric_difference_volume_mm3": null,
+        "chamfer_mean_mm": 0.7151534183980911,
+        "chamfer_distance_mm2": 1.3525140093106356,
+        "area_relative_error": null,
+        "bbox_max_relative_error": null,
+        "volume_iou": 0.9999999999986554,
+        "checks": {
+          "volume_relative_error": "pass",
+          "volume_iou": "pass",
+          "chamfer_relative": "pass"
+        },
+        "metric_errors": [],
+        "warnings": [],
+        "diagnostics": [],
+        "reference_volume_mm3": 15341.228915652337,
+        "candidate_volume_mm3": 15341.228915672955,
+        "reference_bbox_mm": [
+          -24.497747126814442,
+          -24.49774712672086,
+          -32.23703441124981,
+          24.497747126627285,
+          24.497747126720867,
+          34.72347440178734
+        ],
+        "candidate_bbox_mm": [
+          -24.49774712681444,
+          -24.497747126720856,
+          -32.23703441124886,
+          24.49774712662768,
+          24.497747126720864,
+          34.72347440178752
+        ]
+      },
+      "comparison_frame": {
+        "centroid_mm": [
+          1.4553846984459745e-10,
+          -2.82110079821417e-15,
+          -4.508807750158625
+        ],
+        "characteristic_length_mm": 155.5245051837543,
+        "scale_to_normalized": 0.6429854888903113,
+        "target_length_mm": 100.0,
+        "matrix": [
+          [
+            0.6429854888903113,
+            0.0,
+            0.0,
+            -9.357912418537632e-11
+          ],
+          [
+            0.0,
+            0.6429854888903113,
+            0.0,
+            1.813926875948585e-15
+          ],
+          [
+            0.0,
+            0.0,
+            0.6429854888903113,
+            2.899097955548168
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "inverse_matrix": [
+          [
+            1.555245051837543,
+            0.0,
+            0.0,
+            1.4553846984459745e-10
+          ],
+          [
+            0.0,
+            1.555245051837543,
+            0.0,
+            -2.8211007982141695e-15
+          ],
+          [
+            0.0,
+            0.0,
+            1.555245051837543,
+            -4.508807750158625
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "principal_moments": [
+          6125891.8482498005,
+          9721411.505579764,
+          9721411.505591078
+        ],
+        "principal_axes_degenerate": true,
+        "effective_source_deflection_mm": 0.1555245051837543,
+        "volume_scaling_consistency_relative": 9.485495137563473e-16
+      },
+      "reference_volume_mm3": 57710.73894165638,
+      "candidate_volume_mm3": 57710.73894173396,
+      "volume_iou": 0.9999999999986554,
+      "chamfer_relative": 0.007151534183980911,
+      "chamfer_mean_mm": 1.1122388152683351,
+      "chamfer_distance_mm2": 3.2714435346769744,
+      "symmetric_difference_volume_mm3": null,
+      "decision": {
+        "outcome": "accepted",
+        "reason_code": "geometry.verified",
+        "failed_checks": []
+      }
+    },
+    "geometry": {
+      "evaluation_version": "fixed-frame-shape-v1",
+      "metric_implementation": "step2code/shape-v1",
+      "coordinate_policy": "source world frame; one shared numerical conditioning transform",
+      "units": {
+        "length": "mm",
+        "volume": "mm^3",
+        "squared_cd": "mm^2"
+      },
+      "thresholds": {
+        "volume_relative_error": 0.001,
+        "volume_iou": 0.999,
+        "chamfer_relative": 0.01
+      },
+      "checks": {
+        "volume_relative_error": "pass",
+        "volume_iou": "pass",
+        "chamfer_relative": "pass"
+      },
+      "metric_errors": [],
+      "warnings": [],
+      "diagnostics": [],
+      "coordinate_check": {
+        "status": "resolved",
+        "method": "fixed_source_frame",
+        "candidate_to_reference": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      "cd_sampling": {
+        "points_per_shape": 8192,
+        "seed": 0,
+        "protocol": "area-weighted-triangle-surface",
+        "relative_mesh_deflection": 0.001,
+        "definition": "CD2=mean(d(A,B)^2)+mean(d(B,A)^2); CD=mean of both one-way mean distances"
+      },
+      "raw": {
+        "reference": {
+          "volume_mm3": 57710.73894075777,
+          "bbox_mm": [
+            -38.1000001,
+            -38.1000001,
+            -54.6452961041715,
+            38.1000001,
+            38.1000001,
+            49.4947040958286
+          ],
+          "solid_count": 1
+        },
+        "candidate": {
+          "volume_mm3": 57710.73894173396,
+          "bbox_mm": [
+            -38.1,
+            -38.1,
+            -54.64529600417,
+            38.10000000000062,
+            38.1,
+            49.494703995829
+          ],
+          "solid_count": 1
+        }
+      },
+      "volume_relative_error": 1.6915155605036092e-11,
+      "measurement": {
+        "volume_relative_error": 1.6913230673989484e-11,
+        "symmetric_difference_relative": null,
+        "chamfer_relative": 0.007617369824654041,
+        "symmetric_difference_volume_mm3": null,
+        "chamfer_mean_mm": 0.7617369824654041,
+        "chamfer_distance_mm2": 1.4726471070843052,
+        "area_relative_error": null,
+        "bbox_max_relative_error": null,
+        "volume_iou": 0.9999999999844705,
+        "checks": {
+          "volume_relative_error": "pass",
+          "volume_iou": "pass",
+          "chamfer_relative": "pass"
+        },
+        "metric_errors": [],
+        "warnings": [],
+        "diagnostics": [],
+        "reference_volume_mm3": 15341.22891540952,
+        "candidate_volume_mm3": 15341.22891566899,
+        "reference_bbox_mm": [
+          -24.497747226702256,
+          -24.49774722671875,
+          -32.237034511629425,
+          24.497747226735253,
+          24.497747226718758,
+          34.7234745014019
+        ],
+        "candidate_bbox_mm": [
+          -24.497747126702254,
+          -24.49774712671875,
+          -32.237034411628464,
+          24.49774712673565,
+          24.497747126718757,
+          34.72347440140216
+        ]
+      },
+      "comparison_frame": {
+        "centroid_mm": [
+          -2.5659557036502286e-11,
+          -5.134800735404283e-15,
+          -4.508807749563931
+        ],
+        "characteristic_length_mm": 155.52450518376767,
+        "scale_to_normalized": 0.642985488890256,
+        "target_length_mm": 100.0,
+        "matrix": [
+          [
+            0.642985488890256,
+            0.0,
+            0.0,
+            1.649872282582283e-11
+          ],
+          [
+            0.0,
+            0.642985488890256,
+            0.0,
+            3.3016023612079687e-15
+          ],
+          [
+            0.0,
+            0.0,
+            0.642985488890256,
+            2.899097955165539
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "inverse_matrix": [
+          [
+            1.5552450518376766,
+            0.0,
+            0.0,
+            -2.5659557036502286e-11
+          ],
+          [
+            0.0,
+            1.5552450518376766,
+            0.0,
+            -5.134800735404283e-15
+          ],
+          [
+            0.0,
+            0.0,
+            1.5552450518376766,
+            -4.508807749563931
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "principal_moments": [
+          6125891.848199531,
+          9721411.505407192,
+          9721411.505409127
+        ],
+        "principal_axes_degenerate": true,
+        "effective_source_deflection_mm": 0.15552450518376768,
+        "volume_scaling_consistency_relative": 1.185686892214202e-16
+      },
+      "reference_volume_mm3": 57710.73894075777,
+      "candidate_volume_mm3": 57710.73894173396,
+      "volume_iou": 0.9999999999844705,
+      "chamfer_relative": 0.007617369824654041,
+      "chamfer_mean_mm": 1.184687672781083,
+      "chamfer_distance_mm2": 3.5620199304168825,
+      "symmetric_difference_volume_mm3": null,
+      "decision": {
+        "outcome": "accepted",
+        "reason_code": "geometry.verified",
+        "failed_checks": []
+      }
+    }
+  },
+  "signatures": {
+    "source": {
+      "valid": true,
+      "solid_count": 1,
+      "face_count": 6,
+      "edge_occurrences": 16,
+      "volume_mm3": 57710.73894075777,
+      "bbox_mm": [
+        -38.1000001,
+        -38.1000001,
+        -54.6452961041715,
+        38.1000001,
+        38.1000001,
+        49.4947040958286
+      ],
+      "bodies": [
+        {
+          "volume_mm3": 57710.73894075777,
+          "bbox_mm": [
+            -38.1000001,
+            -38.1000001,
+            -54.6452961041715,
+            38.1000001,
+            38.1000001,
+            49.4947040958286
+          ],
+          "valid": true
+        }
+      ]
+    },
+    "native": {
+      "valid": true,
+      "solid_count": 1,
+      "face_count": 6,
+      "edge_occurrences": 16,
+      "volume_mm3": 57710.73894165638,
+      "bbox_mm": [
+        -38.10000000000001,
+        -38.10000000000001,
+        -54.6452960041715,
+        38.10000000000001,
+        38.10000000000001,
+        49.49470399582873
+      ],
+      "bodies": [
+        {
+          "volume_mm3": 57710.73894165638,
+          "bbox_mm": [
+            -38.10000000000001,
+            -38.10000000000001,
+            -54.6452960041715,
+            38.10000000000001,
+            38.10000000000001,
+            49.49470399582873
+          ],
+          "valid": true
+        }
+      ]
+    },
+    "generated_bodies": [
+      {
+        "valid": true,
+        "solid_count": 1,
+        "face_count": 6,
+        "edge_occurrences": 16,
+        "volume_mm3": 57710.73894165638,
+        "bbox_mm": [
+          -38.10000000000001,
+          -38.10000000000001,
+          -54.6452960041715,
+          38.10000000000001,
+          38.10000000000001,
+          49.49470399582873
+        ],
+        "bodies": [
+          {
+            "volume_mm3": 57710.73894165638,
+            "bbox_mm": [
+              -38.10000000000001,
+              -38.10000000000001,
+              -54.6452960041715,
+              38.10000000000001,
+              38.10000000000001,
+              49.49470399582873
+            ],
+            "valid": true
+          }
+        ]
+      }
+    ],
+    "wrapper": {
+      "valid": true,
+      "solid_count": 1,
+      "face_count": 6,
+      "edge_occurrences": 16,
+      "volume_mm3": 57710.73894165638,
+      "bbox_mm": [
+        -38.10000000000001,
+        -38.10000000000001,
+        -54.6452960041715,
+        38.10000000000001,
+        38.10000000000001,
+        49.49470399582873
+      ],
+      "bodies": [
+        {
+          "volume_mm3": 57710.73894165638,
+          "bbox_mm": [
+            -38.10000000000001,
+            -38.10000000000001,
+            -54.6452960041715,
+            38.10000000000001,
+            38.10000000000001,
+            49.49470399582873
+          ],
+          "valid": true
+        }
+      ]
+    },
+    "step_readback": {
+      "valid": true,
+      "solid_count": 1,
+      "face_count": 6,
+      "edge_occurrences": 16,
+      "volume_mm3": 57710.73894173396,
+      "bbox_mm": [
+        -38.1,
+        -38.1,
+        -54.64529600417,
+        38.10000000000062,
+        38.1,
+        49.494703995829
+      ],
+      "bodies": [
+        {
+          "volume_mm3": 57710.73894173396,
+          "bbox_mm": [
+            -38.1,
+            -38.1,
+            -54.64529600417,
+            38.10000000000062,
+            38.1,
+            49.494703995829
+          ],
+          "valid": true
+        }
+      ]
+    },
+    "wrapper_occupied": {
+      "valid": true,
+      "solid_count": 1,
+      "face_count": 6,
+      "edge_occurrences": 16,
+      "volume_mm3": 57710.73894165638,
+      "bbox_mm": [
+        -38.10000000000001,
+        -38.10000000000001,
+        -54.6452960041715,
+        38.10000000000001,
+        38.10000000000001,
+        49.49470399582873
+      ],
+      "bodies": [
+        {
+          "volume_mm3": 57710.73894165638,
+          "bbox_mm": [
+            -38.10000000000001,
+            -38.10000000000001,
+            -54.6452960041715,
+            38.10000000000001,
+            38.10000000000001,
+            49.49470399582873
+          ],
+          "valid": true
+        }
+      ]
+    },
+    "step_readback_occupied": {
+      "valid": true,
+      "solid_count": 1,
+      "face_count": 6,
+      "edge_occurrences": 16,
+      "volume_mm3": 57710.73894173396,
+      "bbox_mm": [
+        -38.1,
+        -38.1,
+        -54.64529600417,
+        38.10000000000062,
+        38.1,
+        49.494703995829
+      ],
+      "bodies": [
+        {
+          "volume_mm3": 57710.73894173396,
+          "bbox_mm": [
+            -38.1,
+            -38.1,
+            -54.64529600417,
+            38.10000000000062,
+            38.1,
+            49.494703995829
+          ],
+          "valid": true
+        }
+      ]
+    },
+    "source_occupied": {
+      "valid": true,
+      "solid_count": 1,
+      "face_count": 6,
+      "edge_occurrences": 16,
+      "volume_mm3": 57710.73894075777,
+      "bbox_mm": [
+        -38.1000001,
+        -38.1000001,
+        -54.6452961041715,
+        38.1000001,
+        38.1000001,
+        49.4947040958286
+      ],
+      "bodies": [
+        {
+          "volume_mm3": 57710.73894075777,
+          "bbox_mm": [
+            -38.1000001,
+            -38.1000001,
+            -54.6452961041715,
+            38.1000001,
+            38.1000001,
+            49.4947040958286
+          ],
+          "valid": true
+        }
+      ]
+    }
+  },
+  "eligibility": {
+    "geometry": "pass",
+    "serialization": "pass",
+    "readability": "pass",
+    "parameter_edit": "not_run",
+    "assembly": "unsupported",
+    "history": "unsupported"
+  }
+}

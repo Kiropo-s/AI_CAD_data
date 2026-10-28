@@ -1,0 +1,140 @@
+{
+  "format": "step-profile-p2a-smoke",
+  "version": 1,
+  "date": "2026-10-28",
+  "read_only": true,
+  "contract": {
+    "exact_curve_lowering": true,
+    "polyline_approximation": false,
+    "partial_ellipse_policy": "explicit profile.curve_unsupported until backend supports trimmed ellipse"
+  },
+  "cases": [
+    {
+      "case_label": "mixed_line_arc",
+      "status": "pass",
+      "loop_count": 1,
+      "loop_kinds": [
+        "outer"
+      ],
+      "curve_operations": [
+        [
+          "sketch.line",
+          "sketch.line",
+          "sketch.line",
+          "sketch.arc"
+        ]
+      ],
+      "emitted_node_count": 7,
+      "frame_node": "smoke_mixed_line_arc_frame",
+      "profile_node": "smoke_mixed_line_arc_profile",
+      "self_intersection_status": "pass"
+    },
+    {
+      "case_label": "multi_hole",
+      "status": "pass",
+      "loop_count": 3,
+      "loop_kinds": [
+        "outer",
+        "inner",
+        "inner"
+      ],
+      "curve_operations": [
+        [
+          "sketch.line",
+          "sketch.line",
+          "sketch.line",
+          "sketch.line"
+        ],
+        [
+          "sketch.circle"
+        ],
+        [
+          "sketch.circle"
+        ]
+      ],
+      "emitted_node_count": 11,
+      "frame_node": "smoke_multi_hole_frame",
+      "profile_node": "smoke_multi_hole_profile",
+      "self_intersection_status": "pass"
+    },
+    {
+      "case_label": "bspline",
+      "status": "pass",
+      "loop_count": 1,
+      "loop_kinds": [
+        "outer"
+      ],
+      "curve_operations": [
+        [
+          "sketch.bspline",
+          "sketch.line"
+        ]
+      ],
+      "emitted_node_count": 5,
+      "frame_node": "smoke_bspline_frame",
+      "profile_node": "smoke_bspline_profile",
+      "self_intersection_status": "pass"
+    },
+    {
+      "case_label": "reversed_bspline_loop",
+      "status": "pass",
+      "loop_count": 1,
+      "loop_kinds": [
+        "outer"
+      ],
+      "curve_operations": [
+        [
+          "sketch.bspline",
+          "sketch.line"
+        ]
+      ],
+      "oriented_endpoints": {
+        "start": [
+          0.0,
+          10.0
+        ],
+        "end": [
+          0.0,
+          0.0
+        ],
+        "first_control_point": [
+          0.0,
+          10.0
+        ],
+        "last_control_point": [
+          0.0,
+          0.0
+        ]
+      },
+      "lowered_reversed_flag": false,
+      "emitted_node_count": 5,
+      "frame_node": "smoke_reversed_bspline_frame",
+      "profile_node": "smoke_reversed_bspline_profile",
+      "self_intersection_status": "pass"
+    },
+    {
+      "case_label": "full_ellipse",
+      "status": "pass",
+      "operation": "sketch.ellipse",
+      "source_parameter_range": [
+        0.0,
+        6.283185307179586
+      ],
+      "backend": "exact"
+    },
+    {
+      "case_label": "partial_ellipse",
+      "status": "expected_failure",
+      "reason_code": "profile.curve_unsupported",
+      "details": {
+        "curve_type": "GeomAbs_Ellipse",
+        "partial": true,
+        "source_parameter_range": [
+          0.0,
+          1.5707963267948966
+        ],
+        "backend": "full_ellipse_only"
+      }
+    }
+  ]
+}

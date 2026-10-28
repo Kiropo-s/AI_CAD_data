@@ -1,0 +1,3061 @@
+{
+  "format": "step-plan",
+  "nodes": {
+    "body_001_placement": {
+      "args": {
+        "origin": {
+          "param": "body_001_origin"
+        },
+        "x_axis": {
+          "param": "body_001_x_axis"
+        },
+        "y_axis": {
+          "param": "body_001_y_axis"
+        }
+      },
+      "inputs": {},
+      "op": "frame.rigid3"
+    },
+    "body_001_scale": {
+      "args": {
+        "center": {
+          "literal": [
+            0.0,
+            0.0,
+            5.079999999999999
+          ]
+        },
+        "factor": {
+          "param": "body_001_factor"
+        }
+      },
+      "inputs": {
+        "shape": [
+          "solid_01_partition_union"
+        ]
+      },
+      "op": "shape.uniform_scale"
+    },
+    "body_001_world": {
+      "args": {},
+      "inputs": {
+        "frame": [
+          "body_001_placement"
+        ],
+        "shape": [
+          "body_001_scale"
+        ]
+      },
+      "op": "shape.transform"
+    },
+    "solid_01_partition_001_solid_01_extrude": {
+      "args": {},
+      "inputs": {
+        "frame": [
+          "solid_01_partition_001_solid_01_frame"
+        ],
+        "shape": [
+          "solid_01_partition_001_solid_01_extrude_local"
+        ]
+      },
+      "op": "shape.transform"
+    },
+    "solid_01_partition_001_solid_01_extrude_local": {
+      "args": {
+        "distance": {
+          "literal": 3.8099999999999996
+        }
+      },
+      "inputs": {
+        "profile": [
+          "solid_01_partition_001_solid_01_profile"
+        ]
+      },
+      "op": "solid.extrude"
+    },
+    "solid_01_partition_001_solid_01_frame": {
+      "args": {
+        "origin": {
+          "literal": [
+            0.0,
+            0.0,
+            1.2699999999999996
+          ]
+        },
+        "x_axis": {
+          "literal": [
+            1.0,
+            0.0,
+            -0.0
+          ]
+        },
+        "y_axis": {
+          "literal": [
+            0.0,
+            -1.0,
+            0.0
+          ]
+        }
+      },
+      "inputs": {},
+      "op": "frame.rigid3"
+    },
+    "solid_01_partition_001_solid_01_loop_01": {
+      "args": {},
+      "inputs": {
+        "curves": [
+          "solid_01_partition_001_solid_01_loop_01_edge_001"
+        ]
+      },
+      "op": "wire.loop2"
+    },
+    "solid_01_partition_001_solid_01_loop_01_edge_001": {
+      "args": {
+        "center": {
+          "literal": [
+            0.0,
+            0.0
+          ]
+        },
+        "radius": {
+          "literal": 39.370000000000005
+        },
+        "winding": {
+          "literal": "cw"
+        }
+      },
+      "inputs": {},
+      "op": "curve.circle2"
+    },
+    "solid_01_partition_001_solid_01_loop_02": {
+      "args": {},
+      "inputs": {
+        "curves": [
+          "solid_01_partition_001_solid_01_loop_02_edge_001"
+        ]
+      },
+      "op": "wire.loop2"
+    },
+    "solid_01_partition_001_solid_01_loop_02_edge_001": {
+      "args": {
+        "center": {
+          "literal": [
+            0.0,
+            0.0
+          ]
+        },
+        "radius": {
+          "literal": 38.1
+        },
+        "winding": {
+          "literal": "ccw"
+        }
+      },
+      "inputs": {},
+      "op": "curve.circle2"
+    },
+    "solid_01_partition_001_solid_01_profile": {
+      "args": {},
+      "inputs": {
+        "holes": [
+          "solid_01_partition_001_solid_01_loop_02"
+        ],
+        "outer": [
+          "solid_01_partition_001_solid_01_loop_01"
+        ]
+      },
+      "op": "profile.face2"
+    },
+    "solid_01_partition_002_solid_01_revolve": {
+      "args": {},
+      "inputs": {
+        "frame": [
+          "solid_01_partition_002_solid_01_section_01_frame"
+        ],
+        "shape": [
+          "solid_01_partition_002_solid_01_revolve_section_01_local"
+        ]
+      },
+      "op": "shape.transform"
+    },
+    "solid_01_partition_002_solid_01_revolve_section_01_local": {
+      "args": {
+        "angle": {
+          "literal": 6.283185307179586
+        }
+      },
+      "inputs": {
+        "profile": [
+          "solid_01_partition_002_solid_01_section_01_profile"
+        ]
+      },
+      "op": "solid.revolve"
+    },
+    "solid_01_partition_002_solid_01_section_01_frame": {
+      "args": {
+        "origin": {
+          "literal": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "x_axis": {
+          "literal": [
+            1.0,
+            0.0,
+            0.0
+          ]
+        },
+        "y_axis": {
+          "literal": [
+            -0.0,
+            1.0,
+            0.0
+          ]
+        }
+      },
+      "inputs": {},
+      "op": "frame.rigid3"
+    },
+    "solid_01_partition_002_solid_01_section_01_loop_01": {
+      "args": {},
+      "inputs": {
+        "curves": [
+          "solid_01_partition_002_solid_01_section_01_loop_01_edge_001",
+          "solid_01_partition_002_solid_01_section_01_loop_01_edge_002",
+          "solid_01_partition_002_solid_01_section_01_loop_01_edge_003",
+          "solid_01_partition_002_solid_01_section_01_loop_01_edge_004",
+          "solid_01_partition_002_solid_01_section_01_loop_01_edge_005",
+          "solid_01_partition_002_solid_01_section_01_loop_01_edge_006"
+        ]
+      },
+      "op": "wire.loop2"
+    },
+    "solid_01_partition_002_solid_01_section_01_loop_01_edge_001": {
+      "args": {
+        "end": {
+          "literal": [
+            39.37000000000001,
+            1.27
+          ]
+        },
+        "start": {
+          "literal": [
+            38.1,
+            1.27
+          ]
+        }
+      },
+      "inputs": {},
+      "op": "curve.line2"
+    },
+    "solid_01_partition_002_solid_01_section_01_loop_01_edge_002": {
+      "args": {
+        "degree": {
+          "literal": 1
+        },
+        "knots": {
+          "literal": [
+            -1.2699999999999985,
+            0.0
+          ]
+        },
+        "multiplicities": {
+          "literal": [
+            2,
+            2
+          ]
+        },
+        "periodic": {
+          "literal": false
+        },
+        "poles": {
+          "literal": [
+            [
+              39.370000000000005,
+              1.2700000000000018
+            ],
+            [
+              39.370000000000005,
+              2.54
+            ]
+          ]
+        },
+        "reversed": {
+          "literal": false
+        },
+        "trim": {
+          "literal": [
+            -1.2699999999999985,
+            0.0
+          ]
+        },
+        "weights": {
+          "literal": [
+            1.0,
+            1.0
+          ]
+        }
+      },
+      "inputs": {},
+      "op": "curve.bspline2"
+    },
+    "solid_01_partition_002_solid_01_section_01_loop_01_edge_003": {
+      "args": {
+        "end": {
+          "literal": [
+            37.4194090512249,
+            2.54
+          ]
+        },
+        "start": {
+          "literal": [
+            39.370000000000005,
+            2.54
+          ]
+        }
+      },
+      "inputs": {},
+      "op": "curve.line2"
+    },
+    "solid_01_partition_002_solid_01_section_01_loop_01_edge_004": {
+      "args": {
+        "end": {
+          "literal": [
+            36.10460830148864,
+            2.54
+          ]
+        },
+        "start": {
+          "literal": [
+            37.4194091,
+            2.54
+          ]
+        }
+      },
+      "inputs": {},
+      "op": "curve.line2"
+    },
+    "solid_01_partition_002_solid_01_section_01_loop_01_edge_005": {
+      "args": {
+        "degree": {
+          "literal": 1
+        },
+        "knots": {
+          "literal": [
+            -2.9698969726298134,
+            -1.6550962172653012
+          ]
+        },
+        "multiplicities": {
+          "literal": [
+            2,
+            2
+          ]
+        },
+        "periodic": {
+          "literal": false
+        },
+        "poles": {
+          "literal": [
+            [
+              36.10460830148864,
+              2.5400000000000005
+            ],
+            [
+              36.44490377749324,
+              1.269999993969332
+            ]
+          ]
+        },
+        "reversed": {
+          "literal": false
+        },
+        "trim": {
+          "literal": [
+            -2.9698969726298134,
+            -1.6550962172653012
+          ]
+        },
+        "weights": {
+          "literal": [
+            1.0,
+            1.0
+          ]
+        }
+      },
+      "inputs": {},
+      "op": "curve.bspline2"
+    },
+    "solid_01_partition_002_solid_01_section_01_loop_01_edge_006": {
+      "args": {
+        "end": {
+          "literal": [
+            38.1,
+            1.27
+          ]
+        },
+        "start": {
+          "literal": [
+            36.4449037764917,
+            1.27
+          ]
+        }
+      },
+      "inputs": {},
+      "op": "curve.line2"
+    },
+    "solid_01_partition_002_solid_01_section_01_profile": {
+      "args": {},
+      "inputs": {
+        "holes": [],
+        "outer": [
+          "solid_01_partition_002_solid_01_section_01_loop_01"
+        ]
+      },
+      "op": "profile.face2"
+    },
+    "solid_01_partition_003_solid_01_revolve": {
+      "args": {},
+      "inputs": {
+        "frame": [
+          "solid_01_partition_003_solid_01_section_01_frame"
+        ],
+        "shape": [
+          "solid_01_partition_003_solid_01_revolve_section_01_local"
+        ]
+      },
+      "op": "shape.transform"
+    },
+    "solid_01_partition_003_solid_01_revolve_section_01_local": {
+      "args": {
+        "angle": {
+          "literal": 6.283185307179586
+        }
+      },
+      "inputs": {
+        "profile": [
+          "solid_01_partition_003_solid_01_section_01_profile"
+        ]
+      },
+      "op": "solid.revolve"
+    },
+    "solid_01_partition_003_solid_01_section_01_frame": {
+      "args": {
+        "origin": {
+          "literal": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "x_axis": {
+          "literal": [
+            1.0,
+            0.0,
+            0.0
+          ]
+        },
+        "y_axis": {
+          "literal": [
+            0.0,
+            1.0,
+            -0.0
+          ]
+        }
+      },
+      "inputs": {},
+      "op": "frame.rigid3"
+    },
+    "solid_01_partition_003_solid_01_section_01_loop_01": {
+      "args": {},
+      "inputs": {
+        "curves": [
+          "solid_01_partition_003_solid_01_section_01_loop_01_edge_001",
+          "solid_01_partition_003_solid_01_section_01_loop_01_edge_002",
+          "solid_01_partition_003_solid_01_section_01_loop_01_edge_003",
+          "solid_01_partition_003_solid_01_section_01_loop_01_edge_004"
+        ]
+      },
+      "op": "wire.loop2"
+    },
+    "solid_01_partition_003_solid_01_section_01_loop_01_edge_001": {
+      "args": {
+        "degree": {
+          "literal": 1
+        },
+        "knots": {
+          "literal": [
+            -5.259202996484424,
+            -2.629601485617698
+          ]
+        },
+        "multiplicities": {
+          "literal": [
+            2,
+            2
+          ]
+        },
+        "periodic": {
+          "literal": false
+        },
+        "poles": {
+          "literal": [
+            [
+              37.419409054490096,
+              2.5399999878056576
+            ],
+            [
+              36.738818102445265,
+              5.080000000000004
+            ]
+          ]
+        },
+        "reversed": {
+          "literal": false
+        },
+        "trim": {
+          "literal": [
+            -5.259202996484424,
+            -2.629601485617698
+          ]
+        },
+        "weights": {
+          "literal": [
+            1.0,
+            1.0
+          ]
+        }
+      },
+      "inputs": {},
+      "op": "curve.bspline2"
+    },
+    "solid_01_partition_003_solid_01_section_01_loop_01_edge_002": {
+      "args": {
+        "end": {
+          "literal": [
+            35.424017352711274,
+            5.08
+          ]
+        },
+        "start": {
+          "literal": [
+            36.738818102445265,
+            5.08
+          ]
+        }
+      },
+      "inputs": {},
+      "op": "curve.line2"
+    },
+    "solid_01_partition_003_solid_01_section_01_loop_01_edge_003": {
+      "args": {
+        "degree": {
+          "literal": 1
+        },
+        "knots": {
+          "literal": [
+            -5.599498470872025,
+            -2.9698969726298134
+          ]
+        },
+        "multiplicities": {
+          "literal": [
+            2,
+            2
+          ]
+        },
+        "periodic": {
+          "literal": false
+        },
+        "poles": {
+          "literal": [
+            [
+              35.424017352711274,
+              5.080000000000001
+            ],
+            [
+              36.10460830148864,
+              2.54
+            ]
+          ]
+        },
+        "reversed": {
+          "literal": false
+        },
+        "trim": {
+          "literal": [
+            -5.599498470872025,
+            -2.9698969726298134
+          ]
+        },
+        "weights": {
+          "literal": [
+            1.0,
+            1.0
+          ]
+        }
+      },
+      "inputs": {},
+      "op": "curve.bspline2"
+    },
+    "solid_01_partition_003_solid_01_section_01_loop_01_edge_004": {
+      "args": {
+        "end": {
+          "literal": [
+            37.419409099999996,
+            2.54
+          ]
+        },
+        "start": {
+          "literal": [
+            36.10460830148864,
+            2.54
+          ]
+        }
+      },
+      "inputs": {},
+      "op": "curve.line2"
+    },
+    "solid_01_partition_003_solid_01_section_01_profile": {
+      "args": {},
+      "inputs": {
+        "holes": [],
+        "outer": [
+          "solid_01_partition_003_solid_01_section_01_loop_01"
+        ]
+      },
+      "op": "profile.face2"
+    },
+    "solid_01_partition_004_solid_01_csg_cap_002_1_loop_01": {
+      "args": {},
+      "inputs": {
+        "curves": [
+          "solid_01_partition_004_solid_01_csg_cap_002_1_loop_01_edge_001",
+          "solid_01_partition_004_solid_01_csg_cap_002_1_loop_01_edge_002"
+        ]
+      },
+      "op": "wire.loop2"
+    },
+    "solid_01_partition_004_solid_01_csg_cap_002_1_loop_01_edge_001": {
+      "args": {
+        "center": {
+          "literal": [
+            112.3932065077245,
+            -112.3932065077245
+          ]
+        },
+        "radius": {
+          "literal": 28.347045299999998
+        },
+        "start_angle": {
+          "literal": -0.17314027804006854
+        },
+        "sweep_angle": {
+          "literal": -2.7953120975096555
+        }
+      },
+      "inputs": {},
+      "op": "curve.arc2"
+    },
+    "solid_01_partition_004_solid_01_csg_cap_002_1_loop_01_edge_002": {
+      "args": {
+        "end": {
+          "literal": [
+            140.3164246031788,
+            -117.27673682398287
+          ]
+        },
+        "start": {
+          "literal": [
+            84.46998841227021,
+            -117.27673682398287
+          ]
+        }
+      },
+      "inputs": {},
+      "op": "curve.line2"
+    },
+    "solid_01_partition_004_solid_01_csg_cap_002_1_profile": {
+      "args": {},
+      "inputs": {
+        "holes": [],
+        "outer": [
+          "solid_01_partition_004_solid_01_csg_cap_002_1_loop_01"
+        ]
+      },
+      "op": "profile.face2"
+    },
+    "solid_01_partition_004_solid_01_csg_op_001": {
+      "args": {},
+      "inputs": {
+        "target": [
+          "solid_01_partition_004_solid_01_csg_tool_007"
+        ],
+        "tool": [
+          "solid_01_partition_004_solid_01_csg_tool_010"
+        ]
+      },
+      "op": "boolean.cut"
+    },
+    "solid_01_partition_004_solid_01_csg_tool_007": {
+      "args": {},
+      "inputs": {
+        "frame": [
+          "solid_01_partition_004_solid_01_csg_tool_007_frame"
+        ],
+        "shape": [
+          "solid_01_partition_004_solid_01_csg_tool_007_local"
+        ]
+      },
+      "op": "shape.transform"
+    },
+    "solid_01_partition_004_solid_01_csg_tool_007_frame": {
+      "args": {
+        "origin": {
+          "literal": [
+            -112.3932065077245,
+            -112.3932065077245,
+            6.35
+          ]
+        },
+        "x_axis": {
+          "literal": [
+            1.0,
+            0.0,
+            0.0
+          ]
+        },
+        "y_axis": {
+          "literal": [
+            0.0,
+            -1.0,
+            0.0
+          ]
+        }
+      },
+      "inputs": {},
+      "op": "frame.rigid3"
+    },
+    "solid_01_partition_004_solid_01_csg_tool_007_local": {
+      "args": {
+        "distance": {
+          "literal": 1.2699999999999996
+        }
+      },
+      "inputs": {
+        "profile": [
+          "solid_01_partition_004_solid_01_csg_cap_002_1_profile"
+        ]
+      },
+      "op": "solid.extrude"
+    },
+    "solid_01_partition_004_solid_01_csg_tool_010": {
+      "args": {},
+      "inputs": {
+        "frame": [
+          "solid_01_partition_004_solid_01_csg_tool_010_frame"
+        ],
+        "shape": [
+          "solid_01_partition_004_solid_01_csg_tool_010_local"
+        ]
+      },
+      "op": "shape.transform"
+    },
+    "solid_01_partition_004_solid_01_csg_tool_010_frame": {
+      "args": {
+        "origin": {
+          "literal": [
+            0.0,
+            8.091432755729798,
+            0.7937499891113191
+          ]
+        },
+        "x_axis": {
+          "literal": [
+            1.0,
+            0.0,
+            0.0
+          ]
+        },
+        "y_axis": {
+          "literal": [
+            0.0,
+            -0.4999999999999999,
+            0.8660254037844388
+          ]
+        }
+      },
+      "inputs": {},
+      "op": "frame.rigid3"
+    },
+    "solid_01_partition_004_solid_01_csg_tool_010_local": {
+      "args": {
+        "depth": {
+          "literal": 242.3542488491899
+        },
+        "height": {
+          "literal": 242.3542488491899
+        },
+        "width": {
+          "literal": 242.3542488491899
+        }
+      },
+      "inputs": {},
+      "op": "solid.box"
+    },
+    "solid_01_partition_005_solid_01_revolve": {
+      "args": {},
+      "inputs": {
+        "frame": [
+          "solid_01_partition_005_solid_01_section_01_frame"
+        ],
+        "shape": [
+          "solid_01_partition_005_solid_01_revolve_section_01_local"
+        ]
+      },
+      "op": "shape.transform"
+    },
+    "solid_01_partition_005_solid_01_revolve_section_01_local": {
+      "args": {
+        "angle": {
+          "literal": 6.283185307179586
+        }
+      },
+      "inputs": {
+        "profile": [
+          "solid_01_partition_005_solid_01_section_01_profile"
+        ]
+      },
+      "op": "solid.revolve"
+    },
+    "solid_01_partition_005_solid_01_section_01_frame": {
+      "args": {
+        "origin": {
+          "literal": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "x_axis": {
+          "literal": [
+            1.0,
+            0.0,
+            0.0
+          ]
+        },
+        "y_axis": {
+          "literal": [
+            0.0,
+            1.0,
+            -0.0
+          ]
+        }
+      },
+      "inputs": {},
+      "op": "frame.rigid3"
+    },
+    "solid_01_partition_005_solid_01_section_01_loop_01": {
+      "args": {},
+      "inputs": {
+        "curves": [
+          "solid_01_partition_005_solid_01_section_01_loop_01_edge_001",
+          "solid_01_partition_005_solid_01_section_01_loop_01_edge_002",
+          "solid_01_partition_005_solid_01_section_01_loop_01_edge_003",
+          "solid_01_partition_005_solid_01_section_01_loop_01_edge_004"
+        ]
+      },
+      "op": "wire.loop2"
+    },
+    "solid_01_partition_005_solid_01_section_01_loop_01_edge_001": {
+      "args": {
+        "degree": {
+          "literal": 1
+        },
+        "knots": {
+          "literal": [
+            -6.574003745605527,
+            -5.259202996484424
+          ]
+        },
+        "multiplicities": {
+          "literal": [
+            2,
+            2
+          ]
+        },
+        "periodic": {
+          "literal": false
+        },
+        "poles": {
+          "literal": [
+            [
+              36.738818102445265,
+              5.080000000000003
+            ],
+            [
+              36.39852262805658,
+              6.3500000000000005
+            ]
+          ]
+        },
+        "reversed": {
+          "literal": false
+        },
+        "trim": {
+          "literal": [
+            -6.574003745605527,
+            -5.259202996484424
+          ]
+        },
+        "weights": {
+          "literal": [
+            1.0,
+            1.0
+          ]
+        }
+      },
+      "inputs": {},
+      "op": "curve.bspline2"
+    },
+    "solid_01_partition_005_solid_01_section_01_loop_01_edge_002": {
+      "args": {
+        "end": {
+          "literal": [
+            35.08372187832259,
+            6.35
+          ]
+        },
+        "start": {
+          "literal": [
+            36.39852262805659,
+            6.35
+          ]
+        }
+      },
+      "inputs": {},
+      "op": "curve.line2"
+    },
+    "solid_01_partition_005_solid_01_section_01_loop_01_edge_003": {
+      "args": {
+        "degree": {
+          "literal": 1
+        },
+        "knots": {
+          "literal": [
+            -6.914299219993128,
+            -5.599498470872025
+          ]
+        },
+        "multiplicities": {
+          "literal": [
+            2,
+            2
+          ]
+        },
+        "periodic": {
+          "literal": false
+        },
+        "poles": {
+          "literal": [
+            [
+              35.08372187832259,
+              6.35
+            ],
+            [
+              35.424017352711274,
+              5.080000000000001
+            ]
+          ]
+        },
+        "reversed": {
+          "literal": false
+        },
+        "trim": {
+          "literal": [
+            -6.914299219993128,
+            -5.599498470872025
+          ]
+        },
+        "weights": {
+          "literal": [
+            1.0,
+            1.0
+          ]
+        }
+      },
+      "inputs": {},
+      "op": "curve.bspline2"
+    },
+    "solid_01_partition_005_solid_01_section_01_loop_01_edge_004": {
+      "args": {
+        "end": {
+          "literal": [
+            36.73881810244527,
+            5.08
+          ]
+        },
+        "start": {
+          "literal": [
+            35.424017352711274,
+            5.08
+          ]
+        }
+      },
+      "inputs": {},
+      "op": "curve.line2"
+    },
+    "solid_01_partition_005_solid_01_section_01_profile": {
+      "args": {},
+      "inputs": {
+        "holes": [],
+        "outer": [
+          "solid_01_partition_005_solid_01_section_01_loop_01"
+        ]
+      },
+      "op": "profile.face2"
+    },
+    "solid_01_partition_006_solid_01_csg_op_001": {
+      "args": {},
+      "inputs": {
+        "target": [
+          "solid_01_partition_006_solid_01_csg_tool_001"
+        ],
+        "tool": [
+          "solid_01_partition_006_solid_01_csg_tool_006"
+        ]
+      },
+      "op": "boolean.cut"
+    },
+    "solid_01_partition_006_solid_01_csg_op_003": {
+      "args": {},
+      "inputs": {
+        "target": [
+          "solid_01_partition_006_solid_01_csg_op_001"
+        ],
+        "tool": [
+          "solid_01_partition_006_solid_01_csg_tool_007"
+        ]
+      },
+      "op": "boolean.cut"
+    },
+    "solid_01_partition_006_solid_01_csg_op_005": {
+      "args": {},
+      "inputs": {
+        "target": [
+          "solid_01_partition_006_solid_01_csg_op_003"
+        ],
+        "tool": [
+          "solid_01_partition_006_solid_01_csg_tool_008"
+        ]
+      },
+      "op": "boolean.cut"
+    },
+    "solid_01_partition_006_solid_01_csg_op_007": {
+      "args": {},
+      "inputs": {
+        "operands": [
+          "solid_01_partition_006_solid_01_csg_op_005",
+          "solid_01_partition_006_solid_01_csg_tool_009"
+        ]
+      },
+      "op": "boolean.intersect"
+    },
+    "solid_01_partition_006_solid_01_csg_op_009": {
+      "args": {},
+      "inputs": {
+        "target": [
+          "solid_01_partition_006_solid_01_csg_op_007"
+        ],
+        "tool": [
+          "solid_01_partition_006_solid_01_csg_tool_010"
+        ]
+      },
+      "op": "boolean.cut"
+    },
+    "solid_01_partition_006_solid_01_csg_tool_001": {
+      "args": {},
+      "inputs": {
+        "frame": [
+          "solid_01_partition_006_solid_01_csg_tool_001_frame"
+        ],
+        "shape": [
+          "solid_01_partition_006_solid_01_csg_tool_001_local"
+        ]
+      },
+      "op": "shape.transform"
+    },
+    "solid_01_partition_006_solid_01_csg_tool_001_frame": {
+      "args": {
+        "origin": {
+          "literal": [
+            0.0,
+            4.51691289658038,
+            6.349433130125785
+          ]
+        },
+        "x_axis": {
+          "literal": [
+            1,
+            0,
+            0
+          ]
+        },
+        "y_axis": {
+          "literal": [
+            0,
+            1,
+            0
+          ]
+        }
+      },
+      "inputs": {},
+      "op": "frame.rigid3"
+    },
+    "solid_01_partition_006_solid_01_csg_tool_001_local": {
+      "args": {
+        "depth": {
+          "literal": 3.6673079429056687
+        },
+        "height": {
+          "literal": 3.811133735392558
+        },
+        "width": {
+          "literal": 56.44055457652086
+        }
+      },
+      "inputs": {},
+      "op": "solid.box"
+    },
+    "solid_01_partition_006_solid_01_csg_tool_006": {
+      "args": {},
+      "inputs": {
+        "frame": [
+          "solid_01_partition_006_solid_01_csg_tool_006_frame"
+        ],
+        "shape": [
+          "solid_01_partition_006_solid_01_csg_tool_006_local"
+        ]
+      },
+      "op": "shape.transform"
+    },
+    "solid_01_partition_006_solid_01_csg_tool_006_frame": {
+      "args": {
+        "origin": {
+          "literal": [
+            0.0,
+            5.066839027983491,
+            8.572499997822064
+          ]
+        },
+        "x_axis": {
+          "literal": [
+            1.0,
+            0.0,
+            0.0
+          ]
+        },
+        "y_axis": {
+          "literal": [
+            0.0,
+            0.4999999999999999,
+            -0.8660254037844388
+          ]
+        }
+      },
+      "inputs": {},
+      "op": "frame.rigid3"
+    },
+    "solid_01_partition_006_solid_01_csg_tool_006_local": {
+      "args": {
+        "depth": {
+          "literal": 226.74620733352575
+        },
+        "height": {
+          "literal": 226.74620733352575
+        },
+        "width": {
+          "literal": 226.74620733352575
+        }
+      },
+      "inputs": {},
+      "op": "solid.box"
+    },
+    "solid_01_partition_006_solid_01_csg_tool_007": {
+      "args": {},
+      "inputs": {
+        "frame": [
+          "solid_01_partition_006_solid_01_csg_tool_007_frame"
+        ],
+        "shape": [
+          "solid_01_partition_006_solid_01_csg_tool_007_local"
+        ]
+      },
+      "op": "shape.transform"
+    },
+    "solid_01_partition_006_solid_01_csg_tool_007_frame": {
+      "args": {
+        "origin": {
+          "literal": [
+            0.0,
+            4.516912896580379,
+            6.35
+          ]
+        },
+        "x_axis": {
+          "literal": [
+            1.0,
+            0.0,
+            0.0
+          ]
+        },
+        "y_axis": {
+          "literal": [
+            0.0,
+            -1.0,
+            0.0
+          ]
+        }
+      },
+      "inputs": {},
+      "op": "frame.rigid3"
+    },
+    "solid_01_partition_006_solid_01_csg_tool_007_local": {
+      "args": {
+        "depth": {
+          "literal": 226.74620733352575
+        },
+        "height": {
+          "literal": 226.74620733352575
+        },
+        "width": {
+          "literal": 226.74620733352575
+        }
+      },
+      "inputs": {},
+      "op": "solid.box"
+    },
+    "solid_01_partition_006_solid_01_csg_tool_008": {
+      "args": {},
+      "inputs": {
+        "frame": [
+          "solid_01_partition_006_solid_01_csg_tool_008_frame"
+        ],
+        "shape": [
+          "solid_01_partition_006_solid_01_csg_tool_008_local"
+        ]
+      },
+      "op": "shape.transform"
+    },
+    "solid_01_partition_006_solid_01_csg_tool_008_frame": {
+      "args": {
+        "origin": {
+          "literal": [
+            0.0,
+            4.516912896580379,
+            10.16
+          ]
+        },
+        "x_axis": {
+          "literal": [
+            1.0,
+            0.0,
+            0.0
+          ]
+        },
+        "y_axis": {
+          "literal": [
+            0.0,
+            1.0,
+            0.0
+          ]
+        }
+      },
+      "inputs": {},
+      "op": "frame.rigid3"
+    },
+    "solid_01_partition_006_solid_01_csg_tool_008_local": {
+      "args": {
+        "depth": {
+          "literal": 226.74620733352575
+        },
+        "height": {
+          "literal": 226.74620733352575
+        },
+        "width": {
+          "literal": 226.74620733352575
+        }
+      },
+      "inputs": {},
+      "op": "solid.box"
+    },
+    "solid_01_partition_006_solid_01_csg_tool_009": {
+      "args": {},
+      "inputs": {
+        "frame": [
+          "solid_01_partition_006_solid_01_csg_tool_009_frame"
+        ],
+        "shape": [
+          "solid_01_partition_006_solid_01_csg_tool_009_local"
+        ]
+      },
+      "op": "shape.transform"
+    },
+    "solid_01_partition_006_solid_01_csg_tool_009_frame": {
+      "args": {
+        "origin": {
+          "literal": [
+            0.0,
+            0.0,
+            10.160566865518343
+          ]
+        },
+        "x_axis": {
+          "literal": [
+            1.0,
+            0.0,
+            0.0
+          ]
+        },
+        "y_axis": {
+          "literal": [
+            0.0,
+            -1.0,
+            0.0
+          ]
+        }
+      },
+      "inputs": {},
+      "op": "frame.rigid3"
+    },
+    "solid_01_partition_006_solid_01_csg_tool_009_local": {
+      "args": {
+        "height": {
+          "literal": 3.8111337353925583
+        },
+        "radius": {
+          "literal": 28.347045299999998
+        }
+      },
+      "inputs": {},
+      "op": "solid.cylinder"
+    },
+    "solid_01_partition_006_solid_01_csg_tool_010": {
+      "args": {},
+      "inputs": {
+        "frame": [
+          "solid_01_partition_006_solid_01_csg_tool_010_frame"
+        ],
+        "shape": [
+          "solid_01_partition_006_solid_01_csg_tool_010_local"
+        ]
+      },
+      "op": "shape.transform"
+    },
+    "solid_01_partition_006_solid_01_csg_tool_010_frame": {
+      "args": {
+        "origin": {
+          "literal": [
+            0.0,
+            3.9669867651772606,
+            7.937499997822059
+          ]
+        },
+        "x_axis": {
+          "literal": [
+            1.0,
+            0.0,
+            0.0
+          ]
+        },
+        "y_axis": {
+          "literal": [
+            0.0,
+            -0.4999999999999999,
+            0.8660254037844388
+          ]
+        }
+      },
+      "inputs": {},
+      "op": "frame.rigid3"
+    },
+    "solid_01_partition_006_solid_01_csg_tool_010_local": {
+      "args": {
+        "depth": {
+          "literal": 226.74620733352575
+        },
+        "height": {
+          "literal": 226.74620733352575
+        },
+        "width": {
+          "literal": 226.74620733352575
+        }
+      },
+      "inputs": {},
+      "op": "solid.box"
+    },
+    "solid_01_partition_007_solid_01_csg_cap_004_0_loop_01": {
+      "args": {},
+      "inputs": {
+        "curves": [
+          "solid_01_partition_007_solid_01_csg_cap_004_0_loop_01_edge_001",
+          "solid_01_partition_007_solid_01_csg_cap_004_0_loop_01_edge_002",
+          "solid_01_partition_007_solid_01_csg_cap_004_0_loop_01_edge_003",
+          "solid_01_partition_007_solid_01_csg_cap_004_0_loop_01_edge_004",
+          "solid_01_partition_007_solid_01_csg_cap_004_0_loop_01_edge_005"
+        ]
+      },
+      "op": "wire.loop2"
+    },
+    "solid_01_partition_007_solid_01_csg_cap_004_0_loop_01_edge_001": {
+      "args": {
+        "center": {
+          "literal": [
+            112.3932065077245,
+            -112.3932065077245
+          ]
+        },
+        "radius": {
+          "literal": 28.347045299999998
+        },
+        "start_angle": {
+          "literal": -0.14693834539891132
+        },
+        "sweep_angle": {
+          "literal": -2.847715962791972
+        }
+      },
+      "inputs": {},
+      "op": "curve.arc2"
+    },
+    "solid_01_partition_007_solid_01_csg_cap_004_0_loop_01_edge_002": {
+      "args": {
+        "end": {
+          "literal": [
+            85.63612464908536,
+            -116.54350198211203
+          ]
+        },
+        "start": {
+          "literal": [
+            84.35162979179195,
+            -116.54350198211203
+          ]
+        }
+      },
+      "inputs": {},
+      "op": "curve.line2"
+    },
+    "solid_01_partition_007_solid_01_csg_cap_004_0_loop_01_edge_003": {
+      "args": {
+        "center": {
+          "literal": [
+            112.3932065077245,
+            -112.3932065077245
+          ]
+        },
+        "radius": {
+          "literal": 27.0770453
+        },
+        "start_angle": {
+          "literal": -2.9877087715119623
+        },
+        "sweep_angle": {
+          "literal": 2.7509881313446343
+        }
+      },
+      "inputs": {},
+      "op": "curve.arc2"
+    },
+    "solid_01_partition_007_solid_01_csg_cap_004_0_loop_01_edge_004": {
+      "args": {
+        "center": {
+          "literal": [
+            112.3932065077245,
+            -112.3932065077245
+          ]
+        },
+        "radius": {
+          "literal": 27.0770453
+        },
+        "start_angle": {
+          "literal": -0.23672064016732852
+        },
+        "sweep_angle": {
+          "literal": 0.08283675808949997
+        }
+      },
+      "inputs": {},
+      "op": "curve.arc2"
+    },
+    "solid_01_partition_007_solid_01_csg_cap_004_0_loop_01_edge_005": {
+      "args": {
+        "end": {
+          "literal": [
+            140.43478322365706,
+            -116.54350198211203
+          ]
+        },
+        "start": {
+          "literal": [
+            139.15028836636364,
+            -116.54350198211203
+          ]
+        }
+      },
+      "inputs": {},
+      "op": "curve.line2"
+    },
+    "solid_01_partition_007_solid_01_csg_cap_004_0_profile": {
+      "args": {},
+      "inputs": {
+        "holes": [],
+        "outer": [
+          "solid_01_partition_007_solid_01_csg_cap_004_0_loop_01"
+        ]
+      },
+      "op": "profile.face2"
+    },
+    "solid_01_partition_007_solid_01_csg_op_001": {
+      "args": {},
+      "inputs": {
+        "target": [
+          "solid_01_partition_007_solid_01_csg_tool_002"
+        ],
+        "tool": [
+          "solid_01_partition_007_solid_01_csg_tool_009"
+        ]
+      },
+      "op": "boolean.cut"
+    },
+    "solid_01_partition_007_solid_01_csg_tool_002": {
+      "args": {},
+      "inputs": {
+        "frame": [
+          "solid_01_partition_007_solid_01_csg_tool_002_frame"
+        ],
+        "shape": [
+          "solid_01_partition_007_solid_01_csg_tool_002_local"
+        ]
+      },
+      "op": "shape.transform"
+    },
+    "solid_01_partition_007_solid_01_csg_tool_002_frame": {
+      "args": {
+        "origin": {
+          "literal": [
+            -112.3932065077245,
+            -112.3932065077245,
+            10.16
+          ]
+        },
+        "x_axis": {
+          "literal": [
+            1.0,
+            0.0,
+            0.0
+          ]
+        },
+        "y_axis": {
+          "literal": [
+            0.0,
+            -1.0,
+            0.0
+          ]
+        }
+      },
+      "inputs": {},
+      "op": "frame.rigid3"
+    },
+    "solid_01_partition_007_solid_01_csg_tool_002_local": {
+      "args": {
+        "distance": {
+          "literal": 3.8100000000000005
+        }
+      },
+      "inputs": {
+        "profile": [
+          "solid_01_partition_007_solid_01_csg_cap_004_0_profile"
+        ]
+      },
+      "op": "solid.extrude"
+    },
+    "solid_01_partition_007_solid_01_csg_tool_009": {
+      "args": {},
+      "inputs": {
+        "frame": [
+          "solid_01_partition_007_solid_01_csg_tool_009_frame"
+        ],
+        "shape": [
+          "solid_01_partition_007_solid_01_csg_tool_009_local"
+        ]
+      },
+      "op": "shape.transform"
+    },
+    "solid_01_partition_007_solid_01_csg_tool_009_frame": {
+      "args": {
+        "origin": {
+          "literal": [
+            0.0,
+            7.999778388136832,
+            3.492500010517915
+          ]
+        },
+        "x_axis": {
+          "literal": [
+            1.0,
+            0.0,
+            0.0
+          ]
+        },
+        "y_axis": {
+          "literal": [
+            0.0,
+            -0.4999999999999999,
+            0.8660254037844388
+          ]
+        }
+      },
+      "inputs": {},
+      "op": "frame.rigid3"
+    },
+    "solid_01_partition_007_solid_01_csg_tool_009_local": {
+      "args": {
+        "depth": {
+          "literal": 244.79604269291417
+        },
+        "height": {
+          "literal": 244.79604269291417
+        },
+        "width": {
+          "literal": 244.79604269291417
+        }
+      },
+      "inputs": {},
+      "op": "solid.box"
+    },
+    "solid_01_partition_008_solid_01_revolve": {
+      "args": {},
+      "inputs": {
+        "frame": [
+          "solid_01_partition_008_solid_01_section_01_frame"
+        ],
+        "shape": [
+          "solid_01_partition_008_solid_01_revolve_section_01_local"
+        ]
+      },
+      "op": "shape.transform"
+    },
+    "solid_01_partition_008_solid_01_revolve_section_01_local": {
+      "args": {
+        "angle": {
+          "literal": 6.283185307179586
+        }
+      },
+      "inputs": {
+        "profile": [
+          "solid_01_partition_008_solid_01_section_01_profile"
+        ]
+      },
+      "op": "solid.revolve"
+    },
+    "solid_01_partition_008_solid_01_section_01_frame": {
+      "args": {
+        "origin": {
+          "literal": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "x_axis": {
+          "literal": [
+            1.0,
+            0.0,
+            0.0
+          ]
+        },
+        "y_axis": {
+          "literal": [
+            0.0,
+            1.0,
+            -0.0
+          ]
+        }
+      },
+      "inputs": {},
+      "op": "frame.rigid3"
+    },
+    "solid_01_partition_008_solid_01_section_01_loop_01": {
+      "args": {},
+      "inputs": {
+        "curves": [
+          "solid_01_partition_008_solid_01_section_01_loop_01_edge_001",
+          "solid_01_partition_008_solid_01_section_01_loop_01_edge_002",
+          "solid_01_partition_008_solid_01_section_01_loop_01_edge_003",
+          "solid_01_partition_008_solid_01_section_01_loop_01_edge_004"
+        ]
+      },
+      "op": "wire.loop2"
+    },
+    "solid_01_partition_008_solid_01_section_01_loop_01_edge_001": {
+      "args": {
+        "degree": {
+          "literal": 1
+        },
+        "knots": {
+          "literal": [
+            -10.518405992968841,
+            -6.574003745605527
+          ]
+        },
+        "multiplicities": {
+          "literal": [
+            2,
+            2
+          ]
+        },
+        "periodic": {
+          "literal": false
+        },
+        "poles": {
+          "literal": [
+            [
+              36.39852262805658,
+              6.350000000000001
+            ],
+            [
+              35.377636204890536,
+              10.16
+            ]
+          ]
+        },
+        "reversed": {
+          "literal": false
+        },
+        "trim": {
+          "literal": [
+            -10.518405992968841,
+            -6.574003745605527
+          ]
+        },
+        "weights": {
+          "literal": [
+            1.0,
+            1.0
+          ]
+        }
+      },
+      "inputs": {},
+      "op": "curve.bspline2"
+    },
+    "solid_01_partition_008_solid_01_section_01_loop_01_edge_002": {
+      "args": {
+        "end": {
+          "literal": [
+            34.062835455156545,
+            10.16
+          ]
+        },
+        "start": {
+          "literal": [
+            35.377636204890536,
+            10.16
+          ]
+        }
+      },
+      "inputs": {},
+      "op": "curve.line2"
+    },
+    "solid_01_partition_008_solid_01_section_01_loop_01_edge_003": {
+      "args": {
+        "degree": {
+          "literal": 1
+        },
+        "knots": {
+          "literal": [
+            -10.858701467356441,
+            -6.914299219993128
+          ]
+        },
+        "multiplicities": {
+          "literal": [
+            2,
+            2
+          ]
+        },
+        "periodic": {
+          "literal": false
+        },
+        "poles": {
+          "literal": [
+            [
+              34.062835455156545,
+              10.159999999999998
+            ],
+            [
+              35.08372187832259,
+              6.3500000000000005
+            ]
+          ]
+        },
+        "reversed": {
+          "literal": false
+        },
+        "trim": {
+          "literal": [
+            -10.858701467356441,
+            -6.914299219993128
+          ]
+        },
+        "weights": {
+          "literal": [
+            1.0,
+            1.0
+          ]
+        }
+      },
+      "inputs": {},
+      "op": "curve.bspline2"
+    },
+    "solid_01_partition_008_solid_01_section_01_loop_01_edge_004": {
+      "args": {
+        "end": {
+          "literal": [
+            36.39852262805658,
+            6.35
+          ]
+        },
+        "start": {
+          "literal": [
+            35.08372187832259,
+            6.35
+          ]
+        }
+      },
+      "inputs": {},
+      "op": "curve.line2"
+    },
+    "solid_01_partition_008_solid_01_section_01_profile": {
+      "args": {},
+      "inputs": {
+        "holes": [],
+        "outer": [
+          "solid_01_partition_008_solid_01_section_01_loop_01"
+        ]
+      },
+      "op": "profile.face2"
+    },
+    "solid_01_partition_009_solid_01_revolve": {
+      "args": {},
+      "inputs": {
+        "frame": [
+          "solid_01_partition_009_solid_01_section_01_frame"
+        ],
+        "shape": [
+          "solid_01_partition_009_solid_01_revolve_section_01_local"
+        ]
+      },
+      "op": "shape.transform"
+    },
+    "solid_01_partition_009_solid_01_revolve_section_01_local": {
+      "args": {
+        "angle": {
+          "literal": 6.283185307179586
+        }
+      },
+      "inputs": {
+        "profile": [
+          "solid_01_partition_009_solid_01_section_01_profile"
+        ]
+      },
+      "op": "solid.revolve"
+    },
+    "solid_01_partition_009_solid_01_section_01_frame": {
+      "args": {
+        "origin": {
+          "literal": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "x_axis": {
+          "literal": [
+            1.0,
+            0.0,
+            0.0
+          ]
+        },
+        "y_axis": {
+          "literal": [
+            0.0,
+            1.0,
+            -0.0
+          ]
+        }
+      },
+      "inputs": {},
+      "op": "frame.rigid3"
+    },
+    "solid_01_partition_009_solid_01_section_01_loop_01": {
+      "args": {},
+      "inputs": {
+        "curves": [
+          "solid_01_partition_009_solid_01_section_01_loop_01_edge_001",
+          "solid_01_partition_009_solid_01_section_01_loop_01_edge_002",
+          "solid_01_partition_009_solid_01_section_01_loop_01_edge_003",
+          "solid_01_partition_009_solid_01_section_01_loop_01_edge_004"
+        ]
+      },
+      "op": "wire.loop2"
+    },
+    "solid_01_partition_009_solid_01_section_01_loop_01_edge_001": {
+      "args": {
+        "end": {
+          "literal": [
+            33.7225399813915,
+            11.43
+          ]
+        },
+        "start": {
+          "literal": [
+            35.03734073050185,
+            11.43
+          ]
+        }
+      },
+      "inputs": {},
+      "op": "curve.line2"
+    },
+    "solid_01_partition_009_solid_01_section_01_loop_01_edge_002": {
+      "args": {
+        "degree": {
+          "literal": 1
+        },
+        "knots": {
+          "literal": [
+            -12.173502211499903,
+            -10.858701467356441
+          ]
+        },
+        "multiplicities": {
+          "literal": [
+            2,
+            2
+          ]
+        },
+        "periodic": {
+          "literal": false
+        },
+        "poles": {
+          "literal": [
+            [
+              33.72253998205617,
+              11.429999995191963
+            ],
+            [
+              34.062835455156545,
+              10.159999999999998
+            ]
+          ]
+        },
+        "reversed": {
+          "literal": false
+        },
+        "trim": {
+          "literal": [
+            -12.173502211499903,
+            -10.858701467356441
+          ]
+        },
+        "weights": {
+          "literal": [
+            1.0,
+            1.0
+          ]
+        }
+      },
+      "inputs": {},
+      "op": "curve.bspline2"
+    },
+    "solid_01_partition_009_solid_01_section_01_loop_01_edge_003": {
+      "args": {
+        "end": {
+          "literal": [
+            35.377636204890536,
+            10.16
+          ]
+        },
+        "start": {
+          "literal": [
+            34.062835455156545,
+            10.16
+          ]
+        }
+      },
+      "inputs": {},
+      "op": "curve.line2"
+    },
+    "solid_01_partition_009_solid_01_section_01_loop_01_edge_004": {
+      "args": {
+        "degree": {
+          "literal": 1
+        },
+        "knots": {
+          "literal": [
+            -11.833206742089947,
+            -10.518405992968841
+          ]
+        },
+        "multiplicities": {
+          "literal": [
+            2,
+            2
+          ]
+        },
+        "periodic": {
+          "literal": false
+        },
+        "poles": {
+          "literal": [
+            [
+              35.377636204890536,
+              10.16
+            ],
+            [
+              35.03734073050185,
+              11.430000000000001
+            ]
+          ]
+        },
+        "reversed": {
+          "literal": false
+        },
+        "trim": {
+          "literal": [
+            -11.833206742089947,
+            -10.518405992968841
+          ]
+        },
+        "weights": {
+          "literal": [
+            1.0,
+            1.0
+          ]
+        }
+      },
+      "inputs": {},
+      "op": "curve.bspline2"
+    },
+    "solid_01_partition_009_solid_01_section_01_profile": {
+      "args": {},
+      "inputs": {
+        "holes": [],
+        "outer": [
+          "solid_01_partition_009_solid_01_section_01_loop_01"
+        ]
+      },
+      "op": "profile.face2"
+    },
+    "solid_01_partition_010_solid_01_csg_op_001": {
+      "args": {},
+      "inputs": {
+        "operands": [
+          "solid_01_partition_010_solid_01_csg_tool_001",
+          "solid_01_partition_010_solid_01_csg_tool_010"
+        ]
+      },
+      "op": "boolean.intersect"
+    },
+    "solid_01_partition_010_solid_01_csg_op_003": {
+      "args": {},
+      "inputs": {
+        "target": [
+          "solid_01_partition_010_solid_01_csg_op_001"
+        ],
+        "tool": [
+          "solid_01_partition_010_solid_01_csg_tool_011"
+        ]
+      },
+      "op": "boolean.cut"
+    },
+    "solid_01_partition_010_solid_01_csg_op_005": {
+      "args": {},
+      "inputs": {
+        "target": [
+          "solid_01_partition_010_solid_01_csg_op_003"
+        ],
+        "tool": [
+          "solid_01_partition_010_solid_01_csg_tool_012"
+        ]
+      },
+      "op": "boolean.cut"
+    },
+    "solid_01_partition_010_solid_01_csg_op_007": {
+      "args": {},
+      "inputs": {
+        "target": [
+          "solid_01_partition_010_solid_01_csg_op_005"
+        ],
+        "tool": [
+          "solid_01_partition_010_solid_01_csg_tool_013"
+        ]
+      },
+      "op": "boolean.cut"
+    },
+    "solid_01_partition_010_solid_01_csg_tool_001": {
+      "args": {},
+      "inputs": {
+        "frame": [
+          "solid_01_partition_010_solid_01_csg_tool_001_frame"
+        ],
+        "shape": [
+          "solid_01_partition_010_solid_01_csg_tool_001_local"
+        ]
+      },
+      "op": "shape.transform"
+    },
+    "solid_01_partition_010_solid_01_csg_tool_001_frame": {
+      "args": {
+        "origin": {
+          "literal": [
+            0.0,
+            -12.098374912806229,
+            10.159346301499184
+          ]
+        },
+        "x_axis": {
+          "literal": [
+            1,
+            0,
+            0
+          ]
+        },
+        "y_axis": {
+          "literal": [
+            0,
+            1,
+            0
+          ]
+        }
+      },
+      "inputs": {},
+      "op": "frame.rigid3"
+    },
+    "solid_01_partition_010_solid_01_csg_tool_001_local": {
+      "args": {
+        "depth": {
+          "literal": 32.49864817138915
+        },
+        "height": {
+          "literal": 1.27130739700162
+        },
+        "width": {
+          "literal": 56.695397997001606
+        }
+      },
+      "inputs": {},
+      "op": "solid.box"
+    },
+    "solid_01_partition_010_solid_01_csg_tool_010": {
+      "args": {},
+      "inputs": {
+        "frame": [
+          "solid_01_partition_010_solid_01_csg_tool_010_frame"
+        ],
+        "shape": [
+          "solid_01_partition_010_solid_01_csg_tool_010_local"
+        ]
+      },
+      "op": "shape.transform"
+    },
+    "solid_01_partition_010_solid_01_csg_tool_010_frame": {
+      "args": {
+        "origin": {
+          "literal": [
+            0.0,
+            0.0,
+            11.430653698500805
+          ]
+        },
+        "x_axis": {
+          "literal": [
+            1.0,
+            0.0,
+            0.0
+          ]
+        },
+        "y_axis": {
+          "literal": [
+            0.0,
+            -1.0,
+            0.0
+          ]
+        }
+      },
+      "inputs": {},
+      "op": "frame.rigid3"
+    },
+    "solid_01_partition_010_solid_01_csg_tool_010_local": {
+      "args": {
+        "height": {
+          "literal": 1.2713073970016198
+        },
+        "radius": {
+          "literal": 28.347045299999998
+        }
+      },
+      "inputs": {},
+      "op": "solid.cylinder"
+    },
+    "solid_01_partition_010_solid_01_csg_tool_011": {
+      "args": {},
+      "inputs": {
+        "frame": [
+          "solid_01_partition_010_solid_01_csg_tool_011_frame"
+        ],
+        "shape": [
+          "solid_01_partition_010_solid_01_csg_tool_011_local"
+        ]
+      },
+      "op": "shape.transform"
+    },
+    "solid_01_partition_010_solid_01_csg_tool_011_frame": {
+      "args": {
+        "origin": {
+          "literal": [
+            0.0,
+            -12.098374912806236,
+            11.43
+          ]
+        },
+        "x_axis": {
+          "literal": [
+            1.0,
+            0.0,
+            0.0
+          ]
+        },
+        "y_axis": {
+          "literal": [
+            0.0,
+            1.0,
+            0.0
+          ]
+        }
+      },
+      "inputs": {},
+      "op": "frame.rigid3"
+    },
+    "solid_01_partition_010_solid_01_csg_tool_011_local": {
+      "args": {
+        "depth": {
+          "literal": 261.4394003222086
+        },
+        "height": {
+          "literal": 261.4394003222086
+        },
+        "width": {
+          "literal": 261.4394003222086
+        }
+      },
+      "inputs": {},
+      "op": "solid.box"
+    },
+    "solid_01_partition_010_solid_01_csg_tool_012": {
+      "args": {},
+      "inputs": {
+        "frame": [
+          "solid_01_partition_010_solid_01_csg_tool_012_frame"
+        ],
+        "shape": [
+          "solid_01_partition_010_solid_01_csg_tool_012_local"
+        ]
+      },
+      "op": "shape.transform"
+    },
+    "solid_01_partition_010_solid_01_csg_tool_012_frame": {
+      "args": {
+        "origin": {
+          "literal": [
+            0.0,
+            -0.18683518811246813,
+            17.67213066651486
+          ]
+        },
+        "x_axis": {
+          "literal": [
+            1.0,
+            0.0,
+            0.0
+          ]
+        },
+        "y_axis": {
+          "literal": [
+            0.0,
+            0.4999999999999999,
+            -0.8660254037844388
+          ]
+        }
+      },
+      "inputs": {},
+      "op": "frame.rigid3"
+    },
+    "solid_01_partition_010_solid_01_csg_tool_012_local": {
+      "args": {
+        "depth": {
+          "literal": 261.4394003222086
+        },
+        "height": {
+          "literal": 261.4394003222086
+        },
+        "width": {
+          "literal": 261.4394003222086
+        }
+      },
+      "inputs": {},
+      "op": "solid.box"
+    },
+    "solid_01_partition_010_solid_01_csg_tool_013": {
+      "args": {},
+      "inputs": {
+        "frame": [
+          "solid_01_partition_010_solid_01_csg_tool_013_frame"
+        ],
+        "shape": [
+          "solid_01_partition_010_solid_01_csg_tool_013_local"
+        ]
+      },
+      "op": "shape.transform"
+    },
+    "solid_01_partition_010_solid_01_csg_tool_013_frame": {
+      "args": {
+        "origin": {
+          "literal": [
+            0.0,
+            -12.098374912806236,
+            10.16
+          ]
+        },
+        "x_axis": {
+          "literal": [
+            1.0,
+            0.0,
+            0.0
+          ]
+        },
+        "y_axis": {
+          "literal": [
+            0.0,
+            -1.0,
+            0.0
+          ]
+        }
+      },
+      "inputs": {},
+      "op": "frame.rigid3"
+    },
+    "solid_01_partition_010_solid_01_csg_tool_013_local": {
+      "args": {
+        "depth": {
+          "literal": 261.4394003222086
+        },
+        "height": {
+          "literal": 261.4394003222086
+        },
+        "width": {
+          "literal": 261.4394003222086
+        }
+      },
+      "inputs": {},
+      "op": "solid.box"
+    },
+    "solid_01_partition_011_solid_01_csg_cap_002_0_loop_01": {
+      "args": {},
+      "inputs": {
+        "curves": [
+          "solid_01_partition_011_solid_01_csg_cap_002_0_loop_01_edge_001",
+          "solid_01_partition_011_solid_01_csg_cap_002_0_loop_01_edge_002",
+          "solid_01_partition_011_solid_01_csg_cap_002_0_loop_01_edge_003",
+          "solid_01_partition_011_solid_01_csg_cap_002_0_loop_01_edge_004",
+          "solid_01_partition_011_solid_01_csg_cap_002_0_loop_01_edge_005"
+        ]
+      },
+      "op": "wire.loop2"
+    },
+    "solid_01_partition_011_solid_01_csg_cap_002_0_loop_01_edge_001": {
+      "args": {
+        "end": {
+          "literal": [
+            140.53354541602403,
+            -115.81026714024121
+          ]
+        },
+        "start": {
+          "literal": [
+            139.25377382183632,
+            -115.81026714024121
+          ]
+        }
+      },
+      "inputs": {},
+      "op": "curve.line2"
+    },
+    "solid_01_partition_011_solid_01_csg_cap_002_0_loop_01_edge_002": {
+      "args": {
+        "center": {
+          "literal": [
+            112.3932065077245,
+            -112.3932065077245
+          ]
+        },
+        "radius": {
+          "literal": 28.347045299999998
+        },
+        "start_angle": {
+          "literal": -0.12083766132073609
+        },
+        "sweep_angle": {
+          "literal": -2.8999173309483206
+        }
+      },
+      "inputs": {},
+      "op": "curve.arc2"
+    },
+    "solid_01_partition_011_solid_01_csg_cap_002_0_loop_01_edge_003": {
+      "args": {
+        "end": {
+          "literal": [
+            85.5326391936127,
+            -115.81026714024121
+          ]
+        },
+        "start": {
+          "literal": [
+            84.25286759942497,
+            -115.81026714024121
+          ]
+        }
+      },
+      "inputs": {},
+      "op": "curve.line2"
+    },
+    "solid_01_partition_011_solid_01_csg_cap_002_0_loop_01_edge_004": {
+      "args": {
+        "center": {
+          "literal": [
+            112.3932065077245,
+            -112.3932065077245
+          ]
+        },
+        "radius": {
+          "literal": 27.0770453
+        },
+        "start_angle": {
+          "literal": -3.015057569690017
+        },
+        "sweep_angle": {
+          "literal": 2.7783369295226894
+        }
+      },
+      "inputs": {},
+      "op": "curve.arc2"
+    },
+    "solid_01_partition_011_solid_01_csg_cap_002_0_loop_01_edge_005": {
+      "args": {
+        "center": {
+          "literal": [
+            112.3932065077245,
+            -112.3932065077245
+          ]
+        },
+        "radius": {
+          "literal": 27.0770453
+        },
+        "start_angle": {
+          "literal": -0.23672064016732852
+        },
+        "sweep_angle": {
+          "literal": 0.11018555626755422
+        }
+      },
+      "inputs": {},
+      "op": "curve.arc2"
+    },
+    "solid_01_partition_011_solid_01_csg_cap_002_0_profile": {
+      "args": {},
+      "inputs": {
+        "holes": [],
+        "outer": [
+          "solid_01_partition_011_solid_01_csg_cap_002_0_loop_01"
+        ]
+      },
+      "op": "profile.face2"
+    },
+    "solid_01_partition_011_solid_01_csg_op_001": {
+      "args": {},
+      "inputs": {
+        "target": [
+          "solid_01_partition_011_solid_01_csg_tool_002"
+        ],
+        "tool": [
+          "solid_01_partition_011_solid_01_csg_tool_008"
+        ]
+      },
+      "op": "boolean.cut"
+    },
+    "solid_01_partition_011_solid_01_csg_tool_002": {
+      "args": {},
+      "inputs": {
+        "frame": [
+          "solid_01_partition_011_solid_01_csg_tool_002_frame"
+        ],
+        "shape": [
+          "solid_01_partition_011_solid_01_csg_tool_002_local"
+        ]
+      },
+      "op": "shape.transform"
+    },
+    "solid_01_partition_011_solid_01_csg_tool_002_frame": {
+      "args": {
+        "origin": {
+          "literal": [
+            -112.3932065077245,
+            -112.3932065077245,
+            11.43
+          ]
+        },
+        "x_axis": {
+          "literal": [
+            1.0,
+            0.0,
+            0.0
+          ]
+        },
+        "y_axis": {
+          "literal": [
+            0.0,
+            -1.0,
+            0.0
+          ]
+        }
+      },
+      "inputs": {},
+      "op": "frame.rigid3"
+    },
+    "solid_01_partition_011_solid_01_csg_tool_002_local": {
+      "args": {
+        "distance": {
+          "literal": 1.2699999999999996
+        }
+      },
+      "inputs": {
+        "profile": [
+          "solid_01_partition_011_solid_01_csg_cap_002_0_profile"
+        ]
+      },
+      "op": "solid.extrude"
+    },
+    "solid_01_partition_011_solid_01_csg_tool_008": {
+      "args": {},
+      "inputs": {
+        "frame": [
+          "solid_01_partition_011_solid_01_csg_tool_008_frame"
+        ],
+        "shape": [
+          "solid_01_partition_011_solid_01_csg_tool_008_local"
+        ]
+      },
+      "op": "shape.transform"
+    },
+    "solid_01_partition_011_solid_01_csg_tool_008_frame": {
+      "args": {
+        "origin": {
+          "literal": [
+            0.0,
+            6.8082717693256,
+            5.556250011853535
+          ]
+        },
+        "x_axis": {
+          "literal": [
+            1.0,
+            0.0,
+            0.0
+          ]
+        },
+        "y_axis": {
+          "literal": [
+            0.0,
+            -0.4999999999999999,
+            0.8660254037844388
+          ]
+        }
+      },
+      "inputs": {},
+      "op": "frame.rigid3"
+    },
+    "solid_01_partition_011_solid_01_csg_tool_008_local": {
+      "args": {
+        "depth": {
+          "literal": 246.2724259495469
+        },
+        "height": {
+          "literal": 246.2724259495469
+        },
+        "width": {
+          "literal": 246.2724259495469
+        }
+      },
+      "inputs": {},
+      "op": "solid.box"
+    },
+    "solid_01_partition_012_solid_01_csg_cap_009_1_loop_01": {
+      "args": {},
+      "inputs": {
+        "curves": [
+          "solid_01_partition_012_solid_01_csg_cap_009_1_loop_01_edge_001"
+        ]
+      },
+      "op": "wire.loop2"
+    },
+    "solid_01_partition_012_solid_01_csg_cap_009_1_loop_01_edge_001": {
+      "args": {
+        "center": {
+          "literal": [
+            112.3932065077245,
+            112.3932065077245
+          ]
+        },
+        "radius": {
+          "literal": 35.037340730501846
+        },
+        "winding": {
+          "literal": "ccw"
+        }
+      },
+      "inputs": {},
+      "op": "curve.circle2"
+    },
+    "solid_01_partition_012_solid_01_csg_cap_009_1_profile": {
+      "args": {},
+      "inputs": {
+        "holes": [],
+        "outer": [
+          "solid_01_partition_012_solid_01_csg_cap_009_1_loop_01"
+        ]
+      },
+      "op": "profile.face2"
+    },
+    "solid_01_partition_012_solid_01_csg_join_cut_01": {
+      "args": {},
+      "inputs": {
+        "target": [
+          "solid_01_partition_012_solid_01_csg_op_003"
+        ],
+        "tool": [
+          "solid_01_partition_012_solid_01_residual_cut_01_solid_01_extrude"
+        ]
+      },
+      "op": "boolean.cut"
+    },
+    "solid_01_partition_012_solid_01_csg_op_001": {
+      "args": {},
+      "inputs": {
+        "target": [
+          "solid_01_partition_012_solid_01_csg_tool_007"
+        ],
+        "tool": [
+          "solid_01_partition_012_solid_01_csg_tool_024"
+        ]
+      },
+      "op": "boolean.cut"
+    },
+    "solid_01_partition_012_solid_01_csg_op_003": {
+      "args": {},
+      "inputs": {
+        "operands": [
+          "solid_01_partition_012_solid_01_csg_op_001",
+          "solid_01_partition_012_solid_01_csg_tool_026"
+        ]
+      },
+      "op": "boolean.intersect"
+    },
+    "solid_01_partition_012_solid_01_csg_tool_007": {
+      "args": {},
+      "inputs": {
+        "frame": [
+          "solid_01_partition_012_solid_01_csg_tool_007_frame"
+        ],
+        "shape": [
+          "solid_01_partition_012_solid_01_csg_tool_007_local"
+        ]
+      },
+      "op": "shape.transform"
+    },
+    "solid_01_partition_012_solid_01_csg_tool_007_frame": {
+      "args": {
+        "origin": {
+          "literal": [
+            -112.3932065077245,
+            -112.3932065077245,
+            11.43
+          ]
+        },
+        "x_axis": {
+          "literal": [
+            1.0,
+            0.0,
+            0.0
+          ]
+        },
+        "y_axis": {
+          "literal": [
+            0.0,
+            1.0,
+            0.0
+          ]
+        }
+      },
+      "inputs": {},
+      "op": "frame.rigid3"
+    },
+    "solid_01_partition_012_solid_01_csg_tool_007_local": {
+      "args": {
+        "distance": {
+          "literal": 1.2699999999999996
+        }
+      },
+      "inputs": {
+        "profile": [
+          "solid_01_partition_012_solid_01_csg_cap_009_1_profile"
+        ]
+      },
+      "op": "solid.extrude"
+    },
+    "solid_01_partition_012_solid_01_csg_tool_024": {
+      "args": {},
+      "inputs": {
+        "frame": [
+          "solid_01_partition_012_solid_01_csg_tool_024_frame"
+        ],
+        "shape": [
+          "solid_01_partition_012_solid_01_csg_tool_024_local"
+        ]
+      },
+      "op": "shape.transform"
+    },
+    "solid_01_partition_012_solid_01_csg_tool_024_frame": {
+      "args": {
+        "origin": {
+          "literal": [
+            0.0,
+            0.0,
+            12.700991187025455
+          ]
+        },
+        "x_axis": {
+          "literal": [
+            1.0,
+            0.0,
+            0.0
+          ]
+        },
+        "y_axis": {
+          "literal": [
+            0.0,
+            -1.0,
+            0.0
+          ]
+        }
+      },
+      "inputs": {},
+      "op": "frame.rigid3"
+    },
+    "solid_01_partition_012_solid_01_csg_tool_024_local": {
+      "args": {
+        "height": {
+          "literal": 1.2719823740509124
+        },
+        "radius": {
+          "literal": 27.0770453
+        }
+      },
+      "inputs": {},
+      "op": "solid.cylinder"
+    },
+    "solid_01_partition_012_solid_01_csg_tool_026": {
+      "args": {},
+      "inputs": {
+        "frame": [
+          "solid_01_partition_012_solid_01_csg_tool_026_frame"
+        ],
+        "shape": [
+          "solid_01_partition_012_solid_01_csg_tool_026_local"
+        ]
+      },
+      "op": "shape.transform"
+    },
+    "solid_01_partition_012_solid_01_csg_tool_026_frame": {
+      "args": {
+        "origin": {
+          "literal": [
+            0.0,
+            0.0,
+            12.700991187025455
+          ]
+        },
+        "x_axis": {
+          "literal": [
+            1.0,
+            0.0,
+            0.0
+          ]
+        },
+        "y_axis": {
+          "literal": [
+            0.0,
+            -1.0,
+            0.0
+          ]
+        }
+      },
+      "inputs": {},
+      "op": "frame.rigid3"
+    },
+    "solid_01_partition_012_solid_01_csg_tool_026_local": {
+      "args": {
+        "height": {
+          "literal": 1.2719823740509106
+        },
+        "radius_bottom": {
+          "literal": 34.696779668350146
+        },
+        "radius_top": {
+          "literal": 35.03760631826487
+        }
+      },
+      "inputs": {},
+      "op": "solid.cone"
+    },
+    "solid_01_partition_012_solid_01_residual_cut_01_solid_01_extrude": {
+      "args": {},
+      "inputs": {
+        "frame": [
+          "solid_01_partition_012_solid_01_residual_cut_01_solid_01_frame"
+        ],
+        "shape": [
+          "solid_01_partition_012_solid_01_residual_cut_01_solid_01_extrude_local"
+        ]
+      },
+      "op": "shape.transform"
+    },
+    "solid_01_partition_012_solid_01_residual_cut_01_solid_01_extrude_local": {
+      "args": {
+        "distance": {
+          "literal": 1.2699999999999996
+        }
+      },
+      "inputs": {
+        "profile": [
+          "solid_01_partition_012_solid_01_residual_cut_01_solid_01_profile"
+        ]
+      },
+      "op": "solid.extrude"
+    },
+    "solid_01_partition_012_solid_01_residual_cut_01_solid_01_frame": {
+      "args": {
+        "origin": {
+          "literal": [
+            4.445,
+            32.4110452561248,
+            12.7
+          ]
+        },
+        "x_axis": {
+          "literal": [
+            1.0,
+            0.0,
+            -0.0
+          ]
+        },
+        "y_axis": {
+          "literal": [
+            0.0,
+            -1.0,
+            0.0
+          ]
+        }
+      },
+      "inputs": {},
+      "op": "frame.rigid3"
+    },
+    "solid_01_partition_012_solid_01_residual_cut_01_solid_01_loop_01": {
+      "args": {},
+      "inputs": {
+        "curves": [
+          "solid_01_partition_012_solid_01_residual_cut_01_solid_01_loop_01_edge_001",
+          "solid_01_partition_012_solid_01_residual_cut_01_solid_01_loop_01_edge_002",
+          "solid_01_partition_012_solid_01_residual_cut_01_solid_01_loop_01_edge_003",
+          "solid_01_partition_012_solid_01_residual_cut_01_solid_01_loop_01_edge_004"
+        ]
+      },
+      "op": "wire.loop2"
+    },
+    "solid_01_partition_012_solid_01_residual_cut_01_solid_01_loop_01_edge_001": {
+      "args": {
+        "end": {
+          "literal": [
+            -8.89,
+            0.0
+          ]
+        },
+        "start": {
+          "literal": [
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "inputs": {},
+      "op": "curve.line2"
+    },
+    "solid_01_partition_012_solid_01_residual_cut_01_solid_01_loop_01_edge_002": {
+      "args": {
+        "end": {
+          "literal": [
+            -8.889999999999995,
+            3.048000000000002
+          ]
+        },
+        "start": {
+          "literal": [
+            -8.889999999999993,
+            0.0
+          ]
+        }
+      },
+      "inputs": {},
+      "op": "curve.line2"
+    },
+    "solid_01_partition_012_solid_01_residual_cut_01_solid_01_loop_01_edge_003": {
+      "args": {
+        "end": {
+          "literal": [
+            0.0,
+            3.048000000000002
+          ]
+        },
+        "start": {
+          "literal": [
+            -8.89,
+            3.048000000000002
+          ]
+        }
+      },
+      "inputs": {},
+      "op": "curve.line2"
+    },
+    "solid_01_partition_012_solid_01_residual_cut_01_solid_01_loop_01_edge_004": {
+      "args": {
+        "end": {
+          "literal": [
+            0.0,
+            0.0
+          ]
+        },
+        "start": {
+          "literal": [
+            -8.881784197001252e-16,
+            3.048000000000002
+          ]
+        }
+      },
+      "inputs": {},
+      "op": "curve.line2"
+    },
+    "solid_01_partition_012_solid_01_residual_cut_01_solid_01_profile": {
+      "args": {},
+      "inputs": {
+        "holes": [],
+        "outer": [
+          "solid_01_partition_012_solid_01_residual_cut_01_solid_01_loop_01"
+        ]
+      },
+      "op": "profile.face2"
+    },
+    "solid_01_partition_union": {
+      "args": {},
+      "inputs": {
+        "operands": [
+          "solid_01_partition_001_solid_01_extrude",
+          "solid_01_partition_002_solid_01_revolve",
+          "solid_01_partition_003_solid_01_revolve",
+          "solid_01_partition_004_solid_01_csg_op_001",
+          "solid_01_partition_005_solid_01_revolve",
+          "solid_01_partition_006_solid_01_csg_op_009",
+          "solid_01_partition_007_solid_01_csg_op_001",
+          "solid_01_partition_008_solid_01_revolve",
+          "solid_01_partition_009_solid_01_revolve",
+          "solid_01_partition_010_solid_01_csg_op_007",
+          "solid_01_partition_011_solid_01_csg_op_001",
+          "solid_01_partition_012_solid_01_csg_join_cut_01"
+        ]
+      },
+      "op": "boolean.union"
+    }
+  },
+  "outputs": [
+    {
+      "expected_kind": "solid",
+      "id": "body_001",
+      "node": "body_001_world"
+    }
+  ],
+  "parameters": {
+    "body_001_factor": {
+      "editability": "independent",
+      "type": "number",
+      "unit": "1",
+      "value": 1.0
+    },
+    "body_001_origin": {
+      "editability": "independent",
+      "type": "point3",
+      "unit": "mm",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "body_001_x_axis": {
+      "editability": "independent",
+      "type": "direction3",
+      "unit": "1",
+      "value": [
+        1.0,
+        0.0,
+        0.0
+      ]
+    },
+    "body_001_y_axis": {
+      "editability": "independent",
+      "type": "direction3",
+      "unit": "1",
+      "value": [
+        0.0,
+        1.0,
+        0.0
+      ]
+    }
+  },
+  "units": {
+    "angle": "rad",
+    "length": "mm"
+  },
+  "version": 1
+}

@@ -1,0 +1,56 @@
+{
+  "coaxial_sample": {
+    "evidence": {
+      "axis_angle_rad": 0.0,
+      "axis_cross_norm": 0.0,
+      "axis_distance": 0.0,
+      "left_surface": "GeomAbs_Cylinder",
+      "right_surface": "GeomAbs_Cylinder"
+    },
+    "left": "face_000001",
+    "relation": "coaxial",
+    "right": "face_000004",
+    "status": "true",
+    "tolerance": 1e-06
+  },
+  "date": "2026-10-28",
+  "format": "step-brep-relation-p1b-smoke",
+  "geometric_relation_pair_counts": {
+    "coplanar": 4,
+    "parallel": 18,
+    "perpendicular": 48
+  },
+  "read_only": true,
+  "topology_case": {
+    "face_edge_sample": {
+      "evidence": {
+        "edge_occurrence_ids": [
+          "edge_occurrence_000001"
+        ]
+      },
+      "left": "face_000001",
+      "relation": "face-edge",
+      "right": "edge_000001",
+      "status": "true",
+      "tolerance": 0.0
+    },
+    "face_edge_true_count": 4,
+    "face_face_sample": {
+      "evidence": {
+        "shared_edge_ids": [
+          "edge_000001"
+        ]
+      },
+      "left": "face_000001",
+      "relation": "face-face",
+      "right": "face_000003",
+      "status": "true",
+      "tolerance": 0.0
+    },
+    "face_face_shared_edge_true_count": 4,
+    "graph_hash": "cb9f6e69eb101dc81731533d91cc60ef75a515d53a783442d065890e940440ab",
+    "index_hash": "36bb48bc253f169c616cf35c6ff09e088ad60406b464d2b562238d3fc451862e"
+  },
+  "unknown_policy": "unsupported or insufficient evidence returns unknown",
+  "version": 1
+}

@@ -1,0 +1,191 @@
+{
+  "format": "step-plan",
+  "nodes": {
+    "body_001_placement": {
+      "args": {
+        "origin": {
+          "param": "body_001_origin"
+        },
+        "x_axis": {
+          "param": "body_001_x_axis"
+        },
+        "y_axis": {
+          "param": "body_001_y_axis"
+        }
+      },
+      "inputs": {},
+      "op": "frame.rigid3"
+    },
+    "body_001_scale": {
+      "args": {
+        "center": {
+          "literal": [
+            0.0,
+            0.0,
+            12.700000000000001
+          ]
+        },
+        "factor": {
+          "param": "body_001_factor"
+        }
+      },
+      "inputs": {
+        "shape": [
+          "solid_01_extrude"
+        ]
+      },
+      "op": "shape.uniform_scale"
+    },
+    "body_001_world": {
+      "args": {},
+      "inputs": {
+        "frame": [
+          "body_001_placement"
+        ],
+        "shape": [
+          "body_001_scale"
+        ]
+      },
+      "op": "shape.transform"
+    },
+    "solid_01_extrude": {
+      "args": {},
+      "inputs": {
+        "frame": [
+          "solid_01_frame"
+        ],
+        "shape": [
+          "solid_01_extrude_local"
+        ]
+      },
+      "op": "shape.transform"
+    },
+    "solid_01_extrude_local": {
+      "args": {
+        "distance": {
+          "literal": 25.4
+        }
+      },
+      "inputs": {
+        "profile": [
+          "solid_01_profile"
+        ]
+      },
+      "op": "solid.extrude"
+    },
+    "solid_01_frame": {
+      "args": {
+        "origin": {
+          "literal": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "x_axis": {
+          "literal": [
+            1.0,
+            0.0,
+            -0.0
+          ]
+        },
+        "y_axis": {
+          "literal": [
+            -0.0,
+            1.0,
+            0.0
+          ]
+        }
+      },
+      "inputs": {},
+      "op": "frame.rigid3"
+    },
+    "solid_01_loop_01": {
+      "args": {},
+      "inputs": {
+        "curves": [
+          "solid_01_loop_01_edge_001"
+        ]
+      },
+      "op": "wire.loop2"
+    },
+    "solid_01_loop_01_edge_001": {
+      "args": {
+        "center": {
+          "literal": [
+            0.0,
+            0.0
+          ]
+        },
+        "radius": {
+          "literal": 91.0485145
+        },
+        "winding": {
+          "literal": "cw"
+        }
+      },
+      "inputs": {},
+      "op": "curve.circle2"
+    },
+    "solid_01_profile": {
+      "args": {},
+      "inputs": {
+        "holes": [],
+        "outer": [
+          "solid_01_loop_01"
+        ]
+      },
+      "op": "profile.face2"
+    }
+  },
+  "outputs": [
+    {
+      "expected_kind": "solid",
+      "id": "body_001",
+      "node": "body_001_world"
+    }
+  ],
+  "parameters": {
+    "body_001_factor": {
+      "editability": "independent",
+      "type": "number",
+      "unit": "1",
+      "value": 1.0
+    },
+    "body_001_origin": {
+      "editability": "independent",
+      "type": "point3",
+      "unit": "mm",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "body_001_x_axis": {
+      "editability": "independent",
+      "type": "direction3",
+      "unit": "1",
+      "value": [
+        1.0,
+        0.0,
+        0.0
+      ]
+    },
+    "body_001_y_axis": {
+      "editability": "independent",
+      "type": "direction3",
+      "unit": "1",
+      "value": [
+        0.0,
+        1.0,
+        0.0
+      ]
+    }
+  },
+  "units": {
+    "angle": "rad",
+    "length": "mm"
+  },
+  "version": 1
+}

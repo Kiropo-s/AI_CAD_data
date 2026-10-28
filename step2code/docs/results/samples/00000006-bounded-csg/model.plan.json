@@ -1,0 +1,379 @@
+{
+  "format": "step-plan",
+  "nodes": {
+    "body_001_placement": {
+      "args": {
+        "origin": {
+          "param": "body_001_origin"
+        },
+        "x_axis": {
+          "param": "body_001_x_axis"
+        },
+        "y_axis": {
+          "param": "body_001_y_axis"
+        }
+      },
+      "inputs": {},
+      "op": "frame.rigid3"
+    },
+    "body_001_scale": {
+      "args": {
+        "center": {
+          "literal": [
+            0.0,
+            0.0,
+            0.7937500000000101
+          ]
+        },
+        "factor": {
+          "param": "body_001_factor"
+        }
+      },
+      "inputs": {
+        "shape": [
+          "solid_01_csg_op_001"
+        ]
+      },
+      "op": "shape.uniform_scale"
+    },
+    "body_001_world": {
+      "args": {},
+      "inputs": {
+        "frame": [
+          "body_001_placement"
+        ],
+        "shape": [
+          "body_001_scale"
+        ]
+      },
+      "op": "shape.transform"
+    },
+    "solid_01_csg_cap_009_0_loop_01": {
+      "args": {},
+      "inputs": {
+        "curves": [
+          "solid_01_csg_cap_009_0_loop_01_edge_001",
+          "solid_01_csg_cap_009_0_loop_01_edge_002",
+          "solid_01_csg_cap_009_0_loop_01_edge_003",
+          "solid_01_csg_cap_009_0_loop_01_edge_004",
+          "solid_01_csg_cap_009_0_loop_01_edge_005",
+          "solid_01_csg_cap_009_0_loop_01_edge_006"
+        ]
+      },
+      "op": "wire.loop2"
+    },
+    "solid_01_csg_cap_009_0_loop_01_edge_001": {
+      "args": {
+        "end": {
+          "literal": [
+            -2.38125,
+            -1.3748153285077902
+          ]
+        },
+        "start": {
+          "literal": [
+            -4.762500000000002,
+            -2.749630657015587
+          ]
+        }
+      },
+      "inputs": {},
+      "op": "curve.line2"
+    },
+    "solid_01_csg_cap_009_0_loop_01_edge_002": {
+      "args": {
+        "end": {
+          "literal": [
+            1.7763568394002505e-15,
+            -2.749630657015587
+          ]
+        },
+        "start": {
+          "literal": [
+            -2.38125,
+            -1.3748153285077902
+          ]
+        }
+      },
+      "inputs": {},
+      "op": "curve.line2"
+    },
+    "solid_01_csg_cap_009_0_loop_01_edge_003": {
+      "args": {
+        "end": {
+          "literal": [
+            4.440892098500626e-16,
+            -5.499261314031191
+          ]
+        },
+        "start": {
+          "literal": [
+            0.0,
+            -2.74963065701559
+          ]
+        }
+      },
+      "inputs": {},
+      "op": "curve.line2"
+    },
+    "solid_01_csg_cap_009_0_loop_01_edge_004": {
+      "args": {
+        "end": {
+          "literal": [
+            -2.3812499999999996,
+            -6.874076642538991
+          ]
+        },
+        "start": {
+          "literal": [
+            1.7763568394002505e-15,
+            -5.499261314031195
+          ]
+        }
+      },
+      "inputs": {},
+      "op": "curve.line2"
+    },
+    "solid_01_csg_cap_009_0_loop_01_edge_005": {
+      "args": {
+        "end": {
+          "literal": [
+            -4.762500000000002,
+            -5.499261314031194
+          ]
+        },
+        "start": {
+          "literal": [
+            -2.3812499999999996,
+            -6.874076642538991
+          ]
+        }
+      },
+      "inputs": {},
+      "op": "curve.line2"
+    },
+    "solid_01_csg_cap_009_0_loop_01_edge_006": {
+      "args": {
+        "end": {
+          "literal": [
+            -4.7625,
+            -2.74963065701559
+          ]
+        },
+        "start": {
+          "literal": [
+            -4.762500000000001,
+            -5.499261314031191
+          ]
+        }
+      },
+      "inputs": {},
+      "op": "curve.line2"
+    },
+    "solid_01_csg_cap_009_0_loop_02": {
+      "args": {},
+      "inputs": {
+        "curves": [
+          "solid_01_csg_cap_009_0_loop_02_edge_001"
+        ]
+      },
+      "op": "wire.loop2"
+    },
+    "solid_01_csg_cap_009_0_loop_02_edge_001": {
+      "args": {
+        "center": {
+          "literal": [
+            -2.38125,
+            -4.124445985523391
+          ]
+        },
+        "radius": {
+          "literal": 1.2573
+        },
+        "winding": {
+          "literal": "ccw"
+        }
+      },
+      "inputs": {},
+      "op": "curve.circle2"
+    },
+    "solid_01_csg_cap_009_0_profile": {
+      "args": {},
+      "inputs": {
+        "holes": [
+          "solid_01_csg_cap_009_0_loop_02"
+        ],
+        "outer": [
+          "solid_01_csg_cap_009_0_loop_01"
+        ]
+      },
+      "op": "profile.face2"
+    },
+    "solid_01_csg_op_001": {
+      "args": {},
+      "inputs": {
+        "operands": [
+          "solid_01_csg_tool_002",
+          "solid_01_csg_tool_009"
+        ]
+      },
+      "op": "boolean.intersect"
+    },
+    "solid_01_csg_tool_002": {
+      "args": {},
+      "inputs": {
+        "frame": [
+          "solid_01_csg_tool_002_frame"
+        ],
+        "shape": [
+          "solid_01_csg_tool_002_local"
+        ]
+      },
+      "op": "shape.transform"
+    },
+    "solid_01_csg_tool_002_frame": {
+      "args": {
+        "origin": {
+          "literal": [
+            2.38125,
+            4.124445985523391,
+            0.0
+          ]
+        },
+        "x_axis": {
+          "literal": [
+            1.0,
+            0.0,
+            0.0
+          ]
+        },
+        "y_axis": {
+          "literal": [
+            0.0,
+            1.0,
+            0.0
+          ]
+        }
+      },
+      "inputs": {},
+      "op": "frame.rigid3"
+    },
+    "solid_01_csg_tool_002_local": {
+      "args": {
+        "distance": {
+          "literal": 1.5875
+        }
+      },
+      "inputs": {
+        "profile": [
+          "solid_01_csg_cap_009_0_profile"
+        ]
+      },
+      "op": "solid.extrude"
+    },
+    "solid_01_csg_tool_009": {
+      "args": {},
+      "inputs": {
+        "frame": [
+          "solid_01_csg_tool_009_frame"
+        ],
+        "shape": [
+          "solid_01_csg_tool_009_local"
+        ]
+      },
+      "op": "shape.transform"
+    },
+    "solid_01_csg_tool_009_frame": {
+      "args": {
+        "origin": {
+          "literal": [
+            0.0,
+            0.0,
+            1.5875745603533902
+          ]
+        },
+        "x_axis": {
+          "literal": [
+            1.0,
+            0.0,
+            0.0
+          ]
+        },
+        "y_axis": {
+          "literal": [
+            0.0,
+            -1.0,
+            0.0
+          ]
+        }
+      },
+      "inputs": {},
+      "op": "frame.rigid3"
+    },
+    "solid_01_csg_tool_009_local": {
+      "args": {
+        "height": {
+          "literal": 1.5876491207067602
+        },
+        "radius_bottom": {
+          "literal": 2.3811754396466096
+        },
+        "radius_top": {
+          "literal": 3.9688245603614725
+        }
+      },
+      "inputs": {},
+      "op": "solid.cone"
+    }
+  },
+  "outputs": [
+    {
+      "expected_kind": "solid",
+      "id": "body_001",
+      "node": "body_001_world"
+    }
+  ],
+  "parameters": {
+    "body_001_factor": {
+      "editability": "independent",
+      "type": "number",
+      "unit": "1",
+      "value": 1.0
+    },
+    "body_001_origin": {
+      "editability": "independent",
+      "type": "point3",
+      "unit": "mm",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "body_001_x_axis": {
+      "editability": "independent",
+      "type": "direction3",
+      "unit": "1",
+      "value": [
+        1.0,
+        0.0,
+        0.0
+      ]
+    },
+    "body_001_y_axis": {
+      "editability": "independent",
+      "type": "direction3",
+      "unit": "1",
+      "value": [
+        0.0,
+        1.0,
+        0.0
+      ]
+    }
+  },
+  "units": {
+    "angle": "rad",
+    "length": "mm"
+  },
+  "version": 1
+}

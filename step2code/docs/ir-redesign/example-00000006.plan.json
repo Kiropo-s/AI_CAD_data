@@ -1,0 +1,379 @@
+{
+  "format": "step-plan",
+  "version": 1,
+  "units": {
+    "length": "mm",
+    "angle": "rad"
+  },
+  "parameters": {
+    "body_scale": {
+      "type": "number",
+      "unit": "1",
+      "value": 1.0,
+      "editability": "independent"
+    },
+    "body_origin": {
+      "type": "point3",
+      "unit": "mm",
+      "value": [
+        0.0,
+        0.0,
+        0.7937500000000101
+      ],
+      "editability": "independent"
+    },
+    "body_x_axis": {
+      "type": "direction3",
+      "unit": "1",
+      "value": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "editability": "independent"
+    },
+    "body_y_axis": {
+      "type": "direction3",
+      "unit": "1",
+      "value": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "editability": "independent"
+    }
+  },
+  "nodes": {
+    "edge_01": {
+      "op": "curve.line2",
+      "inputs": {},
+      "args": {
+        "start": {
+          "literal": [
+            -2.38125,
+            1.3748153285078004
+          ]
+        },
+        "end": {
+          "literal": [
+            -2.381250000000001,
+            -1.3748153285078004
+          ]
+        }
+      }
+    },
+    "edge_02": {
+      "op": "curve.line2",
+      "inputs": {},
+      "args": {
+        "start": {
+          "literal": [
+            -2.381250000000001,
+            -1.3748153285078004
+          ]
+        },
+        "end": {
+          "literal": [
+            0.0,
+            -2.749630657015601
+          ]
+        }
+      }
+    },
+    "edge_03": {
+      "op": "curve.line2",
+      "inputs": {},
+      "args": {
+        "start": {
+          "literal": [
+            0.0,
+            -2.749630657015601
+          ]
+        },
+        "end": {
+          "literal": [
+            2.38125,
+            -1.374815328507804
+          ]
+        }
+      }
+    },
+    "edge_04": {
+      "op": "curve.line2",
+      "inputs": {},
+      "args": {
+        "start": {
+          "literal": [
+            2.38125,
+            -1.374815328507804
+          ]
+        },
+        "end": {
+          "literal": [
+            2.38125,
+            1.3748153285078004
+          ]
+        }
+      }
+    },
+    "edge_05": {
+      "op": "curve.line2",
+      "inputs": {},
+      "args": {
+        "start": {
+          "literal": [
+            2.38125,
+            1.3748153285078004
+          ]
+        },
+        "end": {
+          "literal": [
+            0.0,
+            2.7496306570156004
+          ]
+        }
+      }
+    },
+    "edge_06": {
+      "op": "curve.line2",
+      "inputs": {},
+      "args": {
+        "start": {
+          "literal": [
+            0.0,
+            2.7496306570156004
+          ]
+        },
+        "end": {
+          "literal": [
+            -2.38125,
+            1.3748153285078004
+          ]
+        }
+      }
+    },
+    "hole_circle": {
+      "op": "curve.circle2",
+      "inputs": {},
+      "args": {
+        "center": {
+          "literal": [
+            0.0,
+            0.0
+          ]
+        },
+        "radius": {
+          "literal": 1.2573
+        },
+        "winding": {
+          "literal": "cw"
+        }
+      }
+    },
+    "outer_loop": {
+      "op": "wire.loop2",
+      "inputs": {
+        "curves": [
+          "edge_01",
+          "edge_02",
+          "edge_03",
+          "edge_04",
+          "edge_05",
+          "edge_06"
+        ]
+      },
+      "args": {}
+    },
+    "hole_loop": {
+      "op": "wire.loop2",
+      "inputs": {
+        "curves": [
+          "hole_circle"
+        ]
+      },
+      "args": {}
+    },
+    "hex_profile": {
+      "op": "profile.face2",
+      "inputs": {
+        "outer": [
+          "outer_loop"
+        ],
+        "holes": [
+          "hole_loop"
+        ]
+      },
+      "args": {}
+    },
+    "hex_prism": {
+      "op": "solid.extrude",
+      "inputs": {
+        "profile": [
+          "hex_profile"
+        ]
+      },
+      "args": {
+        "distance": {
+          "literal": 1.5875
+        }
+      }
+    },
+    "prism_local_frame": {
+      "op": "frame.rigid3",
+      "inputs": {},
+      "args": {
+        "origin": {
+          "literal": [
+            0.0,
+            0.0,
+            -0.7937500000000101
+          ]
+        },
+        "x_axis": {
+          "literal": [
+            1.0,
+            0.0,
+            0.0
+          ]
+        },
+        "y_axis": {
+          "literal": [
+            0.0,
+            1.0,
+            0.0
+          ]
+        }
+      }
+    },
+    "prism_local": {
+      "op": "shape.transform",
+      "inputs": {
+        "shape": [
+          "hex_prism"
+        ],
+        "frame": [
+          "prism_local_frame"
+        ]
+      },
+      "args": {}
+    },
+    "extended_cone": {
+      "op": "solid.cone",
+      "inputs": {},
+      "args": {
+        "radius_bottom": {
+          "literal": 2.3811754396466096
+        },
+        "radius_top": {
+          "literal": 3.9688245603614725
+        },
+        "height": {
+          "literal": 1.5876491207067602
+        }
+      }
+    },
+    "cone_local_frame": {
+      "op": "frame.rigid3",
+      "inputs": {},
+      "args": {
+        "origin": {
+          "literal": [
+            0.0,
+            0.0,
+            0.7938245603533801
+          ]
+        },
+        "x_axis": {
+          "literal": [
+            1.0,
+            0.0,
+            0.0
+          ]
+        },
+        "y_axis": {
+          "literal": [
+            0.0,
+            -1.0,
+            0.0
+          ]
+        }
+      }
+    },
+    "cone_local": {
+      "op": "shape.transform",
+      "inputs": {
+        "shape": [
+          "extended_cone"
+        ],
+        "frame": [
+          "cone_local_frame"
+        ]
+      },
+      "args": {}
+    },
+    "clipped_local": {
+      "op": "boolean.intersect",
+      "inputs": {
+        "operands": [
+          "prism_local",
+          "cone_local"
+        ]
+      },
+      "args": {}
+    },
+    "scaled_local": {
+      "op": "shape.uniform_scale",
+      "inputs": {
+        "shape": [
+          "clipped_local"
+        ]
+      },
+      "args": {
+        "center": {
+          "literal": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "factor": {
+          "param": "body_scale"
+        }
+      }
+    },
+    "body_frame": {
+      "op": "frame.rigid3",
+      "inputs": {},
+      "args": {
+        "origin": {
+          "param": "body_origin"
+        },
+        "x_axis": {
+          "param": "body_x_axis"
+        },
+        "y_axis": {
+          "param": "body_y_axis"
+        }
+      }
+    },
+    "placed_body": {
+      "op": "shape.transform",
+      "inputs": {
+        "shape": [
+          "scaled_local"
+        ],
+        "frame": [
+          "body_frame"
+        ]
+      },
+      "args": {}
+    }
+  },
+  "outputs": [
+    {
+      "id": "body_01",
+      "node": "placed_body",
+      "expected_kind": "solid"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "format": "step-recognition-diagnostics",
+  "version": 1,
+  "case_id": "00000007_b33a147f86da49879455d286_step_000",
+  "source_sha256": "02616fa80edaf4d8a1aa03619e3488fa42158da3874ccca3289b9af700fe07cf",
+  "implementation_fingerprint": "3bdc6fd5ed474a4198cfc30d79870023b36926f6c9ed14128edeecd4972c60ca",
+  "outcome": "accepted",
+  "stage": "geometry",
+  "reason_code": "geometry.verified",
+  "elapsed_seconds": 1.1593427000043448,
+  "source_body_count": 1,
+  "features": [
+    {
+      "solid_index": 1,
+      "method": "analytic_cap_prism"
+    }
+  ],
+  "recognizer_attempts": [],
+  "last_failure": {
+    "reason_code": "geometry.verified",
+    "stage": "geometry",
+    "error": null
+  },
+  "failure_evidence": {},
+  "sidecar_only": true
+}
