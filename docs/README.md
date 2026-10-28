@@ -16,6 +16,7 @@
 
 | 文档 | 阶段 |
 |---|---|
+| [ANALYSIS_0000_V3_20261025.md](reports/ANALYSIS_0000_V3_20261025.md) | 2026-10-25：最新 v3 全量 1437 例分析，1231/54/152（train_ready/provisional/rejected） |
 | [IR2CODE_V3_RESULTS.md](reports/IR2CODE_V3_RESULTS.md) | 2026-10-25：当前 IR→Code 几何契约修复与固定/前 50 回归 |
 | [ANALYSIS_0000_20261024.md](reports/ANALYSIS_0000_20261024.md) | 2026-10-24：旧协议下 0000 全量日志分析 |
 | [READABLE_ONLY_RESULTS.md](reports/READABLE_ONLY_RESULTS.md) | 2026-10-23：readable 单路径迁移与 mixed-86 |
