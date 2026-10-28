@@ -1,0 +1,223 @@
+{
+  "tool": "step2scapi-direct",
+  "version": "0.7.0",
+  "dataset": "ABC",
+  "scope": "abc_0000 first 20 STEP files only",
+  "input_count": 20,
+  "completed_count": 20,
+  "no_full_100_case_run": true,
+  "baseline": {
+    "version": "0.6.0",
+    "train_ready": 9,
+    "provisional": 11
+  },
+  "result": {
+    "train_ready": 9,
+    "provisional": 11,
+    "rejected": 0
+  },
+  "unit_tests": "52 passed",
+  "regression_output": "F:\\AI_CAD\\step2code_direct\\out\\abc-first20-direct-0.7.0-20261028",
+  "cases": [
+    {
+      "id": "00000000",
+      "before": "provisional",
+      "after": "provisional",
+      "before_reason": "unsupported_geometry",
+      "after_reason": "unsupported_geometry",
+      "elapsed_seconds": 1.838714399986202,
+      "failure_category": "hybrid_search",
+      "route_hint": "analytic_csg"
+    },
+    {
+      "id": "00000001",
+      "before": "provisional",
+      "after": "provisional",
+      "before_reason": "unsupported_geometry",
+      "after_reason": "unsupported_geometry",
+      "elapsed_seconds": 44.27491539999028,
+      "failure_category": "freeform_surface",
+      "route_hint": "freeform_gate"
+    },
+    {
+      "id": "00000002",
+      "before": "provisional",
+      "after": "provisional",
+      "before_reason": "unsupported_geometry",
+      "after_reason": "unsupported_geometry",
+      "elapsed_seconds": 41.55050810001558,
+      "failure_category": "hybrid_search",
+      "route_hint": "feature_grouped_csg"
+    },
+    {
+      "id": "00000003",
+      "before": "provisional",
+      "after": "provisional",
+      "before_reason": "unsupported_geometry",
+      "after_reason": "unsupported_geometry",
+      "elapsed_seconds": 41.77066130001913,
+      "failure_category": "freeform_surface",
+      "route_hint": "freeform_gate"
+    },
+    {
+      "id": "00000004",
+      "before": "provisional",
+      "after": "provisional",
+      "before_reason": "unsupported_geometry",
+      "after_reason": "unsupported_geometry",
+      "elapsed_seconds": 41.40623069999856,
+      "failure_category": "hybrid_search",
+      "route_hint": "feature_grouped_csg"
+    },
+    {
+      "id": "00000005",
+      "before": "train_ready",
+      "after": "train_ready",
+      "before_reason": "accepted",
+      "after_reason": "accepted",
+      "elapsed_seconds": 2.7091997000097763,
+      "failure_category": null,
+      "route_hint": "analytic_csg"
+    },
+    {
+      "id": "00000006",
+      "before": "train_ready",
+      "after": "train_ready",
+      "before_reason": "accepted",
+      "after_reason": "accepted",
+      "elapsed_seconds": 1.9884643999976106,
+      "failure_category": null,
+      "route_hint": "analytic_csg"
+    },
+    {
+      "id": "00000007",
+      "before": "train_ready",
+      "after": "train_ready",
+      "before_reason": "accepted",
+      "after_reason": "accepted",
+      "elapsed_seconds": 0.6966248999815434,
+      "failure_category": null,
+      "route_hint": "analytic_csg"
+    },
+    {
+      "id": "00000008",
+      "before": "train_ready",
+      "after": "train_ready",
+      "before_reason": "accepted",
+      "after_reason": "accepted",
+      "elapsed_seconds": 22.173826899990672,
+      "failure_category": null,
+      "route_hint": "analytic_csg"
+    },
+    {
+      "id": "00000009",
+      "before": "train_ready",
+      "after": "train_ready",
+      "before_reason": "accepted",
+      "after_reason": "accepted",
+      "elapsed_seconds": 1.0320621999853756,
+      "failure_category": null,
+      "route_hint": "analytic_csg"
+    },
+    {
+      "id": "00000010",
+      "before": "provisional",
+      "after": "provisional",
+      "before_reason": "unsupported_geometry",
+      "after_reason": "unsupported_geometry",
+      "elapsed_seconds": 42.50296509999316,
+      "failure_category": "hybrid_search",
+      "route_hint": "feature_grouped_csg"
+    },
+    {
+      "id": "00000011",
+      "before": "provisional",
+      "after": "provisional",
+      "before_reason": "unsupported_geometry",
+      "after_reason": "unsupported_geometry",
+      "elapsed_seconds": 64.03241200000048,
+      "failure_category": "freeform_surface",
+      "route_hint": "freeform_gate"
+    },
+    {
+      "id": "00000012",
+      "before": "provisional",
+      "after": "provisional",
+      "before_reason": "unsupported_geometry",
+      "after_reason": "unsupported_geometry",
+      "elapsed_seconds": 61.74071910002385,
+      "failure_category": "freeform_surface",
+      "route_hint": "freeform_gate"
+    },
+    {
+      "id": "00000013",
+      "before": "provisional",
+      "after": "provisional",
+      "before_reason": "unsupported_geometry",
+      "after_reason": "unsupported_geometry",
+      "elapsed_seconds": 44.096045299986145,
+      "failure_category": "rotation_feature",
+      "route_hint": "revolution_then_csg"
+    },
+    {
+      "id": "00000014",
+      "before": "provisional",
+      "after": "provisional",
+      "before_reason": "unsupported_geometry",
+      "after_reason": "unsupported_geometry",
+      "elapsed_seconds": 103.50162500000442,
+      "failure_category": "rotation_feature",
+      "route_hint": "analytic_csg"
+    },
+    {
+      "id": "00000015",
+      "before": "provisional",
+      "after": "provisional",
+      "before_reason": "unsupported_geometry",
+      "after_reason": "unsupported_geometry",
+      "elapsed_seconds": 50.83503330001258,
+      "failure_category": "freeform_surface",
+      "route_hint": "freeform_gate"
+    },
+    {
+      "id": "00000016",
+      "before": "train_ready",
+      "after": "train_ready",
+      "before_reason": "accepted",
+      "after_reason": "accepted",
+      "elapsed_seconds": 4.312617200019304,
+      "failure_category": null,
+      "route_hint": "analytic_csg"
+    },
+    {
+      "id": "00000017",
+      "before": "train_ready",
+      "after": "train_ready",
+      "before_reason": "accepted",
+      "after_reason": "accepted",
+      "elapsed_seconds": 8.23826569999801,
+      "failure_category": null,
+      "route_hint": "analytic_csg"
+    },
+    {
+      "id": "00000018",
+      "before": "train_ready",
+      "after": "train_ready",
+      "before_reason": "accepted",
+      "after_reason": "accepted",
+      "elapsed_seconds": 4.1221390000137035,
+      "failure_category": null,
+      "route_hint": "analytic_csg"
+    },
+    {
+      "id": "00000019",
+      "before": "train_ready",
+      "after": "train_ready",
+      "before_reason": "accepted",
+      "after_reason": "accepted",
+      "elapsed_seconds": 3.9716599000093993,
+      "failure_category": null,
+      "route_hint": "analytic_csg"
+    }
+  ]
+}

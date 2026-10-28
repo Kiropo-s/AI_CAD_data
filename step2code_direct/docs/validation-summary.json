@@ -1,0 +1,58 @@
+{
+  "date": "2026-10-26",
+  "tool_version": "0.1.0",
+  "test_count": 20,
+  "test_result": "passed",
+  "geometric_fixture_count": 12,
+  "scope": "independent direct analytic straight-extrusion reconstruction",
+  "abc": {
+    "input_count": 20,
+    "counts": {
+      "provisional": 15,
+      "train_ready": 5
+    },
+    "accepted_ids": [
+      "00000005",
+      "00000007",
+      "00000017",
+      "00000018",
+      "00000019"
+    ],
+    "samples": 8192,
+    "validation_mode": "world"
+  },
+  "comparison_to_prism_v02": {
+    "matched_count": 20,
+    "baseline_counts": {
+      "provisional": 15,
+      "train_ready": 5
+    },
+    "direct_counts": {
+      "provisional": 15,
+      "train_ready": 5
+    },
+    "acceptance_rate_difference_percentage_points": 0.0
+  },
+  "comparison_to_current_v03": {
+    "matched_count": 20,
+    "baseline_counts": {
+      "provisional": 14,
+      "train_ready": 6
+    },
+    "direct_counts": {
+      "provisional": 15,
+      "train_ready": 5
+    },
+    "acceptance_rate_difference_percentage_points": -5.0
+  },
+  "current_baseline_only_accepted": [
+    "00000009_9b3d6a97e8de4aa193b81000_step_001.step"
+  ],
+  "limitations": [
+    "Current direct route does not recognize general revolutions.",
+    "Both comparisons are descriptive, not causal evidence that removing IR changes success rate.",
+    "Only the first 20 ABC files were evaluated; not the full 10000-file chunk.",
+    "Historical baseline reports lack shared implementation fingerprints.",
+    "Default per-case parameter-edit validation is not_run; test suite covers limited edits."
+  ]
+}

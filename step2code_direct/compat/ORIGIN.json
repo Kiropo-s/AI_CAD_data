@@ -1,0 +1,14 @@
+{
+  "repository": "F:/AI_CAD/step2code",
+  "revision": "097478e7ae2dbcee048cf77540331209094f6180",
+  "files": {
+    "import_step.py": {
+      "source_path": "step_import.py",
+      "sha256": "55f55413e153d2da97a081590aa8da8c2d8137aa190a6869f07580baa7c50bd6"
+    },
+    "validation.py": {
+      "source_path": "validation.py",
+      "sha256": "b8405a13344910ad803ab5212e3d6dba51434f623ac8dd5aa82845646dfded4b"
+    }
+  }
+}
