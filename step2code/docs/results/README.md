@@ -110,7 +110,7 @@ plan_hash          = 137fa9cefb54d5a535a08fd59942f2b9f8c8028d062faa1357cb9c0c797
 
 ## 5. 复现
 
-在仓库的**父目录**（本仓库需检出为 `step2code/`）执行：
+在仓库**根目录**（包含 `step2code/` 的目录）执行：
 
 ```powershell
 ./envs/simplecad/Scripts/python.exe -m step2code --input datasets/abc/step --limit 100 `

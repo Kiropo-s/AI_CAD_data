@@ -6,13 +6,13 @@
 
 ## 使用
 
-在 `F:/AI_CAD` 运行，使用现有 `envs/simplecad` 环境：
+在仓库根目录运行（本机为 `F:/AI_CAD`，即包含 `step2code/` 的目录），使用现有 `envs/simplecad` 环境：
 
 ```powershell
 ./envs/simplecad/Scripts/python.exe -m step2code --input datasets/abc/step/abc_0000 --limit 100 --out step2code/out/my-run --timeout 120
 ```
 
-本仓库需检出为 `step2code/` 目录，并从其父目录以 `-m step2code` 执行。运行时依赖见 `requirements.txt`（Python 3.13、NumPy、SciPy、cadquery-ocp、simplecadapi），测试额外需要 `requirements-dev.txt`。
+在仓库根目录以 `-m step2code` 执行（`step2code/` 必须是当前目录下的子目录）。运行时依赖见 `requirements.txt`（Python 3.13、NumPy、SciPy、cadquery-ocp、simplecadapi），测试额外需要 `requirements-dev.txt`。
 
 输入可以是单个 STEP/STP 或目录。默认 CD 采样 8192 点，验收只使用源世界坐标。输出目录必须为空；每例在独立进程运行，原生调用由父进程硬超时隔离。
 
