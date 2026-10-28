@@ -1,0 +1,113 @@
+{
+  "ir_version": "0.1",
+  "kind": "part",
+  "units": "mm",
+  "tolerance": {
+    "length": 1e-6,
+    "angle_deg": 1e-6
+  },
+  "entities": {
+    "sketch_demo": {
+      "type": "SketchPlane",
+      "op": "sketch.plane",
+      "inputs": [],
+      "params": {
+        "frame": {
+          "origin": [0.0, 0.0, 0.0],
+          "x_axis": [1.0, 0.0, 0.0],
+          "y_axis": [0.0, 1.0, 0.0],
+          "z_axis": [0.0, 0.0, 1.0]
+        }
+      }
+    },
+    "curve_demo_l1": {
+      "type": "SketchLine",
+      "op": "sketch.line",
+      "inputs": [],
+      "params": {
+        "start": [0.0, 0.0],
+        "end": [20.0, 0.0]
+      }
+    },
+    "curve_demo_a1": {
+      "type": "SketchArc",
+      "op": "sketch.arc",
+      "inputs": [],
+      "params": {
+        "start": [20.0, 0.0],
+        "mid": [25.0, 5.0],
+        "end": [20.0, 10.0],
+        "center": [20.0, 5.0],
+        "radius": 5.0,
+        "ccw": true
+      }
+    },
+    "curve_demo_l2": {
+      "type": "SketchLine",
+      "op": "sketch.line",
+      "inputs": [],
+      "params": {
+        "start": [20.0, 10.0],
+        "end": [0.0, 10.0]
+      }
+    },
+    "curve_demo_l3": {
+      "type": "SketchLine",
+      "op": "sketch.line",
+      "inputs": [],
+      "params": {
+        "start": [0.0, 10.0],
+        "end": [0.0, 0.0]
+      }
+    },
+    "loop_demo_p1_0": {
+      "type": "SketchLoop",
+      "op": "sketch.loop",
+      "inputs": [
+        "curve_demo_l1",
+        "curve_demo_a1",
+        "curve_demo_l2",
+        "curve_demo_l3"
+      ],
+      "params": {
+        "is_outer": true,
+        "closed": true
+      }
+    },
+    "profile_demo_p1": {
+      "type": "SketchProfile",
+      "op": "sketch.profile",
+      "inputs": ["loop_demo_p1_0"],
+      "params": {
+        "plane": "sketch_demo",
+        "closed": true,
+        "regions": [{"outer": "loop_demo_p1_0", "holes": []}]
+      }
+    },
+    "extrude_demo": {
+      "type": "ExtrudeFeature",
+      "op": "feature.extrude",
+      "inputs": ["profile_demo_p1"],
+      "params": {
+        "distance": 5.0,
+        "direction": [0.0, 0.0, 1.0],
+        "extent": "one_side",
+        "operation": "new",
+        "start": "profile_plane",
+        "taper": 0.0
+      }
+    }
+  },
+  "sequence": [
+    "sketch_demo",
+    "extrude_demo"
+  ],
+  "results": ["extrude_demo"],
+  "extensions": {
+    "source": {
+      "format": "synthetic",
+      "file": "examples/line_arc_plate.ir.json"
+    }
+  },
+  "unsupported": []
+}

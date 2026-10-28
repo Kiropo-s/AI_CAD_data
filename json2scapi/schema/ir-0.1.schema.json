@@ -1,0 +1,710 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:cad-ir:0.1",
+  "title": "CAD IR 0.1 (DeepCAD-compatible)",
+  "description": "A DeepCAD-based intermediate representation for part modeling. Sketch geometry is expressed in 2D local coordinates; sketch.plane maps it to world space. Geometry preparation ir-geometry-v1 validates arc auxiliaries against authoritative start/mid/end and canonicalizes adjacent endpoints within declared tolerance on a copy; see IR_SPEC.md.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "ir_version",
+    "kind",
+    "units",
+    "entities",
+    "sequence",
+    "results",
+    "unsupported"
+  ],
+  "properties": {
+    "ir_version": {
+      "const": "0.1"
+    },
+    "kind": {
+      "const": "part"
+    },
+    "units": {
+      "enum": [
+        "mm",
+        "m",
+        "inch",
+        "normalized"
+      ]
+    },
+    "tolerance": {
+      "$ref": "#/$defs/tolerance"
+    },
+    "entities": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": {
+        "$ref": "#/$defs/entity"
+      }
+    },
+    "sequence": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "results": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "extensions": {
+      "type": "object"
+    },
+    "unsupported": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/unsupported"
+      }
+    },
+    "evidence": {
+      "type": "object"
+    }
+  },
+  "$defs": {
+    "tolerance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "length",
+        "angle_deg"
+      ],
+      "properties": {
+        "length": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "angle_deg": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        }
+      }
+    },
+    "vec2": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 2,
+      "items": {
+        "type": "number"
+      }
+    },
+    "vec3": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 3,
+      "items": {
+        "type": "number"
+      }
+    },
+    "frame": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "origin",
+        "x_axis",
+        "y_axis",
+        "z_axis"
+      ],
+      "properties": {
+        "origin": {
+          "$ref": "#/$defs/vec3"
+        },
+        "x_axis": {
+          "$ref": "#/$defs/vec3"
+        },
+        "y_axis": {
+          "$ref": "#/$defs/vec3"
+        },
+        "z_axis": {
+          "$ref": "#/$defs/vec3"
+        }
+      }
+    },
+    "entity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "type",
+        "op",
+        "inputs",
+        "params"
+      ],
+      "properties": {
+        "type": {
+          "type": "string",
+          "minLength": 1
+        },
+        "op": {
+          "enum": [
+            "sketch.plane",
+            "sketch.line",
+            "sketch.arc",
+            "sketch.circle",
+            "sketch.loop",
+            "sketch.profile",
+            "feature.extrude"
+          ]
+        },
+        "inputs": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "params": {
+          "type": "object"
+        },
+        "outputs": {
+          "type": "integer",
+          "minimum": 1,
+          "default": 1
+        },
+        "selection": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        "source": {
+          "$ref": "#/$defs/source"
+        },
+        "tags": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "op": {
+                "const": "sketch.plane"
+              }
+            },
+            "required": [
+              "op"
+            ]
+          },
+          "then": {
+            "properties": {
+              "type": {
+                "const": "SketchPlane"
+              },
+              "inputs": {
+                "maxItems": 0
+              },
+              "params": {
+                "$ref": "#/$defs/sketchPlaneParams"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "op": {
+                "const": "sketch.line"
+              }
+            },
+            "required": [
+              "op"
+            ]
+          },
+          "then": {
+            "properties": {
+              "type": {
+                "const": "SketchLine"
+              },
+              "inputs": {
+                "maxItems": 0
+              },
+              "params": {
+                "$ref": "#/$defs/sketchLineParams"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "op": {
+                "const": "sketch.arc"
+              }
+            },
+            "required": [
+              "op"
+            ]
+          },
+          "then": {
+            "properties": {
+              "type": {
+                "const": "SketchArc"
+              },
+              "inputs": {
+                "maxItems": 0
+              },
+              "params": {
+                "$ref": "#/$defs/sketchArcParams"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "op": {
+                "const": "sketch.circle"
+              }
+            },
+            "required": [
+              "op"
+            ]
+          },
+          "then": {
+            "properties": {
+              "type": {
+                "const": "SketchCircle"
+              },
+              "inputs": {
+                "maxItems": 0
+              },
+              "params": {
+                "$ref": "#/$defs/sketchCircleParams"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "op": {
+                "const": "sketch.loop"
+              }
+            },
+            "required": [
+              "op"
+            ]
+          },
+          "then": {
+            "properties": {
+              "type": {
+                "const": "SketchLoop"
+              },
+              "inputs": {
+                "minItems": 1
+              },
+              "params": {
+                "$ref": "#/$defs/sketchLoopParams"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "op": {
+                "const": "sketch.profile"
+              }
+            },
+            "required": [
+              "op"
+            ]
+          },
+          "then": {
+            "properties": {
+              "type": {
+                "const": "SketchProfile"
+              },
+              "inputs": {
+                "minItems": 1
+              },
+              "params": {
+                "$ref": "#/$defs/sketchProfileParams"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "op": {
+                "const": "feature.extrude"
+              }
+            },
+            "required": [
+              "op"
+            ]
+          },
+          "then": {
+            "properties": {
+              "type": {
+                "const": "ExtrudeFeature"
+              },
+              "inputs": {
+                "minItems": 1,
+                "maxItems": 1
+              },
+              "params": {
+                "$ref": "#/$defs/extrudeParams"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "sketchPlaneParams": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "frame"
+      ],
+      "properties": {
+        "frame": {
+          "$ref": "#/$defs/frame"
+        }
+      }
+    },
+    "sketchLineParams": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "start",
+        "end"
+      ],
+      "properties": {
+        "start": {
+          "$ref": "#/$defs/vec2"
+        },
+        "end": {
+          "$ref": "#/$defs/vec2"
+        }
+      }
+    },
+    "sketchArcParams": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "start",
+        "mid",
+        "end"
+      ],
+      "properties": {
+        "start": {
+          "$ref": "#/$defs/vec2"
+        },
+        "mid": {
+          "$ref": "#/$defs/vec2"
+        },
+        "end": {
+          "$ref": "#/$defs/vec2"
+        },
+        "center": {
+          "$ref": "#/$defs/vec2"
+        },
+        "radius": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "ccw": {
+          "type": "boolean"
+        }
+      }
+    },
+    "sketchCircleParams": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "center",
+        "radius"
+      ],
+      "properties": {
+        "center": {
+          "$ref": "#/$defs/vec2"
+        },
+        "radius": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        }
+      }
+    },
+    "sketchLoopParams": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "is_outer",
+        "closed"
+      ],
+      "properties": {
+        "is_outer": {
+          "type": "boolean"
+        },
+        "closed": {
+          "const": true
+        }
+      }
+    },
+    "sketchProfileParams": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "plane",
+        "closed",
+        "regions"
+      ],
+      "properties": {
+        "plane": {
+          "type": "string",
+          "minLength": 1
+        },
+        "closed": {
+          "const": true
+        },
+        "regions": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/profileRegion"
+          }
+        }
+      }
+    },
+    "profileRegion": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "outer",
+        "holes"
+      ],
+      "properties": {
+        "outer": {
+          "type": "string",
+          "minLength": 1
+        },
+        "holes": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "extrudeParams": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "distance",
+        "direction",
+        "extent",
+        "operation",
+        "start"
+      ],
+      "properties": {
+        "distance": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "direction": {
+          "$ref": "#/$defs/vec3"
+        },
+        "extent": {
+          "enum": [
+            "one_side",
+            "symmetric",
+            "two_sides"
+          ]
+        },
+        "distance2": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "operation": {
+          "enum": [
+            "new",
+            "join",
+            "cut",
+            "intersect"
+          ]
+        },
+        "start": {
+          "const": "profile_plane"
+        },
+        "taper": {
+          "type": "number"
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "extent": {
+                "const": "two_sides"
+              }
+            },
+            "required": [
+              "extent"
+            ]
+          },
+          "then": {
+            "required": [
+              "distance2"
+            ]
+          }
+        }
+      ]
+    },
+    "unsupported": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "code",
+        "message"
+      ],
+      "properties": {
+        "code": {
+          "type": "string",
+          "minLength": 1
+        },
+        "message": {
+          "type": "string",
+          "minLength": 1
+        },
+        "entity": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source": {
+          "type": "object"
+        }
+      }
+    },
+    "source": {
+      "type": "object",
+      "additionalProperties": true,
+      "properties": {
+        "format": {
+          "type": "string",
+          "minLength": 1
+        },
+        "entity_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "profile_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "curve_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "profile_index": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "loop_index": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "reversed": {
+          "type": "boolean"
+        },
+        "ordered": {
+          "type": "boolean"
+        },
+        "planarity_projection": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "point",
+              "z_mm",
+              "tolerance_mm"
+            ],
+            "properties": {
+              "point": {
+                "enum": [
+                  "start_point",
+                  "end_point",
+                  "center_point"
+                ]
+              },
+              "z_mm": {
+                "type": "number"
+              },
+              "tolerance_mm": {
+                "type": "number",
+                "exclusiveMinimum": 0
+              }
+            }
+          }
+        },
+        "extent_normalization": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "rule",
+            "extent_one_m",
+            "extent_two_m",
+            "interval_mm"
+          ],
+          "properties": {
+            "rule": {
+              "const": "signed_interval_v1"
+            },
+            "extent_one_m": {
+              "type": "number"
+            },
+            "extent_two_m": {
+              "type": "number"
+            },
+            "interval_mm": {
+              "$ref": "#/$defs/vec2"
+            }
+          }
+        },
+        "frame_normalization": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "rule",
+            "original_axis_lengths",
+            "tolerance"
+          ],
+          "properties": {
+            "rule": {
+              "const": "unit_axes_v1"
+            },
+            "original_axis_lengths": {
+              "$ref": "#/$defs/vec3"
+            },
+            "tolerance": {
+              "type": "number",
+              "exclusiveMinimum": 0,
+              "maximum": 0.000001
+            }
+          }
+        }
+      }
+    }
+  }
+}

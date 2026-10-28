@@ -1,0 +1,1369 @@
+{
+  "date": "2026-10-25",
+  "batch": "F:/AI_CAD/json2scapi/out/corpus/ir2code-v3-0000-20261025-124700",
+  "counts": {
+    "train_ready": 1231,
+    "rejected": 152,
+    "provisional": 54
+  },
+  "datasetTotal": 1437,
+  "manifestUnique": 1437,
+  "missingDataset": [],
+  "progressRows": 1437,
+  "progressUnique": 1437,
+  "badProgress": [],
+  "trainingRows": 1231,
+  "trainingUnique": 1231,
+  "trainIssues": [],
+  "emptyCode": 0,
+  "missingPaths": [],
+  "missingReport": [],
+  "inconsistentReports": [],
+  "badVersions": [],
+  "first50Changes": [],
+  "priorFullCounts": {
+    "train_ready": 958,
+    "provisional": 134,
+    "rejected": 345
+  },
+  "transitions": [
+    [
+      "train_ready -> train_ready",
+      947
+    ],
+    [
+      "rejected -> train_ready",
+      209
+    ],
+    [
+      "rejected -> rejected",
+      121
+    ],
+    [
+      "provisional -> train_ready",
+      75
+    ],
+    [
+      "provisional -> provisional",
+      32
+    ],
+    [
+      "provisional -> rejected",
+      27
+    ],
+    [
+      "rejected -> provisional",
+      15
+    ],
+    [
+      "train_ready -> provisional",
+      7
+    ],
+    [
+      "train_ready -> rejected",
+      4
+    ]
+  ],
+  "measurementErrors": [
+    {
+      "id": "00000137",
+      "stage": "candidate_step",
+      "metric": "volume_iou",
+      "required": true,
+      "error": "GeometryMetricsError: B-rep intersection failed or produced invalid topology"
+    },
+    {
+      "id": "00000352",
+      "stage": "independent_comparison",
+      "metric": "symmetric_difference_volume_mm3",
+      "required": true,
+      "error": "GeometryMetricsError: B-rep symmetric difference failed or produced invalid topology"
+    },
+    {
+      "id": "00000352",
+      "stage": "independent_comparison",
+      "metric": "boolean_consistency",
+      "required": true,
+      "error": "GeometryMetricsError: failed IoU could not be independently verified by Cut"
+    },
+    {
+      "id": "00000954",
+      "stage": "independent_comparison",
+      "metric": "symmetric_difference_volume_mm3",
+      "required": true,
+      "error": "GeometryMetricsError: B-rep symmetric difference failed or produced invalid topology"
+    },
+    {
+      "id": "00000954",
+      "stage": "independent_comparison",
+      "metric": "boolean_consistency",
+      "required": true,
+      "error": "GeometryMetricsError: failed IoU could not be independently verified by Cut"
+    },
+    {
+      "id": "00001005",
+      "stage": "candidate_step",
+      "metric": "volume_iou",
+      "required": true,
+      "error": "GeometryMetricsError: inconsistent B-rep intersection volume: reference=156486.26737443762, candidate=156491.44804168021, intersection=156488.46245485675, overshoot_relative=1.4027303839236424e-05"
+    },
+    {
+      "id": "00001398",
+      "stage": "independent_comparison",
+      "metric": "volume_iou",
+      "required": true,
+      "error": "GeometryMetricsError: B-rep intersection failed or produced invalid topology"
+    },
+    {
+      "id": "00001535",
+      "stage": "independent_comparison",
+      "metric": "symmetric_difference_volume_mm3",
+      "required": true,
+      "error": "GeometryMetricsError: B-rep symmetric difference failed or produced invalid topology"
+    },
+    {
+      "id": "00001535",
+      "stage": "independent_comparison",
+      "metric": "boolean_consistency",
+      "required": true,
+      "error": "GeometryMetricsError: failed IoU could not be independently verified by Cut"
+    },
+    {
+      "id": "00001926",
+      "stage": "independent_comparison",
+      "metric": "boolean_consistency",
+      "required": true,
+      "error": "GeometryMetricsError: Cut and Common disagree on occupied-space difference"
+    },
+    {
+      "id": "00002362",
+      "stage": "independent_comparison",
+      "metric": "volume_iou",
+      "required": true,
+      "error": "GeometryMetricsError: B-rep intersection failed or produced invalid topology"
+    },
+    {
+      "id": "00003149",
+      "stage": "candidate_step",
+      "metric": "volume_iou",
+      "required": true,
+      "error": "GeometryMetricsError: B-rep intersection failed or produced invalid topology"
+    },
+    {
+      "id": "00003382",
+      "stage": "candidate_step",
+      "metric": "boolean_consistency",
+      "required": true,
+      "error": "GeometryMetricsError: difference is inconsistent with input volumes"
+    },
+    {
+      "id": "00003775",
+      "stage": "candidate_step",
+      "metric": "symmetric_difference_volume_mm3",
+      "required": true,
+      "error": "GeometryMetricsError: B-rep symmetric difference failed or produced invalid topology"
+    },
+    {
+      "id": "00003775",
+      "stage": "candidate_step",
+      "metric": "boolean_consistency",
+      "required": true,
+      "error": "GeometryMetricsError: failed IoU could not be independently verified by Cut"
+    },
+    {
+      "id": "00004089",
+      "stage": "candidate_step",
+      "metric": "symmetric_difference_volume_mm3",
+      "required": true,
+      "error": "GeometryMetricsError: B-rep symmetric difference failed or produced invalid topology"
+    },
+    {
+      "id": "00004089",
+      "stage": "candidate_step",
+      "metric": "boolean_consistency",
+      "required": true,
+      "error": "GeometryMetricsError: failed IoU could not be independently verified by Cut"
+    },
+    {
+      "id": "00004671",
+      "stage": "independent_comparison",
+      "metric": "symmetric_difference_volume_mm3",
+      "required": true,
+      "error": "GeometryMetricsError: B-rep symmetric difference failed or produced invalid topology"
+    },
+    {
+      "id": "00004671",
+      "stage": "independent_comparison",
+      "metric": "boolean_consistency",
+      "required": true,
+      "error": "GeometryMetricsError: failed IoU could not be independently verified by Cut"
+    },
+    {
+      "id": "00004929",
+      "stage": "independent_comparison",
+      "metric": "symmetric_difference_volume_mm3",
+      "required": true,
+      "error": "GeometryMetricsError: B-rep symmetric difference failed or produced invalid topology"
+    },
+    {
+      "id": "00004929",
+      "stage": "independent_comparison",
+      "metric": "boolean_consistency",
+      "required": true,
+      "error": "GeometryMetricsError: failed IoU could not be independently verified by Cut"
+    },
+    {
+      "id": "00005340",
+      "stage": "candidate_step",
+      "metric": "shape_evaluation",
+      "required": true,
+      "error": "GeometryMetricsError: face has no surface triangles"
+    },
+    {
+      "id": "00005341",
+      "stage": "candidate_step",
+      "metric": "symmetric_difference_volume_mm3",
+      "required": true,
+      "error": "GeometryMetricsError: B-rep symmetric difference failed or produced invalid topology"
+    },
+    {
+      "id": "00005341",
+      "stage": "candidate_step",
+      "metric": "boolean_consistency",
+      "required": true,
+      "error": "GeometryMetricsError: failed IoU could not be independently verified by Cut"
+    },
+    {
+      "id": "00005346",
+      "stage": "candidate_step",
+      "metric": "shape_evaluation",
+      "required": true,
+      "error": "GeometryMetricsError: face has no surface triangles"
+    },
+    {
+      "id": "00005783",
+      "stage": "candidate_step",
+      "metric": "symmetric_difference_volume_mm3",
+      "required": true,
+      "error": "GeometryMetricsError: B-rep symmetric difference failed or produced invalid topology"
+    },
+    {
+      "id": "00005783",
+      "stage": "candidate_step",
+      "metric": "boolean_consistency",
+      "required": true,
+      "error": "GeometryMetricsError: failed IoU could not be independently verified by Cut"
+    },
+    {
+      "id": "00005915",
+      "stage": "independent_comparison",
+      "metric": "symmetric_difference_volume_mm3",
+      "required": true,
+      "error": "GeometryMetricsError: B-rep symmetric difference failed or produced invalid topology"
+    },
+    {
+      "id": "00005915",
+      "stage": "independent_comparison",
+      "metric": "boolean_consistency",
+      "required": true,
+      "error": "GeometryMetricsError: failed IoU could not be independently verified by Cut"
+    },
+    {
+      "id": "00006436",
+      "stage": "candidate_step",
+      "metric": "volume_iou",
+      "required": true,
+      "error": "GeometryMetricsError: B-rep intersection failed or produced invalid topology"
+    },
+    {
+      "id": "00006526",
+      "stage": "candidate_step",
+      "metric": "volume_iou",
+      "required": true,
+      "error": "GeometryMetricsError: inconsistent B-rep intersection volume: reference=79706.024336182731, candidate=79706.021415012365, intersection=79706.024231557836, overshoot_relative=3.5336671200378493e-08"
+    },
+    {
+      "id": "00006608",
+      "stage": "candidate_step",
+      "metric": "volume_iou",
+      "required": true,
+      "error": "GeometryMetricsError: inconsistent B-rep intersection volume: reference=85400.322339197097, candidate=85400.32233919634, intersection=85400.323623330041, overshoot_relative=1.5036637637258552e-08"
+    },
+    {
+      "id": "00006646",
+      "stage": "candidate_step",
+      "metric": "chamfer_relative",
+      "required": true,
+      "error": "GeometryMetricsError: face has no surface triangles"
+    },
+    {
+      "id": "00007032",
+      "stage": "candidate_step",
+      "metric": "boolean_consistency",
+      "required": true,
+      "error": "GeometryMetricsError: claimed disjoint shapes have a shared interior point"
+    },
+    {
+      "id": "00007039",
+      "stage": "candidate_step",
+      "metric": "shape_evaluation",
+      "required": true,
+      "error": "GeometryMetricsError: face has no surface triangles"
+    },
+    {
+      "id": "00007266",
+      "stage": "independent_comparison",
+      "metric": "volume_iou",
+      "required": true,
+      "error": "GeometryMetricsError: inconsistent B-rep intersection volume: reference=50372.047108771047, candidate=50372.045975793459, intersection=50372.047093326713, overshoot_relative=2.2185583949979383e-08"
+    },
+    {
+      "id": "00007884",
+      "stage": "independent_comparison",
+      "metric": "boolean_consistency",
+      "required": true,
+      "error": "GeometryMetricsError: claimed disjoint shapes have a shared interior point"
+    },
+    {
+      "id": "00008107",
+      "stage": "candidate_step",
+      "metric": "volume_iou",
+      "required": true,
+      "error": "GeometryMetricsError: inconsistent B-rep intersection volume: reference=589.88171238225459, candidate=589.88171238225937, intersection=589.88171894774587, overshoot_relative=1.1130182777600184e-08"
+    },
+    {
+      "id": "00008657",
+      "stage": "candidate_step",
+      "metric": "symmetric_difference_volume_mm3",
+      "required": true,
+      "error": "GeometryMetricsError: B-rep symmetric difference failed or produced invalid topology"
+    },
+    {
+      "id": "00008657",
+      "stage": "candidate_step",
+      "metric": "boolean_consistency",
+      "required": true,
+      "error": "GeometryMetricsError: failed IoU could not be independently verified by Cut"
+    },
+    {
+      "id": "00008903",
+      "stage": "independent_comparison",
+      "metric": "symmetric_difference_volume_mm3",
+      "required": true,
+      "error": "GeometryMetricsError: B-rep symmetric difference failed or produced invalid topology"
+    },
+    {
+      "id": "00008903",
+      "stage": "independent_comparison",
+      "metric": "boolean_consistency",
+      "required": true,
+      "error": "GeometryMetricsError: failed IoU could not be independently verified by Cut"
+    },
+    {
+      "id": "00008904",
+      "stage": "candidate_step",
+      "metric": "symmetric_difference_volume_mm3",
+      "required": true,
+      "error": "GeometryMetricsError: B-rep symmetric difference failed or produced invalid topology"
+    },
+    {
+      "id": "00008904",
+      "stage": "candidate_step",
+      "metric": "boolean_consistency",
+      "required": true,
+      "error": "GeometryMetricsError: failed IoU could not be independently verified by Cut"
+    },
+    {
+      "id": "00008905",
+      "stage": "candidate_step",
+      "metric": "boolean_consistency",
+      "required": true,
+      "error": "GeometryMetricsError: Cut and Common disagree on occupied-space difference"
+    },
+    {
+      "id": "00008929",
+      "stage": "candidate_step",
+      "metric": "volume_iou",
+      "required": true,
+      "error": "GeometryMetricsError: B-rep intersection failed or produced invalid topology"
+    },
+    {
+      "id": "00009176",
+      "stage": "candidate_step",
+      "metric": "volume_iou",
+      "required": true,
+      "error": "GeometryMetricsError: inconsistent B-rep intersection volume: reference=60865.21295640368, candidate=60865.204503016554, intersection=60865.212956403673, overshoot_relative=1.3888702401545869e-07"
+    },
+    {
+      "id": "00009179",
+      "stage": "candidate_step",
+      "metric": "volume_iou",
+      "required": true,
+      "error": "GeometryMetricsError: inconsistent B-rep intersection volume: reference=60865.21295640368, candidate=60865.204503016554, intersection=60865.212956403673, overshoot_relative=1.3888702401545869e-07"
+    },
+    {
+      "id": "00009181",
+      "stage": "candidate_step",
+      "metric": "volume_iou",
+      "required": true,
+      "error": "GeometryMetricsError: inconsistent B-rep intersection volume: reference=46021.59201544011, candidate=46021.590880771022, intersection=46021.592015440132, overshoot_relative=2.4655147468228926e-08"
+    },
+    {
+      "id": "00009182",
+      "stage": "candidate_step",
+      "metric": "volume_iou",
+      "required": true,
+      "error": "GeometryMetricsError: inconsistent B-rep intersection volume: reference=60865.21295640368, candidate=60865.204503016554, intersection=60865.212956403673, overshoot_relative=1.3888702401545869e-07"
+    },
+    {
+      "id": "00009184",
+      "stage": "independent_comparison",
+      "metric": "local_surface",
+      "required": false,
+      "error": "GeometryMetricsError: face has no surface triangles"
+    },
+    {
+      "id": "00009184",
+      "stage": "independent_comparison",
+      "metric": "symmetric_difference_volume_mm3",
+      "required": true,
+      "error": "GeometryMetricsError: B-rep symmetric difference failed or produced invalid topology"
+    },
+    {
+      "id": "00009184",
+      "stage": "independent_comparison",
+      "metric": "boolean_consistency",
+      "required": true,
+      "error": "GeometryMetricsError: failed IoU could not be independently verified by Cut"
+    },
+    {
+      "id": "00009185",
+      "stage": "candidate_step",
+      "metric": "symmetric_difference_volume_mm3",
+      "required": true,
+      "error": "GeometryMetricsError: B-rep symmetric difference failed or produced invalid topology"
+    },
+    {
+      "id": "00009185",
+      "stage": "candidate_step",
+      "metric": "boolean_consistency",
+      "required": true,
+      "error": "GeometryMetricsError: failed IoU could not be independently verified by Cut"
+    },
+    {
+      "id": "00009560",
+      "stage": "candidate_step",
+      "metric": "shape_evaluation",
+      "required": true,
+      "error": "GeometryMetricsError: face has no surface triangles"
+    },
+    {
+      "id": "00009694",
+      "stage": "independent_comparison",
+      "metric": "boolean_consistency",
+      "required": true,
+      "error": "GeometryMetricsError: difference is inconsistent with input volumes"
+    },
+    {
+      "id": "00009816",
+      "stage": "independent_comparison",
+      "metric": "boolean_consistency",
+      "required": true,
+      "error": "GeometryMetricsError: Cut and Common disagree on occupied-space difference"
+    },
+    {
+      "id": "00009839",
+      "stage": "candidate_step",
+      "metric": "shape_evaluation",
+      "required": true,
+      "error": "GeometryMetricsError: face has no surface triangles"
+    },
+    {
+      "id": "00009847",
+      "stage": "independent_comparison",
+      "metric": "volume_iou",
+      "required": true,
+      "error": "GeometryMetricsError: B-rep intersection failed or produced invalid topology"
+    },
+    {
+      "id": "00009847",
+      "stage": "independent_comparison",
+      "metric": "local_surface",
+      "required": false,
+      "error": "GeometryMetricsError: face has no surface triangles"
+    },
+    {
+      "id": "00009851",
+      "stage": "candidate_step",
+      "metric": "shape_evaluation",
+      "required": true,
+      "error": "GeometryMetricsError: face has no surface triangles"
+    }
+  ],
+  "metrics": {
+    "volume_relative_error": {
+      "min": 0,
+      "median": 5.946712443555648e-16,
+      "p95": 1.9667684859583213e-13,
+      "max": 0.0000699886669115222
+    },
+    "volume_iou": {
+      "min": 0.9992645035772149,
+      "median": 1,
+      "p95": 1.0000000000000282,
+      "max": 1.0000000068430277
+    },
+    "chamfer_relative": {
+      "min": 0,
+      "median": 0.0023003763351492454,
+      "p95": 0.0065567522852438935,
+      "max": 0.009360217445886044
+    }
+  },
+  "timing": {
+    "sumSeconds": 11837.27576100001,
+    "median": 7.345641,
+    "p95": 12.268645,
+    "max": 122.978249
+  },
+  "exportNewlineOnlyDifferences": 1231,
+  "validBuilds": 1291,
+  "badSampling": [],
+  "details": {
+    "regressed": [
+      {
+        "id": "00001005",
+        "now": "provisional",
+        "stage": "candidate_step",
+        "reasons": [
+          "measurement_error"
+        ]
+      },
+      {
+        "id": "00001011",
+        "now": "rejected",
+        "stage": "independent_comparison",
+        "reasons": [
+          "geometry_mismatch"
+        ]
+      },
+      {
+        "id": "00001398",
+        "now": "provisional",
+        "stage": "independent_comparison",
+        "reasons": [
+          "measurement_error"
+        ]
+      },
+      {
+        "id": "00001984",
+        "now": "rejected",
+        "stage": "independent_comparison",
+        "reasons": [
+          "geometry_mismatch"
+        ]
+      },
+      {
+        "id": "00005705",
+        "now": "rejected",
+        "stage": "adapter",
+        "reasons": [
+          "ConversionError: FP5fMIV0ocbuzSt_1.JJC: entities.curve_FP5fMIV0ocbuzSt_1_KJFB_JJC_loop0_1.params: auxiliary center conflicts with start/mid/end"
+        ]
+      },
+      {
+        "id": "00006915",
+        "now": "provisional",
+        "stage": "candidate_step",
+        "reasons": [
+          "candidate worker timeout after 120s"
+        ]
+      },
+      {
+        "id": "00007032",
+        "now": "provisional",
+        "stage": "candidate_step",
+        "reasons": [
+          "measurement_error"
+        ]
+      },
+      {
+        "id": "00007535",
+        "now": "provisional",
+        "stage": "candidate_step",
+        "reasons": [
+          "candidate worker timeout after 120s"
+        ]
+      },
+      {
+        "id": "00008657",
+        "now": "provisional",
+        "stage": "candidate_step",
+        "reasons": [
+          "measurement_error"
+        ]
+      },
+      {
+        "id": "00008929",
+        "now": "provisional",
+        "stage": "candidate_step",
+        "reasons": [
+          "measurement_error"
+        ]
+      },
+      {
+        "id": "00009849",
+        "now": "rejected",
+        "stage": "adapter",
+        "reasons": [
+          "ConversionError: FAUjj24svK7Rjsj_0.JGS: entities.curve_FAUjj24svK7Rjsj_0_JGt_JGS_loop0_1.params: auxiliary center conflicts with start/mid/end"
+        ]
+      }
+    ],
+    "holeIds": [
+      "00005353",
+      "00007053",
+      "00007529"
+    ],
+    "roundtrip": [
+      {
+        "id": "00004806",
+        "volume": 6.213555626231961,
+        "iou": 0.005915102143559731,
+        "cd": 0.036359611074683905,
+        "errors": []
+      },
+      {
+        "id": "00006475",
+        "volume": 0.03662883453937837,
+        "iou": 0.447872440236682,
+        "cd": 0.006795217870412446,
+        "errors": [
+          {
+            "metric": "symmetric_difference_volume_mm3",
+            "required": true,
+            "error": "GeometryMetricsError: B-rep symmetric difference failed or produced invalid topology"
+          },
+          {
+            "metric": "boolean_consistency",
+            "required": true,
+            "error": "GeometryMetricsError: failed IoU could not be independently verified by Cut"
+          }
+        ]
+      }
+    ],
+    "measurements": [
+      {
+        "id": "00000137",
+        "stage": "candidate_step",
+        "errors": [
+          {
+            "metric": "volume_iou",
+            "error": "GeometryMetricsError: B-rep intersection failed or produced invalid topology"
+          }
+        ],
+        "checks": {
+          "volume_relative_error": "pass",
+          "volume_iou": "error",
+          "chamfer_relative": "pass"
+        }
+      },
+      {
+        "id": "00000352",
+        "stage": "independent_comparison",
+        "errors": [
+          {
+            "metric": "symmetric_difference_volume_mm3",
+            "error": "GeometryMetricsError: B-rep symmetric difference failed or produced invalid topology"
+          },
+          {
+            "metric": "boolean_consistency",
+            "error": "GeometryMetricsError: failed IoU could not be independently verified by Cut"
+          }
+        ],
+        "checks": {
+          "volume_relative_error": "pass",
+          "volume_iou": "error",
+          "chamfer_relative": "pass"
+        }
+      },
+      {
+        "id": "00000954",
+        "stage": "independent_comparison",
+        "errors": [
+          {
+            "metric": "symmetric_difference_volume_mm3",
+            "error": "GeometryMetricsError: B-rep symmetric difference failed or produced invalid topology"
+          },
+          {
+            "metric": "boolean_consistency",
+            "error": "GeometryMetricsError: failed IoU could not be independently verified by Cut"
+          }
+        ],
+        "checks": {
+          "volume_relative_error": "pass",
+          "volume_iou": "error",
+          "chamfer_relative": "pass"
+        }
+      },
+      {
+        "id": "00001005",
+        "stage": "candidate_step",
+        "errors": [
+          {
+            "metric": "volume_iou",
+            "error": "GeometryMetricsError: inconsistent B-rep intersection volume: reference=156486.26737443762, candidate=156491.44804168021, intersection=156488.46245485675, overshoot_relative=1.4027303839236424e-05"
+          }
+        ],
+        "checks": {
+          "volume_relative_error": "pass",
+          "volume_iou": "error",
+          "chamfer_relative": "pass"
+        }
+      },
+      {
+        "id": "00001398",
+        "stage": "independent_comparison",
+        "errors": [
+          {
+            "metric": "volume_iou",
+            "error": "GeometryMetricsError: B-rep intersection failed or produced invalid topology"
+          }
+        ],
+        "checks": {
+          "volume_relative_error": "pass",
+          "volume_iou": "error",
+          "chamfer_relative": "pass"
+        }
+      },
+      {
+        "id": "00001535",
+        "stage": "independent_comparison",
+        "errors": [
+          {
+            "metric": "symmetric_difference_volume_mm3",
+            "error": "GeometryMetricsError: B-rep symmetric difference failed or produced invalid topology"
+          },
+          {
+            "metric": "boolean_consistency",
+            "error": "GeometryMetricsError: failed IoU could not be independently verified by Cut"
+          }
+        ],
+        "checks": {
+          "volume_relative_error": "pass",
+          "volume_iou": "error",
+          "chamfer_relative": "pass"
+        }
+      },
+      {
+        "id": "00001926",
+        "stage": "independent_comparison",
+        "errors": [
+          {
+            "metric": "boolean_consistency",
+            "error": "GeometryMetricsError: Cut and Common disagree on occupied-space difference"
+          }
+        ],
+        "checks": {
+          "volume_relative_error": "pass",
+          "volume_iou": "error",
+          "chamfer_relative": "pass"
+        }
+      },
+      {
+        "id": "00002362",
+        "stage": "independent_comparison",
+        "errors": [
+          {
+            "metric": "volume_iou",
+            "error": "GeometryMetricsError: B-rep intersection failed or produced invalid topology"
+          }
+        ],
+        "checks": {
+          "volume_relative_error": "pass",
+          "volume_iou": "error",
+          "chamfer_relative": "pass"
+        }
+      },
+      {
+        "id": "00003149",
+        "stage": "candidate_step",
+        "errors": [
+          {
+            "metric": "volume_iou",
+            "error": "GeometryMetricsError: B-rep intersection failed or produced invalid topology"
+          }
+        ],
+        "checks": {
+          "volume_relative_error": "pass",
+          "volume_iou": "error",
+          "chamfer_relative": "pass"
+        }
+      },
+      {
+        "id": "00003382",
+        "stage": "candidate_step",
+        "errors": [
+          {
+            "metric": "boolean_consistency",
+            "error": "GeometryMetricsError: difference is inconsistent with input volumes"
+          }
+        ],
+        "checks": {
+          "volume_relative_error": "pass",
+          "volume_iou": "error",
+          "chamfer_relative": "pass"
+        }
+      },
+      {
+        "id": "00003775",
+        "stage": "candidate_step",
+        "errors": [
+          {
+            "metric": "symmetric_difference_volume_mm3",
+            "error": "GeometryMetricsError: B-rep symmetric difference failed or produced invalid topology"
+          },
+          {
+            "metric": "boolean_consistency",
+            "error": "GeometryMetricsError: failed IoU could not be independently verified by Cut"
+          }
+        ],
+        "checks": {
+          "volume_relative_error": "pass",
+          "volume_iou": "error",
+          "chamfer_relative": "pass"
+        }
+      },
+      {
+        "id": "00004089",
+        "stage": "candidate_step",
+        "errors": [
+          {
+            "metric": "symmetric_difference_volume_mm3",
+            "error": "GeometryMetricsError: B-rep symmetric difference failed or produced invalid topology"
+          },
+          {
+            "metric": "boolean_consistency",
+            "error": "GeometryMetricsError: failed IoU could not be independently verified by Cut"
+          }
+        ],
+        "checks": {
+          "volume_relative_error": "pass",
+          "volume_iou": "error",
+          "chamfer_relative": "pass"
+        }
+      },
+      {
+        "id": "00004671",
+        "stage": "independent_comparison",
+        "errors": [
+          {
+            "metric": "symmetric_difference_volume_mm3",
+            "error": "GeometryMetricsError: B-rep symmetric difference failed or produced invalid topology"
+          },
+          {
+            "metric": "boolean_consistency",
+            "error": "GeometryMetricsError: failed IoU could not be independently verified by Cut"
+          }
+        ],
+        "checks": {
+          "volume_relative_error": "pass",
+          "volume_iou": "error",
+          "chamfer_relative": "pass"
+        }
+      },
+      {
+        "id": "00004929",
+        "stage": "independent_comparison",
+        "errors": [
+          {
+            "metric": "symmetric_difference_volume_mm3",
+            "error": "GeometryMetricsError: B-rep symmetric difference failed or produced invalid topology"
+          },
+          {
+            "metric": "boolean_consistency",
+            "error": "GeometryMetricsError: failed IoU could not be independently verified by Cut"
+          }
+        ],
+        "checks": {
+          "volume_relative_error": "pass",
+          "volume_iou": "error",
+          "chamfer_relative": "pass"
+        }
+      },
+      {
+        "id": "00005340",
+        "stage": "candidate_step",
+        "errors": [
+          {
+            "metric": "shape_evaluation",
+            "error": "GeometryMetricsError: face has no surface triangles"
+          }
+        ],
+        "checks": {}
+      },
+      {
+        "id": "00005341",
+        "stage": "candidate_step",
+        "errors": [
+          {
+            "metric": "symmetric_difference_volume_mm3",
+            "error": "GeometryMetricsError: B-rep symmetric difference failed or produced invalid topology"
+          },
+          {
+            "metric": "boolean_consistency",
+            "error": "GeometryMetricsError: failed IoU could not be independently verified by Cut"
+          }
+        ],
+        "checks": {
+          "volume_relative_error": "pass",
+          "volume_iou": "error",
+          "chamfer_relative": "pass"
+        }
+      },
+      {
+        "id": "00005346",
+        "stage": "candidate_step",
+        "errors": [
+          {
+            "metric": "shape_evaluation",
+            "error": "GeometryMetricsError: face has no surface triangles"
+          }
+        ],
+        "checks": {}
+      },
+      {
+        "id": "00005783",
+        "stage": "candidate_step",
+        "errors": [
+          {
+            "metric": "symmetric_difference_volume_mm3",
+            "error": "GeometryMetricsError: B-rep symmetric difference failed or produced invalid topology"
+          },
+          {
+            "metric": "boolean_consistency",
+            "error": "GeometryMetricsError: failed IoU could not be independently verified by Cut"
+          }
+        ],
+        "checks": {
+          "volume_relative_error": "pass",
+          "volume_iou": "error",
+          "chamfer_relative": "pass"
+        }
+      },
+      {
+        "id": "00005915",
+        "stage": "independent_comparison",
+        "errors": [
+          {
+            "metric": "symmetric_difference_volume_mm3",
+            "error": "GeometryMetricsError: B-rep symmetric difference failed or produced invalid topology"
+          },
+          {
+            "metric": "boolean_consistency",
+            "error": "GeometryMetricsError: failed IoU could not be independently verified by Cut"
+          }
+        ],
+        "checks": {
+          "volume_relative_error": "pass",
+          "volume_iou": "error",
+          "chamfer_relative": "pass"
+        }
+      },
+      {
+        "id": "00006436",
+        "stage": "candidate_step",
+        "errors": [
+          {
+            "metric": "volume_iou",
+            "error": "GeometryMetricsError: B-rep intersection failed or produced invalid topology"
+          }
+        ],
+        "checks": {
+          "volume_relative_error": "pass",
+          "volume_iou": "error",
+          "chamfer_relative": "pass"
+        }
+      },
+      {
+        "id": "00006526",
+        "stage": "candidate_step",
+        "errors": [
+          {
+            "metric": "volume_iou",
+            "error": "GeometryMetricsError: inconsistent B-rep intersection volume: reference=79706.024336182731, candidate=79706.021415012365, intersection=79706.024231557836, overshoot_relative=3.5336671200378493e-08"
+          }
+        ],
+        "checks": {
+          "volume_relative_error": "pass",
+          "volume_iou": "error",
+          "chamfer_relative": "pass"
+        }
+      },
+      {
+        "id": "00006608",
+        "stage": "candidate_step",
+        "errors": [
+          {
+            "metric": "volume_iou",
+            "error": "GeometryMetricsError: inconsistent B-rep intersection volume: reference=85400.322339197097, candidate=85400.32233919634, intersection=85400.323623330041, overshoot_relative=1.5036637637258552e-08"
+          }
+        ],
+        "checks": {
+          "volume_relative_error": "pass",
+          "volume_iou": "error",
+          "chamfer_relative": "pass"
+        }
+      },
+      {
+        "id": "00006646",
+        "stage": "candidate_step",
+        "errors": [
+          {
+            "metric": "chamfer_relative",
+            "error": "GeometryMetricsError: face has no surface triangles"
+          }
+        ],
+        "checks": {
+          "volume_relative_error": "pass",
+          "volume_iou": "pass",
+          "chamfer_relative": "error"
+        }
+      },
+      {
+        "id": "00007032",
+        "stage": "candidate_step",
+        "errors": [
+          {
+            "metric": "boolean_consistency",
+            "error": "GeometryMetricsError: claimed disjoint shapes have a shared interior point"
+          }
+        ],
+        "checks": {
+          "volume_relative_error": "pass",
+          "volume_iou": "error",
+          "chamfer_relative": "pass"
+        }
+      },
+      {
+        "id": "00007039",
+        "stage": "candidate_step",
+        "errors": [
+          {
+            "metric": "shape_evaluation",
+            "error": "GeometryMetricsError: face has no surface triangles"
+          }
+        ],
+        "checks": {}
+      },
+      {
+        "id": "00007266",
+        "stage": "independent_comparison",
+        "errors": [
+          {
+            "metric": "volume_iou",
+            "error": "GeometryMetricsError: inconsistent B-rep intersection volume: reference=50372.047108771047, candidate=50372.045975793459, intersection=50372.047093326713, overshoot_relative=2.2185583949979383e-08"
+          }
+        ],
+        "checks": {
+          "volume_relative_error": "pass",
+          "volume_iou": "error",
+          "chamfer_relative": "pass"
+        }
+      },
+      {
+        "id": "00007884",
+        "stage": "independent_comparison",
+        "errors": [
+          {
+            "metric": "boolean_consistency",
+            "error": "GeometryMetricsError: claimed disjoint shapes have a shared interior point"
+          }
+        ],
+        "checks": {
+          "volume_relative_error": "pass",
+          "volume_iou": "error",
+          "chamfer_relative": "pass"
+        }
+      },
+      {
+        "id": "00008107",
+        "stage": "candidate_step",
+        "errors": [
+          {
+            "metric": "volume_iou",
+            "error": "GeometryMetricsError: inconsistent B-rep intersection volume: reference=589.88171238225459, candidate=589.88171238225937, intersection=589.88171894774587, overshoot_relative=1.1130182777600184e-08"
+          }
+        ],
+        "checks": {
+          "volume_relative_error": "pass",
+          "volume_iou": "error",
+          "chamfer_relative": "pass"
+        }
+      },
+      {
+        "id": "00008657",
+        "stage": "candidate_step",
+        "errors": [
+          {
+            "metric": "symmetric_difference_volume_mm3",
+            "error": "GeometryMetricsError: B-rep symmetric difference failed or produced invalid topology"
+          },
+          {
+            "metric": "boolean_consistency",
+            "error": "GeometryMetricsError: failed IoU could not be independently verified by Cut"
+          }
+        ],
+        "checks": {
+          "volume_relative_error": "pass",
+          "volume_iou": "error",
+          "chamfer_relative": "pass"
+        }
+      },
+      {
+        "id": "00008903",
+        "stage": "independent_comparison",
+        "errors": [
+          {
+            "metric": "symmetric_difference_volume_mm3",
+            "error": "GeometryMetricsError: B-rep symmetric difference failed or produced invalid topology"
+          },
+          {
+            "metric": "boolean_consistency",
+            "error": "GeometryMetricsError: failed IoU could not be independently verified by Cut"
+          }
+        ],
+        "checks": {
+          "volume_relative_error": "pass",
+          "volume_iou": "error",
+          "chamfer_relative": "pass"
+        }
+      },
+      {
+        "id": "00008904",
+        "stage": "candidate_step",
+        "errors": [
+          {
+            "metric": "symmetric_difference_volume_mm3",
+            "error": "GeometryMetricsError: B-rep symmetric difference failed or produced invalid topology"
+          },
+          {
+            "metric": "boolean_consistency",
+            "error": "GeometryMetricsError: failed IoU could not be independently verified by Cut"
+          }
+        ],
+        "checks": {
+          "volume_relative_error": "pass",
+          "volume_iou": "error",
+          "chamfer_relative": "pass"
+        }
+      },
+      {
+        "id": "00008905",
+        "stage": "candidate_step",
+        "errors": [
+          {
+            "metric": "boolean_consistency",
+            "error": "GeometryMetricsError: Cut and Common disagree on occupied-space difference"
+          }
+        ],
+        "checks": {
+          "volume_relative_error": "pass",
+          "volume_iou": "error",
+          "chamfer_relative": "pass"
+        }
+      },
+      {
+        "id": "00008929",
+        "stage": "candidate_step",
+        "errors": [
+          {
+            "metric": "volume_iou",
+            "error": "GeometryMetricsError: B-rep intersection failed or produced invalid topology"
+          }
+        ],
+        "checks": {
+          "volume_relative_error": "pass",
+          "volume_iou": "error",
+          "chamfer_relative": "pass"
+        }
+      },
+      {
+        "id": "00009176",
+        "stage": "candidate_step",
+        "errors": [
+          {
+            "metric": "volume_iou",
+            "error": "GeometryMetricsError: inconsistent B-rep intersection volume: reference=60865.21295640368, candidate=60865.204503016554, intersection=60865.212956403673, overshoot_relative=1.3888702401545869e-07"
+          }
+        ],
+        "checks": {
+          "volume_relative_error": "pass",
+          "volume_iou": "error",
+          "chamfer_relative": "pass"
+        }
+      },
+      {
+        "id": "00009179",
+        "stage": "candidate_step",
+        "errors": [
+          {
+            "metric": "volume_iou",
+            "error": "GeometryMetricsError: inconsistent B-rep intersection volume: reference=60865.21295640368, candidate=60865.204503016554, intersection=60865.212956403673, overshoot_relative=1.3888702401545869e-07"
+          }
+        ],
+        "checks": {
+          "volume_relative_error": "pass",
+          "volume_iou": "error",
+          "chamfer_relative": "pass"
+        }
+      },
+      {
+        "id": "00009181",
+        "stage": "candidate_step",
+        "errors": [
+          {
+            "metric": "volume_iou",
+            "error": "GeometryMetricsError: inconsistent B-rep intersection volume: reference=46021.59201544011, candidate=46021.590880771022, intersection=46021.592015440132, overshoot_relative=2.4655147468228926e-08"
+          }
+        ],
+        "checks": {
+          "volume_relative_error": "pass",
+          "volume_iou": "error",
+          "chamfer_relative": "pass"
+        }
+      },
+      {
+        "id": "00009182",
+        "stage": "candidate_step",
+        "errors": [
+          {
+            "metric": "volume_iou",
+            "error": "GeometryMetricsError: inconsistent B-rep intersection volume: reference=60865.21295640368, candidate=60865.204503016554, intersection=60865.212956403673, overshoot_relative=1.3888702401545869e-07"
+          }
+        ],
+        "checks": {
+          "volume_relative_error": "pass",
+          "volume_iou": "error",
+          "chamfer_relative": "pass"
+        }
+      },
+      {
+        "id": "00009184",
+        "stage": "independent_comparison",
+        "errors": [
+          {
+            "metric": "symmetric_difference_volume_mm3",
+            "error": "GeometryMetricsError: B-rep symmetric difference failed or produced invalid topology"
+          },
+          {
+            "metric": "boolean_consistency",
+            "error": "GeometryMetricsError: failed IoU could not be independently verified by Cut"
+          }
+        ],
+        "checks": {
+          "volume_relative_error": "pass",
+          "volume_iou": "error",
+          "chamfer_relative": "pass"
+        }
+      },
+      {
+        "id": "00009185",
+        "stage": "candidate_step",
+        "errors": [
+          {
+            "metric": "symmetric_difference_volume_mm3",
+            "error": "GeometryMetricsError: B-rep symmetric difference failed or produced invalid topology"
+          },
+          {
+            "metric": "boolean_consistency",
+            "error": "GeometryMetricsError: failed IoU could not be independently verified by Cut"
+          }
+        ],
+        "checks": {
+          "volume_relative_error": "pass",
+          "volume_iou": "error",
+          "chamfer_relative": "pass"
+        }
+      },
+      {
+        "id": "00009560",
+        "stage": "candidate_step",
+        "errors": [
+          {
+            "metric": "shape_evaluation",
+            "error": "GeometryMetricsError: face has no surface triangles"
+          }
+        ],
+        "checks": {}
+      },
+      {
+        "id": "00009694",
+        "stage": "independent_comparison",
+        "errors": [
+          {
+            "metric": "boolean_consistency",
+            "error": "GeometryMetricsError: difference is inconsistent with input volumes"
+          }
+        ],
+        "checks": {
+          "volume_relative_error": "pass",
+          "volume_iou": "error",
+          "chamfer_relative": "pass"
+        }
+      },
+      {
+        "id": "00009816",
+        "stage": "independent_comparison",
+        "errors": [
+          {
+            "metric": "boolean_consistency",
+            "error": "GeometryMetricsError: Cut and Common disagree on occupied-space difference"
+          }
+        ],
+        "checks": {
+          "volume_relative_error": "pass",
+          "volume_iou": "error",
+          "chamfer_relative": "pass"
+        }
+      },
+      {
+        "id": "00009839",
+        "stage": "candidate_step",
+        "errors": [
+          {
+            "metric": "shape_evaluation",
+            "error": "GeometryMetricsError: face has no surface triangles"
+          }
+        ],
+        "checks": {}
+      },
+      {
+        "id": "00009847",
+        "stage": "independent_comparison",
+        "errors": [
+          {
+            "metric": "volume_iou",
+            "error": "GeometryMetricsError: B-rep intersection failed or produced invalid topology"
+          }
+        ],
+        "checks": {
+          "volume_relative_error": "pass",
+          "volume_iou": "error",
+          "chamfer_relative": "pass"
+        }
+      },
+      {
+        "id": "00009851",
+        "stage": "candidate_step",
+        "errors": [
+          {
+            "metric": "shape_evaluation",
+            "error": "GeometryMetricsError: face has no surface triangles"
+          }
+        ],
+        "checks": {}
+      }
+    ]
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "date": "2026-10-25",
+  "deleted_targets": 5718,
+  "deleted_files": 8738,
+  "deleted_bytes": 159532277,
+  "preserved": [
+    "json2scapi/out/corpus",
+    "json2scapi/out/batches/0000-all/batch_summary.json",
+    "json2scapi/out/batches/0000-all/batch_results.csv",
+    "json2scapi/out/batches/0000-all/run.log",
+    "datasets",
+    "envs",
+    "research"
+  ],
+  "note": "Removed reproducible caches, temporary probes and obsolete legacy batch geometry artifacts. Corpus manifests, generated training data and current regression evidence retained.",
+  "verification": {
+    "preserved_files_checked": 5786,
+    "unexpected_missing": [],
+    "changed_python_sources": [],
+    "checked_links": 41,
+    "broken_links": [],
+    "tmp_empty": true
+  },
+  "corpus_retention": "All IR, code, STEP, per-case reports, manifests and training exports retained; disposable runtime caches removed."
+}
