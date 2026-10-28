@@ -1,0 +1,132 @@
+{
+  "protocol": "step-exact-topology-1",
+  "input_hash": "137fa9cefb54d5a535a08fd59942f2b9f8c8028d062faa1357cb9c0c797366cc",
+  "output_hash": "137fa9cefb54d5a535a08fd59942f2b9f8c8028d062faa1357cb9c0c797366cc",
+  "adjustments": [],
+  "connection_tolerance_mm": 1e-06,
+  "checks": [
+    "directed curve continuity",
+    "kernel wire self-intersection",
+    "kernel profile validity",
+    "native region validity",
+    "single-solid output contracts"
+  ],
+  "node_signatures": {
+    "solid_01_extrude_local": {
+      "valid": true,
+      "solid_count": 1,
+      "face_count": 4,
+      "edge_occurrences": 12,
+      "volume_mm3": 661499.1923056485,
+      "bbox_mm": [
+        -91.0485145,
+        -91.0485145,
+        0.0,
+        91.04851450000001,
+        91.0485145,
+        25.4
+      ],
+      "bodies": [
+        {
+          "volume_mm3": 661499.1923056485,
+          "bbox_mm": [
+            -91.0485145,
+            -91.0485145,
+            0.0,
+            91.04851450000001,
+            91.0485145,
+            25.4
+          ],
+          "valid": true
+        }
+      ]
+    },
+    "solid_01_extrude": {
+      "valid": true,
+      "solid_count": 1,
+      "face_count": 4,
+      "edge_occurrences": 12,
+      "volume_mm3": 661499.1923056485,
+      "bbox_mm": [
+        -91.0485145,
+        -91.0485145,
+        0.0,
+        91.04851450000001,
+        91.0485145,
+        25.4
+      ],
+      "bodies": [
+        {
+          "volume_mm3": 661499.1923056485,
+          "bbox_mm": [
+            -91.0485145,
+            -91.0485145,
+            0.0,
+            91.04851450000001,
+            91.0485145,
+            25.4
+          ],
+          "valid": true
+        }
+      ]
+    },
+    "body_001_scale": {
+      "valid": true,
+      "solid_count": 1,
+      "face_count": 4,
+      "edge_occurrences": 12,
+      "volume_mm3": 661499.1923056485,
+      "bbox_mm": [
+        -91.0485145,
+        -91.0485145,
+        0.0,
+        91.04851450000001,
+        91.0485145,
+        25.4
+      ],
+      "bodies": [
+        {
+          "volume_mm3": 661499.1923056485,
+          "bbox_mm": [
+            -91.0485145,
+            -91.0485145,
+            0.0,
+            91.04851450000001,
+            91.0485145,
+            25.4
+          ],
+          "valid": true
+        }
+      ]
+    },
+    "body_001_world": {
+      "valid": true,
+      "solid_count": 1,
+      "face_count": 4,
+      "edge_occurrences": 12,
+      "volume_mm3": 661499.1923056485,
+      "bbox_mm": [
+        -91.0485145,
+        -91.0485145,
+        0.0,
+        91.04851450000001,
+        91.0485145,
+        25.4
+      ],
+      "bodies": [
+        {
+          "volume_mm3": 661499.1923056485,
+          "bbox_mm": [
+            -91.0485145,
+            -91.0485145,
+            0.0,
+            91.04851450000001,
+            91.0485145,
+            25.4
+          ],
+          "valid": true
+        }
+      ]
+    }
+  }
+}

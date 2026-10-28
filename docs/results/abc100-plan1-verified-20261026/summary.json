@@ -1,0 +1,814 @@
+{
+  "run_state": "completed",
+  "requested_count": 100,
+  "selected_count": 100,
+  "completed_count": 100,
+  "counts": {
+    "error": 2,
+    "incomplete": 64,
+    "accepted": 29,
+    "invalid_input": 5
+  },
+  "cases": [
+    {
+      "case_id": "00000000_290a9120f9f249a7a05cfe9c_step_000",
+      "outcome": "error",
+      "reason_code": "recognition.replay_mismatch",
+      "stage": "recognition",
+      "elapsed_seconds": 4.233599999919534,
+      "report": "F:\\AI_CAD\\step2code\\out\\abc100-plan1-verified-20261026\\cases\\00000000_290a9120f9f249a7a05cfe9c_step_000\\report.json"
+    },
+    {
+      "case_id": "00000001_1ffb81a71e5b402e966b9341_step_000",
+      "outcome": "incomplete",
+      "reason_code": "capability.surface_type",
+      "stage": "recognition",
+      "elapsed_seconds": 2.2072956999763846,
+      "report": "F:\\AI_CAD\\step2code\\out\\abc100-plan1-verified-20261026\\cases\\00000001_1ffb81a71e5b402e966b9341_step_000\\report.json"
+    },
+    {
+      "case_id": "00000002_1ffb81a71e5b402e966b9341_step_001",
+      "outcome": "incomplete",
+      "reason_code": "search.no_verified_candidate",
+      "stage": "recognition",
+      "elapsed_seconds": 16.310928500024602,
+      "report": "F:\\AI_CAD\\step2code\\out\\abc100-plan1-verified-20261026\\cases\\00000002_1ffb81a71e5b402e966b9341_step_001\\report.json"
+    },
+    {
+      "case_id": "00000003_1ffb81a71e5b402e966b9341_step_002",
+      "outcome": "incomplete",
+      "reason_code": "capability.surface_type",
+      "stage": "recognition",
+      "elapsed_seconds": 1.2736483998596668,
+      "report": "F:\\AI_CAD\\step2code\\out\\abc100-plan1-verified-20261026\\cases\\00000003_1ffb81a71e5b402e966b9341_step_002\\report.json"
+    },
+    {
+      "case_id": "00000004_1ffb81a71e5b402e966b9341_step_003",
+      "outcome": "incomplete",
+      "reason_code": "capability.surface_type",
+      "stage": "recognition",
+      "elapsed_seconds": 1.1664662000257522,
+      "report": "F:\\AI_CAD\\step2code\\out\\abc100-plan1-verified-20261026\\cases\\00000004_1ffb81a71e5b402e966b9341_step_003\\report.json"
+    },
+    {
+      "case_id": "00000005_d4fe04f0f5f84b52bd4f10e4_step_000",
+      "outcome": "accepted",
+      "reason_code": "geometry.verified",
+      "stage": "geometry",
+      "elapsed_seconds": 4.835200099973008,
+      "report": "F:\\AI_CAD\\step2code\\out\\abc100-plan1-verified-20261026\\cases\\00000005_d4fe04f0f5f84b52bd4f10e4_step_000\\report.json"
+    },
+    {
+      "case_id": "00000006_d4fe04f0f5f84b52bd4f10e4_step_001",
+      "outcome": "accepted",
+      "reason_code": "geometry.verified",
+      "stage": "geometry",
+      "elapsed_seconds": 2.917757299961522,
+      "report": "F:\\AI_CAD\\step2code\\out\\abc100-plan1-verified-20261026\\cases\\00000006_d4fe04f0f5f84b52bd4f10e4_step_001\\report.json"
+    },
+    {
+      "case_id": "00000007_b33a147f86da49879455d286_step_000",
+      "outcome": "accepted",
+      "reason_code": "geometry.verified",
+      "stage": "geometry",
+      "elapsed_seconds": 0.9575416999869049,
+      "report": "F:\\AI_CAD\\step2code\\out\\abc100-plan1-verified-20261026\\cases\\00000007_b33a147f86da49879455d286_step_000\\report.json"
+    },
+    {
+      "case_id": "00000008_9b3d6a97e8de4aa193b81000_step_000",
+      "outcome": "accepted",
+      "reason_code": "geometry.verified",
+      "stage": "geometry",
+      "elapsed_seconds": 55.729362099897116,
+      "report": "F:\\AI_CAD\\step2code\\out\\abc100-plan1-verified-20261026\\cases\\00000008_9b3d6a97e8de4aa193b81000_step_000\\report.json"
+    },
+    {
+      "case_id": "00000009_9b3d6a97e8de4aa193b81000_step_001",
+      "outcome": "accepted",
+      "reason_code": "geometry.verified",
+      "stage": "geometry",
+      "elapsed_seconds": 1.2061842000111938,
+      "report": "F:\\AI_CAD\\step2code\\out\\abc100-plan1-verified-20261026\\cases\\00000009_9b3d6a97e8de4aa193b81000_step_001\\report.json"
+    },
+    {
+      "case_id": "00000010_b4b99d35e04b4277931f9a9c_step_000",
+      "outcome": "incomplete",
+      "reason_code": "capability.surface_type",
+      "stage": "recognition",
+      "elapsed_seconds": 2.716545900097117,
+      "report": "F:\\AI_CAD\\step2code\\out\\abc100-plan1-verified-20261026\\cases\\00000010_b4b99d35e04b4277931f9a9c_step_000\\report.json"
+    },
+    {
+      "case_id": "00000011_e909f412cda24521865fac0f_step_000",
+      "outcome": "incomplete",
+      "reason_code": "capability.surface_type",
+      "stage": "recognition",
+      "elapsed_seconds": 21.374128200113773,
+      "report": "F:\\AI_CAD\\step2code\\out\\abc100-plan1-verified-20261026\\cases\\00000011_e909f412cda24521865fac0f_step_000\\report.json"
+    },
+    {
+      "case_id": "00000012_f16882934f314832b639ffc0_step_000",
+      "outcome": "incomplete",
+      "reason_code": "capability.surface_type",
+      "stage": "recognition",
+      "elapsed_seconds": 20.49823739985004,
+      "report": "F:\\AI_CAD\\step2code\\out\\abc100-plan1-verified-20261026\\cases\\00000012_f16882934f314832b639ffc0_step_000\\report.json"
+    },
+    {
+      "case_id": "00000013_c2f4d27f35ed4c138caf5c18_step_000",
+      "outcome": "incomplete",
+      "reason_code": "capability.surface_type",
+      "stage": "recognition",
+      "elapsed_seconds": 1.719719500048086,
+      "report": "F:\\AI_CAD\\step2code\\out\\abc100-plan1-verified-20261026\\cases\\00000013_c2f4d27f35ed4c138caf5c18_step_000\\report.json"
+    },
+    {
+      "case_id": "00000014_5b1c2f8a8c6f40fdaae1e69d_step_000",
+      "outcome": "incomplete",
+      "reason_code": "capability.surface_type",
+      "stage": "recognition",
+      "elapsed_seconds": 2.904990099836141,
+      "report": "F:\\AI_CAD\\step2code\\out\\abc100-plan1-verified-20261026\\cases\\00000014_5b1c2f8a8c6f40fdaae1e69d_step_000\\report.json"
+    },
+    {
+      "case_id": "00000015_b08aa818955948c690fd9b6d_step_000",
+      "outcome": "incomplete",
+      "reason_code": "capability.surface_type",
+      "stage": "recognition",
+      "elapsed_seconds": 3.933291499968618,
+      "report": "F:\\AI_CAD\\step2code\\out\\abc100-plan1-verified-20261026\\cases\\00000015_b08aa818955948c690fd9b6d_step_000\\report.json"
+    },
+    {
+      "case_id": "00000016_b08aa818955948c690fd9b6d_step_001",
+      "outcome": "incomplete",
+      "reason_code": "search.no_verified_candidate",
+      "stage": "recognition",
+      "elapsed_seconds": 5.61361899995245,
+      "report": "F:\\AI_CAD\\step2code\\out\\abc100-plan1-verified-20261026\\cases\\00000016_b08aa818955948c690fd9b6d_step_001\\report.json"
+    },
+    {
+      "case_id": "00000017_e8e79d1385fd4c78be414f6c_step_000",
+      "outcome": "accepted",
+      "reason_code": "geometry.verified",
+      "stage": "geometry",
+      "elapsed_seconds": 19.595358800143003,
+      "report": "F:\\AI_CAD\\step2code\\out\\abc100-plan1-verified-20261026\\cases\\00000017_e8e79d1385fd4c78be414f6c_step_000\\report.json"
+    },
+    {
+      "case_id": "00000018_e8e79d1385fd4c78be414f6c_step_001",
+      "outcome": "accepted",
+      "reason_code": "geometry.verified",
+      "stage": "geometry",
+      "elapsed_seconds": 9.623970899963751,
+      "report": "F:\\AI_CAD\\step2code\\out\\abc100-plan1-verified-20261026\\cases\\00000018_e8e79d1385fd4c78be414f6c_step_001\\report.json"
+    },
+    {
+      "case_id": "00000019_e8e79d1385fd4c78be414f6c_step_002",
+      "outcome": "accepted",
+      "reason_code": "geometry.verified",
+      "stage": "geometry",
+      "elapsed_seconds": 9.66714149992913,
+      "report": "F:\\AI_CAD\\step2code\\out\\abc100-plan1-verified-20261026\\cases\\00000019_e8e79d1385fd4c78be414f6c_step_002\\report.json"
+    },
+    {
+      "case_id": "00000020_ad34a3f60c4a4caa99646600_step_000",
+      "outcome": "incomplete",
+      "reason_code": "capability.surface_type",
+      "stage": "recognition",
+      "elapsed_seconds": 0.5359851000830531,
+      "report": "F:\\AI_CAD\\step2code\\out\\abc100-plan1-verified-20261026\\cases\\00000020_ad34a3f60c4a4caa99646600_step_000\\report.json"
+    },
+    {
+      "case_id": "00000021_ad34a3f60c4a4caa99646600_step_001",
+      "outcome": "incomplete",
+      "reason_code": "capability.surface_type",
+      "stage": "recognition",
+      "elapsed_seconds": 0.47225399990566075,
+      "report": "F:\\AI_CAD\\step2code\\out\\abc100-plan1-verified-20261026\\cases\\00000021_ad34a3f60c4a4caa99646600_step_001\\report.json"
+    },
+    {
+      "case_id": "00000022_ad34a3f60c4a4caa99646600_step_002",
+      "outcome": "accepted",
+      "reason_code": "geometry.verified",
+      "stage": "geometry",
+      "elapsed_seconds": 0.9488161001354456,
+      "report": "F:\\AI_CAD\\step2code\\out\\abc100-plan1-verified-20261026\\cases\\00000022_ad34a3f60c4a4caa99646600_step_002\\report.json"
+    },
+    {
+      "case_id": "00000023_ad34a3f60c4a4caa99646600_step_003",
+      "outcome": "incomplete",
+      "reason_code": "capability.surface_type",
+      "stage": "recognition",
+      "elapsed_seconds": 15.312004499835894,
+      "report": "F:\\AI_CAD\\step2code\\out\\abc100-plan1-verified-20261026\\cases\\00000023_ad34a3f60c4a4caa99646600_step_003\\report.json"
+    },
+    {
+      "case_id": "00000024_ad34a3f60c4a4caa99646600_step_004",
+      "outcome": "incomplete",
+      "reason_code": "capability.surface_type",
+      "stage": "recognition",
+      "elapsed_seconds": 0.7549216998741031,
+      "report": "F:\\AI_CAD\\step2code\\out\\abc100-plan1-verified-20261026\\cases\\00000024_ad34a3f60c4a4caa99646600_step_004\\report.json"
+    },
+    {
+      "case_id": "00000025_ad34a3f60c4a4caa99646600_step_005",
+      "outcome": "invalid_input",
+      "reason_code": "import.invalid_topology",
+      "stage": "import",
+      "elapsed_seconds": 0.44332399987615645,
+      "report": "F:\\AI_CAD\\step2code\\out\\abc100-plan1-verified-20261026\\cases\\00000025_ad34a3f60c4a4caa99646600_step_005\\report.json"
+    },
+    {
+      "case_id": "00000026_ad34a3f60c4a4caa99646600_step_006",
+      "outcome": "incomplete",
+      "reason_code": "capability.surface_type",
+      "stage": "recognition",
+      "elapsed_seconds": 3.500173999927938,
+      "report": "F:\\AI_CAD\\step2code\\out\\abc100-plan1-verified-20261026\\cases\\00000026_ad34a3f60c4a4caa99646600_step_006\\report.json"
+    },
+    {
+      "case_id": "00000027_ad34a3f60c4a4caa99646600_step_007",
+      "outcome": "incomplete",
+      "reason_code": "capability.surface_type",
+      "stage": "recognition",
+      "elapsed_seconds": 1.066849699942395,
+      "report": "F:\\AI_CAD\\step2code\\out\\abc100-plan1-verified-20261026\\cases\\00000027_ad34a3f60c4a4caa99646600_step_007\\report.json"
+    },
+    {
+      "case_id": "00000028_ad34a3f60c4a4caa99646600_step_008",
+      "outcome": "incomplete",
+      "reason_code": "capability.surface_type",
+      "stage": "recognition",
+      "elapsed_seconds": 1.0684845000505447,
+      "report": "F:\\AI_CAD\\step2code\\out\\abc100-plan1-verified-20261026\\cases\\00000028_ad34a3f60c4a4caa99646600_step_008\\report.json"
+    },
+    {
+      "case_id": "00000029_ad34a3f60c4a4caa99646600_step_009",
+      "outcome": "accepted",
+      "reason_code": "geometry.verified",
+      "stage": "geometry",
+      "elapsed_seconds": 2.740540700033307,
+      "report": "F:\\AI_CAD\\step2code\\out\\abc100-plan1-verified-20261026\\cases\\00000029_ad34a3f60c4a4caa99646600_step_009\\report.json"
+    },
+    {
+      "case_id": "00000030_ad34a3f60c4a4caa99646600_step_010",
+      "outcome": "incomplete",
+      "reason_code": "capability.surface_type",
+      "stage": "recognition",
+      "elapsed_seconds": 1.7906629000790417,
+      "report": "F:\\AI_CAD\\step2code\\out\\abc100-plan1-verified-20261026\\cases\\00000030_ad34a3f60c4a4caa99646600_step_010\\report.json"
+    },
+    {
+      "case_id": "00000031_ad34a3f60c4a4caa99646600_step_011",
+      "outcome": "accepted",
+      "reason_code": "geometry.verified",
+      "stage": "geometry",
+      "elapsed_seconds": 13.255057000089437,
+      "report": "F:\\AI_CAD\\step2code\\out\\abc100-plan1-verified-20261026\\cases\\00000031_ad34a3f60c4a4caa99646600_step_011\\report.json"
+    },
+    {
+      "case_id": "00000032_ad34a3f60c4a4caa99646600_step_012",
+      "outcome": "incomplete",
+      "reason_code": "limit.source_faces",
+      "stage": "recognition",
+      "elapsed_seconds": 0.8522081000264734,
+      "report": "F:\\AI_CAD\\step2code\\out\\abc100-plan1-verified-20261026\\cases\\00000032_ad34a3f60c4a4caa99646600_step_012\\report.json"
+    },
+    {
+      "case_id": "00000033_ad34a3f60c4a4caa99646600_step_013",
+      "outcome": "incomplete",
+      "reason_code": "capability.surface_type",
+      "stage": "recognition",
+      "elapsed_seconds": 12.52862529992126,
+      "report": "F:\\AI_CAD\\step2code\\out\\abc100-plan1-verified-20261026\\cases\\00000033_ad34a3f60c4a4caa99646600_step_013\\report.json"
+    },
+    {
+      "case_id": "00000034_ad34a3f60c4a4caa99646600_step_014",
+      "outcome": "incomplete",
+      "reason_code": "search.no_verified_candidate",
+      "stage": "recognition",
+      "elapsed_seconds": 13.39951160014607,
+      "report": "F:\\AI_CAD\\step2code\\out\\abc100-plan1-verified-20261026\\cases\\00000034_ad34a3f60c4a4caa99646600_step_014\\report.json"
+    },
+    {
+      "case_id": "00000035_6763f7e2f51a489caaf599f0_step_000",
+      "outcome": "incomplete",
+      "reason_code": "limit.source_faces",
+      "stage": "recognition",
+      "elapsed_seconds": 1.2840773998759687,
+      "report": "F:\\AI_CAD\\step2code\\out\\abc100-plan1-verified-20261026\\cases\\00000035_6763f7e2f51a489caaf599f0_step_000\\report.json"
+    },
+    {
+      "case_id": "00000036_b169abf5f2444251b529c688_step_000",
+      "outcome": "incomplete",
+      "reason_code": "domain.loose_faces",
+      "stage": "recognition",
+      "elapsed_seconds": 0.7396619999781251,
+      "report": "F:\\AI_CAD\\step2code\\out\\abc100-plan1-verified-20261026\\cases\\00000036_b169abf5f2444251b529c688_step_000\\report.json"
+    },
+    {
+      "case_id": "00000037_c7d977f326364e35bb5b5d27_step_000",
+      "outcome": "invalid_input",
+      "reason_code": "import.invalid_topology",
+      "stage": "import",
+      "elapsed_seconds": 0.9451591998804361,
+      "report": "F:\\AI_CAD\\step2code\\out\\abc100-plan1-verified-20261026\\cases\\00000037_c7d977f326364e35bb5b5d27_step_000\\report.json"
+    },
+    {
+      "case_id": "00000038_c7d977f326364e35bb5b5d27_step_001",
+      "outcome": "incomplete",
+      "reason_code": "search.no_verified_candidate",
+      "stage": "recognition",
+      "elapsed_seconds": 3.839262100169435,
+      "report": "F:\\AI_CAD\\step2code\\out\\abc100-plan1-verified-20261026\\cases\\00000038_c7d977f326364e35bb5b5d27_step_001\\report.json"
+    },
+    {
+      "case_id": "00000039_c7d977f326364e35bb5b5d27_step_002",
+      "outcome": "accepted",
+      "reason_code": "geometry.verified",
+      "stage": "geometry",
+      "elapsed_seconds": 23.07367890002206,
+      "report": "F:\\AI_CAD\\step2code\\out\\abc100-plan1-verified-20261026\\cases\\00000039_c7d977f326364e35bb5b5d27_step_002\\report.json"
+    },
+    {
+      "case_id": "00000040_c7d977f326364e35bb5b5d27_step_003",
+      "outcome": "incomplete",
+      "reason_code": "capability.surface_type",
+      "stage": "recognition",
+      "elapsed_seconds": 18.630462900036946,
+      "report": "F:\\AI_CAD\\step2code\\out\\abc100-plan1-verified-20261026\\cases\\00000040_c7d977f326364e35bb5b5d27_step_003\\report.json"
+    },
+    {
+      "case_id": "00000041_c7d977f326364e35bb5b5d27_step_004",
+      "outcome": "incomplete",
+      "reason_code": "capability.surface_type",
+      "stage": "recognition",
+      "elapsed_seconds": 8.714320099912584,
+      "report": "F:\\AI_CAD\\step2code\\out\\abc100-plan1-verified-20261026\\cases\\00000041_c7d977f326364e35bb5b5d27_step_004\\report.json"
+    },
+    {
+      "case_id": "00000042_c7d977f326364e35bb5b5d27_step_005",
+      "outcome": "incomplete",
+      "reason_code": "search.no_verified_candidate",
+      "stage": "recognition",
+      "elapsed_seconds": 3.309309900039807,
+      "report": "F:\\AI_CAD\\step2code\\out\\abc100-plan1-verified-20261026\\cases\\00000042_c7d977f326364e35bb5b5d27_step_005\\report.json"
+    },
+    {
+      "case_id": "00000043_c7d977f326364e35bb5b5d27_step_006",
+      "outcome": "incomplete",
+      "reason_code": "domain.loose_faces",
+      "stage": "recognition",
+      "elapsed_seconds": 0.7924325000494719,
+      "report": "F:\\AI_CAD\\step2code\\out\\abc100-plan1-verified-20261026\\cases\\00000043_c7d977f326364e35bb5b5d27_step_006\\report.json"
+    },
+    {
+      "case_id": "00000044_c7d977f326364e35bb5b5d27_step_007",
+      "outcome": "invalid_input",
+      "reason_code": "import.invalid_topology",
+      "stage": "import",
+      "elapsed_seconds": 14.722003899980336,
+      "report": "F:\\AI_CAD\\step2code\\out\\abc100-plan1-verified-20261026\\cases\\00000044_c7d977f326364e35bb5b5d27_step_007\\report.json"
+    },
+    {
+      "case_id": "00000045_c7d977f326364e35bb5b5d27_step_008",
+      "outcome": "incomplete",
+      "reason_code": "capability.surface_type",
+      "stage": "recognition",
+      "elapsed_seconds": 5.498435599962249,
+      "report": "F:\\AI_CAD\\step2code\\out\\abc100-plan1-verified-20261026\\cases\\00000045_c7d977f326364e35bb5b5d27_step_008\\report.json"
+    },
+    {
+      "case_id": "00000046_1a67c6032bbd479492910b39_step_000",
+      "outcome": "incomplete",
+      "reason_code": "worker.timeout",
+      "stage": "import",
+      "elapsed_seconds": 120.53501700004563,
+      "report": "F:\\AI_CAD\\step2code\\out\\abc100-plan1-verified-20261026\\cases\\00000046_1a67c6032bbd479492910b39_step_000\\report.json"
+    },
+    {
+      "case_id": "00000047_1a67c6032bbd479492910b39_step_001",
+      "outcome": "incomplete",
+      "reason_code": "capability.surface_type",
+      "stage": "recognition",
+      "elapsed_seconds": 1.6767587999347597,
+      "report": "F:\\AI_CAD\\step2code\\out\\abc100-plan1-verified-20261026\\cases\\00000047_1a67c6032bbd479492910b39_step_001\\report.json"
+    },
+    {
+      "case_id": "00000048_efe12a13ac2e4ea7880a66d1_step_000",
+      "outcome": "incomplete",
+      "reason_code": "worker.timeout",
+      "stage": "import",
+      "elapsed_seconds": 120.34544339985587,
+      "report": "F:\\AI_CAD\\step2code\\out\\abc100-plan1-verified-20261026\\cases\\00000048_efe12a13ac2e4ea7880a66d1_step_000\\report.json"
+    },
+    {
+      "case_id": "00000049_aa208c45e8734584a147f595_step_000",
+      "outcome": "accepted",
+      "reason_code": "geometry.verified",
+      "stage": "geometry",
+      "elapsed_seconds": 18.67678950005211,
+      "report": "F:\\AI_CAD\\step2code\\out\\abc100-plan1-verified-20261026\\cases\\00000049_aa208c45e8734584a147f595_step_000\\report.json"
+    },
+    {
+      "case_id": "00000050_80d90bfdd2e74e709956122a_step_000",
+      "outcome": "accepted",
+      "reason_code": "geometry.verified",
+      "stage": "geometry",
+      "elapsed_seconds": 6.885789199965075,
+      "report": "F:\\AI_CAD\\step2code\\out\\abc100-plan1-verified-20261026\\cases\\00000050_80d90bfdd2e74e709956122a_step_000\\report.json"
+    },
+    {
+      "case_id": "00000051_666139e3bff64d4e8a6ce183_step_000",
+      "outcome": "incomplete",
+      "reason_code": "search.no_verified_candidate",
+      "stage": "recognition",
+      "elapsed_seconds": 12.898298599990085,
+      "report": "F:\\AI_CAD\\step2code\\out\\abc100-plan1-verified-20261026\\cases\\00000051_666139e3bff64d4e8a6ce183_step_000\\report.json"
+    },
+    {
+      "case_id": "00000052_666139e3bff64d4e8a6ce183_step_001",
+      "outcome": "incomplete",
+      "reason_code": "measurement.unreliable",
+      "stage": "geometry",
+      "elapsed_seconds": 12.736853000009432,
+      "report": "F:\\AI_CAD\\step2code\\out\\abc100-plan1-verified-20261026\\cases\\00000052_666139e3bff64d4e8a6ce183_step_001\\report.json"
+    },
+    {
+      "case_id": "00000053_666139e3bff64d4e8a6ce183_step_002",
+      "outcome": "incomplete",
+      "reason_code": "search.no_verified_candidate",
+      "stage": "recognition",
+      "elapsed_seconds": 16.94688649987802,
+      "report": "F:\\AI_CAD\\step2code\\out\\abc100-plan1-verified-20261026\\cases\\00000053_666139e3bff64d4e8a6ce183_step_002\\report.json"
+    },
+    {
+      "case_id": "00000054_666139e3bff64d4e8a6ce183_step_003",
+      "outcome": "incomplete",
+      "reason_code": "search.no_verified_candidate",
+      "stage": "recognition",
+      "elapsed_seconds": 15.330957500031218,
+      "report": "F:\\AI_CAD\\step2code\\out\\abc100-plan1-verified-20261026\\cases\\00000054_666139e3bff64d4e8a6ce183_step_003\\report.json"
+    },
+    {
+      "case_id": "00000055_666139e3bff64d4e8a6ce183_step_004",
+      "outcome": "incomplete",
+      "reason_code": "limit.source_bodies",
+      "stage": "recognition",
+      "elapsed_seconds": 34.51358060003258,
+      "report": "F:\\AI_CAD\\step2code\\out\\abc100-plan1-verified-20261026\\cases\\00000055_666139e3bff64d4e8a6ce183_step_004\\report.json"
+    },
+    {
+      "case_id": "00000056_666139e3bff64d4e8a6ce183_step_005",
+      "outcome": "error",
+      "reason_code": "recognition.replay_mismatch",
+      "stage": "recognition",
+      "elapsed_seconds": 1.6131500001065433,
+      "report": "F:\\AI_CAD\\step2code\\out\\abc100-plan1-verified-20261026\\cases\\00000056_666139e3bff64d4e8a6ce183_step_005\\report.json"
+    },
+    {
+      "case_id": "00000057_666139e3bff64d4e8a6ce183_step_006",
+      "outcome": "incomplete",
+      "reason_code": "search.no_verified_candidate",
+      "stage": "recognition",
+      "elapsed_seconds": 15.633444499922916,
+      "report": "F:\\AI_CAD\\step2code\\out\\abc100-plan1-verified-20261026\\cases\\00000057_666139e3bff64d4e8a6ce183_step_006\\report.json"
+    },
+    {
+      "case_id": "00000058_666139e3bff64d4e8a6ce183_step_007",
+      "outcome": "incomplete",
+      "reason_code": "search.no_verified_candidate",
+      "stage": "recognition",
+      "elapsed_seconds": 8.609286400023848,
+      "report": "F:\\AI_CAD\\step2code\\out\\abc100-plan1-verified-20261026\\cases\\00000058_666139e3bff64d4e8a6ce183_step_007\\report.json"
+    },
+    {
+      "case_id": "00000059_767e4372b5f94a88a7a17d90_step_000",
+      "outcome": "incomplete",
+      "reason_code": "search.no_verified_candidate",
+      "stage": "recognition",
+      "elapsed_seconds": 6.4608980000484735,
+      "report": "F:\\AI_CAD\\step2code\\out\\abc100-plan1-verified-20261026\\cases\\00000059_767e4372b5f94a88a7a17d90_step_000\\report.json"
+    },
+    {
+      "case_id": "00000060_767e4372b5f94a88a7a17d90_step_001",
+      "outcome": "incomplete",
+      "reason_code": "search.no_verified_candidate",
+      "stage": "recognition",
+      "elapsed_seconds": 15.771348500158638,
+      "report": "F:\\AI_CAD\\step2code\\out\\abc100-plan1-verified-20261026\\cases\\00000060_767e4372b5f94a88a7a17d90_step_001\\report.json"
+    },
+    {
+      "case_id": "00000061_767e4372b5f94a88a7a17d90_step_002",
+      "outcome": "accepted",
+      "reason_code": "geometry.verified",
+      "stage": "geometry",
+      "elapsed_seconds": 0.9854107999708503,
+      "report": "F:\\AI_CAD\\step2code\\out\\abc100-plan1-verified-20261026\\cases\\00000061_767e4372b5f94a88a7a17d90_step_002\\report.json"
+    },
+    {
+      "case_id": "00000062_767e4372b5f94a88a7a17d90_step_003",
+      "outcome": "accepted",
+      "reason_code": "geometry.verified",
+      "stage": "geometry",
+      "elapsed_seconds": 7.346452499972656,
+      "report": "F:\\AI_CAD\\step2code\\out\\abc100-plan1-verified-20261026\\cases\\00000062_767e4372b5f94a88a7a17d90_step_003\\report.json"
+    },
+    {
+      "case_id": "00000063_767e4372b5f94a88a7a17d90_step_004",
+      "outcome": "accepted",
+      "reason_code": "geometry.verified",
+      "stage": "geometry",
+      "elapsed_seconds": 0.9268966000527143,
+      "report": "F:\\AI_CAD\\step2code\\out\\abc100-plan1-verified-20261026\\cases\\00000063_767e4372b5f94a88a7a17d90_step_004\\report.json"
+    },
+    {
+      "case_id": "00000064_767e4372b5f94a88a7a17d90_step_005",
+      "outcome": "incomplete",
+      "reason_code": "capability.surface_type",
+      "stage": "recognition",
+      "elapsed_seconds": 2.428705400088802,
+      "report": "F:\\AI_CAD\\step2code\\out\\abc100-plan1-verified-20261026\\cases\\00000064_767e4372b5f94a88a7a17d90_step_005\\report.json"
+    },
+    {
+      "case_id": "00000065_767e4372b5f94a88a7a17d90_step_006",
+      "outcome": "accepted",
+      "reason_code": "geometry.verified",
+      "stage": "geometry",
+      "elapsed_seconds": 9.736971299862489,
+      "report": "F:\\AI_CAD\\step2code\\out\\abc100-plan1-verified-20261026\\cases\\00000065_767e4372b5f94a88a7a17d90_step_006\\report.json"
+    },
+    {
+      "case_id": "00000066_767e4372b5f94a88a7a17d90_step_007",
+      "outcome": "incomplete",
+      "reason_code": "capability.surface_type",
+      "stage": "recognition",
+      "elapsed_seconds": 1.5594842999707907,
+      "report": "F:\\AI_CAD\\step2code\\out\\abc100-plan1-verified-20261026\\cases\\00000066_767e4372b5f94a88a7a17d90_step_007\\report.json"
+    },
+    {
+      "case_id": "00000067_767e4372b5f94a88a7a17d90_step_008",
+      "outcome": "incomplete",
+      "reason_code": "capability.surface_type",
+      "stage": "recognition",
+      "elapsed_seconds": 1.6228830001782626,
+      "report": "F:\\AI_CAD\\step2code\\out\\abc100-plan1-verified-20261026\\cases\\00000067_767e4372b5f94a88a7a17d90_step_008\\report.json"
+    },
+    {
+      "case_id": "00000068_767e4372b5f94a88a7a17d90_step_009",
+      "outcome": "accepted",
+      "reason_code": "geometry.verified",
+      "stage": "geometry",
+      "elapsed_seconds": 2.182891799835488,
+      "report": "F:\\AI_CAD\\step2code\\out\\abc100-plan1-verified-20261026\\cases\\00000068_767e4372b5f94a88a7a17d90_step_009\\report.json"
+    },
+    {
+      "case_id": "00000069_767e4372b5f94a88a7a17d90_step_010",
+      "outcome": "accepted",
+      "reason_code": "geometry.verified",
+      "stage": "geometry",
+      "elapsed_seconds": 2.5037946000229567,
+      "report": "F:\\AI_CAD\\step2code\\out\\abc100-plan1-verified-20261026\\cases\\00000069_767e4372b5f94a88a7a17d90_step_010\\report.json"
+    },
+    {
+      "case_id": "00000070_767e4372b5f94a88a7a17d90_step_011",
+      "outcome": "accepted",
+      "reason_code": "geometry.verified",
+      "stage": "geometry",
+      "elapsed_seconds": 1.4126963999588042,
+      "report": "F:\\AI_CAD\\step2code\\out\\abc100-plan1-verified-20261026\\cases\\00000070_767e4372b5f94a88a7a17d90_step_011\\report.json"
+    },
+    {
+      "case_id": "00000071_767e4372b5f94a88a7a17d90_step_012",
+      "outcome": "incomplete",
+      "reason_code": "search.no_verified_candidate",
+      "stage": "recognition",
+      "elapsed_seconds": 15.704215999925509,
+      "report": "F:\\AI_CAD\\step2code\\out\\abc100-plan1-verified-20261026\\cases\\00000071_767e4372b5f94a88a7a17d90_step_012\\report.json"
+    },
+    {
+      "case_id": "00000072_767e4372b5f94a88a7a17d90_step_013",
+      "outcome": "accepted",
+      "reason_code": "geometry.verified",
+      "stage": "geometry",
+      "elapsed_seconds": 2.332133200019598,
+      "report": "F:\\AI_CAD\\step2code\\out\\abc100-plan1-verified-20261026\\cases\\00000072_767e4372b5f94a88a7a17d90_step_013\\report.json"
+    },
+    {
+      "case_id": "00000073_767e4372b5f94a88a7a17d90_step_014",
+      "outcome": "accepted",
+      "reason_code": "geometry.verified",
+      "stage": "geometry",
+      "elapsed_seconds": 3.1324698999524117,
+      "report": "F:\\AI_CAD\\step2code\\out\\abc100-plan1-verified-20261026\\cases\\00000073_767e4372b5f94a88a7a17d90_step_014\\report.json"
+    },
+    {
+      "case_id": "00000074_767e4372b5f94a88a7a17d90_step_015",
+      "outcome": "accepted",
+      "reason_code": "geometry.verified",
+      "stage": "geometry",
+      "elapsed_seconds": 5.637525599915534,
+      "report": "F:\\AI_CAD\\step2code\\out\\abc100-plan1-verified-20261026\\cases\\00000074_767e4372b5f94a88a7a17d90_step_015\\report.json"
+    },
+    {
+      "case_id": "00000075_767e4372b5f94a88a7a17d90_step_016",
+      "outcome": "accepted",
+      "reason_code": "geometry.verified",
+      "stage": "geometry",
+      "elapsed_seconds": 4.780567300040275,
+      "report": "F:\\AI_CAD\\step2code\\out\\abc100-plan1-verified-20261026\\cases\\00000075_767e4372b5f94a88a7a17d90_step_016\\report.json"
+    },
+    {
+      "case_id": "00000076_767e4372b5f94a88a7a17d90_step_017",
+      "outcome": "accepted",
+      "reason_code": "geometry.verified",
+      "stage": "geometry",
+      "elapsed_seconds": 2.8607701000291854,
+      "report": "F:\\AI_CAD\\step2code\\out\\abc100-plan1-verified-20261026\\cases\\00000076_767e4372b5f94a88a7a17d90_step_017\\report.json"
+    },
+    {
+      "case_id": "00000077_767e4372b5f94a88a7a17d90_step_018",
+      "outcome": "accepted",
+      "reason_code": "geometry.verified",
+      "stage": "geometry",
+      "elapsed_seconds": 3.9982792001683265,
+      "report": "F:\\AI_CAD\\step2code\\out\\abc100-plan1-verified-20261026\\cases\\00000077_767e4372b5f94a88a7a17d90_step_018\\report.json"
+    },
+    {
+      "case_id": "00000078_767e4372b5f94a88a7a17d90_step_019",
+      "outcome": "incomplete",
+      "reason_code": "search.no_verified_candidate",
+      "stage": "recognition",
+      "elapsed_seconds": 9.0940443999134,
+      "report": "F:\\AI_CAD\\step2code\\out\\abc100-plan1-verified-20261026\\cases\\00000078_767e4372b5f94a88a7a17d90_step_019\\report.json"
+    },
+    {
+      "case_id": "00000079_767e4372b5f94a88a7a17d90_step_020",
+      "outcome": "accepted",
+      "reason_code": "geometry.verified",
+      "stage": "geometry",
+      "elapsed_seconds": 9.138085599988699,
+      "report": "F:\\AI_CAD\\step2code\\out\\abc100-plan1-verified-20261026\\cases\\00000079_767e4372b5f94a88a7a17d90_step_020\\report.json"
+    },
+    {
+      "case_id": "00000080_ed3cecad25c64f7abea4cf64_step_000",
+      "outcome": "incomplete",
+      "reason_code": "search.no_verified_candidate",
+      "stage": "recognition",
+      "elapsed_seconds": 15.621420900104567,
+      "report": "F:\\AI_CAD\\step2code\\out\\abc100-plan1-verified-20261026\\cases\\00000080_ed3cecad25c64f7abea4cf64_step_000\\report.json"
+    },
+    {
+      "case_id": "00000081_201dac73881b409b8d57f008_step_000",
+      "outcome": "incomplete",
+      "reason_code": "domain.loose_faces",
+      "stage": "recognition",
+      "elapsed_seconds": 0.5397413000464439,
+      "report": "F:\\AI_CAD\\step2code\\out\\abc100-plan1-verified-20261026\\cases\\00000081_201dac73881b409b8d57f008_step_000\\report.json"
+    },
+    {
+      "case_id": "00000082_55b775e2dd7149a8bd9c9de7_step_000",
+      "outcome": "invalid_input",
+      "reason_code": "import.invalid_topology",
+      "stage": "import",
+      "elapsed_seconds": 2.3929560999386013,
+      "report": "F:\\AI_CAD\\step2code\\out\\abc100-plan1-verified-20261026\\cases\\00000082_55b775e2dd7149a8bd9c9de7_step_000\\report.json"
+    },
+    {
+      "case_id": "00000083_9ea934d3400e45fb9d190941_step_000",
+      "outcome": "incomplete",
+      "reason_code": "capability.surface_type",
+      "stage": "recognition",
+      "elapsed_seconds": 5.924462799914181,
+      "report": "F:\\AI_CAD\\step2code\\out\\abc100-plan1-verified-20261026\\cases\\00000083_9ea934d3400e45fb9d190941_step_000\\report.json"
+    },
+    {
+      "case_id": "00000084_9a051df11afa4fc5a1d667cd_step_000",
+      "outcome": "incomplete",
+      "reason_code": "capability.surface_type",
+      "stage": "recognition",
+      "elapsed_seconds": 23.41656310018152,
+      "report": "F:\\AI_CAD\\step2code\\out\\abc100-plan1-verified-20261026\\cases\\00000084_9a051df11afa4fc5a1d667cd_step_000\\report.json"
+    },
+    {
+      "case_id": "00000085_b4f9335a60a14cecaa599159_step_000",
+      "outcome": "invalid_input",
+      "reason_code": "import.invalid_topology",
+      "stage": "import",
+      "elapsed_seconds": 2.897651300067082,
+      "report": "F:\\AI_CAD\\step2code\\out\\abc100-plan1-verified-20261026\\cases\\00000085_b4f9335a60a14cecaa599159_step_000\\report.json"
+    },
+    {
+      "case_id": "00000086_b4f9335a60a14cecaa599159_step_001",
+      "outcome": "incomplete",
+      "reason_code": "domain.loose_edges",
+      "stage": "recognition",
+      "elapsed_seconds": 0.5142195001244545,
+      "report": "F:\\AI_CAD\\step2code\\out\\abc100-plan1-verified-20261026\\cases\\00000086_b4f9335a60a14cecaa599159_step_001\\report.json"
+    },
+    {
+      "case_id": "00000087_b4f9335a60a14cecaa599159_step_002",
+      "outcome": "incomplete",
+      "reason_code": "domain.loose_faces",
+      "stage": "recognition",
+      "elapsed_seconds": 0.541654999833554,
+      "report": "F:\\AI_CAD\\step2code\\out\\abc100-plan1-verified-20261026\\cases\\00000087_b4f9335a60a14cecaa599159_step_002\\report.json"
+    },
+    {
+      "case_id": "00000088_169bec34317b46e98eb1a403_step_000",
+      "outcome": "incomplete",
+      "reason_code": "search.no_verified_candidate",
+      "stage": "recognition",
+      "elapsed_seconds": 16.351853699889034,
+      "report": "F:\\AI_CAD\\step2code\\out\\abc100-plan1-verified-20261026\\cases\\00000088_169bec34317b46e98eb1a403_step_000\\report.json"
+    },
+    {
+      "case_id": "00000089_169bec34317b46e98eb1a403_step_001",
+      "outcome": "incomplete",
+      "reason_code": "search.no_verified_candidate",
+      "stage": "recognition",
+      "elapsed_seconds": 15.709749799920246,
+      "report": "F:\\AI_CAD\\step2code\\out\\abc100-plan1-verified-20261026\\cases\\00000089_169bec34317b46e98eb1a403_step_001\\report.json"
+    },
+    {
+      "case_id": "00000090_169bec34317b46e98eb1a403_step_002",
+      "outcome": "incomplete",
+      "reason_code": "capability.surface_type",
+      "stage": "recognition",
+      "elapsed_seconds": 0.4970374999102205,
+      "report": "F:\\AI_CAD\\step2code\\out\\abc100-plan1-verified-20261026\\cases\\00000090_169bec34317b46e98eb1a403_step_002\\report.json"
+    },
+    {
+      "case_id": "00000091_169bec34317b46e98eb1a403_step_003",
+      "outcome": "incomplete",
+      "reason_code": "search.no_verified_candidate",
+      "stage": "recognition",
+      "elapsed_seconds": 6.7673766000662,
+      "report": "F:\\AI_CAD\\step2code\\out\\abc100-plan1-verified-20261026\\cases\\00000091_169bec34317b46e98eb1a403_step_003\\report.json"
+    },
+    {
+      "case_id": "00000092_169bec34317b46e98eb1a403_step_004",
+      "outcome": "incomplete",
+      "reason_code": "domain.no_solids",
+      "stage": "recognition",
+      "elapsed_seconds": 0.4479418001137674,
+      "report": "F:\\AI_CAD\\step2code\\out\\abc100-plan1-verified-20261026\\cases\\00000092_169bec34317b46e98eb1a403_step_004\\report.json"
+    },
+    {
+      "case_id": "00000093_169bec34317b46e98eb1a403_step_005",
+      "outcome": "accepted",
+      "reason_code": "geometry.verified",
+      "stage": "geometry",
+      "elapsed_seconds": 2.3097798000089824,
+      "report": "F:\\AI_CAD\\step2code\\out\\abc100-plan1-verified-20261026\\cases\\00000093_169bec34317b46e98eb1a403_step_005\\report.json"
+    },
+    {
+      "case_id": "00000094_a47a98a09959465188a093ad_step_000",
+      "outcome": "incomplete",
+      "reason_code": "capability.surface_type",
+      "stage": "recognition",
+      "elapsed_seconds": 20.438201899873093,
+      "report": "F:\\AI_CAD\\step2code\\out\\abc100-plan1-verified-20261026\\cases\\00000094_a47a98a09959465188a093ad_step_000\\report.json"
+    },
+    {
+      "case_id": "00000095_79c7c1db73274f22b599eef0_step_000",
+      "outcome": "incomplete",
+      "reason_code": "search.no_verified_candidate",
+      "stage": "recognition",
+      "elapsed_seconds": 2.347608800046146,
+      "report": "F:\\AI_CAD\\step2code\\out\\abc100-plan1-verified-20261026\\cases\\00000095_79c7c1db73274f22b599eef0_step_000\\report.json"
+    },
+    {
+      "case_id": "00000096_fcd027a9411a4ae7ac146826_step_000",
+      "outcome": "incomplete",
+      "reason_code": "capability.surface_type",
+      "stage": "recognition",
+      "elapsed_seconds": 2.5827136000152677,
+      "report": "F:\\AI_CAD\\step2code\\out\\abc100-plan1-verified-20261026\\cases\\00000096_fcd027a9411a4ae7ac146826_step_000\\report.json"
+    },
+    {
+      "case_id": "00000097_a6920073c7fe448584f0d647_step_000",
+      "outcome": "incomplete",
+      "reason_code": "limit.source_faces",
+      "stage": "recognition",
+      "elapsed_seconds": 2.724380500148982,
+      "report": "F:\\AI_CAD\\step2code\\out\\abc100-plan1-verified-20261026\\cases\\00000097_a6920073c7fe448584f0d647_step_000\\report.json"
+    },
+    {
+      "case_id": "00000098_72cf0f9ca5324822a4d41a80_step_000",
+      "outcome": "incomplete",
+      "reason_code": "capability.surface_type",
+      "stage": "recognition",
+      "elapsed_seconds": 1.182144699851051,
+      "report": "F:\\AI_CAD\\step2code\\out\\abc100-plan1-verified-20261026\\cases\\00000098_72cf0f9ca5324822a4d41a80_step_000\\report.json"
+    },
+    {
+      "case_id": "00000099_7911d7c4c4b9417d92801ff6_step_000",
+      "outcome": "incomplete",
+      "reason_code": "search.no_verified_candidate",
+      "stage": "recognition",
+      "elapsed_seconds": 33.66424970002845,
+      "report": "F:\\AI_CAD\\step2code\\out\\abc100-plan1-verified-20261026\\cases\\00000099_7911d7c4c4b9417d92801ff6_step_000\\report.json"
+    }
+  ]
+}

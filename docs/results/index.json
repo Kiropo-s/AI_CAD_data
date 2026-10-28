@@ -1,0 +1,37 @@
+{
+  "format": "step2code-run-index",
+  "version": 1,
+  "source": "out/",
+  "runs": [
+    {
+      "name": "abc-first20-p2a-20261028",
+      "run_state": "completed",
+      "requested": 20,
+      "selected": 20,
+      "completed": 20,
+      "counts": {
+        "accepted": 8,
+        "incomplete": 11,
+        "error": 1
+      },
+      "size_mb": 14.0,
+      "has_summary": true
+    },
+    {
+      "name": "abc100-p05-diagnostics-20261027-r4",
+      "run_state": "completed",
+      "requested": 100,
+      "selected": 100,
+      "completed": 100,
+      "counts": {
+        "accepted": 30,
+        "incomplete": 63,
+        "invalid_input": 5,
+        "error": 2
+      },
+      "size_mb": 43.7,
+      "has_summary": true
+    }
+  ],
+  "unindexed_directories": []
+}

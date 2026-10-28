@@ -1,0 +1,3076 @@
+{
+  "plan_hash": "f0a3ca78636ada294e63462a03dca51ddfeaa309aa8d68ebd0396efa6fc715e8",
+  "recognizer": "exact-analytic-dag-1",
+  "features": [
+    {
+      "solid_index": 1,
+      "method": "verified_partition_csg",
+      "node_sources": {
+        "solid_01_partition_001_solid_01_loop_01_edge_001": {
+          "namespace": "solid_01_partition_001",
+          "parent_node": "solid_01_loop_01_edge_001",
+          "derived_geometry": true,
+          "evidence": {
+            "entity_id": "solid_01.face_0003.inferred_prism",
+            "loop_index": 0,
+            "edge_index": 5,
+            "curve_evidence": {
+              "center": [
+                0.0,
+                0.0
+              ],
+              "radius": 39.370000000000005
+            }
+          }
+        },
+        "solid_01_partition_001_solid_01_loop_02_edge_001": {
+          "namespace": "solid_01_partition_001",
+          "parent_node": "solid_01_loop_02_edge_001",
+          "derived_geometry": true,
+          "evidence": {
+            "entity_id": "solid_01.face_0003.inferred_prism",
+            "loop_index": 1,
+            "edge_index": 3,
+            "curve_evidence": {
+              "center": [
+                0.0,
+                0.0
+              ],
+              "radius": 38.1
+            }
+          }
+        },
+        "solid_01_partition_002_solid_01_section_01_loop_01_edge_001": {
+          "namespace": "solid_01_partition_002",
+          "parent_node": "solid_01_section_01_loop_01_edge_001",
+          "derived_geometry": true,
+          "evidence": {
+            "entity_id": "solid_01.section_01.inferred_revolution",
+            "loop_index": 0,
+            "edge_index": 1,
+            "curve_evidence": {
+              "start": [
+                38.1,
+                1.27
+              ],
+              "end": [
+                39.37000000000001,
+                1.27
+              ]
+            }
+          }
+        },
+        "solid_01_partition_002_solid_01_section_01_loop_01_edge_002": {
+          "namespace": "solid_01_partition_002",
+          "parent_node": "solid_01_section_01_loop_01_edge_002",
+          "derived_geometry": true,
+          "evidence": {
+            "entity_id": "solid_01.section_01.inferred_revolution",
+            "loop_index": 0,
+            "edge_index": 6,
+            "curve_evidence": {
+              "control_points": [
+                [
+                  39.370000000000005,
+                  1.2700000000000018
+                ],
+                [
+                  39.370000000000005,
+                  2.54
+                ]
+              ],
+              "degree": 1,
+              "knots": [
+                -1.2699999999999985,
+                0.0
+              ],
+              "multiplicities": [
+                2,
+                2
+              ],
+              "weights": [
+                1.0,
+                1.0
+              ],
+              "periodic": false,
+              "pole_plane_residual_mm": 1.446430334472939e-14,
+              "provenance": "bounded kernel section B-spline; no converter sampling or fitting",
+              "source_parameter_range": [
+                -1.2699999999999985,
+                0.0
+              ]
+            }
+          }
+        },
+        "solid_01_partition_002_solid_01_section_01_loop_01_edge_003": {
+          "namespace": "solid_01_partition_002",
+          "parent_node": "solid_01_section_01_loop_01_edge_003",
+          "derived_geometry": true,
+          "evidence": {
+            "entity_id": "solid_01.section_01.inferred_revolution",
+            "loop_index": 0,
+            "edge_index": 5,
+            "curve_evidence": {
+              "start": [
+                39.370000000000005,
+                2.54
+              ],
+              "end": [
+                37.4194090512249,
+                2.54
+              ]
+            }
+          }
+        },
+        "solid_01_partition_002_solid_01_section_01_loop_01_edge_004": {
+          "namespace": "solid_01_partition_002",
+          "parent_node": "solid_01_section_01_loop_01_edge_004",
+          "derived_geometry": true,
+          "evidence": {
+            "entity_id": "solid_01.section_01.inferred_revolution",
+            "loop_index": 0,
+            "edge_index": 4,
+            "curve_evidence": {
+              "start": [
+                37.4194091,
+                2.54
+              ],
+              "end": [
+                36.10460830148864,
+                2.54
+              ]
+            }
+          }
+        },
+        "solid_01_partition_002_solid_01_section_01_loop_01_edge_005": {
+          "namespace": "solid_01_partition_002",
+          "parent_node": "solid_01_section_01_loop_01_edge_005",
+          "derived_geometry": true,
+          "evidence": {
+            "entity_id": "solid_01.section_01.inferred_revolution",
+            "loop_index": 0,
+            "edge_index": 3,
+            "curve_evidence": {
+              "control_points": [
+                [
+                  36.10460830148864,
+                  2.5400000000000005
+                ],
+                [
+                  36.44490377749324,
+                  1.269999993969332
+                ]
+              ],
+              "degree": 1,
+              "knots": [
+                -2.9698969726298134,
+                -1.6550962172653012
+              ],
+              "multiplicities": [
+                2,
+                2
+              ],
+              "weights": [
+                1.0,
+                1.0
+              ],
+              "periodic": false,
+              "pole_plane_residual_mm": 0.0,
+              "provenance": "bounded kernel section B-spline; no converter sampling or fitting",
+              "source_parameter_range": [
+                -2.9698969726298134,
+                -1.6550962172653012
+              ]
+            }
+          }
+        },
+        "solid_01_partition_002_solid_01_section_01_loop_01_edge_006": {
+          "namespace": "solid_01_partition_002",
+          "parent_node": "solid_01_section_01_loop_01_edge_006",
+          "derived_geometry": true,
+          "evidence": {
+            "entity_id": "solid_01.section_01.inferred_revolution",
+            "loop_index": 0,
+            "edge_index": 2,
+            "curve_evidence": {
+              "start": [
+                36.4449037764917,
+                1.27
+              ],
+              "end": [
+                38.1,
+                1.27
+              ]
+            }
+          }
+        },
+        "solid_01_partition_003_solid_01_section_01_loop_01_edge_001": {
+          "namespace": "solid_01_partition_003",
+          "parent_node": "solid_01_section_01_loop_01_edge_001",
+          "derived_geometry": true,
+          "evidence": {
+            "entity_id": "solid_01.section_01.inferred_revolution",
+            "loop_index": 0,
+            "edge_index": 1,
+            "curve_evidence": {
+              "control_points": [
+                [
+                  37.419409054490096,
+                  2.5399999878056576
+                ],
+                [
+                  36.738818102445265,
+                  5.080000000000004
+                ]
+              ],
+              "degree": 1,
+              "knots": [
+                -5.259202996484424,
+                -2.629601485617698
+              ],
+              "multiplicities": [
+                2,
+                2
+              ],
+              "weights": [
+                1.0,
+                1.0
+              ],
+              "periodic": false,
+              "pole_plane_residual_mm": 0.0,
+              "provenance": "bounded kernel section B-spline; no converter sampling or fitting",
+              "source_parameter_range": [
+                -2.629601485617698,
+                -5.259202996484424
+              ]
+            }
+          }
+        },
+        "solid_01_partition_003_solid_01_section_01_loop_01_edge_002": {
+          "namespace": "solid_01_partition_003",
+          "parent_node": "solid_01_section_01_loop_01_edge_002",
+          "derived_geometry": true,
+          "evidence": {
+            "entity_id": "solid_01.section_01.inferred_revolution",
+            "loop_index": 0,
+            "edge_index": 4,
+            "curve_evidence": {
+              "start": [
+                36.738818102445265,
+                5.08
+              ],
+              "end": [
+                35.424017352711274,
+                5.08
+              ]
+            }
+          }
+        },
+        "solid_01_partition_003_solid_01_section_01_loop_01_edge_003": {
+          "namespace": "solid_01_partition_003",
+          "parent_node": "solid_01_section_01_loop_01_edge_003",
+          "derived_geometry": true,
+          "evidence": {
+            "entity_id": "solid_01.section_01.inferred_revolution",
+            "loop_index": 0,
+            "edge_index": 3,
+            "curve_evidence": {
+              "control_points": [
+                [
+                  35.424017352711274,
+                  5.080000000000001
+                ],
+                [
+                  36.10460830148864,
+                  2.54
+                ]
+              ],
+              "degree": 1,
+              "knots": [
+                -5.599498470872025,
+                -2.9698969726298134
+              ],
+              "multiplicities": [
+                2,
+                2
+              ],
+              "weights": [
+                1.0,
+                1.0
+              ],
+              "periodic": false,
+              "pole_plane_residual_mm": 0.0,
+              "provenance": "bounded kernel section B-spline; no converter sampling or fitting",
+              "source_parameter_range": [
+                -5.599498470872025,
+                -2.9698969726298134
+              ]
+            }
+          }
+        },
+        "solid_01_partition_003_solid_01_section_01_loop_01_edge_004": {
+          "namespace": "solid_01_partition_003",
+          "parent_node": "solid_01_section_01_loop_01_edge_004",
+          "derived_geometry": true,
+          "evidence": {
+            "entity_id": "solid_01.section_01.inferred_revolution",
+            "loop_index": 0,
+            "edge_index": 2,
+            "curve_evidence": {
+              "start": [
+                36.10460830148864,
+                2.54
+              ],
+              "end": [
+                37.419409099999996,
+                2.54
+              ]
+            }
+          }
+        },
+        "solid_01_partition_004_solid_01_csg_cap_002_1_loop_01_edge_001": {
+          "namespace": "solid_01_partition_004",
+          "parent_node": "solid_01_csg_cap_002_1_loop_01_edge_001",
+          "derived_geometry": true,
+          "evidence": {
+            "entity_id": "solid_01.face_0002.csg_cap",
+            "loop_index": 0,
+            "edge_index": 3,
+            "curve_evidence": {
+              "start": [
+                140.31642460464056,
+                -117.27673682423851
+              ],
+              "mid": [
+                112.3932065077245,
+                -140.7402518077245
+              ],
+              "end": [
+                84.46998841080844,
+                -117.27673682423853
+              ],
+              "center": [
+                112.3932065077245,
+                -112.3932065077245
+              ],
+              "radius": 28.347045299999998,
+              "ccw": false
+            }
+          }
+        },
+        "solid_01_partition_004_solid_01_csg_cap_002_1_loop_01_edge_002": {
+          "namespace": "solid_01_partition_004",
+          "parent_node": "solid_01_csg_cap_002_1_loop_01_edge_002",
+          "derived_geometry": true,
+          "evidence": {
+            "entity_id": "solid_01.face_0002.csg_cap",
+            "loop_index": 0,
+            "edge_index": 4,
+            "curve_evidence": {
+              "start": [
+                84.46998841227021,
+                -117.27673682398287
+              ],
+              "end": [
+                140.3164246031788,
+                -117.27673682398287
+              ]
+            }
+          }
+        },
+        "solid_01_partition_005_solid_01_section_01_loop_01_edge_001": {
+          "namespace": "solid_01_partition_005",
+          "parent_node": "solid_01_section_01_loop_01_edge_001",
+          "derived_geometry": true,
+          "evidence": {
+            "entity_id": "solid_01.section_01.inferred_revolution",
+            "loop_index": 0,
+            "edge_index": 1,
+            "curve_evidence": {
+              "control_points": [
+                [
+                  36.738818102445265,
+                  5.080000000000003
+                ],
+                [
+                  36.39852262805658,
+                  6.3500000000000005
+                ]
+              ],
+              "degree": 1,
+              "knots": [
+                -6.574003745605527,
+                -5.259202996484424
+              ],
+              "multiplicities": [
+                2,
+                2
+              ],
+              "weights": [
+                1.0,
+                1.0
+              ],
+              "periodic": false,
+              "pole_plane_residual_mm": 0.0,
+              "provenance": "bounded kernel section B-spline; no converter sampling or fitting",
+              "source_parameter_range": [
+                -5.259202996484424,
+                -6.574003745605527
+              ]
+            }
+          }
+        },
+        "solid_01_partition_005_solid_01_section_01_loop_01_edge_002": {
+          "namespace": "solid_01_partition_005",
+          "parent_node": "solid_01_section_01_loop_01_edge_002",
+          "derived_geometry": true,
+          "evidence": {
+            "entity_id": "solid_01.section_01.inferred_revolution",
+            "loop_index": 0,
+            "edge_index": 4,
+            "curve_evidence": {
+              "start": [
+                36.39852262805659,
+                6.35
+              ],
+              "end": [
+                35.08372187832259,
+                6.35
+              ]
+            }
+          }
+        },
+        "solid_01_partition_005_solid_01_section_01_loop_01_edge_003": {
+          "namespace": "solid_01_partition_005",
+          "parent_node": "solid_01_section_01_loop_01_edge_003",
+          "derived_geometry": true,
+          "evidence": {
+            "entity_id": "solid_01.section_01.inferred_revolution",
+            "loop_index": 0,
+            "edge_index": 3,
+            "curve_evidence": {
+              "control_points": [
+                [
+                  35.08372187832259,
+                  6.35
+                ],
+                [
+                  35.424017352711274,
+                  5.080000000000001
+                ]
+              ],
+              "degree": 1,
+              "knots": [
+                -6.914299219993128,
+                -5.599498470872025
+              ],
+              "multiplicities": [
+                2,
+                2
+              ],
+              "weights": [
+                1.0,
+                1.0
+              ],
+              "periodic": false,
+              "pole_plane_residual_mm": 0.0,
+              "provenance": "bounded kernel section B-spline; no converter sampling or fitting",
+              "source_parameter_range": [
+                -6.914299219993128,
+                -5.599498470872025
+              ]
+            }
+          }
+        },
+        "solid_01_partition_005_solid_01_section_01_loop_01_edge_004": {
+          "namespace": "solid_01_partition_005",
+          "parent_node": "solid_01_section_01_loop_01_edge_004",
+          "derived_geometry": true,
+          "evidence": {
+            "entity_id": "solid_01.section_01.inferred_revolution",
+            "loop_index": 0,
+            "edge_index": 2,
+            "curve_evidence": {
+              "start": [
+                35.424017352711274,
+                5.08
+              ],
+              "end": [
+                36.73881810244527,
+                5.08
+              ]
+            }
+          }
+        },
+        "solid_01_partition_007_solid_01_csg_cap_004_0_loop_01_edge_001": {
+          "namespace": "solid_01_partition_007",
+          "parent_node": "solid_01_csg_cap_004_0_loop_01_edge_001",
+          "derived_geometry": true,
+          "evidence": {
+            "entity_id": "solid_01.face_0004.csg_cap",
+            "loop_index": 0,
+            "edge_index": 10,
+            "curve_evidence": {
+              "start": [
+                140.43478322365704,
+                -116.54350198211205
+              ],
+              "mid": [
+                112.3932065077245,
+                -140.7402518077245
+              ],
+              "end": [
+                84.35162979179195,
+                -116.54350198211202
+              ],
+              "center": [
+                112.3932065077245,
+                -112.3932065077245
+              ],
+              "radius": 28.347045299999998,
+              "ccw": false
+            }
+          }
+        },
+        "solid_01_partition_007_solid_01_csg_cap_004_0_loop_01_edge_002": {
+          "namespace": "solid_01_partition_007",
+          "parent_node": "solid_01_csg_cap_004_0_loop_01_edge_002",
+          "derived_geometry": true,
+          "evidence": {
+            "entity_id": "solid_01.face_0004.csg_cap",
+            "loop_index": 0,
+            "edge_index": 11,
+            "curve_evidence": {
+              "start": [
+                84.35162979179195,
+                -116.54350198211203
+              ],
+              "end": [
+                85.63612464908536,
+                -116.54350198211203
+              ]
+            }
+          }
+        },
+        "solid_01_partition_007_solid_01_csg_cap_004_0_loop_01_edge_003": {
+          "namespace": "solid_01_partition_007",
+          "parent_node": "solid_01_csg_cap_004_0_loop_01_edge_003",
+          "derived_geometry": true,
+          "evidence": {
+            "entity_id": "solid_01.face_0004.csg_cap",
+            "loop_index": 0,
+            "edge_index": 4,
+            "curve_evidence": {
+              "start": [
+                85.63612464792455,
+                -116.54350198229214
+              ],
+              "mid": [
+                111.27203980315139,
+                -139.44703003414696
+              ],
+              "end": [
+                138.7151342875733,
+                -118.74320651801398
+              ],
+              "center": [
+                112.3932065077245,
+                -112.3932065077245
+              ],
+              "radius": 27.0770453,
+              "ccw": true
+            }
+          }
+        },
+        "solid_01_partition_007_solid_01_csg_cap_004_0_loop_01_edge_004": {
+          "namespace": "solid_01_partition_007",
+          "parent_node": "solid_01_csg_cap_004_0_loop_01_edge_004",
+          "derived_geometry": true,
+          "evidence": {
+            "entity_id": "solid_01.face_0004.csg_cap",
+            "loop_index": 0,
+            "edge_index": 3,
+            "curve_evidence": {
+              "start": [
+                138.71513428757328,
+                -118.74320651801399
+              ],
+              "mid": [
+                138.95549163330435,
+                -117.64786073856136
+              ],
+              "end": [
+                139.15028836752447,
+                -116.54350198229207
+              ],
+              "center": [
+                112.3932065077245,
+                -112.3932065077245
+              ],
+              "radius": 27.0770453,
+              "ccw": true
+            }
+          }
+        },
+        "solid_01_partition_007_solid_01_csg_cap_004_0_loop_01_edge_005": {
+          "namespace": "solid_01_partition_007",
+          "parent_node": "solid_01_csg_cap_004_0_loop_01_edge_005",
+          "derived_geometry": true,
+          "evidence": {
+            "entity_id": "solid_01.face_0004.csg_cap",
+            "loop_index": 0,
+            "edge_index": 9,
+            "curve_evidence": {
+              "start": [
+                139.15028836636364,
+                -116.54350198211203
+              ],
+              "end": [
+                140.43478322365706,
+                -116.54350198211203
+              ]
+            }
+          }
+        },
+        "solid_01_partition_008_solid_01_section_01_loop_01_edge_001": {
+          "namespace": "solid_01_partition_008",
+          "parent_node": "solid_01_section_01_loop_01_edge_001",
+          "derived_geometry": true,
+          "evidence": {
+            "entity_id": "solid_01.section_01.inferred_revolution",
+            "loop_index": 0,
+            "edge_index": 1,
+            "curve_evidence": {
+              "control_points": [
+                [
+                  36.39852262805658,
+                  6.350000000000001
+                ],
+                [
+                  35.377636204890536,
+                  10.16
+                ]
+              ],
+              "degree": 1,
+              "knots": [
+                -10.518405992968841,
+                -6.574003745605527
+              ],
+              "multiplicities": [
+                2,
+                2
+              ],
+              "weights": [
+                1.0,
+                1.0
+              ],
+              "periodic": false,
+              "pole_plane_residual_mm": 0.0,
+              "provenance": "bounded kernel section B-spline; no converter sampling or fitting",
+              "source_parameter_range": [
+                -6.574003745605527,
+                -10.518405992968841
+              ]
+            }
+          }
+        },
+        "solid_01_partition_008_solid_01_section_01_loop_01_edge_002": {
+          "namespace": "solid_01_partition_008",
+          "parent_node": "solid_01_section_01_loop_01_edge_002",
+          "derived_geometry": true,
+          "evidence": {
+            "entity_id": "solid_01.section_01.inferred_revolution",
+            "loop_index": 0,
+            "edge_index": 4,
+            "curve_evidence": {
+              "start": [
+                35.377636204890536,
+                10.16
+              ],
+              "end": [
+                34.062835455156545,
+                10.16
+              ]
+            }
+          }
+        },
+        "solid_01_partition_008_solid_01_section_01_loop_01_edge_003": {
+          "namespace": "solid_01_partition_008",
+          "parent_node": "solid_01_section_01_loop_01_edge_003",
+          "derived_geometry": true,
+          "evidence": {
+            "entity_id": "solid_01.section_01.inferred_revolution",
+            "loop_index": 0,
+            "edge_index": 3,
+            "curve_evidence": {
+              "control_points": [
+                [
+                  34.062835455156545,
+                  10.159999999999998
+                ],
+                [
+                  35.08372187832259,
+                  6.3500000000000005
+                ]
+              ],
+              "degree": 1,
+              "knots": [
+                -10.858701467356441,
+                -6.914299219993128
+              ],
+              "multiplicities": [
+                2,
+                2
+              ],
+              "weights": [
+                1.0,
+                1.0
+              ],
+              "periodic": false,
+              "pole_plane_residual_mm": 0.0,
+              "provenance": "bounded kernel section B-spline; no converter sampling or fitting",
+              "source_parameter_range": [
+                -10.858701467356441,
+                -6.914299219993128
+              ]
+            }
+          }
+        },
+        "solid_01_partition_008_solid_01_section_01_loop_01_edge_004": {
+          "namespace": "solid_01_partition_008",
+          "parent_node": "solid_01_section_01_loop_01_edge_004",
+          "derived_geometry": true,
+          "evidence": {
+            "entity_id": "solid_01.section_01.inferred_revolution",
+            "loop_index": 0,
+            "edge_index": 2,
+            "curve_evidence": {
+              "start": [
+                35.08372187832259,
+                6.35
+              ],
+              "end": [
+                36.39852262805658,
+                6.35
+              ]
+            }
+          }
+        },
+        "solid_01_partition_009_solid_01_section_01_loop_01_edge_001": {
+          "namespace": "solid_01_partition_009",
+          "parent_node": "solid_01_section_01_loop_01_edge_001",
+          "derived_geometry": true,
+          "evidence": {
+            "entity_id": "solid_01.section_01.inferred_revolution",
+            "loop_index": 0,
+            "edge_index": 1,
+            "curve_evidence": {
+              "start": [
+                35.03734073050185,
+                11.43
+              ],
+              "end": [
+                33.7225399813915,
+                11.43
+              ]
+            }
+          }
+        },
+        "solid_01_partition_009_solid_01_section_01_loop_01_edge_002": {
+          "namespace": "solid_01_partition_009",
+          "parent_node": "solid_01_section_01_loop_01_edge_002",
+          "derived_geometry": true,
+          "evidence": {
+            "entity_id": "solid_01.section_01.inferred_revolution",
+            "loop_index": 0,
+            "edge_index": 4,
+            "curve_evidence": {
+              "control_points": [
+                [
+                  33.72253998205617,
+                  11.429999995191963
+                ],
+                [
+                  34.062835455156545,
+                  10.159999999999998
+                ]
+              ],
+              "degree": 1,
+              "knots": [
+                -12.173502211499903,
+                -10.858701467356441
+              ],
+              "multiplicities": [
+                2,
+                2
+              ],
+              "weights": [
+                1.0,
+                1.0
+              ],
+              "periodic": false,
+              "pole_plane_residual_mm": 0.0,
+              "provenance": "bounded kernel section B-spline; no converter sampling or fitting",
+              "source_parameter_range": [
+                -12.173502211499903,
+                -10.858701467356441
+              ]
+            }
+          }
+        },
+        "solid_01_partition_009_solid_01_section_01_loop_01_edge_003": {
+          "namespace": "solid_01_partition_009",
+          "parent_node": "solid_01_section_01_loop_01_edge_003",
+          "derived_geometry": true,
+          "evidence": {
+            "entity_id": "solid_01.section_01.inferred_revolution",
+            "loop_index": 0,
+            "edge_index": 3,
+            "curve_evidence": {
+              "start": [
+                34.062835455156545,
+                10.16
+              ],
+              "end": [
+                35.377636204890536,
+                10.16
+              ]
+            }
+          }
+        },
+        "solid_01_partition_009_solid_01_section_01_loop_01_edge_004": {
+          "namespace": "solid_01_partition_009",
+          "parent_node": "solid_01_section_01_loop_01_edge_004",
+          "derived_geometry": true,
+          "evidence": {
+            "entity_id": "solid_01.section_01.inferred_revolution",
+            "loop_index": 0,
+            "edge_index": 2,
+            "curve_evidence": {
+              "control_points": [
+                [
+                  35.377636204890536,
+                  10.16
+                ],
+                [
+                  35.03734073050185,
+                  11.430000000000001
+                ]
+              ],
+              "degree": 1,
+              "knots": [
+                -11.833206742089947,
+                -10.518405992968841
+              ],
+              "multiplicities": [
+                2,
+                2
+              ],
+              "weights": [
+                1.0,
+                1.0
+              ],
+              "periodic": false,
+              "pole_plane_residual_mm": 0.0,
+              "provenance": "bounded kernel section B-spline; no converter sampling or fitting",
+              "source_parameter_range": [
+                -10.518405992968841,
+                -11.833206742089947
+              ]
+            }
+          }
+        },
+        "solid_01_partition_011_solid_01_csg_cap_002_0_loop_01_edge_001": {
+          "namespace": "solid_01_partition_011",
+          "parent_node": "solid_01_csg_cap_002_0_loop_01_edge_001",
+          "derived_geometry": true,
+          "evidence": {
+            "entity_id": "solid_01.face_0002.csg_cap",
+            "loop_index": 0,
+            "edge_index": 5,
+            "curve_evidence": {
+              "start": [
+                139.25377382183632,
+                -115.81026714024121
+              ],
+              "end": [
+                140.53354541602403,
+                -115.81026714024121
+              ]
+            }
+          }
+        },
+        "solid_01_partition_011_solid_01_csg_cap_002_0_loop_01_edge_002": {
+          "namespace": "solid_01_partition_011",
+          "parent_node": "solid_01_csg_cap_002_0_loop_01_edge_002",
+          "derived_geometry": true,
+          "evidence": {
+            "entity_id": "solid_01.face_0002.csg_cap",
+            "loop_index": 0,
+            "edge_index": 1,
+            "curve_evidence": {
+              "start": [
+                140.53354541602403,
+                -115.8102671402412
+              ],
+              "mid": [
+                112.3932065077245,
+                -140.7402518077245
+              ],
+              "end": [
+                84.25286759942497,
+                -115.81026714024121
+              ],
+              "center": [
+                112.3932065077245,
+                -112.3932065077245
+              ],
+              "radius": 28.347045299999998,
+              "ccw": false
+            }
+          }
+        },
+        "solid_01_partition_011_solid_01_csg_cap_002_0_loop_01_edge_003": {
+          "namespace": "solid_01_partition_011",
+          "parent_node": "solid_01_csg_cap_002_0_loop_01_edge_003",
+          "derived_geometry": true,
+          "evidence": {
+            "entity_id": "solid_01.face_0002.csg_cap",
+            "loop_index": 0,
+            "edge_index": 8,
+            "curve_evidence": {
+              "start": [
+                84.25286759942497,
+                -115.81026714024121
+              ],
+              "end": [
+                85.5326391936127,
+                -115.81026714024121
+              ]
+            }
+          }
+        },
+        "solid_01_partition_011_solid_01_csg_cap_002_0_loop_01_edge_004": {
+          "namespace": "solid_01_partition_011",
+          "parent_node": "solid_01_csg_cap_002_0_loop_01_edge_004",
+          "derived_geometry": true,
+          "evidence": {
+            "entity_id": "solid_01.face_0002.csg_cap",
+            "loop_index": 0,
+            "edge_index": 7,
+            "curve_evidence": {
+              "start": [
+                85.53263915008822,
+                -115.81026714577821
+              ],
+              "mid": [
+                110.90221137393218,
+                -139.42916988411002
+              ],
+              "end": [
+                138.7151342875733,
+                -118.74320651801398
+              ],
+              "center": [
+                112.3932065077245,
+                -112.3932065077245
+              ],
+              "radius": 27.0770453,
+              "ccw": true
+            }
+          }
+        },
+        "solid_01_partition_011_solid_01_csg_cap_002_0_loop_01_edge_005": {
+          "namespace": "solid_01_partition_011",
+          "parent_node": "solid_01_csg_cap_002_0_loop_01_edge_005",
+          "derived_geometry": true,
+          "evidence": {
+            "entity_id": "solid_01.face_0002.csg_cap",
+            "loop_index": 0,
+            "edge_index": 6,
+            "curve_evidence": {
+              "start": [
+                138.71513428757328,
+                -118.74320651801399
+              ],
+              "mid": [
+                139.02486024162656,
+                -117.28415749662156
+              ],
+              "end": [
+                139.25377386536078,
+                -115.81026714577816
+              ],
+              "center": [
+                112.3932065077245,
+                -112.3932065077245
+              ],
+              "radius": 27.0770453,
+              "ccw": true
+            }
+          }
+        },
+        "solid_01_partition_012_solid_01_csg_cap_009_1_loop_01_edge_001": {
+          "namespace": "solid_01_partition_012",
+          "parent_node": "solid_01_csg_cap_009_1_loop_01_edge_001",
+          "derived_geometry": true,
+          "evidence": {
+            "entity_id": "solid_01.face_0009.csg_cap",
+            "loop_index": 0,
+            "edge_index": 22,
+            "curve_evidence": {
+              "center": [
+                112.3932065077245,
+                112.3932065077245
+              ],
+              "radius": 35.037340730501846
+            }
+          }
+        },
+        "solid_01_partition_012_solid_01_residual_cut_01_solid_01_loop_01_edge_001": {
+          "namespace": "solid_01_partition_012",
+          "parent_node": "solid_01_residual_cut_01_solid_01_loop_01_edge_001",
+          "derived_geometry": true,
+          "evidence": {
+            "namespace": "solid_01_residual_cut_01",
+            "parent_node": "solid_01_loop_01_edge_001",
+            "derived_geometry": true,
+            "evidence": {
+              "entity_id": "solid_01.face_0006.inferred_prism",
+              "loop_index": 0,
+              "edge_index": 6,
+              "curve_evidence": {
+                "start": [
+                  0.0,
+                  0.0
+                ],
+                "end": [
+                  -8.89,
+                  0.0
+                ]
+              }
+            }
+          }
+        },
+        "solid_01_partition_012_solid_01_residual_cut_01_solid_01_loop_01_edge_002": {
+          "namespace": "solid_01_partition_012",
+          "parent_node": "solid_01_residual_cut_01_solid_01_loop_01_edge_002",
+          "derived_geometry": true,
+          "evidence": {
+            "namespace": "solid_01_residual_cut_01",
+            "parent_node": "solid_01_loop_01_edge_002",
+            "derived_geometry": true,
+            "evidence": {
+              "entity_id": "solid_01.face_0006.inferred_prism",
+              "loop_index": 0,
+              "edge_index": 12,
+              "curve_evidence": {
+                "start": [
+                  -8.889999999999993,
+                  0.0
+                ],
+                "end": [
+                  -8.889999999999995,
+                  3.048000000000002
+                ]
+              }
+            }
+          }
+        },
+        "solid_01_partition_012_solid_01_residual_cut_01_solid_01_loop_01_edge_003": {
+          "namespace": "solid_01_partition_012",
+          "parent_node": "solid_01_residual_cut_01_solid_01_loop_01_edge_003",
+          "derived_geometry": true,
+          "evidence": {
+            "namespace": "solid_01_residual_cut_01",
+            "parent_node": "solid_01_loop_01_edge_003",
+            "derived_geometry": true,
+            "evidence": {
+              "entity_id": "solid_01.face_0006.inferred_prism",
+              "loop_index": 0,
+              "edge_index": 11,
+              "curve_evidence": {
+                "start": [
+                  -8.89,
+                  3.048000000000002
+                ],
+                "end": [
+                  0.0,
+                  3.048000000000002
+                ]
+              }
+            }
+          }
+        },
+        "solid_01_partition_012_solid_01_residual_cut_01_solid_01_loop_01_edge_004": {
+          "namespace": "solid_01_partition_012",
+          "parent_node": "solid_01_residual_cut_01_solid_01_loop_01_edge_004",
+          "derived_geometry": true,
+          "evidence": {
+            "namespace": "solid_01_residual_cut_01",
+            "parent_node": "solid_01_loop_01_edge_004",
+            "derived_geometry": true,
+            "evidence": {
+              "entity_id": "solid_01.face_0006.inferred_prism",
+              "loop_index": 0,
+              "edge_index": 9,
+              "curve_evidence": {
+                "start": [
+                  -8.881784197001252e-16,
+                  3.048000000000002
+                ],
+                "end": [
+                  0.0,
+                  0.0
+                ]
+              }
+            }
+          }
+        }
+      },
+      "selected": {
+        "status": "recognized",
+        "strategy": "verified_planar_partition_union",
+        "symmetric_difference_relative": 0.0,
+        "part_count": 12,
+        "node_count": 161,
+        "boolean_count": 26
+      },
+      "attempts": {
+        "prior_direct_csg": {
+          "solid_index": 1,
+          "method": "verified_bounded_csg",
+          "attempts": [
+            {
+              "stock_id": "tool_015",
+              "missing_relative": 0.8388090752773513
+            },
+            {
+              "stock_id": "tool_019",
+              "missing_relative": 0.8388090752773513
+            },
+            {
+              "stock_id": "tool_011",
+              "missing_relative": 0.8294069331170932
+            },
+            {
+              "stock_id": "tool_013",
+              "missing_relative": 0.8294069331170932
+            },
+            {
+              "stock_id": "tool_003",
+              "missing_relative": 0.8248761264236171
+            },
+            {
+              "stock_id": "tool_010",
+              "missing_relative": 0.8152453842233459
+            },
+            {
+              "stock_id": "tool_012",
+              "missing_relative": 0.8152453842233459
+            },
+            {
+              "stock_id": "tool_004",
+              "missing_relative": 0.7772954105110707
+            },
+            {
+              "stock_id": "tool_007",
+              "missing_relative": 0.824876126423616
+            },
+            {
+              "stock_id": "tool_016",
+              "missing_relative": 0.8364305983485859
+            },
+            {
+              "stock_id": "tool_020",
+              "missing_relative": 0.8364305983485859
+            },
+            {
+              "stock_id": "tool_017",
+              "missing_relative": 0.8364305983485859
+            },
+            {
+              "stock_id": "tool_005",
+              "missing_relative": 0.7253238640326649
+            },
+            {
+              "stock_id": "tool_008",
+              "missing_relative": 0.6137315094874418
+            },
+            {
+              "stock_id": "tool_014",
+              "missing_relative": 0.8364305983485859
+            },
+            {
+              "stock_id": "tool_018",
+              "missing_relative": 0.8364305983485859
+            },
+            {
+              "stock_id": "tool_002",
+              "missing_relative": 0.7136044727850456
+            },
+            {
+              "stock_id": "tool_009",
+              "missing_relative": 0.5334342901190483
+            },
+            {
+              "stock_id": "tool_006",
+              "missing_relative": 0.41686819923174856
+            },
+            {
+              "stock_id": "tool_001",
+              "missing_relative": 0.0
+            }
+          ],
+          "limits": {
+            "candidates": 96,
+            "steps": 32,
+            "faces": 80,
+            "seconds": 15.0
+          },
+          "gate": {
+            "face_count": 21,
+            "face_limit": 80,
+            "unsupported_surface_types": []
+          },
+          "candidate_count": 44,
+          "stock_count": 20,
+          "tool_count": 24,
+          "elapsed_seconds": 3.9092824999970617,
+          "strategy": "source_contained_prism_union",
+          "final_volume_relative_error": 0.6495236527647451,
+          "reason": "Bounded CSG candidates did not reconstruct the complete source solid"
+        },
+        "partition_planes": [
+          {
+            "depth": 0,
+            "axis": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "positions_mm": [
+              -2.5400011,
+              1.27,
+              2.54,
+              5.08,
+              6.35,
+              10.16,
+              11.43,
+              12.700001099999998
+            ]
+          },
+          {
+            "depth": 1,
+            "axis": [
+              0.0,
+              0.8660254037844388,
+              0.4999999999999999
+            ],
+            "positions_mm": [
+              5.499260261853247,
+              7.404261314031192,
+              8.674261314031185,
+              29.62926240202828
+            ]
+          },
+          {
+            "depth": 1,
+            "axis": [
+              0.0,
+              0.8660254037844388,
+              0.4999999999999999
+            ],
+            "positions_mm": [
+              -19.46926248863082,
+              8.674261314031185,
+              30.264262488630816
+            ]
+          }
+        ],
+        "attempted_parts": 14,
+        "parts": [
+          {
+            "part_index": 1,
+            "method": "analytic_cap_prism",
+            "source_check": {
+              "face_index": 3,
+              "face_area_mm2": 309.0915622494749,
+              "distance_origin_kind": "measured",
+              "distance_method": "parallel_cap_separation",
+              "opposite_face_index": 2,
+              "status": "recognized",
+              "distance_mm": 3.8099999999999996,
+              "symmetric_difference_relative": 0.0
+            }
+          },
+          {
+            "part_index": 2,
+            "method": "verified_meridian_revolution",
+            "source_check": {
+              "axis_source_face_index": 3,
+              "origin_mm": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "axis": [
+                -0.0,
+                -0.0,
+                1.0
+              ],
+              "bbox_error_mm": 5.329070518200751e-15,
+              "coarse_bbox_rejection_tolerance_mm": 0.11136241809297841,
+              "coarse_volume_relative_error": 1.2197783691372976e-09,
+              "status": "recognized",
+              "symmetric_difference_relative": 0.0,
+              "section_face_count": 1,
+              "section_profile_ids": [
+                "solid_01_section_01_profile"
+              ]
+            }
+          },
+          {
+            "part_index": 3,
+            "method": "verified_meridian_revolution",
+            "source_check": {
+              "axis_source_face_index": 1,
+              "origin_mm": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "axis": [
+                -0.0,
+                0.0,
+                1.0
+              ],
+              "bbox_error_mm": 4.550990695406654e-08,
+              "coarse_bbox_rejection_tolerance_mm": 0.10586854622641377,
+              "coarse_volume_relative_error": 6.352192750898614e-09,
+              "status": "recognized",
+              "symmetric_difference_relative": 0.0,
+              "section_face_count": 1,
+              "section_profile_ids": [
+                "solid_01_section_01_profile"
+              ]
+            }
+          },
+          {
+            "part_index": 4,
+            "method": "verified_bounded_csg",
+            "source_check": {
+              "status": "recognized",
+              "strategy": "enclosing_stock_monotone_cuts",
+              "symmetric_difference_relative": 0.0,
+              "node_count": 11,
+              "boolean_count": 1
+            }
+          },
+          {
+            "part_index": 5,
+            "method": "verified_meridian_revolution",
+            "source_check": {
+              "axis_source_face_index": 1,
+              "origin_mm": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "axis": [
+                -0.0,
+                0.0,
+                1.0
+              ],
+              "bbox_error_mm": 0.0,
+              "coarse_bbox_rejection_tolerance_mm": 0.10392083046149406,
+              "coarse_volume_relative_error": 7.543552178199504e-15,
+              "status": "recognized",
+              "symmetric_difference_relative": 0.0,
+              "section_face_count": 1,
+              "section_profile_ids": [
+                "solid_01_section_01_profile"
+              ]
+            }
+          },
+          {
+            "part_index": 6,
+            "method": "verified_bounded_csg",
+            "source_check": {
+              "status": "recognized",
+              "strategy": "enclosing_stock_monotone_cuts",
+              "symmetric_difference_relative": 0.0,
+              "node_count": 23,
+              "boolean_count": 5
+            }
+          },
+          {
+            "part_index": 7,
+            "method": "verified_bounded_csg",
+            "source_check": {
+              "status": "recognized",
+              "strategy": "enclosing_stock_monotone_cuts",
+              "symmetric_difference_relative": 0.0,
+              "node_count": 14,
+              "boolean_count": 1
+            }
+          },
+          {
+            "part_index": 8,
+            "method": "verified_meridian_revolution",
+            "source_check": {
+              "axis_source_face_index": 1,
+              "origin_mm": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "axis": [
+                -0.0,
+                0.0,
+                1.0
+              ],
+              "bbox_error_mm": 0.0,
+              "coarse_bbox_rejection_tolerance_mm": 0.10302104520826223,
+              "coarse_volume_relative_error": 0.0,
+              "status": "recognized",
+              "symmetric_difference_relative": 0.0,
+              "section_face_count": 1,
+              "section_profile_ids": [
+                "solid_01_section_01_profile"
+              ]
+            }
+          },
+          {
+            "part_index": 9,
+            "method": "verified_meridian_revolution",
+            "source_check": {
+              "axis_source_face_index": 1,
+              "origin_mm": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "axis": [
+                -0.0,
+                0.0,
+                1.0
+              ],
+              "bbox_error_mm": 7.105427357601002e-15,
+              "coarse_bbox_rejection_tolerance_mm": 0.10007112522939306,
+              "coarse_volume_relative_error": 2.302352198187892e-09,
+              "status": "recognized",
+              "symmetric_difference_relative": 0.0,
+              "section_face_count": 1,
+              "section_profile_ids": [
+                "solid_01_section_01_profile"
+              ]
+            }
+          },
+          {
+            "part_index": 10,
+            "method": "verified_bounded_csg",
+            "source_check": {
+              "status": "recognized",
+              "strategy": "enclosing_stock_monotone_cuts",
+              "symmetric_difference_relative": 0.0,
+              "node_count": 19,
+              "boolean_count": 4
+            }
+          },
+          {
+            "part_index": 11,
+            "method": "verified_bounded_csg",
+            "source_check": {
+              "status": "recognized",
+              "strategy": "enclosing_stock_monotone_cuts",
+              "symmetric_difference_relative": 0.0,
+              "node_count": 14,
+              "boolean_count": 1
+            }
+          },
+          {
+            "part_index": 12,
+            "method": "verified_bounded_csg",
+            "source_check": {
+              "status": "recognized",
+              "strategy": "enclosing_stock_monotone_cuts; verified native residual cut",
+              "symmetric_difference_relative": 0.0,
+              "node_count": 24,
+              "boolean_count": 3
+            }
+          }
+        ]
+      },
+      "coordinate_frame": {
+        "selected_frame": {
+          "origin": [
+            0.0,
+            0.0,
+            5.079999999999999
+          ],
+          "x_axis": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "y_axis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "z_axis": [
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        "application": "all derived native operands transformed together exactly once",
+        "adjustments": []
+      },
+      "source_face_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21
+      ],
+      "source_topology": {
+        "face_count": 21,
+        "edge_count": 41,
+        "faces": [
+          {
+            "face_index": 1,
+            "edge_indices": [
+              1,
+              2,
+              3,
+              4
+            ]
+          },
+          {
+            "face_index": 2,
+            "edge_indices": [
+              3,
+              5,
+              6,
+              7
+            ]
+          },
+          {
+            "face_index": 3,
+            "edge_indices": [
+              1,
+              8,
+              9,
+              10
+            ]
+          },
+          {
+            "face_index": 4,
+            "edge_indices": [
+              2,
+              6,
+              9,
+              11,
+              12,
+              13
+            ]
+          },
+          {
+            "face_index": 5,
+            "edge_indices": [
+              4,
+              5,
+              10,
+              14,
+              15,
+              16
+            ]
+          },
+          {
+            "face_index": 6,
+            "edge_indices": [
+              17,
+              18
+            ]
+          },
+          {
+            "face_index": 7,
+            "edge_indices": [
+              19,
+              20
+            ]
+          },
+          {
+            "face_index": 8,
+            "edge_indices": [
+              18,
+              20,
+              21
+            ]
+          },
+          {
+            "face_index": 9,
+            "edge_indices": [
+              19,
+              22,
+              23
+            ]
+          },
+          {
+            "face_index": 10,
+            "edge_indices": [
+              12,
+              17,
+              24
+            ]
+          },
+          {
+            "face_index": 11,
+            "edge_indices": [
+              11,
+              25,
+              26,
+              27,
+              28,
+              29
+            ]
+          },
+          {
+            "face_index": 12,
+            "edge_indices": [
+              26,
+              30
+            ]
+          },
+          {
+            "face_index": 13,
+            "edge_indices": [
+              28,
+              31
+            ]
+          },
+          {
+            "face_index": 14,
+            "edge_indices": [
+              32,
+              33,
+              34,
+              35
+            ]
+          },
+          {
+            "face_index": 15,
+            "edge_indices": [
+              32,
+              36,
+              37
+            ]
+          },
+          {
+            "face_index": 16,
+            "edge_indices": [
+              34,
+              38
+            ]
+          },
+          {
+            "face_index": 17,
+            "edge_indices": [
+              15,
+              33,
+              35,
+              36,
+              37,
+              38,
+              39
+            ]
+          },
+          {
+            "face_index": 18,
+            "edge_indices": [
+              14,
+              40,
+              41
+            ]
+          },
+          {
+            "face_index": 19,
+            "edge_indices": [
+              23,
+              41
+            ]
+          },
+          {
+            "face_index": 20,
+            "edge_indices": [
+              7,
+              8,
+              13,
+              16
+            ]
+          },
+          {
+            "face_index": 21,
+            "edge_indices": [
+              27,
+              29,
+              30,
+              31
+            ]
+          }
+        ]
+      },
+      "history_recovered": false,
+      "approximation": "planar source partition; verified cap/meridian geometry replay; no sampled fitting",
+      "prior_attempts": {
+        "prism": {
+          "solid_index": 1,
+          "surface_types": {
+            "GeomAbs_Plane": 15,
+            "GeomAbs_Cylinder": 4,
+            "GeomAbs_Cone": 2
+          },
+          "planar_faces": 15,
+          "candidate_limit": 64,
+          "attempts": [
+            {
+              "face_index": 4,
+              "face_area_mm2": 1451.7092825889645,
+              "distance_origin_kind": "measured",
+              "distance_method": "parallel_cap_separation",
+              "opposite_face_index": 7,
+              "status": "not_recognized",
+              "reason": "UnsupportedGeometry: Cap prism does not match the source bounding box"
+            },
+            {
+              "face_index": 15,
+              "face_area_mm2": 1414.1506447166362,
+              "distance_origin_kind": "measured",
+              "distance_method": "parallel_cap_separation",
+              "opposite_face_index": 4,
+              "status": "not_recognized",
+              "reason": "UnsupportedGeometry: Cap prism does not match the source bounding box"
+            },
+            {
+              "face_index": 13,
+              "face_area_mm2": 1336.21051717009,
+              "distance_origin_kind": "measured",
+              "distance_method": "parallel_cap_separation",
+              "opposite_face_index": 7,
+              "status": "not_recognized",
+              "reason": "UnsupportedGeometry: Cap prism does not match the source bounding box"
+            },
+            {
+              "face_index": 5,
+              "face_area_mm2": 1021.1105185860406,
+              "distance_origin_kind": "measured",
+              "distance_method": "parallel_cap_separation",
+              "opposite_face_index": 4,
+              "status": "not_recognized",
+              "reason": "UnsupportedGeometry: Cap prism does not match the source bounding box"
+            },
+            {
+              "face_index": 16,
+              "face_area_mm2": 945.8799336213493,
+              "distance_origin_kind": "measured",
+              "distance_method": "parallel_cap_separation",
+              "opposite_face_index": 4,
+              "status": "not_recognized",
+              "reason": "UnsupportedGeometry: Cap prism does not match the source bounding box"
+            },
+            {
+              "face_index": 12,
+              "face_area_mm2": 810.9552030438246,
+              "distance_origin_kind": "measured",
+              "distance_method": "parallel_cap_separation",
+              "opposite_face_index": 7,
+              "status": "not_recognized",
+              "reason": "UnsupportedGeometry: Cap prism does not match the source bounding box"
+            },
+            {
+              "face_index": 6,
+              "face_area_mm2": 470.56258416162564,
+              "distance_origin_kind": "measured",
+              "distance_method": "parallel_cap_separation",
+              "opposite_face_index": 7,
+              "status": "not_recognized",
+              "reason": "UnsupportedGeometry: Cap prism does not match the source bounding box"
+            },
+            {
+              "face_index": 19,
+              "face_area_mm2": 387.6065191940261,
+              "distance_origin_kind": "measured",
+              "distance_method": "parallel_cap_separation",
+              "opposite_face_index": 4,
+              "status": "not_recognized",
+              "reason": "UnsupportedGeometry: Cap prism does not match the source bounding box"
+            },
+            {
+              "face_index": 14,
+              "face_area_mm2": 328.82366880981067,
+              "distance_origin_kind": "measured",
+              "distance_method": "parallel_cap_separation",
+              "opposite_face_index": 21,
+              "status": "not_recognized",
+              "reason": "UnsupportedGeometry: Partial ellipse profile edges are not yet supported"
+            },
+            {
+              "face_index": 21,
+              "face_area_mm2": 312.2887987766849,
+              "distance_origin_kind": "measured",
+              "distance_method": "parallel_cap_separation",
+              "opposite_face_index": 14,
+              "status": "not_recognized",
+              "reason": "UnsupportedGeometry: Partial ellipse profile edges are not yet supported"
+            },
+            {
+              "face_index": 7,
+              "face_area_mm2": 309.0915622494749,
+              "distance_origin_kind": "measured",
+              "distance_method": "parallel_cap_separation",
+              "opposite_face_index": 4,
+              "status": "not_recognized",
+              "reason": "UnsupportedGeometry: Cap prism differs from source: relative difference=1.1491464229778152"
+            },
+            {
+              "face_index": 2,
+              "face_area_mm2": 11.290299999999965,
+              "distance_origin_kind": "derived",
+              "distance_method": "volume_over_cap_area",
+              "distance_expression": "source_volume_mm3 / face_area_mm2",
+              "status": "not_recognized",
+              "reason": "UnsupportedGeometry: Cap prism does not match the source bounding box"
+            },
+            {
+              "face_index": 3,
+              "face_area_mm2": 11.290299999999965,
+              "distance_origin_kind": "derived",
+              "distance_method": "volume_over_cap_area",
+              "distance_expression": "source_volume_mm3 / face_area_mm2",
+              "status": "not_recognized",
+              "reason": "UnsupportedGeometry: Cap prism does not match the source bounding box"
+            },
+            {
+              "face_index": 1,
+              "face_area_mm2": 3.87095999999999,
+              "distance_origin_kind": "derived",
+              "distance_method": "volume_over_cap_area",
+              "distance_expression": "source_volume_mm3 / face_area_mm2",
+              "status": "not_recognized",
+              "reason": "UnsupportedGeometry: Cap prism does not match the source bounding box"
+            },
+            {
+              "face_index": 20,
+              "face_area_mm2": 3.87095999999999,
+              "distance_origin_kind": "derived",
+              "distance_method": "volume_over_cap_area",
+              "distance_expression": "source_volume_mm3 / face_area_mm2",
+              "status": "not_recognized",
+              "reason": "UnsupportedGeometry: Cap prism does not match the source bounding box"
+            }
+          ]
+        },
+        "revolution": {
+          "solid_index": 1,
+          "method": "verified_meridian_revolution",
+          "axis_candidate_count": 1,
+          "axis_candidate_limit": 8,
+          "attempts": [
+            {
+              "axis_source_face_index": 8,
+              "origin_mm": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "axis": [
+                -0.0,
+                -0.0,
+                1.0
+              ],
+              "status": "not_recognized",
+              "reason": "ValueError: Plane face 1 is not perpendicular to the full-revolution axis"
+            }
+          ]
+        }
+      },
+      "replay_check": {
+        "symmetric_difference_relative": 0.0,
+        "plan_hash": "f0a3ca78636ada294e63462a03dca51ddfeaa309aa8d68ebd0396efa6fc715e8"
+      }
+    }
+  ],
+  "source_solid_count": 1,
+  "output_map": [
+    {
+      "body_id": "body_001",
+      "source_solid_index": 1,
+      "output_node": "body_001_world",
+      "source_face_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21
+      ]
+    }
+  ],
+  "node_sources": {
+    "solid_01_partition_001_solid_01_loop_01_edge_001": {
+      "namespace": "solid_01_partition_001",
+      "parent_node": "solid_01_loop_01_edge_001",
+      "derived_geometry": true,
+      "evidence": {
+        "entity_id": "solid_01.face_0003.inferred_prism",
+        "loop_index": 0,
+        "edge_index": 5,
+        "curve_evidence": {
+          "center": [
+            0.0,
+            0.0
+          ],
+          "radius": 39.370000000000005
+        }
+      }
+    },
+    "solid_01_partition_001_solid_01_loop_02_edge_001": {
+      "namespace": "solid_01_partition_001",
+      "parent_node": "solid_01_loop_02_edge_001",
+      "derived_geometry": true,
+      "evidence": {
+        "entity_id": "solid_01.face_0003.inferred_prism",
+        "loop_index": 1,
+        "edge_index": 3,
+        "curve_evidence": {
+          "center": [
+            0.0,
+            0.0
+          ],
+          "radius": 38.1
+        }
+      }
+    },
+    "solid_01_partition_002_solid_01_section_01_loop_01_edge_001": {
+      "namespace": "solid_01_partition_002",
+      "parent_node": "solid_01_section_01_loop_01_edge_001",
+      "derived_geometry": true,
+      "evidence": {
+        "entity_id": "solid_01.section_01.inferred_revolution",
+        "loop_index": 0,
+        "edge_index": 1,
+        "curve_evidence": {
+          "start": [
+            38.1,
+            1.27
+          ],
+          "end": [
+            39.37000000000001,
+            1.27
+          ]
+        }
+      }
+    },
+    "solid_01_partition_002_solid_01_section_01_loop_01_edge_002": {
+      "namespace": "solid_01_partition_002",
+      "parent_node": "solid_01_section_01_loop_01_edge_002",
+      "derived_geometry": true,
+      "evidence": {
+        "entity_id": "solid_01.section_01.inferred_revolution",
+        "loop_index": 0,
+        "edge_index": 6,
+        "curve_evidence": {
+          "control_points": [
+            [
+              39.370000000000005,
+              1.2700000000000018
+            ],
+            [
+              39.370000000000005,
+              2.54
+            ]
+          ],
+          "degree": 1,
+          "knots": [
+            -1.2699999999999985,
+            0.0
+          ],
+          "multiplicities": [
+            2,
+            2
+          ],
+          "weights": [
+            1.0,
+            1.0
+          ],
+          "periodic": false,
+          "pole_plane_residual_mm": 1.446430334472939e-14,
+          "provenance": "bounded kernel section B-spline; no converter sampling or fitting",
+          "source_parameter_range": [
+            -1.2699999999999985,
+            0.0
+          ]
+        }
+      }
+    },
+    "solid_01_partition_002_solid_01_section_01_loop_01_edge_003": {
+      "namespace": "solid_01_partition_002",
+      "parent_node": "solid_01_section_01_loop_01_edge_003",
+      "derived_geometry": true,
+      "evidence": {
+        "entity_id": "solid_01.section_01.inferred_revolution",
+        "loop_index": 0,
+        "edge_index": 5,
+        "curve_evidence": {
+          "start": [
+            39.370000000000005,
+            2.54
+          ],
+          "end": [
+            37.4194090512249,
+            2.54
+          ]
+        }
+      }
+    },
+    "solid_01_partition_002_solid_01_section_01_loop_01_edge_004": {
+      "namespace": "solid_01_partition_002",
+      "parent_node": "solid_01_section_01_loop_01_edge_004",
+      "derived_geometry": true,
+      "evidence": {
+        "entity_id": "solid_01.section_01.inferred_revolution",
+        "loop_index": 0,
+        "edge_index": 4,
+        "curve_evidence": {
+          "start": [
+            37.4194091,
+            2.54
+          ],
+          "end": [
+            36.10460830148864,
+            2.54
+          ]
+        }
+      }
+    },
+    "solid_01_partition_002_solid_01_section_01_loop_01_edge_005": {
+      "namespace": "solid_01_partition_002",
+      "parent_node": "solid_01_section_01_loop_01_edge_005",
+      "derived_geometry": true,
+      "evidence": {
+        "entity_id": "solid_01.section_01.inferred_revolution",
+        "loop_index": 0,
+        "edge_index": 3,
+        "curve_evidence": {
+          "control_points": [
+            [
+              36.10460830148864,
+              2.5400000000000005
+            ],
+            [
+              36.44490377749324,
+              1.269999993969332
+            ]
+          ],
+          "degree": 1,
+          "knots": [
+            -2.9698969726298134,
+            -1.6550962172653012
+          ],
+          "multiplicities": [
+            2,
+            2
+          ],
+          "weights": [
+            1.0,
+            1.0
+          ],
+          "periodic": false,
+          "pole_plane_residual_mm": 0.0,
+          "provenance": "bounded kernel section B-spline; no converter sampling or fitting",
+          "source_parameter_range": [
+            -2.9698969726298134,
+            -1.6550962172653012
+          ]
+        }
+      }
+    },
+    "solid_01_partition_002_solid_01_section_01_loop_01_edge_006": {
+      "namespace": "solid_01_partition_002",
+      "parent_node": "solid_01_section_01_loop_01_edge_006",
+      "derived_geometry": true,
+      "evidence": {
+        "entity_id": "solid_01.section_01.inferred_revolution",
+        "loop_index": 0,
+        "edge_index": 2,
+        "curve_evidence": {
+          "start": [
+            36.4449037764917,
+            1.27
+          ],
+          "end": [
+            38.1,
+            1.27
+          ]
+        }
+      }
+    },
+    "solid_01_partition_003_solid_01_section_01_loop_01_edge_001": {
+      "namespace": "solid_01_partition_003",
+      "parent_node": "solid_01_section_01_loop_01_edge_001",
+      "derived_geometry": true,
+      "evidence": {
+        "entity_id": "solid_01.section_01.inferred_revolution",
+        "loop_index": 0,
+        "edge_index": 1,
+        "curve_evidence": {
+          "control_points": [
+            [
+              37.419409054490096,
+              2.5399999878056576
+            ],
+            [
+              36.738818102445265,
+              5.080000000000004
+            ]
+          ],
+          "degree": 1,
+          "knots": [
+            -5.259202996484424,
+            -2.629601485617698
+          ],
+          "multiplicities": [
+            2,
+            2
+          ],
+          "weights": [
+            1.0,
+            1.0
+          ],
+          "periodic": false,
+          "pole_plane_residual_mm": 0.0,
+          "provenance": "bounded kernel section B-spline; no converter sampling or fitting",
+          "source_parameter_range": [
+            -2.629601485617698,
+            -5.259202996484424
+          ]
+        }
+      }
+    },
+    "solid_01_partition_003_solid_01_section_01_loop_01_edge_002": {
+      "namespace": "solid_01_partition_003",
+      "parent_node": "solid_01_section_01_loop_01_edge_002",
+      "derived_geometry": true,
+      "evidence": {
+        "entity_id": "solid_01.section_01.inferred_revolution",
+        "loop_index": 0,
+        "edge_index": 4,
+        "curve_evidence": {
+          "start": [
+            36.738818102445265,
+            5.08
+          ],
+          "end": [
+            35.424017352711274,
+            5.08
+          ]
+        }
+      }
+    },
+    "solid_01_partition_003_solid_01_section_01_loop_01_edge_003": {
+      "namespace": "solid_01_partition_003",
+      "parent_node": "solid_01_section_01_loop_01_edge_003",
+      "derived_geometry": true,
+      "evidence": {
+        "entity_id": "solid_01.section_01.inferred_revolution",
+        "loop_index": 0,
+        "edge_index": 3,
+        "curve_evidence": {
+          "control_points": [
+            [
+              35.424017352711274,
+              5.080000000000001
+            ],
+            [
+              36.10460830148864,
+              2.54
+            ]
+          ],
+          "degree": 1,
+          "knots": [
+            -5.599498470872025,
+            -2.9698969726298134
+          ],
+          "multiplicities": [
+            2,
+            2
+          ],
+          "weights": [
+            1.0,
+            1.0
+          ],
+          "periodic": false,
+          "pole_plane_residual_mm": 0.0,
+          "provenance": "bounded kernel section B-spline; no converter sampling or fitting",
+          "source_parameter_range": [
+            -5.599498470872025,
+            -2.9698969726298134
+          ]
+        }
+      }
+    },
+    "solid_01_partition_003_solid_01_section_01_loop_01_edge_004": {
+      "namespace": "solid_01_partition_003",
+      "parent_node": "solid_01_section_01_loop_01_edge_004",
+      "derived_geometry": true,
+      "evidence": {
+        "entity_id": "solid_01.section_01.inferred_revolution",
+        "loop_index": 0,
+        "edge_index": 2,
+        "curve_evidence": {
+          "start": [
+            36.10460830148864,
+            2.54
+          ],
+          "end": [
+            37.419409099999996,
+            2.54
+          ]
+        }
+      }
+    },
+    "solid_01_partition_004_solid_01_csg_cap_002_1_loop_01_edge_001": {
+      "namespace": "solid_01_partition_004",
+      "parent_node": "solid_01_csg_cap_002_1_loop_01_edge_001",
+      "derived_geometry": true,
+      "evidence": {
+        "entity_id": "solid_01.face_0002.csg_cap",
+        "loop_index": 0,
+        "edge_index": 3,
+        "curve_evidence": {
+          "start": [
+            140.31642460464056,
+            -117.27673682423851
+          ],
+          "mid": [
+            112.3932065077245,
+            -140.7402518077245
+          ],
+          "end": [
+            84.46998841080844,
+            -117.27673682423853
+          ],
+          "center": [
+            112.3932065077245,
+            -112.3932065077245
+          ],
+          "radius": 28.347045299999998,
+          "ccw": false
+        }
+      }
+    },
+    "solid_01_partition_004_solid_01_csg_cap_002_1_loop_01_edge_002": {
+      "namespace": "solid_01_partition_004",
+      "parent_node": "solid_01_csg_cap_002_1_loop_01_edge_002",
+      "derived_geometry": true,
+      "evidence": {
+        "entity_id": "solid_01.face_0002.csg_cap",
+        "loop_index": 0,
+        "edge_index": 4,
+        "curve_evidence": {
+          "start": [
+            84.46998841227021,
+            -117.27673682398287
+          ],
+          "end": [
+            140.3164246031788,
+            -117.27673682398287
+          ]
+        }
+      }
+    },
+    "solid_01_partition_005_solid_01_section_01_loop_01_edge_001": {
+      "namespace": "solid_01_partition_005",
+      "parent_node": "solid_01_section_01_loop_01_edge_001",
+      "derived_geometry": true,
+      "evidence": {
+        "entity_id": "solid_01.section_01.inferred_revolution",
+        "loop_index": 0,
+        "edge_index": 1,
+        "curve_evidence": {
+          "control_points": [
+            [
+              36.738818102445265,
+              5.080000000000003
+            ],
+            [
+              36.39852262805658,
+              6.3500000000000005
+            ]
+          ],
+          "degree": 1,
+          "knots": [
+            -6.574003745605527,
+            -5.259202996484424
+          ],
+          "multiplicities": [
+            2,
+            2
+          ],
+          "weights": [
+            1.0,
+            1.0
+          ],
+          "periodic": false,
+          "pole_plane_residual_mm": 0.0,
+          "provenance": "bounded kernel section B-spline; no converter sampling or fitting",
+          "source_parameter_range": [
+            -5.259202996484424,
+            -6.574003745605527
+          ]
+        }
+      }
+    },
+    "solid_01_partition_005_solid_01_section_01_loop_01_edge_002": {
+      "namespace": "solid_01_partition_005",
+      "parent_node": "solid_01_section_01_loop_01_edge_002",
+      "derived_geometry": true,
+      "evidence": {
+        "entity_id": "solid_01.section_01.inferred_revolution",
+        "loop_index": 0,
+        "edge_index": 4,
+        "curve_evidence": {
+          "start": [
+            36.39852262805659,
+            6.35
+          ],
+          "end": [
+            35.08372187832259,
+            6.35
+          ]
+        }
+      }
+    },
+    "solid_01_partition_005_solid_01_section_01_loop_01_edge_003": {
+      "namespace": "solid_01_partition_005",
+      "parent_node": "solid_01_section_01_loop_01_edge_003",
+      "derived_geometry": true,
+      "evidence": {
+        "entity_id": "solid_01.section_01.inferred_revolution",
+        "loop_index": 0,
+        "edge_index": 3,
+        "curve_evidence": {
+          "control_points": [
+            [
+              35.08372187832259,
+              6.35
+            ],
+            [
+              35.424017352711274,
+              5.080000000000001
+            ]
+          ],
+          "degree": 1,
+          "knots": [
+            -6.914299219993128,
+            -5.599498470872025
+          ],
+          "multiplicities": [
+            2,
+            2
+          ],
+          "weights": [
+            1.0,
+            1.0
+          ],
+          "periodic": false,
+          "pole_plane_residual_mm": 0.0,
+          "provenance": "bounded kernel section B-spline; no converter sampling or fitting",
+          "source_parameter_range": [
+            -6.914299219993128,
+            -5.599498470872025
+          ]
+        }
+      }
+    },
+    "solid_01_partition_005_solid_01_section_01_loop_01_edge_004": {
+      "namespace": "solid_01_partition_005",
+      "parent_node": "solid_01_section_01_loop_01_edge_004",
+      "derived_geometry": true,
+      "evidence": {
+        "entity_id": "solid_01.section_01.inferred_revolution",
+        "loop_index": 0,
+        "edge_index": 2,
+        "curve_evidence": {
+          "start": [
+            35.424017352711274,
+            5.08
+          ],
+          "end": [
+            36.73881810244527,
+            5.08
+          ]
+        }
+      }
+    },
+    "solid_01_partition_007_solid_01_csg_cap_004_0_loop_01_edge_001": {
+      "namespace": "solid_01_partition_007",
+      "parent_node": "solid_01_csg_cap_004_0_loop_01_edge_001",
+      "derived_geometry": true,
+      "evidence": {
+        "entity_id": "solid_01.face_0004.csg_cap",
+        "loop_index": 0,
+        "edge_index": 10,
+        "curve_evidence": {
+          "start": [
+            140.43478322365704,
+            -116.54350198211205
+          ],
+          "mid": [
+            112.3932065077245,
+            -140.7402518077245
+          ],
+          "end": [
+            84.35162979179195,
+            -116.54350198211202
+          ],
+          "center": [
+            112.3932065077245,
+            -112.3932065077245
+          ],
+          "radius": 28.347045299999998,
+          "ccw": false
+        }
+      }
+    },
+    "solid_01_partition_007_solid_01_csg_cap_004_0_loop_01_edge_002": {
+      "namespace": "solid_01_partition_007",
+      "parent_node": "solid_01_csg_cap_004_0_loop_01_edge_002",
+      "derived_geometry": true,
+      "evidence": {
+        "entity_id": "solid_01.face_0004.csg_cap",
+        "loop_index": 0,
+        "edge_index": 11,
+        "curve_evidence": {
+          "start": [
+            84.35162979179195,
+            -116.54350198211203
+          ],
+          "end": [
+            85.63612464908536,
+            -116.54350198211203
+          ]
+        }
+      }
+    },
+    "solid_01_partition_007_solid_01_csg_cap_004_0_loop_01_edge_003": {
+      "namespace": "solid_01_partition_007",
+      "parent_node": "solid_01_csg_cap_004_0_loop_01_edge_003",
+      "derived_geometry": true,
+      "evidence": {
+        "entity_id": "solid_01.face_0004.csg_cap",
+        "loop_index": 0,
+        "edge_index": 4,
+        "curve_evidence": {
+          "start": [
+            85.63612464792455,
+            -116.54350198229214
+          ],
+          "mid": [
+            111.27203980315139,
+            -139.44703003414696
+          ],
+          "end": [
+            138.7151342875733,
+            -118.74320651801398
+          ],
+          "center": [
+            112.3932065077245,
+            -112.3932065077245
+          ],
+          "radius": 27.0770453,
+          "ccw": true
+        }
+      }
+    },
+    "solid_01_partition_007_solid_01_csg_cap_004_0_loop_01_edge_004": {
+      "namespace": "solid_01_partition_007",
+      "parent_node": "solid_01_csg_cap_004_0_loop_01_edge_004",
+      "derived_geometry": true,
+      "evidence": {
+        "entity_id": "solid_01.face_0004.csg_cap",
+        "loop_index": 0,
+        "edge_index": 3,
+        "curve_evidence": {
+          "start": [
+            138.71513428757328,
+            -118.74320651801399
+          ],
+          "mid": [
+            138.95549163330435,
+            -117.64786073856136
+          ],
+          "end": [
+            139.15028836752447,
+            -116.54350198229207
+          ],
+          "center": [
+            112.3932065077245,
+            -112.3932065077245
+          ],
+          "radius": 27.0770453,
+          "ccw": true
+        }
+      }
+    },
+    "solid_01_partition_007_solid_01_csg_cap_004_0_loop_01_edge_005": {
+      "namespace": "solid_01_partition_007",
+      "parent_node": "solid_01_csg_cap_004_0_loop_01_edge_005",
+      "derived_geometry": true,
+      "evidence": {
+        "entity_id": "solid_01.face_0004.csg_cap",
+        "loop_index": 0,
+        "edge_index": 9,
+        "curve_evidence": {
+          "start": [
+            139.15028836636364,
+            -116.54350198211203
+          ],
+          "end": [
+            140.43478322365706,
+            -116.54350198211203
+          ]
+        }
+      }
+    },
+    "solid_01_partition_008_solid_01_section_01_loop_01_edge_001": {
+      "namespace": "solid_01_partition_008",
+      "parent_node": "solid_01_section_01_loop_01_edge_001",
+      "derived_geometry": true,
+      "evidence": {
+        "entity_id": "solid_01.section_01.inferred_revolution",
+        "loop_index": 0,
+        "edge_index": 1,
+        "curve_evidence": {
+          "control_points": [
+            [
+              36.39852262805658,
+              6.350000000000001
+            ],
+            [
+              35.377636204890536,
+              10.16
+            ]
+          ],
+          "degree": 1,
+          "knots": [
+            -10.518405992968841,
+            -6.574003745605527
+          ],
+          "multiplicities": [
+            2,
+            2
+          ],
+          "weights": [
+            1.0,
+            1.0
+          ],
+          "periodic": false,
+          "pole_plane_residual_mm": 0.0,
+          "provenance": "bounded kernel section B-spline; no converter sampling or fitting",
+          "source_parameter_range": [
+            -6.574003745605527,
+            -10.518405992968841
+          ]
+        }
+      }
+    },
+    "solid_01_partition_008_solid_01_section_01_loop_01_edge_002": {
+      "namespace": "solid_01_partition_008",
+      "parent_node": "solid_01_section_01_loop_01_edge_002",
+      "derived_geometry": true,
+      "evidence": {
+        "entity_id": "solid_01.section_01.inferred_revolution",
+        "loop_index": 0,
+        "edge_index": 4,
+        "curve_evidence": {
+          "start": [
+            35.377636204890536,
+            10.16
+          ],
+          "end": [
+            34.062835455156545,
+            10.16
+          ]
+        }
+      }
+    },
+    "solid_01_partition_008_solid_01_section_01_loop_01_edge_003": {
+      "namespace": "solid_01_partition_008",
+      "parent_node": "solid_01_section_01_loop_01_edge_003",
+      "derived_geometry": true,
+      "evidence": {
+        "entity_id": "solid_01.section_01.inferred_revolution",
+        "loop_index": 0,
+        "edge_index": 3,
+        "curve_evidence": {
+          "control_points": [
+            [
+              34.062835455156545,
+              10.159999999999998
+            ],
+            [
+              35.08372187832259,
+              6.3500000000000005
+            ]
+          ],
+          "degree": 1,
+          "knots": [
+            -10.858701467356441,
+            -6.914299219993128
+          ],
+          "multiplicities": [
+            2,
+            2
+          ],
+          "weights": [
+            1.0,
+            1.0
+          ],
+          "periodic": false,
+          "pole_plane_residual_mm": 0.0,
+          "provenance": "bounded kernel section B-spline; no converter sampling or fitting",
+          "source_parameter_range": [
+            -10.858701467356441,
+            -6.914299219993128
+          ]
+        }
+      }
+    },
+    "solid_01_partition_008_solid_01_section_01_loop_01_edge_004": {
+      "namespace": "solid_01_partition_008",
+      "parent_node": "solid_01_section_01_loop_01_edge_004",
+      "derived_geometry": true,
+      "evidence": {
+        "entity_id": "solid_01.section_01.inferred_revolution",
+        "loop_index": 0,
+        "edge_index": 2,
+        "curve_evidence": {
+          "start": [
+            35.08372187832259,
+            6.35
+          ],
+          "end": [
+            36.39852262805658,
+            6.35
+          ]
+        }
+      }
+    },
+    "solid_01_partition_009_solid_01_section_01_loop_01_edge_001": {
+      "namespace": "solid_01_partition_009",
+      "parent_node": "solid_01_section_01_loop_01_edge_001",
+      "derived_geometry": true,
+      "evidence": {
+        "entity_id": "solid_01.section_01.inferred_revolution",
+        "loop_index": 0,
+        "edge_index": 1,
+        "curve_evidence": {
+          "start": [
+            35.03734073050185,
+            11.43
+          ],
+          "end": [
+            33.7225399813915,
+            11.43
+          ]
+        }
+      }
+    },
+    "solid_01_partition_009_solid_01_section_01_loop_01_edge_002": {
+      "namespace": "solid_01_partition_009",
+      "parent_node": "solid_01_section_01_loop_01_edge_002",
+      "derived_geometry": true,
+      "evidence": {
+        "entity_id": "solid_01.section_01.inferred_revolution",
+        "loop_index": 0,
+        "edge_index": 4,
+        "curve_evidence": {
+          "control_points": [
+            [
+              33.72253998205617,
+              11.429999995191963
+            ],
+            [
+              34.062835455156545,
+              10.159999999999998
+            ]
+          ],
+          "degree": 1,
+          "knots": [
+            -12.173502211499903,
+            -10.858701467356441
+          ],
+          "multiplicities": [
+            2,
+            2
+          ],
+          "weights": [
+            1.0,
+            1.0
+          ],
+          "periodic": false,
+          "pole_plane_residual_mm": 0.0,
+          "provenance": "bounded kernel section B-spline; no converter sampling or fitting",
+          "source_parameter_range": [
+            -12.173502211499903,
+            -10.858701467356441
+          ]
+        }
+      }
+    },
+    "solid_01_partition_009_solid_01_section_01_loop_01_edge_003": {
+      "namespace": "solid_01_partition_009",
+      "parent_node": "solid_01_section_01_loop_01_edge_003",
+      "derived_geometry": true,
+      "evidence": {
+        "entity_id": "solid_01.section_01.inferred_revolution",
+        "loop_index": 0,
+        "edge_index": 3,
+        "curve_evidence": {
+          "start": [
+            34.062835455156545,
+            10.16
+          ],
+          "end": [
+            35.377636204890536,
+            10.16
+          ]
+        }
+      }
+    },
+    "solid_01_partition_009_solid_01_section_01_loop_01_edge_004": {
+      "namespace": "solid_01_partition_009",
+      "parent_node": "solid_01_section_01_loop_01_edge_004",
+      "derived_geometry": true,
+      "evidence": {
+        "entity_id": "solid_01.section_01.inferred_revolution",
+        "loop_index": 0,
+        "edge_index": 2,
+        "curve_evidence": {
+          "control_points": [
+            [
+              35.377636204890536,
+              10.16
+            ],
+            [
+              35.03734073050185,
+              11.430000000000001
+            ]
+          ],
+          "degree": 1,
+          "knots": [
+            -11.833206742089947,
+            -10.518405992968841
+          ],
+          "multiplicities": [
+            2,
+            2
+          ],
+          "weights": [
+            1.0,
+            1.0
+          ],
+          "periodic": false,
+          "pole_plane_residual_mm": 0.0,
+          "provenance": "bounded kernel section B-spline; no converter sampling or fitting",
+          "source_parameter_range": [
+            -10.518405992968841,
+            -11.833206742089947
+          ]
+        }
+      }
+    },
+    "solid_01_partition_011_solid_01_csg_cap_002_0_loop_01_edge_001": {
+      "namespace": "solid_01_partition_011",
+      "parent_node": "solid_01_csg_cap_002_0_loop_01_edge_001",
+      "derived_geometry": true,
+      "evidence": {
+        "entity_id": "solid_01.face_0002.csg_cap",
+        "loop_index": 0,
+        "edge_index": 5,
+        "curve_evidence": {
+          "start": [
+            139.25377382183632,
+            -115.81026714024121
+          ],
+          "end": [
+            140.53354541602403,
+            -115.81026714024121
+          ]
+        }
+      }
+    },
+    "solid_01_partition_011_solid_01_csg_cap_002_0_loop_01_edge_002": {
+      "namespace": "solid_01_partition_011",
+      "parent_node": "solid_01_csg_cap_002_0_loop_01_edge_002",
+      "derived_geometry": true,
+      "evidence": {
+        "entity_id": "solid_01.face_0002.csg_cap",
+        "loop_index": 0,
+        "edge_index": 1,
+        "curve_evidence": {
+          "start": [
+            140.53354541602403,
+            -115.8102671402412
+          ],
+          "mid": [
+            112.3932065077245,
+            -140.7402518077245
+          ],
+          "end": [
+            84.25286759942497,
+            -115.81026714024121
+          ],
+          "center": [
+            112.3932065077245,
+            -112.3932065077245
+          ],
+          "radius": 28.347045299999998,
+          "ccw": false
+        }
+      }
+    },
+    "solid_01_partition_011_solid_01_csg_cap_002_0_loop_01_edge_003": {
+      "namespace": "solid_01_partition_011",
+      "parent_node": "solid_01_csg_cap_002_0_loop_01_edge_003",
+      "derived_geometry": true,
+      "evidence": {
+        "entity_id": "solid_01.face_0002.csg_cap",
+        "loop_index": 0,
+        "edge_index": 8,
+        "curve_evidence": {
+          "start": [
+            84.25286759942497,
+            -115.81026714024121
+          ],
+          "end": [
+            85.5326391936127,
+            -115.81026714024121
+          ]
+        }
+      }
+    },
+    "solid_01_partition_011_solid_01_csg_cap_002_0_loop_01_edge_004": {
+      "namespace": "solid_01_partition_011",
+      "parent_node": "solid_01_csg_cap_002_0_loop_01_edge_004",
+      "derived_geometry": true,
+      "evidence": {
+        "entity_id": "solid_01.face_0002.csg_cap",
+        "loop_index": 0,
+        "edge_index": 7,
+        "curve_evidence": {
+          "start": [
+            85.53263915008822,
+            -115.81026714577821
+          ],
+          "mid": [
+            110.90221137393218,
+            -139.42916988411002
+          ],
+          "end": [
+            138.7151342875733,
+            -118.74320651801398
+          ],
+          "center": [
+            112.3932065077245,
+            -112.3932065077245
+          ],
+          "radius": 27.0770453,
+          "ccw": true
+        }
+      }
+    },
+    "solid_01_partition_011_solid_01_csg_cap_002_0_loop_01_edge_005": {
+      "namespace": "solid_01_partition_011",
+      "parent_node": "solid_01_csg_cap_002_0_loop_01_edge_005",
+      "derived_geometry": true,
+      "evidence": {
+        "entity_id": "solid_01.face_0002.csg_cap",
+        "loop_index": 0,
+        "edge_index": 6,
+        "curve_evidence": {
+          "start": [
+            138.71513428757328,
+            -118.74320651801399
+          ],
+          "mid": [
+            139.02486024162656,
+            -117.28415749662156
+          ],
+          "end": [
+            139.25377386536078,
+            -115.81026714577816
+          ],
+          "center": [
+            112.3932065077245,
+            -112.3932065077245
+          ],
+          "radius": 27.0770453,
+          "ccw": true
+        }
+      }
+    },
+    "solid_01_partition_012_solid_01_csg_cap_009_1_loop_01_edge_001": {
+      "namespace": "solid_01_partition_012",
+      "parent_node": "solid_01_csg_cap_009_1_loop_01_edge_001",
+      "derived_geometry": true,
+      "evidence": {
+        "entity_id": "solid_01.face_0009.csg_cap",
+        "loop_index": 0,
+        "edge_index": 22,
+        "curve_evidence": {
+          "center": [
+            112.3932065077245,
+            112.3932065077245
+          ],
+          "radius": 35.037340730501846
+        }
+      }
+    },
+    "solid_01_partition_012_solid_01_residual_cut_01_solid_01_loop_01_edge_001": {
+      "namespace": "solid_01_partition_012",
+      "parent_node": "solid_01_residual_cut_01_solid_01_loop_01_edge_001",
+      "derived_geometry": true,
+      "evidence": {
+        "namespace": "solid_01_residual_cut_01",
+        "parent_node": "solid_01_loop_01_edge_001",
+        "derived_geometry": true,
+        "evidence": {
+          "entity_id": "solid_01.face_0006.inferred_prism",
+          "loop_index": 0,
+          "edge_index": 6,
+          "curve_evidence": {
+            "start": [
+              0.0,
+              0.0
+            ],
+            "end": [
+              -8.89,
+              0.0
+            ]
+          }
+        }
+      }
+    },
+    "solid_01_partition_012_solid_01_residual_cut_01_solid_01_loop_01_edge_002": {
+      "namespace": "solid_01_partition_012",
+      "parent_node": "solid_01_residual_cut_01_solid_01_loop_01_edge_002",
+      "derived_geometry": true,
+      "evidence": {
+        "namespace": "solid_01_residual_cut_01",
+        "parent_node": "solid_01_loop_01_edge_002",
+        "derived_geometry": true,
+        "evidence": {
+          "entity_id": "solid_01.face_0006.inferred_prism",
+          "loop_index": 0,
+          "edge_index": 12,
+          "curve_evidence": {
+            "start": [
+              -8.889999999999993,
+              0.0
+            ],
+            "end": [
+              -8.889999999999995,
+              3.048000000000002
+            ]
+          }
+        }
+      }
+    },
+    "solid_01_partition_012_solid_01_residual_cut_01_solid_01_loop_01_edge_003": {
+      "namespace": "solid_01_partition_012",
+      "parent_node": "solid_01_residual_cut_01_solid_01_loop_01_edge_003",
+      "derived_geometry": true,
+      "evidence": {
+        "namespace": "solid_01_residual_cut_01",
+        "parent_node": "solid_01_loop_01_edge_003",
+        "derived_geometry": true,
+        "evidence": {
+          "entity_id": "solid_01.face_0006.inferred_prism",
+          "loop_index": 0,
+          "edge_index": 11,
+          "curve_evidence": {
+            "start": [
+              -8.89,
+              3.048000000000002
+            ],
+            "end": [
+              0.0,
+              3.048000000000002
+            ]
+          }
+        }
+      }
+    },
+    "solid_01_partition_012_solid_01_residual_cut_01_solid_01_loop_01_edge_004": {
+      "namespace": "solid_01_partition_012",
+      "parent_node": "solid_01_residual_cut_01_solid_01_loop_01_edge_004",
+      "derived_geometry": true,
+      "evidence": {
+        "namespace": "solid_01_residual_cut_01",
+        "parent_node": "solid_01_loop_01_edge_004",
+        "derived_geometry": true,
+        "evidence": {
+          "entity_id": "solid_01.face_0006.inferred_prism",
+          "loop_index": 0,
+          "edge_index": 9,
+          "curve_evidence": {
+            "start": [
+              -8.881784197001252e-16,
+              3.048000000000002
+            ],
+            "end": [
+              0.0,
+              0.0
+            ]
+          }
+        }
+      }
+    }
+  },
+  "history_recovered": false
+}

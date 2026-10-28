@@ -1,0 +1,501 @@
+{
+  "format": "step-run",
+  "version": 1,
+  "created_at": "2026-10-27T16:34:18.155931+08:00",
+  "run_state": "completed",
+  "implementation": {
+    "tool_version": "1.0.0",
+    "plan_version": 1,
+    "compiler": "scapi-plan-1",
+    "evaluator": "shape-world-1",
+    "revision": "097478e7ae2dbcee048cf77540331209094f6180",
+    "source_hashes": {
+      "cli.py": "44737f7bbe0609b0a9e1272eff0a6aa44e8cf3533359d2e0f4f49df1027e3581",
+      "pipeline.py": "aac871f71b207dd8e1072d5bb48a697b8e19aa33fd41d49a0ce466e6af1a9fb0",
+      "step2scapi.py": "5dc5b0aaa4677b04c2f4f82e858b62926fc65695a294f2b5577698ce5b87e7ae",
+      "__init__.py": "5f3a55636d5e7e6f41fd4e383e16ecb4d0893d3fb05a34facfdbf09a4aa6a5ed",
+      "__main__.py": "56f7d4004c060695c7c030c243981cb8960ce3f931f282d4a3475324e6d2c015",
+      "batch/checkpoint.py": "5ae46a4f21f1742bb13fbd99248ffb10977389e70d18a009b67d669967bbe5ff",
+      "batch/diagnostics.py": "c63119a2aa8c092499bc3880aff5593c58bdbba711fdd4b353e8853529847b16",
+      "batch/events.py": "5664da1e186871edd5919fa5064ab733cb1cf6b0529e2e0d0088f465608e5534",
+      "batch/identity.py": "8acdbff49fcf8b5e6ff4a0e3c33e7f5bda9e5b8e883bf1aca265b56d18a93338",
+      "batch/process.py": "ede4300e35e51c31781e421ea442054a72ddbe5b5802e7418f0fd453df482e6e",
+      "batch/runner.py": "2acece9a05ae57321e0158d8490d41f5a3c57af785bcc421fe0c1dcbb19e70e0",
+      "batch/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "codegen/scapi.py": "a8d86e008ec69b2fec149971fb3219cd0002d61298d5d32ef70132223cd248d2",
+      "codegen/templates.py": "cd343a28778718051db606d7c9bd5db8fb90a31509782f62d373d39776d6dc26",
+      "codegen/__init__.py": "70a4f0d98381f06d2a92fbe6c6b446c362844a7c61fe8b4976ff1f63fda9855e",
+      "kernel/curves.py": "fbb1b279ae2a6059adbea9cd25502ed7d3265846cfafb819bf75483a0934dd0b",
+      "kernel/execute.py": "cd8231fb76f9de30a42eb508bd2fa1c70a53300eea4c8f38f916af22f5146691",
+      "kernel/import_step.py": "55f55413e153d2da97a081590aa8da8c2d8137aa190a6869f07580baa7c50bd6",
+      "kernel/runtime.py": "3776c2da979c808555835207076ad28db16b09c3be5cf753df37a8207fa9501d",
+      "kernel/signatures.py": "f14662c6681b886a7cae52039a9655f24e012df5006918e16e5bb757729a4b4c",
+      "kernel/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "plan/codec.py": "9d4ab092b57de2871edb1a4df3a889749956cec53e73970d64f1a727c19389be",
+      "plan/graph.py": "f87622feeb2b6a031a3508e6adcbb5b9573c150f314f2be5d74ebb677c694d12",
+      "plan/model.py": "6ecfd9d6c0795cfd2e381683bd63a19703f91726a968912c35062966693ee2fa",
+      "plan/passes.py": "a33f22541ee8cc52e2eddb152749b1a31036c3052e218bdfadeae9bee43b9212",
+      "plan/preparation.py": "e0e8495fba25cab4a5b593182f4460d77bf125344331cc4ac9a094b568c7c3aa",
+      "plan/registry.py": "77fb1530af588c6fc436cc049e56b0bf6a2b6ecb48bc4f0beea4a017a634771e",
+      "plan/validation.py": "ec36adbf379ef0fec5e40ef0f88122a5a5d61338050a6e48d889c3def3d856b3",
+      "plan/__init__.py": "a9ba441cfcb8f8c1cf5ccac1729efde8637f6227d72efd32a15751a102687810",
+      "recognition/api.py": "23cad3a4a0568f8c4a48677444fb2fdbe4d2ebdb7b62ec01ac0d0e8a3a39bf57",
+      "recognition/context.py": "a9df83d33d7a49c4b85c6d4e1e0adf8ca60f464df23f570f9a3d7388d9669758",
+      "recognition/csg.py": "d3fa2e029cc79183eea269fbab01719563602d4fa8d2c0f519ff5514bc52c8be",
+      "recognition/partition.py": "ea9c472be000741affe5881dc6f4ad7bcf3b8b97bf67f6df2ca9be4ca0572881",
+      "recognition/prism.py": "807ae18d7c6778b086631a7614a3806d3a6a360e3d6b055cda6f4dac8ca73c05",
+      "recognition/revolution.py": "660585685f546c1b0420de3bdf69a8cb2b4096a8d6157f47cb581240f8ef2fe5",
+      "recognition/__init__.py": "421ff249e09ec1c6f254223070afe738ce3d24a70c3024e8630c5ccdae61fab4",
+      "verification/conditioning.py": "c0567a0c4efa9751be215e92281ff79bcd4636b872ce347a40ddac74f6a7d09e",
+      "verification/coverage.py": "ab5e7a77291e5404fb3e6dad291c9cbf7fab045d64552b59fb18e0f404867bba",
+      "verification/geometry.py": "3d2cbf06d047ef6bd177ccd214cb0e3ff793bdd38492cf2a4dd7656de21dd1c1",
+      "verification/measurements.py": "e16e8fb7d72fbc82373b458a6df973f4d7b3c6dad9d95466bd47bb2df9b60d46",
+      "verification/metrics.py": "3db5f84285a476e25484fcb8239e57f110b019816f882a1a9a0b218b16fa4637",
+      "verification/policy.py": "3dcb2fe25b24f8a79f53e10f17f56051bf6a814d837e8607c191763fc47e4f38",
+      "verification/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "plan/schema.json": "57b5d29c867e9752def7833b7edf5a035b8de9577bfbd89e89eb03b1cc0f6557"
+    },
+    "dependencies": {
+      "python": "3.13.14",
+      "simplecadapi": "2.2.6",
+      "cadquery-ocp": "7.9.3.1.1",
+      "numpy": "2.5.4",
+      "scipy": "1.18.1"
+    },
+    "fingerprint": "3bdc6fd5ed474a4198cfc30d79870023b36926f6c9ed14128edeecd4972c60ca"
+  },
+  "configuration": {
+    "samples": 8192,
+    "mode": "world",
+    "recognition": {
+      "length_tolerance": 1e-06,
+      "reconstruction_relative_tolerance": 1e-07,
+      "max_candidates": 64,
+      "max_solids": 64,
+      "max_revolve_candidates": 8,
+      "max_section_faces": 16,
+      "max_section_edges": 256,
+      "max_spline_poles": 256,
+      "max_csg_candidates": 96,
+      "max_csg_steps": 32,
+      "max_csg_faces": 80,
+      "max_csg_seconds": 15.0,
+      "max_csg_parts": 24,
+      "max_csg_depth": 3
+    },
+    "hard_timeout_seconds": 120.0
+  },
+  "available_count": 10000,
+  "requested_count": 100,
+  "selected_count": 100,
+  "completed_count": 100,
+  "inputs": [
+    {
+      "path": "F:\\AI_CAD\\datasets\\abc\\step\\abc_0000\\00000000_290a9120f9f249a7a05cfe9c_step_000.step",
+      "sha256": "73411ebbcc0afa5fa742b331ce1be4450b34c9b367b75aedccc47e21798fb6dc"
+    },
+    {
+      "path": "F:\\AI_CAD\\datasets\\abc\\step\\abc_0000\\00000001_1ffb81a71e5b402e966b9341_step_000.step",
+      "sha256": "8f27522538b086ecc9bfb6e458207bea0f8f9715b2d76bb8dbd93a5083e8a018"
+    },
+    {
+      "path": "F:\\AI_CAD\\datasets\\abc\\step\\abc_0000\\00000002_1ffb81a71e5b402e966b9341_step_001.step",
+      "sha256": "c190144c83c811a48c1a7892c299fc60a85332ee21535c630518637d9f325688"
+    },
+    {
+      "path": "F:\\AI_CAD\\datasets\\abc\\step\\abc_0000\\00000003_1ffb81a71e5b402e966b9341_step_002.step",
+      "sha256": "532f0f0687407346f43f9a28e7934c9927df0d269dd4d097864be1e060368734"
+    },
+    {
+      "path": "F:\\AI_CAD\\datasets\\abc\\step\\abc_0000\\00000004_1ffb81a71e5b402e966b9341_step_003.step",
+      "sha256": "a7be17878aea45cc9a1aa0b68901756a8ad70d6988a9c42fb2ee6c8525a32195"
+    },
+    {
+      "path": "F:\\AI_CAD\\datasets\\abc\\step\\abc_0000\\00000005_d4fe04f0f5f84b52bd4f10e4_step_000.step",
+      "sha256": "7a970a7f10b5f7ef783e20a8713358f3a8c9cd005cf4355a586a19e72ca32de5"
+    },
+    {
+      "path": "F:\\AI_CAD\\datasets\\abc\\step\\abc_0000\\00000006_d4fe04f0f5f84b52bd4f10e4_step_001.step",
+      "sha256": "5b0a309b468874e023681903bd6208479f6ea80064d9c17e08873e921732a0fe"
+    },
+    {
+      "path": "F:\\AI_CAD\\datasets\\abc\\step\\abc_0000\\00000007_b33a147f86da49879455d286_step_000.step",
+      "sha256": "02616fa80edaf4d8a1aa03619e3488fa42158da3874ccca3289b9af700fe07cf"
+    },
+    {
+      "path": "F:\\AI_CAD\\datasets\\abc\\step\\abc_0000\\00000008_9b3d6a97e8de4aa193b81000_step_000.step",
+      "sha256": "84c7687d1acf464c406a6648e379893f21f0c9ed358ea0dee92be7e10b882f47"
+    },
+    {
+      "path": "F:\\AI_CAD\\datasets\\abc\\step\\abc_0000\\00000009_9b3d6a97e8de4aa193b81000_step_001.step",
+      "sha256": "34a7b399bef7d25ce7b85357d06210ec7c06fe6a39a6b20bc7369dc1abd40b77"
+    },
+    {
+      "path": "F:\\AI_CAD\\datasets\\abc\\step\\abc_0000\\00000010_b4b99d35e04b4277931f9a9c_step_000.step",
+      "sha256": "79a1916b709d95e5aa5b79694f9d988bcd97c1c1c2e9abb9eaa428f2a22026b6"
+    },
+    {
+      "path": "F:\\AI_CAD\\datasets\\abc\\step\\abc_0000\\00000011_e909f412cda24521865fac0f_step_000.step",
+      "sha256": "490701d7fca1db71dc912bc6e1d7a3a1ef1792aeb030cfb1ead764abcf7e6920"
+    },
+    {
+      "path": "F:\\AI_CAD\\datasets\\abc\\step\\abc_0000\\00000012_f16882934f314832b639ffc0_step_000.step",
+      "sha256": "29da96fd0b52e262036807b162b8c5d02cb74ab640dbef47d373433ad80ca046"
+    },
+    {
+      "path": "F:\\AI_CAD\\datasets\\abc\\step\\abc_0000\\00000013_c2f4d27f35ed4c138caf5c18_step_000.step",
+      "sha256": "0af8f4f012b3355dd0f2232b9f04df45cdd2ee13c5d36368176b0a50e5c5a5e6"
+    },
+    {
+      "path": "F:\\AI_CAD\\datasets\\abc\\step\\abc_0000\\00000014_5b1c2f8a8c6f40fdaae1e69d_step_000.step",
+      "sha256": "7c7190f868acd93951fd6302313d1f818828f44da6a5716b7434c0059e0802b0"
+    },
+    {
+      "path": "F:\\AI_CAD\\datasets\\abc\\step\\abc_0000\\00000015_b08aa818955948c690fd9b6d_step_000.step",
+      "sha256": "4460d2d68643db57c164e1ede21817a037fcb9881a974943906348ca31aa7e40"
+    },
+    {
+      "path": "F:\\AI_CAD\\datasets\\abc\\step\\abc_0000\\00000016_b08aa818955948c690fd9b6d_step_001.step",
+      "sha256": "767992134bf890032be8ef450710d7ddbd69b1bc49a11904b29e0fae328e286a"
+    },
+    {
+      "path": "F:\\AI_CAD\\datasets\\abc\\step\\abc_0000\\00000017_e8e79d1385fd4c78be414f6c_step_000.step",
+      "sha256": "ff5d59a91a341035c7604987eb5e54503710bfedf4962608c658f4d985ea0112"
+    },
+    {
+      "path": "F:\\AI_CAD\\datasets\\abc\\step\\abc_0000\\00000018_e8e79d1385fd4c78be414f6c_step_001.step",
+      "sha256": "a446e05fcda2dba53fcea363e826fe497130aa9a68ed16a00f3d2bad90c04a3a"
+    },
+    {
+      "path": "F:\\AI_CAD\\datasets\\abc\\step\\abc_0000\\00000019_e8e79d1385fd4c78be414f6c_step_002.step",
+      "sha256": "605617ea94f22724a0689faf740f6bf8767cf12604a6cfb162115c1016bbd83e"
+    },
+    {
+      "path": "F:\\AI_CAD\\datasets\\abc\\step\\abc_0000\\00000020_ad34a3f60c4a4caa99646600_step_000.step",
+      "sha256": "0392c2d92f45b8659158225801388d47a34743684894c3433150eec722dfa6d8"
+    },
+    {
+      "path": "F:\\AI_CAD\\datasets\\abc\\step\\abc_0000\\00000021_ad34a3f60c4a4caa99646600_step_001.step",
+      "sha256": "1ec4f3b2d9b1c5cfa9c0fed114d125ed53b85759134657a0f6ffa29078179ba2"
+    },
+    {
+      "path": "F:\\AI_CAD\\datasets\\abc\\step\\abc_0000\\00000022_ad34a3f60c4a4caa99646600_step_002.step",
+      "sha256": "9ed73f7963a68aec2121a1308385a8dc76041ff634870b28e9bc684c0ef3b4cc"
+    },
+    {
+      "path": "F:\\AI_CAD\\datasets\\abc\\step\\abc_0000\\00000023_ad34a3f60c4a4caa99646600_step_003.step",
+      "sha256": "df279cd73c5ad232b336a15f08edb217509da81bfd4bf31efcdd6e1fc22774c4"
+    },
+    {
+      "path": "F:\\AI_CAD\\datasets\\abc\\step\\abc_0000\\00000024_ad34a3f60c4a4caa99646600_step_004.step",
+      "sha256": "426ad96ce4f14561ce048cca1f4aa56226690516b15b75d27650a97d7d4398c9"
+    },
+    {
+      "path": "F:\\AI_CAD\\datasets\\abc\\step\\abc_0000\\00000025_ad34a3f60c4a4caa99646600_step_005.step",
+      "sha256": "c2a5fe9c2dd5876567aaf1683480cc25c47bbe5ce9b8efefd6af49ae6d6ee969"
+    },
+    {
+      "path": "F:\\AI_CAD\\datasets\\abc\\step\\abc_0000\\00000026_ad34a3f60c4a4caa99646600_step_006.step",
+      "sha256": "a3a1ed78e2afd0b19e2c92146c200ee1beaa9c02b131621a14d9e7f61367cd6a"
+    },
+    {
+      "path": "F:\\AI_CAD\\datasets\\abc\\step\\abc_0000\\00000027_ad34a3f60c4a4caa99646600_step_007.step",
+      "sha256": "f5aa1abefabb3b42c7ccee50992e159429f0c711cc7072d9ff36a7a833a4cf60"
+    },
+    {
+      "path": "F:\\AI_CAD\\datasets\\abc\\step\\abc_0000\\00000028_ad34a3f60c4a4caa99646600_step_008.step",
+      "sha256": "c371205191a34eb90c867d280607bb4ae0948b5082e1e483a0a5430667280205"
+    },
+    {
+      "path": "F:\\AI_CAD\\datasets\\abc\\step\\abc_0000\\00000029_ad34a3f60c4a4caa99646600_step_009.step",
+      "sha256": "460499c066bfa9ca375c888966b4bacdebc839aff7b4dfea271b547699aa891d"
+    },
+    {
+      "path": "F:\\AI_CAD\\datasets\\abc\\step\\abc_0000\\00000030_ad34a3f60c4a4caa99646600_step_010.step",
+      "sha256": "5002f5f8573a471829e295f213c31590aa9694eeda4d6c41c62bd17ae612047f"
+    },
+    {
+      "path": "F:\\AI_CAD\\datasets\\abc\\step\\abc_0000\\00000031_ad34a3f60c4a4caa99646600_step_011.step",
+      "sha256": "b3869dc65446bfdd6d7c0136796f6b484e4a0661e2149bc9320033c60a7eb17c"
+    },
+    {
+      "path": "F:\\AI_CAD\\datasets\\abc\\step\\abc_0000\\00000032_ad34a3f60c4a4caa99646600_step_012.step",
+      "sha256": "2a8fd1d0d80f613e56ae62a3efc8e11405db4c9df5f7fde6c695a17ecceaf68b"
+    },
+    {
+      "path": "F:\\AI_CAD\\datasets\\abc\\step\\abc_0000\\00000033_ad34a3f60c4a4caa99646600_step_013.step",
+      "sha256": "996ae3a5b6b455ea61812a71214624f851fd0605bf81a6e733078a473b8f09e1"
+    },
+    {
+      "path": "F:\\AI_CAD\\datasets\\abc\\step\\abc_0000\\00000034_ad34a3f60c4a4caa99646600_step_014.step",
+      "sha256": "8f6857e1c640b24ebb5a8423d0d359c230564650bfa097d33c128fbfe4754dea"
+    },
+    {
+      "path": "F:\\AI_CAD\\datasets\\abc\\step\\abc_0000\\00000035_6763f7e2f51a489caaf599f0_step_000.step",
+      "sha256": "cb9dec2c45b414425814f8eb1073623740dbff71f1a4188483a7bd661645d031"
+    },
+    {
+      "path": "F:\\AI_CAD\\datasets\\abc\\step\\abc_0000\\00000036_b169abf5f2444251b529c688_step_000.step",
+      "sha256": "f076b3b075c567ff24f357b2c79bb28bb7b103352b1d9c158249ffdbba61f423"
+    },
+    {
+      "path": "F:\\AI_CAD\\datasets\\abc\\step\\abc_0000\\00000037_c7d977f326364e35bb5b5d27_step_000.step",
+      "sha256": "a766b8fcdf336a2a44e25a6d6f94a7fd4ad92467b8b8e71b73fd2c0e4208ae6f"
+    },
+    {
+      "path": "F:\\AI_CAD\\datasets\\abc\\step\\abc_0000\\00000038_c7d977f326364e35bb5b5d27_step_001.step",
+      "sha256": "5e1144c289e4b3dfe49a2c4e5b6791d127585140ca9290936c983071bf014578"
+    },
+    {
+      "path": "F:\\AI_CAD\\datasets\\abc\\step\\abc_0000\\00000039_c7d977f326364e35bb5b5d27_step_002.step",
+      "sha256": "570dc256209cf66da6c063933332332a5b637b0c0b9dbf0e6bd89062eaf09b95"
+    },
+    {
+      "path": "F:\\AI_CAD\\datasets\\abc\\step\\abc_0000\\00000040_c7d977f326364e35bb5b5d27_step_003.step",
+      "sha256": "81671b208ed660fb7c656db6981023703692bb9ed22ef22999ce50323a62b9a3"
+    },
+    {
+      "path": "F:\\AI_CAD\\datasets\\abc\\step\\abc_0000\\00000041_c7d977f326364e35bb5b5d27_step_004.step",
+      "sha256": "89a47b4fd728ba07f7537f6458c28e39f7632e8f1d458be54fd8673080ea94f3"
+    },
+    {
+      "path": "F:\\AI_CAD\\datasets\\abc\\step\\abc_0000\\00000042_c7d977f326364e35bb5b5d27_step_005.step",
+      "sha256": "38ed98d6c2c3eac9e8605eab80c48a454227aa8378e52df2c8c3cf53d4bb2f54"
+    },
+    {
+      "path": "F:\\AI_CAD\\datasets\\abc\\step\\abc_0000\\00000043_c7d977f326364e35bb5b5d27_step_006.step",
+      "sha256": "a69a63264d69f31efe11e208e315cf8014a08944784345f0a155b7708a3fe926"
+    },
+    {
+      "path": "F:\\AI_CAD\\datasets\\abc\\step\\abc_0000\\00000044_c7d977f326364e35bb5b5d27_step_007.step",
+      "sha256": "9c61e704579f1efaccd733a2fca8ffed816c1705a619e11dca73193d7656740f"
+    },
+    {
+      "path": "F:\\AI_CAD\\datasets\\abc\\step\\abc_0000\\00000045_c7d977f326364e35bb5b5d27_step_008.step",
+      "sha256": "bcc8626b5762559e19727ced361199744a5de3acff74d27ef0e2a7a1ebb7fdae"
+    },
+    {
+      "path": "F:\\AI_CAD\\datasets\\abc\\step\\abc_0000\\00000046_1a67c6032bbd479492910b39_step_000.step",
+      "sha256": "9e793a35f752fa5970161460ba5d907c7a1ba8bd1e8142799d97cd5e90fcaa59"
+    },
+    {
+      "path": "F:\\AI_CAD\\datasets\\abc\\step\\abc_0000\\00000047_1a67c6032bbd479492910b39_step_001.step",
+      "sha256": "218e81e6814f15098f1f730b204b460a120ec9469df40b1c31b4ceb4ae44f738"
+    },
+    {
+      "path": "F:\\AI_CAD\\datasets\\abc\\step\\abc_0000\\00000048_efe12a13ac2e4ea7880a66d1_step_000.step",
+      "sha256": "83a0aeafaa7816858aa1bc6deb41108ab4f7aa0bbd3175888278589c3e5e9109"
+    },
+    {
+      "path": "F:\\AI_CAD\\datasets\\abc\\step\\abc_0000\\00000049_aa208c45e8734584a147f595_step_000.step",
+      "sha256": "9629fd2c66a40e5af4cf2db973d9fcfd4801b9a097770d1f285fa30421a6bc15"
+    },
+    {
+      "path": "F:\\AI_CAD\\datasets\\abc\\step\\abc_0000\\00000050_80d90bfdd2e74e709956122a_step_000.step",
+      "sha256": "579e4b3e18709f6888a4179f189926e40c35a35c156392ec593105cf1650a60c"
+    },
+    {
+      "path": "F:\\AI_CAD\\datasets\\abc\\step\\abc_0000\\00000051_666139e3bff64d4e8a6ce183_step_000.step",
+      "sha256": "84be71bafb16de56aa949654c43550f76faaf28ae2d3ca488396fb5b0c62fde5"
+    },
+    {
+      "path": "F:\\AI_CAD\\datasets\\abc\\step\\abc_0000\\00000052_666139e3bff64d4e8a6ce183_step_001.step",
+      "sha256": "ea74752ddf4daa678f41e31cb60ab25d87c47e9aa6f04c15463a2681e1e24967"
+    },
+    {
+      "path": "F:\\AI_CAD\\datasets\\abc\\step\\abc_0000\\00000053_666139e3bff64d4e8a6ce183_step_002.step",
+      "sha256": "72d110462e1c778f77bf1f39a1e33019a02b50e3d6ea261958de05916222f575"
+    },
+    {
+      "path": "F:\\AI_CAD\\datasets\\abc\\step\\abc_0000\\00000054_666139e3bff64d4e8a6ce183_step_003.step",
+      "sha256": "fa2afb7f19cd4f5eb3f0fe97d843207598cf3eeac1377b944b046e7a61b2e5ee"
+    },
+    {
+      "path": "F:\\AI_CAD\\datasets\\abc\\step\\abc_0000\\00000055_666139e3bff64d4e8a6ce183_step_004.step",
+      "sha256": "7b590d2d1aa5b48013a68c6a5ac68d740cde6eaf9290bf0603291b3fe1163dd7"
+    },
+    {
+      "path": "F:\\AI_CAD\\datasets\\abc\\step\\abc_0000\\00000056_666139e3bff64d4e8a6ce183_step_005.step",
+      "sha256": "8f7b16ad7316d2742eef4743b5b2650f14173ac6dbe1d068978f6fe0e8a9fd7d"
+    },
+    {
+      "path": "F:\\AI_CAD\\datasets\\abc\\step\\abc_0000\\00000057_666139e3bff64d4e8a6ce183_step_006.step",
+      "sha256": "ea0a0966c40ba5394ddf7d9def2caebb0f0dbe5c5e0171123561da1dd865f8b9"
+    },
+    {
+      "path": "F:\\AI_CAD\\datasets\\abc\\step\\abc_0000\\00000058_666139e3bff64d4e8a6ce183_step_007.step",
+      "sha256": "074a7a75a62a033f74df584dd38c544ce25f977f74fe83fa1177ab10cc591eec"
+    },
+    {
+      "path": "F:\\AI_CAD\\datasets\\abc\\step\\abc_0000\\00000059_767e4372b5f94a88a7a17d90_step_000.step",
+      "sha256": "d2a8628a1a6e8c9e1cde35fe0134b6f5495d90faae2902348f8553082f3e1b81"
+    },
+    {
+      "path": "F:\\AI_CAD\\datasets\\abc\\step\\abc_0000\\00000060_767e4372b5f94a88a7a17d90_step_001.step",
+      "sha256": "b303289c63ec9896115021c5bd134b0c767b064e10088b19a4319b73ad32c55f"
+    },
+    {
+      "path": "F:\\AI_CAD\\datasets\\abc\\step\\abc_0000\\00000061_767e4372b5f94a88a7a17d90_step_002.step",
+      "sha256": "3cd8ca8c623f29b9798b601f43e3235f54bba0a409546baaa8f4ac49469318ea"
+    },
+    {
+      "path": "F:\\AI_CAD\\datasets\\abc\\step\\abc_0000\\00000062_767e4372b5f94a88a7a17d90_step_003.step",
+      "sha256": "b7f2b867b8e02b33e206a2d70f98fabe99fae76c96475b26cffac5712b24d761"
+    },
+    {
+      "path": "F:\\AI_CAD\\datasets\\abc\\step\\abc_0000\\00000063_767e4372b5f94a88a7a17d90_step_004.step",
+      "sha256": "8d4808cb1e75b3a56ee1491724d70e60b67ad69b5bac1ac7ac62c1966ae84198"
+    },
+    {
+      "path": "F:\\AI_CAD\\datasets\\abc\\step\\abc_0000\\00000064_767e4372b5f94a88a7a17d90_step_005.step",
+      "sha256": "c06713d7cebf6bfe3360a83a0c663df760793316272b23d8ff3c98e4cd4cfea9"
+    },
+    {
+      "path": "F:\\AI_CAD\\datasets\\abc\\step\\abc_0000\\00000065_767e4372b5f94a88a7a17d90_step_006.step",
+      "sha256": "a1cde6eded28099c960b4b3da9738665aca724b6de53e2eff0000b68d9b1e64a"
+    },
+    {
+      "path": "F:\\AI_CAD\\datasets\\abc\\step\\abc_0000\\00000066_767e4372b5f94a88a7a17d90_step_007.step",
+      "sha256": "3e5d5e83a128759ff4ddb8041fdf718ddc0887322784a5f9806c5051c486d520"
+    },
+    {
+      "path": "F:\\AI_CAD\\datasets\\abc\\step\\abc_0000\\00000067_767e4372b5f94a88a7a17d90_step_008.step",
+      "sha256": "386b6dfe6e448feb5d3409ce94adb2d04831e206cd55d3d3c4be9a57a46dc093"
+    },
+    {
+      "path": "F:\\AI_CAD\\datasets\\abc\\step\\abc_0000\\00000068_767e4372b5f94a88a7a17d90_step_009.step",
+      "sha256": "48b1785325b53923c2570e1a7507f70a06df8c62d05a79e701b5e6797a94ebcf"
+    },
+    {
+      "path": "F:\\AI_CAD\\datasets\\abc\\step\\abc_0000\\00000069_767e4372b5f94a88a7a17d90_step_010.step",
+      "sha256": "ab74763058885361ad368436bac613ff05628ab1a81c10afe82d38c10f147a6e"
+    },
+    {
+      "path": "F:\\AI_CAD\\datasets\\abc\\step\\abc_0000\\00000070_767e4372b5f94a88a7a17d90_step_011.step",
+      "sha256": "f5096eb95dd5c974e30f68dee6a9c5c991218526bb0f0ef68d4065d0e8f72314"
+    },
+    {
+      "path": "F:\\AI_CAD\\datasets\\abc\\step\\abc_0000\\00000071_767e4372b5f94a88a7a17d90_step_012.step",
+      "sha256": "9c20b7a3ca73ab1a67241ca81c79256a28dfef6a74771e3a9b97360aa5ca3814"
+    },
+    {
+      "path": "F:\\AI_CAD\\datasets\\abc\\step\\abc_0000\\00000072_767e4372b5f94a88a7a17d90_step_013.step",
+      "sha256": "bcf1be91542b7a645fcc4ed9e1c4fb6db6faa4b4f0d3766da1b9074e462d4405"
+    },
+    {
+      "path": "F:\\AI_CAD\\datasets\\abc\\step\\abc_0000\\00000073_767e4372b5f94a88a7a17d90_step_014.step",
+      "sha256": "80795f336ab501e927d8799731cbdeccb5d2c32d4522bb1e0fb6393cd181a074"
+    },
+    {
+      "path": "F:\\AI_CAD\\datasets\\abc\\step\\abc_0000\\00000074_767e4372b5f94a88a7a17d90_step_015.step",
+      "sha256": "17d5275f548269b6aac32ea85d9e5be3b4b97a336d66e799a5f61f2c00550851"
+    },
+    {
+      "path": "F:\\AI_CAD\\datasets\\abc\\step\\abc_0000\\00000075_767e4372b5f94a88a7a17d90_step_016.step",
+      "sha256": "9ff3a4a26083141bbc2c20d4359b5674c38e17525e8a49c103bbc208d0f82596"
+    },
+    {
+      "path": "F:\\AI_CAD\\datasets\\abc\\step\\abc_0000\\00000076_767e4372b5f94a88a7a17d90_step_017.step",
+      "sha256": "7cdc4a25e15a3003e1d04eb78202424a3faf1b489b4188903c2402afd0b6844c"
+    },
+    {
+      "path": "F:\\AI_CAD\\datasets\\abc\\step\\abc_0000\\00000077_767e4372b5f94a88a7a17d90_step_018.step",
+      "sha256": "bccd40ce3e906b98b490e9cc2a69b21d3d9f561a6f7b0f0c5b4251eaca0601ac"
+    },
+    {
+      "path": "F:\\AI_CAD\\datasets\\abc\\step\\abc_0000\\00000078_767e4372b5f94a88a7a17d90_step_019.step",
+      "sha256": "aa9d874c918ac7aa7f105983c053998c626e268224c540571d6e873b4657d639"
+    },
+    {
+      "path": "F:\\AI_CAD\\datasets\\abc\\step\\abc_0000\\00000079_767e4372b5f94a88a7a17d90_step_020.step",
+      "sha256": "3ba094cdff6171e0efa1912b49a1deba31c4f70cd16e713a52339d54bf8c3a97"
+    },
+    {
+      "path": "F:\\AI_CAD\\datasets\\abc\\step\\abc_0000\\00000080_ed3cecad25c64f7abea4cf64_step_000.step",
+      "sha256": "d188c61d972ffa672b23194b15918124de32adc92d7d11287448a453b693c2a2"
+    },
+    {
+      "path": "F:\\AI_CAD\\datasets\\abc\\step\\abc_0000\\00000081_201dac73881b409b8d57f008_step_000.step",
+      "sha256": "61aa684c029dd7acb52177d795ce472b7070ecf7edc83f5eb2ea60c8b81040ba"
+    },
+    {
+      "path": "F:\\AI_CAD\\datasets\\abc\\step\\abc_0000\\00000082_55b775e2dd7149a8bd9c9de7_step_000.step",
+      "sha256": "83eb18e7ba1adc4c113f516b17ba4d9eec455d4d8d8725769ce67e5a53e161ae"
+    },
+    {
+      "path": "F:\\AI_CAD\\datasets\\abc\\step\\abc_0000\\00000083_9ea934d3400e45fb9d190941_step_000.step",
+      "sha256": "78e9361a9fd301e6bbbf71fdfcfb7a70f5094e5c68fc314b571dd93e04c3f339"
+    },
+    {
+      "path": "F:\\AI_CAD\\datasets\\abc\\step\\abc_0000\\00000084_9a051df11afa4fc5a1d667cd_step_000.step",
+      "sha256": "9de3a9963c2f2f5a5540cd76c31bf80aaf5ab0df12ac79a9dab48bd85ab27c25"
+    },
+    {
+      "path": "F:\\AI_CAD\\datasets\\abc\\step\\abc_0000\\00000085_b4f9335a60a14cecaa599159_step_000.step",
+      "sha256": "38af6db144911ebb61ce414656fcd2a21638b4ccda82ab8ee72f521bb367e168"
+    },
+    {
+      "path": "F:\\AI_CAD\\datasets\\abc\\step\\abc_0000\\00000086_b4f9335a60a14cecaa599159_step_001.step",
+      "sha256": "bbdddcbb4c0a9f8ddbbbe65921d656649810e8b17ea9e3ae7a2f1596d8081302"
+    },
+    {
+      "path": "F:\\AI_CAD\\datasets\\abc\\step\\abc_0000\\00000087_b4f9335a60a14cecaa599159_step_002.step",
+      "sha256": "42101eb431e3760dbce6737803fdb3a89336dde6fbd02e8d94bcce4f23299ec8"
+    },
+    {
+      "path": "F:\\AI_CAD\\datasets\\abc\\step\\abc_0000\\00000088_169bec34317b46e98eb1a403_step_000.step",
+      "sha256": "83a101845dfd3749f3e893c23bfdb1aaf12d5dd8c10ea9a19d1d972b2503fad0"
+    },
+    {
+      "path": "F:\\AI_CAD\\datasets\\abc\\step\\abc_0000\\00000089_169bec34317b46e98eb1a403_step_001.step",
+      "sha256": "56c93125808f4f9363282bdcd84fdd5f731ab56cab7a84825704565c520b05f5"
+    },
+    {
+      "path": "F:\\AI_CAD\\datasets\\abc\\step\\abc_0000\\00000090_169bec34317b46e98eb1a403_step_002.step",
+      "sha256": "e32eeaca5e4e202baab4cdeadd5a98509016f0ffa0e51ff8ef6cfd136ef7a4f6"
+    },
+    {
+      "path": "F:\\AI_CAD\\datasets\\abc\\step\\abc_0000\\00000091_169bec34317b46e98eb1a403_step_003.step",
+      "sha256": "be1bae43a59cd6bc4b05a22a293b14c08cf7cf8ef5bf52f771681c3d044df12e"
+    },
+    {
+      "path": "F:\\AI_CAD\\datasets\\abc\\step\\abc_0000\\00000092_169bec34317b46e98eb1a403_step_004.step",
+      "sha256": "b159376f94b626b0994d5f0420f3db5f93768c132bf1d74b55a5bff5d17a8f71"
+    },
+    {
+      "path": "F:\\AI_CAD\\datasets\\abc\\step\\abc_0000\\00000093_169bec34317b46e98eb1a403_step_005.step",
+      "sha256": "3303e4148b4beaeb942eb752de61fc93ea328f503a13e7fd57695d2a3ef3c00f"
+    },
+    {
+      "path": "F:\\AI_CAD\\datasets\\abc\\step\\abc_0000\\00000094_a47a98a09959465188a093ad_step_000.step",
+      "sha256": "8e389b5571066e3f0d6c4c934f2581f96b0ca32228386121da23678ed495ac00"
+    },
+    {
+      "path": "F:\\AI_CAD\\datasets\\abc\\step\\abc_0000\\00000095_79c7c1db73274f22b599eef0_step_000.step",
+      "sha256": "1bc04e6cfa703776267ced86e3e1ece0b3f55bf1912aaa82696ca3856fe54261"
+    },
+    {
+      "path": "F:\\AI_CAD\\datasets\\abc\\step\\abc_0000\\00000096_fcd027a9411a4ae7ac146826_step_000.step",
+      "sha256": "8bdd6aaf27c145f019747352fafbf7967cb715f8643740a37527b5c666562a0f"
+    },
+    {
+      "path": "F:\\AI_CAD\\datasets\\abc\\step\\abc_0000\\00000097_a6920073c7fe448584f0d647_step_000.step",
+      "sha256": "7beb62ad0c1fd1434214da8a92ef5f3620080f6c7cb10ff1fe83daa31759a727"
+    },
+    {
+      "path": "F:\\AI_CAD\\datasets\\abc\\step\\abc_0000\\00000098_72cf0f9ca5324822a4d41a80_step_000.step",
+      "sha256": "d6b18a044faf965acdace83eb70fd042235776173dfe41be9428d081d5e5b428"
+    },
+    {
+      "path": "F:\\AI_CAD\\datasets\\abc\\step\\abc_0000\\00000099_7911d7c4c4b9417d92801ff6_step_000.step",
+      "sha256": "d755b713f0f24eb3cc01b54a74050cdf2afd542d9afd8a3843b221fe5697079b"
+    }
+  ],
+  "identity_hash": "3ab054da0a57bb49cc159e8d1d2611ed29b7ed2f52d3b44dfa958fa31714edc7",
+  "outcome_counts": {
+    "error": 2,
+    "incomplete": 63,
+    "accepted": 30,
+    "invalid_input": 5
+  }
+}

@@ -1,0 +1,1282 @@
+{
+  "format": "step-symbols",
+  "version": 1,
+  "compiler": "scapi-plan-1",
+  "plan_hash": "f0a3ca78636ada294e63462a03dca51ddfeaa309aa8d68ebd0396efa6fc715e8",
+  "code_sha256": "dca49c48974976c6ea59f965385ebcf6b7389aaf5767fd25c2a5eba46dd2d169",
+  "parameters": {
+    "body_001_factor": {
+      "symbol": "P001_BODY_001_FACTOR",
+      "editability": "independent",
+      "type": "number",
+      "unit": "1",
+      "value": 1.0
+    },
+    "body_001_origin": {
+      "symbol": "P002_BODY_001_ORIGIN",
+      "editability": "independent",
+      "type": "point3",
+      "unit": "mm",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "body_001_x_axis": {
+      "symbol": "P003_BODY_001_X_AXIS",
+      "editability": "independent",
+      "type": "direction3",
+      "unit": "1",
+      "value": [
+        1.0,
+        0.0,
+        0.0
+      ]
+    },
+    "body_001_y_axis": {
+      "symbol": "P004_BODY_001_Y_AXIS",
+      "editability": "independent",
+      "type": "direction3",
+      "unit": "1",
+      "value": [
+        0.0,
+        1.0,
+        0.0
+      ]
+    }
+  },
+  "source_map": {
+    "solid_01_partition_001_solid_01_loop_01_edge_001": [
+      {
+        "function": "make_profile_001",
+        "line": 16,
+        "end": 25
+      }
+    ],
+    "solid_01_partition_001_solid_01_loop_01": [
+      {
+        "function": "make_profile_001",
+        "line": 26,
+        "end": 26
+      }
+    ],
+    "solid_01_partition_001_solid_01_loop_02_edge_001": [
+      {
+        "function": "make_profile_001",
+        "line": 27,
+        "end": 36
+      }
+    ],
+    "solid_01_partition_001_solid_01_loop_02": [
+      {
+        "function": "make_profile_001",
+        "line": 37,
+        "end": 37
+      }
+    ],
+    "solid_01_partition_001_solid_01_profile": [
+      {
+        "function": "make_profile_001",
+        "line": 38,
+        "end": 38
+      }
+    ],
+    "solid_01_partition_002_solid_01_section_01_loop_01_edge_001": [
+      {
+        "function": "make_profile_002",
+        "line": 43,
+        "end": 43
+      }
+    ],
+    "solid_01_partition_002_solid_01_section_01_loop_01_edge_002": [
+      {
+        "function": "make_profile_002",
+        "line": 44,
+        "end": 49
+      }
+    ],
+    "solid_01_partition_002_solid_01_section_01_loop_01_edge_003": [
+      {
+        "function": "make_profile_002",
+        "line": 50,
+        "end": 50
+      }
+    ],
+    "solid_01_partition_002_solid_01_section_01_loop_01_edge_004": [
+      {
+        "function": "make_profile_002",
+        "line": 51,
+        "end": 51
+      }
+    ],
+    "solid_01_partition_002_solid_01_section_01_loop_01_edge_005": [
+      {
+        "function": "make_profile_002",
+        "line": 52,
+        "end": 57
+      }
+    ],
+    "solid_01_partition_002_solid_01_section_01_loop_01_edge_006": [
+      {
+        "function": "make_profile_002",
+        "line": 58,
+        "end": 58
+      }
+    ],
+    "solid_01_partition_002_solid_01_section_01_loop_01": [
+      {
+        "function": "make_profile_002",
+        "line": 59,
+        "end": 59
+      }
+    ],
+    "solid_01_partition_002_solid_01_section_01_profile": [
+      {
+        "function": "make_profile_002",
+        "line": 60,
+        "end": 60
+      }
+    ],
+    "solid_01_partition_003_solid_01_section_01_loop_01_edge_001": [
+      {
+        "function": "make_profile_003",
+        "line": 65,
+        "end": 70
+      }
+    ],
+    "solid_01_partition_003_solid_01_section_01_loop_01_edge_002": [
+      {
+        "function": "make_profile_003",
+        "line": 71,
+        "end": 71
+      }
+    ],
+    "solid_01_partition_003_solid_01_section_01_loop_01_edge_003": [
+      {
+        "function": "make_profile_003",
+        "line": 72,
+        "end": 77
+      }
+    ],
+    "solid_01_partition_003_solid_01_section_01_loop_01_edge_004": [
+      {
+        "function": "make_profile_003",
+        "line": 78,
+        "end": 78
+      }
+    ],
+    "solid_01_partition_003_solid_01_section_01_loop_01": [
+      {
+        "function": "make_profile_003",
+        "line": 79,
+        "end": 79
+      }
+    ],
+    "solid_01_partition_003_solid_01_section_01_profile": [
+      {
+        "function": "make_profile_003",
+        "line": 80,
+        "end": 80
+      }
+    ],
+    "solid_01_partition_004_solid_01_csg_cap_002_1_loop_01_edge_002": [
+      {
+        "function": "make_profile_004",
+        "line": 85,
+        "end": 85
+      }
+    ],
+    "solid_01_partition_004_solid_01_csg_cap_002_1_loop_01_edge_001": [
+      {
+        "function": "make_profile_004",
+        "line": 86,
+        "end": 90
+      }
+    ],
+    "solid_01_partition_004_solid_01_csg_cap_002_1_loop_01": [
+      {
+        "function": "make_profile_004",
+        "line": 91,
+        "end": 91
+      }
+    ],
+    "solid_01_partition_004_solid_01_csg_cap_002_1_profile": [
+      {
+        "function": "make_profile_004",
+        "line": 92,
+        "end": 92
+      }
+    ],
+    "solid_01_partition_005_solid_01_section_01_loop_01_edge_001": [
+      {
+        "function": "make_profile_005",
+        "line": 97,
+        "end": 102
+      }
+    ],
+    "solid_01_partition_005_solid_01_section_01_loop_01_edge_002": [
+      {
+        "function": "make_profile_005",
+        "line": 103,
+        "end": 103
+      }
+    ],
+    "solid_01_partition_005_solid_01_section_01_loop_01_edge_003": [
+      {
+        "function": "make_profile_005",
+        "line": 104,
+        "end": 109
+      }
+    ],
+    "solid_01_partition_005_solid_01_section_01_loop_01_edge_004": [
+      {
+        "function": "make_profile_005",
+        "line": 110,
+        "end": 110
+      }
+    ],
+    "solid_01_partition_005_solid_01_section_01_loop_01": [
+      {
+        "function": "make_profile_005",
+        "line": 111,
+        "end": 111
+      }
+    ],
+    "solid_01_partition_005_solid_01_section_01_profile": [
+      {
+        "function": "make_profile_005",
+        "line": 112,
+        "end": 112
+      }
+    ],
+    "solid_01_partition_007_solid_01_csg_cap_004_0_loop_01_edge_005": [
+      {
+        "function": "make_profile_006",
+        "line": 117,
+        "end": 117
+      }
+    ],
+    "solid_01_partition_007_solid_01_csg_cap_004_0_loop_01_edge_004": [
+      {
+        "function": "make_profile_006",
+        "line": 118,
+        "end": 122
+      }
+    ],
+    "solid_01_partition_007_solid_01_csg_cap_004_0_loop_01_edge_003": [
+      {
+        "function": "make_profile_006",
+        "line": 123,
+        "end": 127
+      }
+    ],
+    "solid_01_partition_007_solid_01_csg_cap_004_0_loop_01_edge_002": [
+      {
+        "function": "make_profile_006",
+        "line": 128,
+        "end": 128
+      }
+    ],
+    "solid_01_partition_007_solid_01_csg_cap_004_0_loop_01_edge_001": [
+      {
+        "function": "make_profile_006",
+        "line": 129,
+        "end": 133
+      }
+    ],
+    "solid_01_partition_007_solid_01_csg_cap_004_0_loop_01": [
+      {
+        "function": "make_profile_006",
+        "line": 134,
+        "end": 134
+      }
+    ],
+    "solid_01_partition_007_solid_01_csg_cap_004_0_profile": [
+      {
+        "function": "make_profile_006",
+        "line": 135,
+        "end": 135
+      }
+    ],
+    "solid_01_partition_008_solid_01_section_01_loop_01_edge_001": [
+      {
+        "function": "make_profile_007",
+        "line": 140,
+        "end": 145
+      }
+    ],
+    "solid_01_partition_008_solid_01_section_01_loop_01_edge_002": [
+      {
+        "function": "make_profile_007",
+        "line": 146,
+        "end": 146
+      }
+    ],
+    "solid_01_partition_008_solid_01_section_01_loop_01_edge_003": [
+      {
+        "function": "make_profile_007",
+        "line": 147,
+        "end": 152
+      }
+    ],
+    "solid_01_partition_008_solid_01_section_01_loop_01_edge_004": [
+      {
+        "function": "make_profile_007",
+        "line": 153,
+        "end": 153
+      }
+    ],
+    "solid_01_partition_008_solid_01_section_01_loop_01": [
+      {
+        "function": "make_profile_007",
+        "line": 154,
+        "end": 154
+      }
+    ],
+    "solid_01_partition_008_solid_01_section_01_profile": [
+      {
+        "function": "make_profile_007",
+        "line": 155,
+        "end": 155
+      }
+    ],
+    "solid_01_partition_009_solid_01_section_01_loop_01_edge_001": [
+      {
+        "function": "make_profile_008",
+        "line": 160,
+        "end": 160
+      }
+    ],
+    "solid_01_partition_009_solid_01_section_01_loop_01_edge_002": [
+      {
+        "function": "make_profile_008",
+        "line": 161,
+        "end": 166
+      }
+    ],
+    "solid_01_partition_009_solid_01_section_01_loop_01_edge_003": [
+      {
+        "function": "make_profile_008",
+        "line": 167,
+        "end": 167
+      }
+    ],
+    "solid_01_partition_009_solid_01_section_01_loop_01_edge_004": [
+      {
+        "function": "make_profile_008",
+        "line": 168,
+        "end": 173
+      }
+    ],
+    "solid_01_partition_009_solid_01_section_01_loop_01": [
+      {
+        "function": "make_profile_008",
+        "line": 174,
+        "end": 174
+      }
+    ],
+    "solid_01_partition_009_solid_01_section_01_profile": [
+      {
+        "function": "make_profile_008",
+        "line": 175,
+        "end": 175
+      }
+    ],
+    "solid_01_partition_011_solid_01_csg_cap_002_0_loop_01_edge_005": [
+      {
+        "function": "make_profile_009",
+        "line": 180,
+        "end": 184
+      }
+    ],
+    "solid_01_partition_011_solid_01_csg_cap_002_0_loop_01_edge_004": [
+      {
+        "function": "make_profile_009",
+        "line": 185,
+        "end": 189
+      }
+    ],
+    "solid_01_partition_011_solid_01_csg_cap_002_0_loop_01_edge_003": [
+      {
+        "function": "make_profile_009",
+        "line": 190,
+        "end": 190
+      }
+    ],
+    "solid_01_partition_011_solid_01_csg_cap_002_0_loop_01_edge_002": [
+      {
+        "function": "make_profile_009",
+        "line": 191,
+        "end": 195
+      }
+    ],
+    "solid_01_partition_011_solid_01_csg_cap_002_0_loop_01_edge_001": [
+      {
+        "function": "make_profile_009",
+        "line": 196,
+        "end": 196
+      }
+    ],
+    "solid_01_partition_011_solid_01_csg_cap_002_0_loop_01": [
+      {
+        "function": "make_profile_009",
+        "line": 197,
+        "end": 197
+      }
+    ],
+    "solid_01_partition_011_solid_01_csg_cap_002_0_profile": [
+      {
+        "function": "make_profile_009",
+        "line": 198,
+        "end": 198
+      }
+    ],
+    "solid_01_partition_012_solid_01_csg_cap_009_1_loop_01_edge_001": [
+      {
+        "function": "make_profile_010",
+        "line": 203,
+        "end": 212
+      }
+    ],
+    "solid_01_partition_012_solid_01_csg_cap_009_1_loop_01": [
+      {
+        "function": "make_profile_010",
+        "line": 213,
+        "end": 213
+      }
+    ],
+    "solid_01_partition_012_solid_01_csg_cap_009_1_profile": [
+      {
+        "function": "make_profile_010",
+        "line": 214,
+        "end": 214
+      }
+    ],
+    "solid_01_partition_012_solid_01_residual_cut_01_solid_01_loop_01_edge_004": [
+      {
+        "function": "make_profile_011",
+        "line": 219,
+        "end": 219
+      }
+    ],
+    "solid_01_partition_012_solid_01_residual_cut_01_solid_01_loop_01_edge_003": [
+      {
+        "function": "make_profile_011",
+        "line": 220,
+        "end": 220
+      }
+    ],
+    "solid_01_partition_012_solid_01_residual_cut_01_solid_01_loop_01_edge_002": [
+      {
+        "function": "make_profile_011",
+        "line": 221,
+        "end": 221
+      }
+    ],
+    "solid_01_partition_012_solid_01_residual_cut_01_solid_01_loop_01_edge_001": [
+      {
+        "function": "make_profile_011",
+        "line": 222,
+        "end": 222
+      }
+    ],
+    "solid_01_partition_012_solid_01_residual_cut_01_solid_01_loop_01": [
+      {
+        "function": "make_profile_011",
+        "line": 223,
+        "end": 223
+      }
+    ],
+    "solid_01_partition_012_solid_01_residual_cut_01_solid_01_profile": [
+      {
+        "function": "make_profile_011",
+        "line": 224,
+        "end": 224
+      }
+    ],
+    "solid_01_partition_001_solid_01_extrude_local": [
+      {
+        "function": "make_body_001",
+        "line": 229,
+        "end": 229
+      }
+    ],
+    "solid_01_partition_001_solid_01_frame": [
+      {
+        "function": "make_body_001",
+        "line": 230,
+        "end": 230
+      }
+    ],
+    "solid_01_partition_001_solid_01_extrude": [
+      {
+        "function": "make_body_001",
+        "line": 230,
+        "end": 230
+      }
+    ],
+    "solid_01_partition_002_solid_01_revolve_section_01_local": [
+      {
+        "function": "make_body_001",
+        "line": 231,
+        "end": 231
+      }
+    ],
+    "solid_01_partition_002_solid_01_section_01_frame": [
+      {
+        "function": "make_body_001",
+        "line": 232,
+        "end": 232
+      }
+    ],
+    "solid_01_partition_002_solid_01_revolve": [
+      {
+        "function": "make_body_001",
+        "line": 232,
+        "end": 232
+      }
+    ],
+    "solid_01_partition_003_solid_01_revolve_section_01_local": [
+      {
+        "function": "make_body_001",
+        "line": 233,
+        "end": 233
+      }
+    ],
+    "solid_01_partition_003_solid_01_section_01_frame": [
+      {
+        "function": "make_body_001",
+        "line": 234,
+        "end": 234
+      }
+    ],
+    "solid_01_partition_003_solid_01_revolve": [
+      {
+        "function": "make_body_001",
+        "line": 234,
+        "end": 234
+      }
+    ],
+    "solid_01_partition_004_solid_01_csg_tool_007_local": [
+      {
+        "function": "make_body_001",
+        "line": 235,
+        "end": 235
+      }
+    ],
+    "solid_01_partition_004_solid_01_csg_tool_007_frame": [
+      {
+        "function": "make_body_001",
+        "line": 236,
+        "end": 236
+      }
+    ],
+    "solid_01_partition_004_solid_01_csg_tool_007": [
+      {
+        "function": "make_body_001",
+        "line": 236,
+        "end": 236
+      }
+    ],
+    "solid_01_partition_004_solid_01_csg_tool_010_local": [
+      {
+        "function": "make_body_001",
+        "line": 237,
+        "end": 237
+      }
+    ],
+    "solid_01_partition_004_solid_01_csg_tool_010_frame": [
+      {
+        "function": "make_body_001",
+        "line": 238,
+        "end": 238
+      }
+    ],
+    "solid_01_partition_004_solid_01_csg_tool_010": [
+      {
+        "function": "make_body_001",
+        "line": 238,
+        "end": 238
+      }
+    ],
+    "solid_01_partition_004_solid_01_csg_op_001": [
+      {
+        "function": "make_body_001",
+        "line": 239,
+        "end": 239
+      }
+    ],
+    "solid_01_partition_005_solid_01_revolve_section_01_local": [
+      {
+        "function": "make_body_001",
+        "line": 240,
+        "end": 240
+      }
+    ],
+    "solid_01_partition_005_solid_01_section_01_frame": [
+      {
+        "function": "make_body_001",
+        "line": 241,
+        "end": 241
+      }
+    ],
+    "solid_01_partition_005_solid_01_revolve": [
+      {
+        "function": "make_body_001",
+        "line": 241,
+        "end": 241
+      }
+    ],
+    "solid_01_partition_006_solid_01_csg_tool_001_local": [
+      {
+        "function": "make_body_001",
+        "line": 242,
+        "end": 242
+      }
+    ],
+    "solid_01_partition_006_solid_01_csg_tool_001_frame": [
+      {
+        "function": "make_body_001",
+        "line": 243,
+        "end": 243
+      }
+    ],
+    "solid_01_partition_006_solid_01_csg_tool_001": [
+      {
+        "function": "make_body_001",
+        "line": 243,
+        "end": 243
+      }
+    ],
+    "solid_01_partition_006_solid_01_csg_tool_006_local": [
+      {
+        "function": "make_body_001",
+        "line": 244,
+        "end": 244
+      }
+    ],
+    "solid_01_partition_006_solid_01_csg_tool_006_frame": [
+      {
+        "function": "make_body_001",
+        "line": 245,
+        "end": 245
+      }
+    ],
+    "solid_01_partition_006_solid_01_csg_tool_006": [
+      {
+        "function": "make_body_001",
+        "line": 245,
+        "end": 245
+      }
+    ],
+    "solid_01_partition_006_solid_01_csg_op_001": [
+      {
+        "function": "make_body_001",
+        "line": 246,
+        "end": 246
+      }
+    ],
+    "solid_01_partition_006_solid_01_csg_tool_007_local": [
+      {
+        "function": "make_body_001",
+        "line": 247,
+        "end": 247
+      }
+    ],
+    "solid_01_partition_006_solid_01_csg_tool_007_frame": [
+      {
+        "function": "make_body_001",
+        "line": 248,
+        "end": 248
+      }
+    ],
+    "solid_01_partition_006_solid_01_csg_tool_007": [
+      {
+        "function": "make_body_001",
+        "line": 248,
+        "end": 248
+      }
+    ],
+    "solid_01_partition_006_solid_01_csg_op_003": [
+      {
+        "function": "make_body_001",
+        "line": 249,
+        "end": 249
+      }
+    ],
+    "solid_01_partition_006_solid_01_csg_tool_008_local": [
+      {
+        "function": "make_body_001",
+        "line": 250,
+        "end": 250
+      }
+    ],
+    "solid_01_partition_006_solid_01_csg_tool_008_frame": [
+      {
+        "function": "make_body_001",
+        "line": 251,
+        "end": 251
+      }
+    ],
+    "solid_01_partition_006_solid_01_csg_tool_008": [
+      {
+        "function": "make_body_001",
+        "line": 251,
+        "end": 251
+      }
+    ],
+    "solid_01_partition_006_solid_01_csg_op_005": [
+      {
+        "function": "make_body_001",
+        "line": 252,
+        "end": 252
+      }
+    ],
+    "solid_01_partition_006_solid_01_csg_tool_009_local": [
+      {
+        "function": "make_body_001",
+        "line": 253,
+        "end": 253
+      }
+    ],
+    "solid_01_partition_006_solid_01_csg_tool_009_frame": [
+      {
+        "function": "make_body_001",
+        "line": 254,
+        "end": 254
+      }
+    ],
+    "solid_01_partition_006_solid_01_csg_tool_009": [
+      {
+        "function": "make_body_001",
+        "line": 254,
+        "end": 254
+      }
+    ],
+    "solid_01_partition_006_solid_01_csg_op_007": [
+      {
+        "function": "make_body_001",
+        "line": 255,
+        "end": 255
+      }
+    ],
+    "solid_01_partition_006_solid_01_csg_tool_010_local": [
+      {
+        "function": "make_body_001",
+        "line": 256,
+        "end": 256
+      }
+    ],
+    "solid_01_partition_006_solid_01_csg_tool_010_frame": [
+      {
+        "function": "make_body_001",
+        "line": 257,
+        "end": 257
+      }
+    ],
+    "solid_01_partition_006_solid_01_csg_tool_010": [
+      {
+        "function": "make_body_001",
+        "line": 257,
+        "end": 257
+      }
+    ],
+    "solid_01_partition_006_solid_01_csg_op_009": [
+      {
+        "function": "make_body_001",
+        "line": 258,
+        "end": 258
+      }
+    ],
+    "solid_01_partition_007_solid_01_csg_tool_002_local": [
+      {
+        "function": "make_body_001",
+        "line": 259,
+        "end": 259
+      }
+    ],
+    "solid_01_partition_007_solid_01_csg_tool_002_frame": [
+      {
+        "function": "make_body_001",
+        "line": 260,
+        "end": 260
+      }
+    ],
+    "solid_01_partition_007_solid_01_csg_tool_002": [
+      {
+        "function": "make_body_001",
+        "line": 260,
+        "end": 260
+      }
+    ],
+    "solid_01_partition_007_solid_01_csg_tool_009_local": [
+      {
+        "function": "make_body_001",
+        "line": 261,
+        "end": 261
+      }
+    ],
+    "solid_01_partition_007_solid_01_csg_tool_009_frame": [
+      {
+        "function": "make_body_001",
+        "line": 262,
+        "end": 262
+      }
+    ],
+    "solid_01_partition_007_solid_01_csg_tool_009": [
+      {
+        "function": "make_body_001",
+        "line": 262,
+        "end": 262
+      }
+    ],
+    "solid_01_partition_007_solid_01_csg_op_001": [
+      {
+        "function": "make_body_001",
+        "line": 263,
+        "end": 263
+      }
+    ],
+    "solid_01_partition_008_solid_01_revolve_section_01_local": [
+      {
+        "function": "make_body_001",
+        "line": 264,
+        "end": 264
+      }
+    ],
+    "solid_01_partition_008_solid_01_section_01_frame": [
+      {
+        "function": "make_body_001",
+        "line": 265,
+        "end": 265
+      }
+    ],
+    "solid_01_partition_008_solid_01_revolve": [
+      {
+        "function": "make_body_001",
+        "line": 265,
+        "end": 265
+      }
+    ],
+    "solid_01_partition_009_solid_01_revolve_section_01_local": [
+      {
+        "function": "make_body_001",
+        "line": 266,
+        "end": 266
+      }
+    ],
+    "solid_01_partition_009_solid_01_section_01_frame": [
+      {
+        "function": "make_body_001",
+        "line": 267,
+        "end": 267
+      }
+    ],
+    "solid_01_partition_009_solid_01_revolve": [
+      {
+        "function": "make_body_001",
+        "line": 267,
+        "end": 267
+      }
+    ],
+    "solid_01_partition_010_solid_01_csg_tool_001_local": [
+      {
+        "function": "make_body_001",
+        "line": 268,
+        "end": 268
+      }
+    ],
+    "solid_01_partition_010_solid_01_csg_tool_001_frame": [
+      {
+        "function": "make_body_001",
+        "line": 269,
+        "end": 269
+      }
+    ],
+    "solid_01_partition_010_solid_01_csg_tool_001": [
+      {
+        "function": "make_body_001",
+        "line": 269,
+        "end": 269
+      }
+    ],
+    "solid_01_partition_010_solid_01_csg_tool_010_local": [
+      {
+        "function": "make_body_001",
+        "line": 270,
+        "end": 270
+      }
+    ],
+    "solid_01_partition_010_solid_01_csg_tool_010_frame": [
+      {
+        "function": "make_body_001",
+        "line": 271,
+        "end": 271
+      }
+    ],
+    "solid_01_partition_010_solid_01_csg_tool_010": [
+      {
+        "function": "make_body_001",
+        "line": 271,
+        "end": 271
+      }
+    ],
+    "solid_01_partition_010_solid_01_csg_op_001": [
+      {
+        "function": "make_body_001",
+        "line": 272,
+        "end": 272
+      }
+    ],
+    "solid_01_partition_010_solid_01_csg_tool_011_local": [
+      {
+        "function": "make_body_001",
+        "line": 273,
+        "end": 273
+      }
+    ],
+    "solid_01_partition_010_solid_01_csg_tool_011_frame": [
+      {
+        "function": "make_body_001",
+        "line": 274,
+        "end": 274
+      }
+    ],
+    "solid_01_partition_010_solid_01_csg_tool_011": [
+      {
+        "function": "make_body_001",
+        "line": 274,
+        "end": 274
+      }
+    ],
+    "solid_01_partition_010_solid_01_csg_op_003": [
+      {
+        "function": "make_body_001",
+        "line": 275,
+        "end": 275
+      }
+    ],
+    "solid_01_partition_010_solid_01_csg_tool_012_local": [
+      {
+        "function": "make_body_001",
+        "line": 276,
+        "end": 276
+      }
+    ],
+    "solid_01_partition_010_solid_01_csg_tool_012_frame": [
+      {
+        "function": "make_body_001",
+        "line": 277,
+        "end": 277
+      }
+    ],
+    "solid_01_partition_010_solid_01_csg_tool_012": [
+      {
+        "function": "make_body_001",
+        "line": 277,
+        "end": 277
+      }
+    ],
+    "solid_01_partition_010_solid_01_csg_op_005": [
+      {
+        "function": "make_body_001",
+        "line": 278,
+        "end": 278
+      }
+    ],
+    "solid_01_partition_010_solid_01_csg_tool_013_local": [
+      {
+        "function": "make_body_001",
+        "line": 279,
+        "end": 279
+      }
+    ],
+    "solid_01_partition_010_solid_01_csg_tool_013_frame": [
+      {
+        "function": "make_body_001",
+        "line": 280,
+        "end": 280
+      }
+    ],
+    "solid_01_partition_010_solid_01_csg_tool_013": [
+      {
+        "function": "make_body_001",
+        "line": 280,
+        "end": 280
+      }
+    ],
+    "solid_01_partition_010_solid_01_csg_op_007": [
+      {
+        "function": "make_body_001",
+        "line": 281,
+        "end": 281
+      }
+    ],
+    "solid_01_partition_011_solid_01_csg_tool_002_local": [
+      {
+        "function": "make_body_001",
+        "line": 282,
+        "end": 282
+      }
+    ],
+    "solid_01_partition_011_solid_01_csg_tool_002_frame": [
+      {
+        "function": "make_body_001",
+        "line": 283,
+        "end": 283
+      }
+    ],
+    "solid_01_partition_011_solid_01_csg_tool_002": [
+      {
+        "function": "make_body_001",
+        "line": 283,
+        "end": 283
+      }
+    ],
+    "solid_01_partition_011_solid_01_csg_tool_008_local": [
+      {
+        "function": "make_body_001",
+        "line": 284,
+        "end": 284
+      }
+    ],
+    "solid_01_partition_011_solid_01_csg_tool_008_frame": [
+      {
+        "function": "make_body_001",
+        "line": 285,
+        "end": 285
+      }
+    ],
+    "solid_01_partition_011_solid_01_csg_tool_008": [
+      {
+        "function": "make_body_001",
+        "line": 285,
+        "end": 285
+      }
+    ],
+    "solid_01_partition_011_solid_01_csg_op_001": [
+      {
+        "function": "make_body_001",
+        "line": 286,
+        "end": 286
+      }
+    ],
+    "solid_01_partition_012_solid_01_csg_tool_007_local": [
+      {
+        "function": "make_body_001",
+        "line": 287,
+        "end": 287
+      }
+    ],
+    "solid_01_partition_012_solid_01_csg_tool_007_frame": [
+      {
+        "function": "make_body_001",
+        "line": 288,
+        "end": 288
+      }
+    ],
+    "solid_01_partition_012_solid_01_csg_tool_007": [
+      {
+        "function": "make_body_001",
+        "line": 288,
+        "end": 288
+      }
+    ],
+    "solid_01_partition_012_solid_01_csg_tool_024_local": [
+      {
+        "function": "make_body_001",
+        "line": 289,
+        "end": 289
+      }
+    ],
+    "solid_01_partition_012_solid_01_csg_tool_024_frame": [
+      {
+        "function": "make_body_001",
+        "line": 290,
+        "end": 290
+      }
+    ],
+    "solid_01_partition_012_solid_01_csg_tool_024": [
+      {
+        "function": "make_body_001",
+        "line": 290,
+        "end": 290
+      }
+    ],
+    "solid_01_partition_012_solid_01_csg_op_001": [
+      {
+        "function": "make_body_001",
+        "line": 291,
+        "end": 291
+      }
+    ],
+    "solid_01_partition_012_solid_01_csg_tool_026_local": [
+      {
+        "function": "make_body_001",
+        "line": 292,
+        "end": 292
+      }
+    ],
+    "solid_01_partition_012_solid_01_csg_tool_026_frame": [
+      {
+        "function": "make_body_001",
+        "line": 293,
+        "end": 293
+      }
+    ],
+    "solid_01_partition_012_solid_01_csg_tool_026": [
+      {
+        "function": "make_body_001",
+        "line": 293,
+        "end": 293
+      }
+    ],
+    "solid_01_partition_012_solid_01_csg_op_003": [
+      {
+        "function": "make_body_001",
+        "line": 294,
+        "end": 294
+      }
+    ],
+    "solid_01_partition_012_solid_01_residual_cut_01_solid_01_extrude_local": [
+      {
+        "function": "make_body_001",
+        "line": 295,
+        "end": 295
+      }
+    ],
+    "solid_01_partition_012_solid_01_residual_cut_01_solid_01_frame": [
+      {
+        "function": "make_body_001",
+        "line": 296,
+        "end": 296
+      }
+    ],
+    "solid_01_partition_012_solid_01_residual_cut_01_solid_01_extrude": [
+      {
+        "function": "make_body_001",
+        "line": 296,
+        "end": 296
+      }
+    ],
+    "solid_01_partition_012_solid_01_csg_join_cut_01": [
+      {
+        "function": "make_body_001",
+        "line": 297,
+        "end": 297
+      }
+    ],
+    "solid_01_partition_union": [
+      {
+        "function": "make_body_001",
+        "line": 298,
+        "end": 298
+      }
+    ],
+    "body_001_scale": [
+      {
+        "function": "make_body_001",
+        "line": 299,
+        "end": 300
+      }
+    ],
+    "body_001_placement": [
+      {
+        "function": "make_body_001",
+        "line": 301,
+        "end": 301
+      }
+    ],
+    "body_001_world": [
+      {
+        "function": "make_body_001",
+        "line": 301,
+        "end": 301
+      }
+    ]
+  },
+  "outputs": [
+    {
+      "expected_kind": "solid",
+      "id": "body_001",
+      "node": "body_001_world"
+    }
+  ],
+  "functions": [
+    {
+      "name": "make_profile_001",
+      "line": 14,
+      "end": 38
+    },
+    {
+      "name": "make_profile_002",
+      "line": 41,
+      "end": 60
+    },
+    {
+      "name": "make_profile_003",
+      "line": 63,
+      "end": 80
+    },
+    {
+      "name": "make_profile_004",
+      "line": 83,
+      "end": 92
+    },
+    {
+      "name": "make_profile_005",
+      "line": 95,
+      "end": 112
+    },
+    {
+      "name": "make_profile_006",
+      "line": 115,
+      "end": 135
+    },
+    {
+      "name": "make_profile_007",
+      "line": 138,
+      "end": 155
+    },
+    {
+      "name": "make_profile_008",
+      "line": 158,
+      "end": 175
+    },
+    {
+      "name": "make_profile_009",
+      "line": 178,
+      "end": 198
+    },
+    {
+      "name": "make_profile_010",
+      "line": 201,
+      "end": 214
+    },
+    {
+      "name": "make_profile_011",
+      "line": 217,
+      "end": 224
+    },
+    {
+      "name": "make_body_001",
+      "line": 227,
+      "end": 302
+    },
+    {
+      "name": "build",
+      "line": 305,
+      "end": 311
+    }
+  ],
+  "structure": {
+    "lines": 415,
+    "profile_count": 11,
+    "body_count": 1,
+    "build_lines": 7,
+    "max_function_lines": 76
+  },
+  "code_structure_spec": "step-readable-2",
+  "history_recovered": false
+}

@@ -1,0 +1,366 @@
+{
+  "format": "step2code-run-index",
+  "version": 1,
+  "source": "out/",
+  "runs": [
+    {
+      "name": "abc-csg-v4-regression",
+      "run_state": null,
+      "requested": null,
+      "selected": null,
+      "completed": null,
+      "counts": {},
+      "size_mb": 7.2,
+      "has_summary": true
+    },
+    {
+      "name": "abc-expanded-v3-regression",
+      "run_state": null,
+      "requested": null,
+      "selected": null,
+      "completed": null,
+      "counts": {},
+      "size_mb": 6.5,
+      "has_summary": true
+    },
+    {
+      "name": "abc-expanded-v3-verified",
+      "run_state": null,
+      "requested": null,
+      "selected": null,
+      "completed": null,
+      "counts": {},
+      "size_mb": 6.5,
+      "has_summary": true
+    },
+    {
+      "name": "abc-first1000-v4-20261026-180058",
+      "run_state": null,
+      "requested": null,
+      "selected": null,
+      "completed": null,
+      "counts": {},
+      "size_mb": 14.5,
+      "has_summary": true
+    },
+    {
+      "name": "abc-first20-p2a-20261028",
+      "run_state": "completed",
+      "requested": 20,
+      "selected": 20,
+      "completed": 20,
+      "counts": {
+        "accepted": 8,
+        "incomplete": 11,
+        "error": 1
+      },
+      "size_mb": 14.0,
+      "has_summary": true
+    },
+    {
+      "name": "abc-first20-rotation-v3",
+      "run_state": null,
+      "requested": null,
+      "selected": null,
+      "completed": null,
+      "counts": {},
+      "size_mb": 6.5,
+      "has_summary": true
+    },
+    {
+      "name": "abc-first20-rotation-v3-final",
+      "run_state": null,
+      "requested": null,
+      "selected": null,
+      "completed": null,
+      "counts": {},
+      "size_mb": 6.5,
+      "has_summary": true
+    },
+    {
+      "name": "abc-first20-step-readable-v1",
+      "run_state": null,
+      "requested": null,
+      "selected": null,
+      "completed": null,
+      "counts": {},
+      "size_mb": 6.1,
+      "has_summary": true
+    },
+    {
+      "name": "abc-first20-step-readable-v1-final",
+      "run_state": null,
+      "requested": null,
+      "selected": null,
+      "completed": null,
+      "counts": {},
+      "size_mb": 6.4,
+      "has_summary": true
+    },
+    {
+      "name": "abc-first20-v1",
+      "run_state": null,
+      "requested": null,
+      "selected": null,
+      "completed": null,
+      "counts": {},
+      "size_mb": 5.0,
+      "has_summary": true
+    },
+    {
+      "name": "abc-step-readable-v1-regression",
+      "run_state": null,
+      "requested": null,
+      "selected": null,
+      "completed": null,
+      "counts": {},
+      "size_mb": 6.4,
+      "has_summary": true
+    },
+    {
+      "name": "abc100-p05-diagnostics-20261027-r1",
+      "run_state": "completed",
+      "requested": 100,
+      "selected": 100,
+      "completed": 100,
+      "counts": {
+        "accepted": 29,
+        "incomplete": 64,
+        "invalid_input": 5,
+        "error": 2
+      },
+      "size_mb": 43.9,
+      "has_summary": true
+    },
+    {
+      "name": "abc100-p05-diagnostics-20261027-r2",
+      "run_state": "completed",
+      "requested": 100,
+      "selected": 100,
+      "completed": 100,
+      "counts": {
+        "accepted": 30,
+        "incomplete": 63,
+        "invalid_input": 5,
+        "error": 2
+      },
+      "size_mb": 44.7,
+      "has_summary": true
+    },
+    {
+      "name": "abc100-p05-diagnostics-20261027-r3",
+      "run_state": "interrupted",
+      "requested": 100,
+      "selected": 100,
+      "completed": 55,
+      "counts": {
+        "accepted": 15,
+        "incomplete": 36,
+        "invalid_input": 3,
+        "error": 1
+      },
+      "size_mb": 28.3,
+      "has_summary": true
+    },
+    {
+      "name": "abc100-p05-diagnostics-20261027-r4",
+      "run_state": "completed",
+      "requested": 100,
+      "selected": 100,
+      "completed": 100,
+      "counts": {
+        "accepted": 30,
+        "incomplete": 63,
+        "invalid_input": 5,
+        "error": 2
+      },
+      "size_mb": 43.7,
+      "has_summary": true
+    },
+    {
+      "name": "abc100-plan1-20261026",
+      "run_state": "interrupted",
+      "requested": 100,
+      "selected": 100,
+      "completed": 46,
+      "counts": {
+        "accepted": 11,
+        "incomplete": 30,
+        "invalid_input": 3,
+        "error": 2
+      },
+      "size_mb": 9.2,
+      "has_summary": true
+    },
+    {
+      "name": "abc100-plan1-final-20261026",
+      "run_state": "completed",
+      "requested": 100,
+      "selected": 100,
+      "completed": 100,
+      "counts": {
+        "accepted": 29,
+        "incomplete": 63,
+        "invalid_input": 6,
+        "error": 2
+      },
+      "size_mb": 29.7,
+      "has_summary": true
+    },
+    {
+      "name": "abc100-plan1-verified-20261026",
+      "run_state": "completed",
+      "requested": 100,
+      "selected": 100,
+      "completed": 100,
+      "counts": {
+        "accepted": 29,
+        "incomplete": 64,
+        "invalid_input": 5,
+        "error": 2
+      },
+      "size_mb": 29.6,
+      "has_summary": true
+    },
+    {
+      "name": "abc100-recognition-extension-20261027-r1",
+      "run_state": "completed",
+      "requested": 100,
+      "selected": 100,
+      "completed": 100,
+      "counts": {
+        "accepted": 30,
+        "incomplete": 63,
+        "invalid_input": 5,
+        "error": 2
+      },
+      "size_mb": 30.2,
+      "has_summary": true
+    },
+    {
+      "name": "abc14-coarse-v3",
+      "run_state": null,
+      "requested": null,
+      "selected": null,
+      "completed": null,
+      "counts": {},
+      "size_mb": 0.0,
+      "has_summary": true
+    },
+    {
+      "name": "csg06-first",
+      "run_state": null,
+      "requested": null,
+      "selected": null,
+      "completed": null,
+      "counts": {},
+      "size_mb": 0.1,
+      "has_summary": true
+    },
+    {
+      "name": "csg06-oriented",
+      "run_state": null,
+      "requested": null,
+      "selected": null,
+      "completed": null,
+      "counts": {},
+      "size_mb": 0.1,
+      "has_summary": true
+    },
+    {
+      "name": "csg06-replay",
+      "run_state": null,
+      "requested": null,
+      "selected": null,
+      "completed": null,
+      "counts": {},
+      "size_mb": 0.1,
+      "has_summary": true
+    },
+    {
+      "name": "csg08-partition",
+      "run_state": null,
+      "requested": null,
+      "selected": null,
+      "completed": null,
+      "counts": {},
+      "size_mb": 0.5,
+      "has_summary": true
+    },
+    {
+      "name": "csg08-union",
+      "run_state": null,
+      "requested": null,
+      "selected": null,
+      "completed": null,
+      "counts": {},
+      "size_mb": 0.6,
+      "has_summary": true
+    },
+    {
+      "name": "p05-diagnostics-parent-smoke-08-20261027-r1",
+      "run_state": "completed",
+      "requested": 1,
+      "selected": 1,
+      "completed": 1,
+      "counts": {
+        "accepted": 1
+      },
+      "size_mb": 1.1,
+      "has_summary": true
+    },
+    {
+      "name": "p05-diagnostics-smoke-08-20261027-r2",
+      "run_state": "completed",
+      "requested": 1,
+      "selected": 1,
+      "completed": 1,
+      "counts": {
+        "accepted": 1
+      },
+      "size_mb": 1.1,
+      "has_summary": true
+    },
+    {
+      "name": "p05-diagnostics-smoke-20261027-r1",
+      "run_state": "completed",
+      "requested": 1,
+      "selected": 1,
+      "completed": 1,
+      "counts": {
+        "accepted": 1
+      },
+      "size_mb": 0.9,
+      "has_summary": true
+    },
+    {
+      "name": "readable-review-step-v1",
+      "run_state": null,
+      "requested": null,
+      "selected": null,
+      "completed": null,
+      "counts": {},
+      "size_mb": 0.8,
+      "has_summary": true
+    },
+    {
+      "name": "readable-review-v1",
+      "run_state": null,
+      "requested": null,
+      "selected": null,
+      "completed": null,
+      "counts": {},
+      "size_mb": 0.7,
+      "has_summary": true
+    }
+  ],
+  "unindexed_directories": [
+    "csg-review-v4",
+    "recognition-extension-csg-20261027",
+    "recognition-extension-surface-20261027",
+    "recognition-extension-targeted-20261027",
+    "refactor-smoke",
+    "rotation-review-v3",
+    "unit-meter-debug-v1"
+  ]
+}

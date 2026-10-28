@@ -1,0 +1,183 @@
+{
+  "format": "step-run",
+  "version": 1,
+  "created_at": "2026-10-28T10:42:24.136974+08:00",
+  "run_state": "completed",
+  "implementation": {
+    "tool_version": "1.0.0",
+    "plan_version": 1,
+    "compiler": "scapi-plan-1",
+    "evaluator": "shape-world-1",
+    "revision": "097478e7ae2dbcee048cf77540331209094f6180",
+    "source_hashes": {
+      "cli.py": "44737f7bbe0609b0a9e1272eff0a6aa44e8cf3533359d2e0f4f49df1027e3581",
+      "pipeline.py": "aac871f71b207dd8e1072d5bb48a697b8e19aa33fd41d49a0ce466e6af1a9fb0",
+      "step2scapi.py": "5dc5b0aaa4677b04c2f4f82e858b62926fc65695a294f2b5577698ce5b87e7ae",
+      "__init__.py": "5f3a55636d5e7e6f41fd4e383e16ecb4d0893d3fb05a34facfdbf09a4aa6a5ed",
+      "__main__.py": "56f7d4004c060695c7c030c243981cb8960ce3f931f282d4a3475324e6d2c015",
+      "batch/checkpoint.py": "5ae46a4f21f1742bb13fbd99248ffb10977389e70d18a009b67d669967bbe5ff",
+      "batch/diagnostics.py": "c63119a2aa8c092499bc3880aff5593c58bdbba711fdd4b353e8853529847b16",
+      "batch/events.py": "5664da1e186871edd5919fa5064ab733cb1cf6b0529e2e0d0088f465608e5534",
+      "batch/identity.py": "8acdbff49fcf8b5e6ff4a0e3c33e7f5bda9e5b8e883bf1aca265b56d18a93338",
+      "batch/process.py": "ede4300e35e51c31781e421ea442054a72ddbe5b5802e7418f0fd453df482e6e",
+      "batch/runner.py": "2acece9a05ae57321e0158d8490d41f5a3c57af785bcc421fe0c1dcbb19e70e0",
+      "batch/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "codegen/scapi.py": "a8d86e008ec69b2fec149971fb3219cd0002d61298d5d32ef70132223cd248d2",
+      "codegen/templates.py": "cd343a28778718051db606d7c9bd5db8fb90a31509782f62d373d39776d6dc26",
+      "codegen/__init__.py": "70a4f0d98381f06d2a92fbe6c6b446c362844a7c61fe8b4976ff1f63fda9855e",
+      "kernel/brep_graph.py": "2ef4faf6aade59594151838530a72158282f1a3243befe935218f8ad62450d29",
+      "kernel/brep_relations.py": "c4a28cc06dacd35d71b6eabe2ad57ca9aa48d61b014bbcd15b5a3684a5df14ce",
+      "kernel/curves.py": "fbb1b279ae2a6059adbea9cd25502ed7d3265846cfafb819bf75483a0934dd0b",
+      "kernel/execute.py": "cd8231fb76f9de30a42eb508bd2fa1c70a53300eea4c8f38f916af22f5146691",
+      "kernel/import_step.py": "55f55413e153d2da97a081590aa8da8c2d8137aa190a6869f07580baa7c50bd6",
+      "kernel/runtime.py": "3776c2da979c808555835207076ad28db16b09c3be5cf753df37a8207fa9501d",
+      "kernel/signatures.py": "f14662c6681b886a7cae52039a9655f24e012df5006918e16e5bb757729a4b4c",
+      "kernel/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "plan/codec.py": "9d4ab092b57de2871edb1a4df3a889749956cec53e73970d64f1a727c19389be",
+      "plan/graph.py": "f87622feeb2b6a031a3508e6adcbb5b9573c150f314f2be5d74ebb677c694d12",
+      "plan/model.py": "6ecfd9d6c0795cfd2e381683bd63a19703f91726a968912c35062966693ee2fa",
+      "plan/passes.py": "a33f22541ee8cc52e2eddb152749b1a31036c3052e218bdfadeae9bee43b9212",
+      "plan/preparation.py": "e0e8495fba25cab4a5b593182f4460d77bf125344331cc4ac9a094b568c7c3aa",
+      "plan/registry.py": "77fb1530af588c6fc436cc049e56b0bf6a2b6ecb48bc4f0beea4a017a634771e",
+      "plan/validation.py": "ec36adbf379ef0fec5e40ef0f88122a5a5d61338050a6e48d889c3def3d856b3",
+      "plan/__init__.py": "a9ba441cfcb8f8c1cf5ccac1729efde8637f6227d72efd32a15751a102687810",
+      "recognition/api.py": "23cad3a4a0568f8c4a48677444fb2fdbe4d2ebdb7b62ec01ac0d0e8a3a39bf57",
+      "recognition/context.py": "a9df83d33d7a49c4b85c6d4e1e0adf8ca60f464df23f570f9a3d7388d9669758",
+      "recognition/csg.py": "d3fa2e029cc79183eea269fbab01719563602d4fa8d2c0f519ff5514bc52c8be",
+      "recognition/partition.py": "ea9c472be000741affe5881dc6f4ad7bcf3b8b97bf67f6df2ca9be4ca0572881",
+      "recognition/prism.py": "df92c33571e3e3b1098552db9823870320c61aade94961f82edc41f4f2279995",
+      "recognition/profile.py": "29288549c69c160f7fab95d5b3d4f33cadb7a7acf891829bb4d032b10eb77744",
+      "recognition/revolution.py": "660585685f546c1b0420de3bdf69a8cb2b4096a8d6157f47cb581240f8ef2fe5",
+      "recognition/__init__.py": "421ff249e09ec1c6f254223070afe738ce3d24a70c3024e8630c5ccdae61fab4",
+      "verification/conditioning.py": "c0567a0c4efa9751be215e92281ff79bcd4636b872ce347a40ddac74f6a7d09e",
+      "verification/coverage.py": "ab5e7a77291e5404fb3e6dad291c9cbf7fab045d64552b59fb18e0f404867bba",
+      "verification/geometry.py": "3d2cbf06d047ef6bd177ccd214cb0e3ff793bdd38492cf2a4dd7656de21dd1c1",
+      "verification/measurements.py": "e16e8fb7d72fbc82373b458a6df973f4d7b3c6dad9d95466bd47bb2df9b60d46",
+      "verification/metrics.py": "3db5f84285a476e25484fcb8239e57f110b019816f882a1a9a0b218b16fa4637",
+      "verification/policy.py": "3dcb2fe25b24f8a79f53e10f17f56051bf6a814d837e8607c191763fc47e4f38",
+      "verification/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "plan/schema.json": "57b5d29c867e9752def7833b7edf5a035b8de9577bfbd89e89eb03b1cc0f6557"
+    },
+    "dependencies": {
+      "python": "3.13.14",
+      "simplecadapi": "2.2.6",
+      "cadquery-ocp": "7.9.3.1.1",
+      "numpy": "2.5.4",
+      "scipy": "1.18.1"
+    },
+    "fingerprint": "135d063d2a567cf272fd0b92f6f9f6dd51954144c2be0f048b36e57a93d455b5"
+  },
+  "configuration": {
+    "samples": 8192,
+    "mode": "world",
+    "recognition": {
+      "length_tolerance": 1e-06,
+      "reconstruction_relative_tolerance": 1e-07,
+      "max_candidates": 64,
+      "max_solids": 64,
+      "max_revolve_candidates": 8,
+      "max_section_faces": 16,
+      "max_section_edges": 256,
+      "max_spline_poles": 256,
+      "max_csg_candidates": 96,
+      "max_csg_steps": 32,
+      "max_csg_faces": 80,
+      "max_csg_seconds": 15.0,
+      "max_csg_parts": 24,
+      "max_csg_depth": 3
+    },
+    "hard_timeout_seconds": 120.0
+  },
+  "available_count": 10000,
+  "requested_count": 20,
+  "selected_count": 20,
+  "completed_count": 20,
+  "inputs": [
+    {
+      "path": "F:\\AI_CAD\\datasets\\abc\\step\\abc_0000\\00000000_290a9120f9f249a7a05cfe9c_step_000.step",
+      "sha256": "73411ebbcc0afa5fa742b331ce1be4450b34c9b367b75aedccc47e21798fb6dc"
+    },
+    {
+      "path": "F:\\AI_CAD\\datasets\\abc\\step\\abc_0000\\00000001_1ffb81a71e5b402e966b9341_step_000.step",
+      "sha256": "8f27522538b086ecc9bfb6e458207bea0f8f9715b2d76bb8dbd93a5083e8a018"
+    },
+    {
+      "path": "F:\\AI_CAD\\datasets\\abc\\step\\abc_0000\\00000002_1ffb81a71e5b402e966b9341_step_001.step",
+      "sha256": "c190144c83c811a48c1a7892c299fc60a85332ee21535c630518637d9f325688"
+    },
+    {
+      "path": "F:\\AI_CAD\\datasets\\abc\\step\\abc_0000\\00000003_1ffb81a71e5b402e966b9341_step_002.step",
+      "sha256": "532f0f0687407346f43f9a28e7934c9927df0d269dd4d097864be1e060368734"
+    },
+    {
+      "path": "F:\\AI_CAD\\datasets\\abc\\step\\abc_0000\\00000004_1ffb81a71e5b402e966b9341_step_003.step",
+      "sha256": "a7be17878aea45cc9a1aa0b68901756a8ad70d6988a9c42fb2ee6c8525a32195"
+    },
+    {
+      "path": "F:\\AI_CAD\\datasets\\abc\\step\\abc_0000\\00000005_d4fe04f0f5f84b52bd4f10e4_step_000.step",
+      "sha256": "7a970a7f10b5f7ef783e20a8713358f3a8c9cd005cf4355a586a19e72ca32de5"
+    },
+    {
+      "path": "F:\\AI_CAD\\datasets\\abc\\step\\abc_0000\\00000006_d4fe04f0f5f84b52bd4f10e4_step_001.step",
+      "sha256": "5b0a309b468874e023681903bd6208479f6ea80064d9c17e08873e921732a0fe"
+    },
+    {
+      "path": "F:\\AI_CAD\\datasets\\abc\\step\\abc_0000\\00000007_b33a147f86da49879455d286_step_000.step",
+      "sha256": "02616fa80edaf4d8a1aa03619e3488fa42158da3874ccca3289b9af700fe07cf"
+    },
+    {
+      "path": "F:\\AI_CAD\\datasets\\abc\\step\\abc_0000\\00000008_9b3d6a97e8de4aa193b81000_step_000.step",
+      "sha256": "84c7687d1acf464c406a6648e379893f21f0c9ed358ea0dee92be7e10b882f47"
+    },
+    {
+      "path": "F:\\AI_CAD\\datasets\\abc\\step\\abc_0000\\00000009_9b3d6a97e8de4aa193b81000_step_001.step",
+      "sha256": "34a7b399bef7d25ce7b85357d06210ec7c06fe6a39a6b20bc7369dc1abd40b77"
+    },
+    {
+      "path": "F:\\AI_CAD\\datasets\\abc\\step\\abc_0000\\00000010_b4b99d35e04b4277931f9a9c_step_000.step",
+      "sha256": "79a1916b709d95e5aa5b79694f9d988bcd97c1c1c2e9abb9eaa428f2a22026b6"
+    },
+    {
+      "path": "F:\\AI_CAD\\datasets\\abc\\step\\abc_0000\\00000011_e909f412cda24521865fac0f_step_000.step",
+      "sha256": "490701d7fca1db71dc912bc6e1d7a3a1ef1792aeb030cfb1ead764abcf7e6920"
+    },
+    {
+      "path": "F:\\AI_CAD\\datasets\\abc\\step\\abc_0000\\00000012_f16882934f314832b639ffc0_step_000.step",
+      "sha256": "29da96fd0b52e262036807b162b8c5d02cb74ab640dbef47d373433ad80ca046"
+    },
+    {
+      "path": "F:\\AI_CAD\\datasets\\abc\\step\\abc_0000\\00000013_c2f4d27f35ed4c138caf5c18_step_000.step",
+      "sha256": "0af8f4f012b3355dd0f2232b9f04df45cdd2ee13c5d36368176b0a50e5c5a5e6"
+    },
+    {
+      "path": "F:\\AI_CAD\\datasets\\abc\\step\\abc_0000\\00000014_5b1c2f8a8c6f40fdaae1e69d_step_000.step",
+      "sha256": "7c7190f868acd93951fd6302313d1f818828f44da6a5716b7434c0059e0802b0"
+    },
+    {
+      "path": "F:\\AI_CAD\\datasets\\abc\\step\\abc_0000\\00000015_b08aa818955948c690fd9b6d_step_000.step",
+      "sha256": "4460d2d68643db57c164e1ede21817a037fcb9881a974943906348ca31aa7e40"
+    },
+    {
+      "path": "F:\\AI_CAD\\datasets\\abc\\step\\abc_0000\\00000016_b08aa818955948c690fd9b6d_step_001.step",
+      "sha256": "767992134bf890032be8ef450710d7ddbd69b1bc49a11904b29e0fae328e286a"
+    },
+    {
+      "path": "F:\\AI_CAD\\datasets\\abc\\step\\abc_0000\\00000017_e8e79d1385fd4c78be414f6c_step_000.step",
+      "sha256": "ff5d59a91a341035c7604987eb5e54503710bfedf4962608c658f4d985ea0112"
+    },
+    {
+      "path": "F:\\AI_CAD\\datasets\\abc\\step\\abc_0000\\00000018_e8e79d1385fd4c78be414f6c_step_001.step",
+      "sha256": "a446e05fcda2dba53fcea363e826fe497130aa9a68ed16a00f3d2bad90c04a3a"
+    },
+    {
+      "path": "F:\\AI_CAD\\datasets\\abc\\step\\abc_0000\\00000019_e8e79d1385fd4c78be414f6c_step_002.step",
+      "sha256": "605617ea94f22724a0689faf740f6bf8767cf12604a6cfb162115c1016bbd83e"
+    }
+  ],
+  "identity_hash": "9c9e95d286ff055e94d1d6b57a48c8b343ba6fc6f2d6dc4d552cf8aa83e4577a",
+  "outcome_counts": {
+    "error": 1,
+    "incomplete": 11,
+    "accepted": 8
+  }
+}

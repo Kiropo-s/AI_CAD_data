@@ -1,0 +1,568 @@
+test_existing_output_is_preserved (test_cli.CLITests.test_existing_output_is_preserved) ... ok
+test_recognition_options_reject_invalid_tolerance (test_cli.CLITests.test_recognition_options_reject_invalid_tolerance) ... ok
+test_timeout_and_native_crash_are_provisional_and_batch_continues (test_cli.CLITests.test_timeout_and_native_crash_are_provisional_and_batch_continues) ... ok
+test_associative_union_keeps_disconnected_intermediates_out_of_replay (test_csg.CSGTests.test_associative_union_keeps_disconnected_intermediates_out_of_replay) ... ok
+test_csg_limits_are_real_rejection_limits (test_csg.CSGTests.test_csg_limits_are_real_rejection_limits) ... ok
+test_deterministic_standalone_code_only_uses_scapi (test_csg.CSGTests.test_deterministic_standalone_code_only_uses_scapi) ... ok
+
+*******************************************************************
+******        Statistics on Transfer (Write)                 ******
+
+*******************************************************************
+******        Transfer Mode = 0  I.E.  As Is       ******
+******        Transferring Shape, ShapeType = 0                      ******
+** WorkSession : Sending all data
+ Step File Name : C:\Users\m1835\AppData\Local\Temp\tmpr100st00\crossed_blind_holes.step(524 ents)  Write  Done
+
+*******************************************************************
+******        Statistics on Transfer (Write)                 ******
+
+*******************************************************************
+******        Transfer Mode = 0  I.E.  As Is       ******
+******        Transferring Shape, ShapeType = 2                      ******
+** WorkSession : Sending all data
+ Step File Name : C:\Users\m1835\AppData\Local\Temp\tmpr100st00\crossed_blind_holes\model.step(604 ents)  Write  Done
+
+*******************************************************************
+******        Statistics on Transfer (Write)                 ******
+
+*******************************************************************
+******        Transfer Mode = 0  I.E.  As Is       ******
+******        Transferring Shape, ShapeType = 0                      ******
+** WorkSession : Sending all data
+ Step File Name : C:\Users\m1835\AppData\Local\Temp\tmpr100st00\blind_hole.step(440 ents)  Write  Done
+
+*******************************************************************
+******        Statistics on Transfer (Write)                 ******
+
+*******************************************************************
+******        Transfer Mode = 0  I.E.  As Is       ******
+******        Transferring Shape, ShapeType = 2                      ******
+** WorkSession : Sending all data
+ Step File Name : C:\Users\m1835\AppData\Local\Temp\tmpr100st00\blind_hole\model.step(440 ents)  Write  Done
+
+*******************************************************************
+******        Statistics on Transfer (Write)                 ******
+
+*******************************************************************
+******        Transfer Mode = 0  I.E.  As Is       ******
+******        Transferring Shape, ShapeType = 0                      ******
+** WorkSession : Sending all data
+ Step File Name : C:\Users\m1835\AppData\Local\Temp\tmpr100st00\localized_boss.step(440 ents)  Write  Done
+
+*******************************************************************
+******        Statistics on Transfer (Write)                 ******
+
+*******************************************************************
+******        Transfer Mode = 0  I.E.  As Is       ******
+******        Transferring Shape, ShapeType = 2                      ******
+** WorkSession : Sending all data
+ Step File Name : C:\Users\m1835\AppData\Local\Temp\tmpr100st00\localized_boss\model.step(444 ents)  Write  Done
+
+*******************************************************************
+******        Statistics on Transfer (Write)                 ******
+
+*******************************************************************
+******        Transfer Mode = 0  I.E.  As Is       ******
+******        Transferring Shape, ShapeType = 0                      ******
+** WorkSession : Sending all data
+ Step File Name : C:\Users\m1835\AppData\Local\Temp\tmpr100st00\tapered_polygon.step(843 ents)  Write  Done
+
+*******************************************************************
+******        Statistics on Transfer (Write)                 ******
+
+*******************************************************************
+******        Transfer Mode = 0  I.E.  As Is       ******
+******        Transferring Shape, ShapeType = 2                      ******
+** WorkSession : Sending all data
+ Step File Name : C:\Users\m1835\AppData\Local\Temp\tmpr100st00\tapered_polygon\model.step(935 ents)  Write  Done
+test_hybrid_examples_build_export_and_measure (test_csg.CSGTests.test_hybrid_examples_build_export_and_measure) ... ok
+test_independent_scale_placement_and_fresh_builds (test_csg.CSGTests.test_independent_scale_placement_and_fresh_builds) ... ok
+test_invalid_recipe_and_operation_rejected (test_csg.CSGTests.test_invalid_recipe_and_operation_rejected) ... ok
+test_unsupported_partial_source_never_exports_success (test_csg.CSGTests.test_unsupported_partial_source_never_exports_success) ... ok
+
+*******************************************************************
+******        Statistics on Transfer (Write)                 ******
+
+*******************************************************************
+******        Transfer Mode = 0  I.E.  As Is       ******
+******        Transferring Shape, ShapeType = 2                      ******
+** WorkSession : Sending all data
+ Step File Name : C:\Users\m1835\AppData\Local\Temp\tmp7ls5h8of\sphere.step(32 ents)  Write  Done
+
+*******************************************************************
+******        Statistics on Transfer (Write)                 ******
+
+*******************************************************************
+******        Transfer Mode = 0  I.E.  As Is       ******
+******        Transferring Shape, ShapeType = 2                      ******
+** WorkSession : Sending all data
+ Step File Name : C:\Users\m1835\AppData\Local\Temp\tmp7ls5h8of\sphere\model.step(32 ents)  Write  Done
+
+*******************************************************************
+******        Statistics on Transfer (Write)                 ******
+
+*******************************************************************
+******        Transfer Mode = 0  I.E.  As Is       ******
+******        Transferring Shape, ShapeType = 2                      ******
+** WorkSession : Sending all data
+ Step File Name : C:\Users\m1835\AppData\Local\Temp\tmp7ls5h8of\cone.step(87 ents)  Write  Done
+
+*******************************************************************
+******        Statistics on Transfer (Write)                 ******
+
+*******************************************************************
+******        Transfer Mode = 0  I.E.  As Is       ******
+******        Transferring Shape, ShapeType = 2                      ******
+** WorkSession : Sending all data
+ Step File Name : C:\Users\m1835\AppData\Local\Temp\tmp7ls5h8of\cone\model.step(87 ents)  Write  Done
+
+*******************************************************************
+******        Statistics on Transfer (Write)                 ******
+
+*******************************************************************
+******        Transfer Mode = 0  I.E.  As Is       ******
+******        Transferring Shape, ShapeType = 2                      ******
+** WorkSession : Sending all data
+ Step File Name : C:\Users\m1835\AppData\Local\Temp\tmp7ls5h8of\frustum.step(118 ents)  Write  Done
+
+*******************************************************************
+******        Statistics on Transfer (Write)                 ******
+
+*******************************************************************
+******        Transfer Mode = 0  I.E.  As Is       ******
+******        Transferring Shape, ShapeType = 2                      ******
+** WorkSession : Sending all data
+ Step File Name : C:\Users\m1835\AppData\Local\Temp\tmp7ls5h8of\frustum\model.step(118 ents)  Write  Done
+
+*******************************************************************
+******        Statistics on Transfer (Write)                 ******
+
+*******************************************************************
+******        Transfer Mode = 0  I.E.  As Is       ******
+******        Transferring Shape, ShapeType = 2                      ******
+** WorkSession : Sending all data
+ Step File Name : C:\Users\m1835\AppData\Local\Temp\tmp7ls5h8of\torus.step(78 ents)  Write  Done
+
+*******************************************************************
+******        Statistics on Transfer (Write)                 ******
+
+*******************************************************************
+******        Transfer Mode = 0  I.E.  As Is       ******
+******        Transferring Shape, ShapeType = 2                      ******
+** WorkSession : Sending all data
+ Step File Name : C:\Users\m1835\AppData\Local\Temp\tmp7ls5h8of\torus\model.step(134 ents)  Write  Done
+
+*******************************************************************
+******        Statistics on Transfer (Write)                 ******
+
+*******************************************************************
+******        Transfer Mode = 0  I.E.  As Is       ******
+******        Transferring Shape, ShapeType = 0                      ******
+** WorkSession : Sending all data
+ Step File Name : C:\Users\m1835\AppData\Local\Temp\tmp7ls5h8of\stepped_shaft.step(208 ents)  Write  Done
+
+*******************************************************************
+******        Statistics on Transfer (Write)                 ******
+
+*******************************************************************
+******        Transfer Mode = 0  I.E.  As Is       ******
+******        Transferring Shape, ShapeType = 2                      ******
+** WorkSession : Sending all data
+ Step File Name : C:\Users\m1835\AppData\Local\Temp\tmp7ls5h8of\stepped_shaft\model.step(208 ents)  Write  Done
+
+*******************************************************************
+******        Statistics on Transfer (Write)                 ******
+
+*******************************************************************
+******        Transfer Mode = 0  I.E.  As Is       ******
+******        Transferring Shape, ShapeType = 0                      ******
+** WorkSession : Sending all data
+ Step File Name : C:\Users\m1835\AppData\Local\Temp\tmp7ls5h8of\hollow_sphere.step(44 ents)  Write  Done
+
+*******************************************************************
+******        Statistics on Transfer (Write)                 ******
+
+*******************************************************************
+******        Transfer Mode = 0  I.E.  As Is       ******
+******        Transferring Shape, ShapeType = 2                      ******
+** WorkSession : Sending all data
+ Step File Name : C:\Users\m1835\AppData\Local\Temp\tmp7ls5h8of\hollow_sphere\model.step(44 ents)  Write  Done
+
+*******************************************************************
+******        Statistics on Transfer (Write)                 ******
+
+*******************************************************************
+******        Transfer Mode = 0  I.E.  As Is       ******
+******        Transferring Shape, ShapeType = 2                      ******
+** WorkSession : Sending all data
+ Step File Name : C:\Users\m1835\AppData\Local\Temp\tmp7ls5h8of\oblique_frustum.step(118 ents)  Write  Done
+
+*******************************************************************
+******        Statistics on Transfer (Write)                 ******
+
+*******************************************************************
+******        Transfer Mode = 0  I.E.  As Is       ******
+******        Transferring Shape, ShapeType = 2                      ******
+** WorkSession : Sending all data
+ Step File Name : C:\Users\m1835\AppData\Local\Temp\tmp7ls5h8of\oblique_frustum\model.step(118 ents)  Write  Done
+test_end_to_end_analytic_revolutions (test_revolution.RevolutionTests.test_end_to_end_analytic_revolutions) ... ok
+
+*******************************************************************
+******        Statistics on Transfer (Write)                 ******
+
+*******************************************************************
+******        Transfer Mode = 0  I.E.  As Is       ******
+******        Transferring Shape, ShapeType = 2                      ******
+** WorkSession : Sending all data
+ Step File Name : C:\Users\m1835\AppData\Local\Temp\tmp2abj8dp7\spline.step(36 ents)  Write  Done
+
+*******************************************************************
+******        Statistics on Transfer (Write)                 ******
+
+*******************************************************************
+******        Transfer Mode = 0  I.E.  As Is       ******
+******        Transferring Shape, ShapeType = 2                      ******
+** WorkSession : Sending all data
+ Step File Name : C:\Users\m1835\AppData\Local\Temp\tmp2abj8dp7\case\model.step(36 ents)  Write  Done
+test_kernel_rational_spline_section_replayed_without_fitting (test_revolution.RevolutionTests.test_kernel_rational_spline_section_replayed_without_fitting) ... ok
+test_mixed_operations_cover_bodies_in_both_orders (test_revolution.RevolutionTests.test_mixed_operations_cover_bodies_in_both_orders) ... ok
+
+*******************************************************************
+******        Statistics on Transfer (Write)                 ******
+
+*******************************************************************
+******        Transfer Mode = 0  I.E.  As Is       ******
+******        Transferring Shape, ShapeType = 0                      ******
+** WorkSession : Sending all data
+ Step File Name : C:\Users\m1835\AppData\Local\Temp\tmpt0ivwh1k\partial.step(121 ents)  Write  Done
+test_partial_recognition_never_exports_complete_case (test_revolution.RevolutionTests.test_partial_recognition_never_exports_complete_case) ... ok
+test_reversed_source_is_not_accepted_by_negative_volume (test_revolution.RevolutionTests.test_reversed_source_is_not_accepted_by_negative_volume) ... ok
+test_saved_rotation_program_is_isolated_and_deterministic (test_revolution.RevolutionTests.test_saved_rotation_program_is_isolated_and_deterministic) ... ok
+test_scale_and_placement_edits_are_independent (test_revolution.RevolutionTests.test_scale_and_placement_edits_are_independent) ... ok
+test_section_limits_are_enforced (test_revolution.RevolutionTests.test_section_limits_are_enforced) ... ok
+test_section_provenance_is_not_a_source_edge_claim (test_revolution.RevolutionTests.test_section_provenance_is_not_a_source_edge_claim) ... ok
+test_unsupported_plan_semantics_are_not_silently_emitted (test_revolution.RevolutionTests.test_unsupported_plan_semantics_are_not_silently_emitted) ... ok
+test_wrong_axis_or_asymmetric_geometry_does_not_pass (test_revolution.RevolutionTests.test_wrong_axis_or_asymmetric_geometry_does_not_pass) ... ok
+**** ERR StepFile : Undefined Parsing: Line 2: Incorrect syntax: unexpected TYPE, expecting STEP    ****
+test_bad_step_is_provisional (test_step2scapi.ConversionTests.test_bad_step_is_provisional) ... ok
+test_deterministic_recognition_and_codegen (test_step2scapi.ConversionTests.test_deterministic_recognition_and_codegen) ... ok
+test_existing_case_is_preserved (test_step2scapi.ConversionTests.test_existing_case_is_preserved) ... ok
+test_recognition_limits (test_step2scapi.ConversionTests.test_recognition_limits) ... ok
+
+*******************************************************************
+******        Statistics on Transfer (Write)                 ******
+
+*******************************************************************
+******        Transfer Mode = 0  I.E.  As Is       ******
+******        Transferring Shape, ShapeType = 2                      ******
+** WorkSession : Sending all data
+ Step File Name : C:\Users\m1835\AppData\Local\Temp\tmpzmstcwny\box.step(350 ents)  Write  Done
+
+*******************************************************************
+******        Statistics on Transfer (Write)                 ******
+
+*******************************************************************
+******        Transfer Mode = 0  I.E.  As Is       ******
+******        Transferring Shape, ShapeType = 2                      ******
+** WorkSession : Sending all data
+ Step File Name : C:\Users\m1835\AppData\Local\Temp\tmpzmstcwny\box\model.step(350 ents)  Write  Done
+
+*******************************************************************
+******        Statistics on Transfer (Write)                 ******
+
+*******************************************************************
+******        Transfer Mode = 0  I.E.  As Is       ******
+******        Transferring Shape, ShapeType = 2                      ******
+** WorkSession : Sending all data
+ Step File Name : C:\Users\m1835\AppData\Local\Temp\tmpzmstcwny\cylinder.step(118 ents)  Write  Done
+
+*******************************************************************
+******        Statistics on Transfer (Write)                 ******
+
+*******************************************************************
+******        Transfer Mode = 0  I.E.  As Is       ******
+******        Transferring Shape, ShapeType = 2                      ******
+** WorkSession : Sending all data
+ Step File Name : C:\Users\m1835\AppData\Local\Temp\tmpzmstcwny\cylinder\model.step(118 ents)  Write  Done
+
+*******************************************************************
+******        Statistics on Transfer (Write)                 ******
+
+*******************************************************************
+******        Transfer Mode = 0  I.E.  As Is       ******
+******        Transferring Shape, ShapeType = 0                      ******
+** WorkSession : Sending all data
+ Step File Name : C:\Users\m1835\AppData\Local\Temp\tmpzmstcwny\annulus.step(202 ents)  Write  Done
+
+*******************************************************************
+******        Statistics on Transfer (Write)                 ******
+
+*******************************************************************
+******        Transfer Mode = 0  I.E.  As Is       ******
+******        Transferring Shape, ShapeType = 2                      ******
+** WorkSession : Sending all data
+ Step File Name : C:\Users\m1835\AppData\Local\Temp\tmpzmstcwny\annulus\model.step(202 ents)  Write  Done
+
+*******************************************************************
+******        Statistics on Transfer (Write)                 ******
+
+*******************************************************************
+******        Transfer Mode = 0  I.E.  As Is       ******
+******        Transferring Shape, ShapeType = 0                      ******
+** WorkSession : Sending all data
+ Step File Name : C:\Users\m1835\AppData\Local\Temp\tmpzmstcwny\box_with_hole.step(434 ents)  Write  Done
+
+*******************************************************************
+******        Statistics on Transfer (Write)                 ******
+
+*******************************************************************
+******        Transfer Mode = 0  I.E.  As Is       ******
+******        Transferring Shape, ShapeType = 2                      ******
+** WorkSession : Sending all data
+ Step File Name : C:\Users\m1835\AppData\Local\Temp\tmpzmstcwny\box_with_hole\model.step(434 ents)  Write  Done
+
+*******************************************************************
+******        Statistics on Transfer (Write)                 ******
+
+*******************************************************************
+******        Transfer Mode = 0  I.E.  As Is       ******
+******        Transferring Shape, ShapeType = 0                      ******
+** WorkSession : Sending all data
+ Step File Name : C:\Users\m1835\AppData\Local\Temp\tmpzmstcwny\two_holes.step(518 ents)  Write  Done
+
+*******************************************************************
+******        Statistics on Transfer (Write)                 ******
+
+*******************************************************************
+******        Transfer Mode = 0  I.E.  As Is       ******
+******        Transferring Shape, ShapeType = 2                      ******
+** WorkSession : Sending all data
+ Step File Name : C:\Users\m1835\AppData\Local\Temp\tmpzmstcwny\two_holes\model.step(518 ents)  Write  Done
+
+*******************************************************************
+******        Statistics on Transfer (Write)                 ******
+
+*******************************************************************
+******        Transfer Mode = 0  I.E.  As Is       ******
+******        Transferring Shape, ShapeType = 2                      ******
+** WorkSession : Sending all data
+ Step File Name : C:\Users\m1835\AppData\Local\Temp\tmpzmstcwny\oblique_box.step(350 ents)  Write  Done
+
+*******************************************************************
+******        Statistics on Transfer (Write)                 ******
+
+*******************************************************************
+******        Transfer Mode = 0  I.E.  As Is       ******
+******        Transferring Shape, ShapeType = 2                      ******
+** WorkSession : Sending all data
+ Step File Name : C:\Users\m1835\AppData\Local\Temp\tmpzmstcwny\oblique_box\model.step(350 ents)  Write  Done
+
+*******************************************************************
+******        Statistics on Transfer (Write)                 ******
+
+*******************************************************************
+******        Transfer Mode = 0  I.E.  As Is       ******
+******        Transferring Shape, ShapeType = 0                      ******
+** WorkSession : Sending all data
+ Step File Name : C:\Users\m1835\AppData\Local\Temp\tmpzmstcwny\oblique_annulus.step(202 ents)  Write  Done
+
+*******************************************************************
+******        Statistics on Transfer (Write)                 ******
+
+*******************************************************************
+******        Transfer Mode = 0  I.E.  As Is       ******
+******        Transferring Shape, ShapeType = 2                      ******
+** WorkSession : Sending all data
+ Step File Name : C:\Users\m1835\AppData\Local\Temp\tmpzmstcwny\oblique_annulus\model.step(202 ents)  Write  Done
+
+*******************************************************************
+******        Statistics on Transfer (Write)                 ******
+
+*******************************************************************
+******        Transfer Mode = 0  I.E.  As Is       ******
+******        Transferring Shape, ShapeType = 2                      ******
+** WorkSession : Sending all data
+ Step File Name : C:\Users\m1835\AppData\Local\Temp\tmpzmstcwny\line_arc.step(352 ents)  Write  Done
+
+*******************************************************************
+******        Statistics on Transfer (Write)                 ******
+
+*******************************************************************
+******        Transfer Mode = 0  I.E.  As Is       ******
+******        Transferring Shape, ShapeType = 2                      ******
+** WorkSession : Sending all data
+ Step File Name : C:\Users\m1835\AppData\Local\Temp\tmpzmstcwny\line_arc\model.step(352 ents)  Write  Done
+
+*******************************************************************
+******        Statistics on Transfer (Write)                 ******
+
+*******************************************************************
+******        Transfer Mode = 0  I.E.  As Is       ******
+******        Transferring Shape, ShapeType = 2                      ******
+** WorkSession : Sending all data
+ Step File Name : C:\Users\m1835\AppData\Local\Temp\tmpzmstcwny\major_arc.step(196 ents)  Write  Done
+
+*******************************************************************
+******        Statistics on Transfer (Write)                 ******
+
+*******************************************************************
+******        Transfer Mode = 0  I.E.  As Is       ******
+******        Transferring Shape, ShapeType = 2                      ******
+** WorkSession : Sending all data
+ Step File Name : C:\Users\m1835\AppData\Local\Temp\tmpzmstcwny\major_arc\model.step(196 ents)  Write  Done
+
+*******************************************************************
+******        Statistics on Transfer (Write)                 ******
+
+*******************************************************************
+******        Transfer Mode = 0  I.E.  As Is       ******
+******        Transferring Shape, ShapeType = 0                      ******
+** WorkSession : Sending all data
+ Step File Name : C:\Users\m1835\AppData\Local\Temp\tmpzmstcwny\disjoint.step(494 ents)  Write  Done
+
+*******************************************************************
+******        Statistics on Transfer (Write)                 ******
+
+*******************************************************************
+******        Transfer Mode = 0  I.E.  As Is       ******
+******        Transferring Shape, ShapeType = 2                      ******
+
+*******************************************************************
+******        Statistics on Transfer (Write)                 ******
+
+*******************************************************************
+******        Transfer Mode = 0  I.E.  As Is       ******
+******        Transferring Shape, ShapeType = 2                      ******
+** WorkSession : Sending all data
+ Step File Name : C:\Users\m1835\AppData\Local\Temp\tmpzmstcwny\disjoint\model.step(462 ents)  Write  Done
+
+*******************************************************************
+******        Statistics on Transfer (Write)                 ******
+
+*******************************************************************
+******        Transfer Mode = 0  I.E.  As Is       ******
+******        Transferring Shape, ShapeType = 0                      ******
+** WorkSession : Sending all data
+ Step File Name : C:\Users\m1835\AppData\Local\Temp\tmpzmstcwny\overlapping_bodies.step(726 ents)  Write  Done
+
+*******************************************************************
+******        Statistics on Transfer (Write)                 ******
+
+*******************************************************************
+******        Transfer Mode = 0  I.E.  As Is       ******
+******        Transferring Shape, ShapeType = 2                      ******
+
+*******************************************************************
+******        Statistics on Transfer (Write)                 ******
+
+*******************************************************************
+******        Transfer Mode = 0  I.E.  As Is       ******
+******        Transferring Shape, ShapeType = 2                      ******
+** WorkSession : Sending all data
+ Step File Name : C:\Users\m1835\AppData\Local\Temp\tmpzmstcwny\overlapping_bodies\model.step(694 ents)  Write  Done
+
+*******************************************************************
+******        Statistics on Transfer (Write)                 ******
+
+*******************************************************************
+******        Transfer Mode = 0  I.E.  As Is       ******
+******        Transferring Shape, ShapeType = 2                      ******
+** WorkSession : Sending all data
+ Step File Name : C:\Users\m1835\AppData\Local\Temp\tmpzmstcwny\offset_cylinder.step(118 ents)  Write  Done
+
+*******************************************************************
+******        Statistics on Transfer (Write)                 ******
+
+*******************************************************************
+******        Transfer Mode = 0  I.E.  As Is       ******
+******        Transferring Shape, ShapeType = 2                      ******
+** WorkSession : Sending all data
+ Step File Name : C:\Users\m1835\AppData\Local\Temp\tmpzmstcwny\offset_cylinder\model.step(118 ents)  Write  Done
+test_standalone_cases_and_structure (test_step2scapi.ConversionTests.test_standalone_cases_and_structure) ... ok
+test_top_level_dimensions_are_read_at_build_time (test_step2scapi.ConversionTests.test_top_level_dimensions_are_read_at_build_time) ... ok
+
+*******************************************************************
+******        Statistics on Transfer (Write)                 ******
+
+*******************************************************************
+******        Transfer Mode = 0  I.E.  As Is       ******
+******        Transferring Shape, ShapeType = 2                      ******
+** WorkSession : Sending all data
+ Step File Name : C:\Users\m1835\AppData\Local\Temp\tmpq4mbmnwi\unsupported.step(63 ents)  Write  Done
+test_unsupported_shapes_do_not_produce_passing_code (test_step2scapi.ConversionTests.test_unsupported_shapes_do_not_produce_passing_code) ... ok
+test_missing_required_measurement_is_not_pass (test_step2scapi.MetricTests.test_missing_required_measurement_is_not_pass) ... ok
+test_same_geometry_passes (test_step2scapi.MetricTests.test_same_geometry_passes) ... ok
+test_similarity_is_explicitly_available (test_step2scapi.MetricTests.test_similarity_is_explicitly_available) ... ok
+test_world_mode_rejects_scale (test_step2scapi.MetricTests.test_world_mode_rejects_scale) ... ok
+test_world_mode_rejects_translation (test_step2scapi.MetricTests.test_world_mode_rejects_translation) ... ok
+test_coverage_catches_missing_and_swapped_bodies (test_step_codegen.StepCodeTests.test_coverage_catches_missing_and_swapped_bodies) ... ok
+
+*******************************************************************
+******        Statistics on Transfer (Write)                 ******
+
+*******************************************************************
+******        Transfer Mode = 0  I.E.  As Is       ******
+******        Transferring Shape, ShapeType = 2                      ******
+** WorkSession : Sending all data
+ Step File Name : C:\Users\m1835\AppData\Local\Temp\tmpuxf6n6l4\box.step(118 ents)  Write  Done
+
+*******************************************************************
+******        Statistics on Transfer (Write)                 ******
+
+*******************************************************************
+******        Transfer Mode = 0  I.E.  As Is       ******
+******        Transferring Shape, ShapeType = 2                      ******
+** WorkSession : Sending all data
+ Step File Name : C:\Users\m1835\AppData\Local\Temp\tmpuxf6n6l4\case\model.step(118 ents)  Write  Done
+test_coverage_failure_cannot_be_train_ready (test_step_codegen.StepCodeTests.test_coverage_failure_cannot_be_train_ready) ... ok
+
+*******************************************************************
+******        Statistics on Transfer (Write)                 ******
+
+*******************************************************************
+******        Transfer Mode = 0  I.E.  As Is       ******
+******        Transferring Shape, ShapeType = 2                      ******
+** WorkSession : Sending all data
+ Step File Name : C:\Users\m1835\AppData\Local\Temp\tmp2eepuyxh\source.step(118 ents)  Write  Done
+
+*******************************************************************
+******        Statistics on Transfer (Write)                 ******
+
+*******************************************************************
+******        Transfer Mode = 0  I.E.  As Is       ******
+******        Transferring Shape, ShapeType = 2                      ******
+** WorkSession : Sending all data
+ Step File Name : C:\Users\m1835\AppData\Local\Temp\tmp2eepuyxh\case\model.step(118 ents)  Write  Done
+test_edit_smoke_changes_actual_saved_program_globals (test_step_codegen.StepCodeTests.test_edit_smoke_changes_actual_saved_program_globals) ... ok
+test_invalid_frames_fail_without_silent_normalization (test_step_codegen.StepCodeTests.test_invalid_frames_fail_without_silent_normalization) ... ok
+test_loose_geometry_is_not_dropped (test_step_codegen.StepCodeTests.test_loose_geometry_is_not_dropped) ... ok
+test_metadata_and_codegen_are_deterministic_and_bound (test_step_codegen.StepCodeTests.test_metadata_and_codegen_are_deterministic_and_bound) ... ok
+
+*******************************************************************
+******        Statistics on Transfer (Write)                 ******
+
+*******************************************************************
+******        Transfer Mode = 0  I.E.  As Is       ******
+******        Transferring Shape, ShapeType = 2                      ******
+** WorkSession : Sending all data
+ Step File Name : C:\Users\m1835\AppData\Local\Temp\tmpg0uitie4\meters.step(350 ents)  Write  Done
+
+*******************************************************************
+******        Statistics on Transfer (Write)                 ******
+
+*******************************************************************
+******        Transfer Mode = 0  I.E.  As Is       ******
+******        Transferring Shape, ShapeType = 2                      ******
+** WorkSession : Sending all data
+ Step File Name : C:\Users\m1835\AppData\Local\Temp\tmpg0uitie4\case\model.step(350 ents)  Write  Done
+test_meter_source_imported_to_mm_exactly_once (test_step_codegen.StepCodeTests.test_meter_source_imported_to_mm_exactly_once) ... ok
+test_reuse_with_independent_sizes_placement_and_fresh_builds (test_step_codegen.StepCodeTests.test_reuse_with_independent_sizes_placement_and_fresh_builds) ... ok
+test_saved_program_is_standalone_in_isolated_python (test_step_codegen.StepCodeTests.test_saved_program_is_standalone_in_isolated_python) ... ok
+test_template_identity_keeps_profile_topology_and_fixed_coordinates (test_step_codegen.StepCodeTests.test_template_identity_keeps_profile_topology_and_fixed_coordinates) ... ok
+test_world_rotation_edit_uses_same_frame_for_profile_and_extrusion (test_step_codegen.StepCodeTests.test_world_rotation_edit_uses_same_frame_for_profile_and_extrusion) ... ok
+
+----------------------------------------------------------------------
+Ran 44 tests in 19.813s
+
+OK

@@ -1,0 +1,224 @@
+{
+  "format": "step-symbols",
+  "version": 1,
+  "compiler": "scapi-plan-1",
+  "plan_hash": "b43a86be786d3f82c0bb9b46945e230bc4f911af1c6ca2a78c2208352026964f",
+  "code_sha256": "6edecd483ebd4ea491f560eb7a0efc6dcec0cec7131c74110949bd6d367a6607",
+  "parameters": {
+    "body_001_factor": {
+      "symbol": "P001_BODY_001_FACTOR",
+      "editability": "independent",
+      "type": "number",
+      "unit": "1",
+      "value": 1.0
+    },
+    "body_001_origin": {
+      "symbol": "P002_BODY_001_ORIGIN",
+      "editability": "independent",
+      "type": "point3",
+      "unit": "mm",
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "body_001_x_axis": {
+      "symbol": "P003_BODY_001_X_AXIS",
+      "editability": "independent",
+      "type": "direction3",
+      "unit": "1",
+      "value": [
+        1.0,
+        0.0,
+        0.0
+      ]
+    },
+    "body_001_y_axis": {
+      "symbol": "P004_BODY_001_Y_AXIS",
+      "editability": "independent",
+      "type": "direction3",
+      "unit": "1",
+      "value": [
+        0.0,
+        1.0,
+        0.0
+      ]
+    }
+  },
+  "source_map": {
+    "solid_01_csg_cap_009_0_loop_01_edge_006": [
+      {
+        "function": "make_profile_001",
+        "line": 16,
+        "end": 16
+      }
+    ],
+    "solid_01_csg_cap_009_0_loop_01_edge_005": [
+      {
+        "function": "make_profile_001",
+        "line": 17,
+        "end": 17
+      }
+    ],
+    "solid_01_csg_cap_009_0_loop_01_edge_004": [
+      {
+        "function": "make_profile_001",
+        "line": 18,
+        "end": 18
+      }
+    ],
+    "solid_01_csg_cap_009_0_loop_01_edge_003": [
+      {
+        "function": "make_profile_001",
+        "line": 19,
+        "end": 19
+      }
+    ],
+    "solid_01_csg_cap_009_0_loop_01_edge_002": [
+      {
+        "function": "make_profile_001",
+        "line": 20,
+        "end": 20
+      }
+    ],
+    "solid_01_csg_cap_009_0_loop_01_edge_001": [
+      {
+        "function": "make_profile_001",
+        "line": 21,
+        "end": 21
+      }
+    ],
+    "solid_01_csg_cap_009_0_loop_01": [
+      {
+        "function": "make_profile_001",
+        "line": 22,
+        "end": 22
+      }
+    ],
+    "solid_01_csg_cap_009_0_loop_02_edge_001": [
+      {
+        "function": "make_profile_001",
+        "line": 23,
+        "end": 32
+      }
+    ],
+    "solid_01_csg_cap_009_0_loop_02": [
+      {
+        "function": "make_profile_001",
+        "line": 33,
+        "end": 33
+      }
+    ],
+    "solid_01_csg_cap_009_0_profile": [
+      {
+        "function": "make_profile_001",
+        "line": 34,
+        "end": 34
+      }
+    ],
+    "solid_01_csg_tool_002_local": [
+      {
+        "function": "make_body_001",
+        "line": 39,
+        "end": 39
+      }
+    ],
+    "solid_01_csg_tool_002_frame": [
+      {
+        "function": "make_body_001",
+        "line": 40,
+        "end": 40
+      }
+    ],
+    "solid_01_csg_tool_002": [
+      {
+        "function": "make_body_001",
+        "line": 40,
+        "end": 40
+      }
+    ],
+    "solid_01_csg_tool_009_local": [
+      {
+        "function": "make_body_001",
+        "line": 41,
+        "end": 41
+      }
+    ],
+    "solid_01_csg_tool_009_frame": [
+      {
+        "function": "make_body_001",
+        "line": 42,
+        "end": 42
+      }
+    ],
+    "solid_01_csg_tool_009": [
+      {
+        "function": "make_body_001",
+        "line": 42,
+        "end": 42
+      }
+    ],
+    "solid_01_csg_op_001": [
+      {
+        "function": "make_body_001",
+        "line": 43,
+        "end": 43
+      }
+    ],
+    "body_001_scale": [
+      {
+        "function": "make_body_001",
+        "line": 44,
+        "end": 45
+      }
+    ],
+    "body_001_placement": [
+      {
+        "function": "make_body_001",
+        "line": 46,
+        "end": 46
+      }
+    ],
+    "body_001_world": [
+      {
+        "function": "make_body_001",
+        "line": 46,
+        "end": 46
+      }
+    ]
+  },
+  "outputs": [
+    {
+      "expected_kind": "solid",
+      "id": "body_001",
+      "node": "body_001_world"
+    }
+  ],
+  "functions": [
+    {
+      "name": "make_profile_001",
+      "line": 14,
+      "end": 34
+    },
+    {
+      "name": "make_body_001",
+      "line": 37,
+      "end": 47
+    },
+    {
+      "name": "build",
+      "line": 50,
+      "end": 56
+    }
+  ],
+  "structure": {
+    "lines": 160,
+    "profile_count": 1,
+    "body_count": 1,
+    "build_lines": 7,
+    "max_function_lines": 21
+  },
+  "code_structure_spec": "step-readable-2",
+  "history_recovered": false
+}

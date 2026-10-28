@@ -1,0 +1,940 @@
+{
+  "source_sha256": "84c7687d1acf464c406a6648e379893f21f0c9ed358ea0dee92be7e10b882f47",
+  "topology": {
+    "format": "step-source-topology",
+    "version": 1,
+    "shape_signature": {
+      "valid": true,
+      "solid_count": 1,
+      "face_count": 21,
+      "edge_occurrences": 82,
+      "volume_mm3": 10527.80955115289,
+      "bbox_mm": [
+        -39.370000100000006,
+        -39.370000100000006,
+        -2.5400001,
+        39.370000100000006,
+        39.370000100000006,
+        12.700000099999999
+      ],
+      "bodies": [
+        {
+          "volume_mm3": 10527.80955115289,
+          "bbox_mm": [
+            -39.370000100000006,
+            -39.370000100000006,
+            -2.5400001,
+            39.370000100000006,
+            39.370000100000006,
+            12.700000099999999
+          ],
+          "valid": true
+        }
+      ]
+    },
+    "entity_counts": {
+      "solid_count": 1,
+      "face_count": 21,
+      "edge_count": 41,
+      "vertex_count": 27
+    },
+    "surface_type_histogram": {
+      "GeomAbs_Cone": 2,
+      "GeomAbs_Cylinder": 4,
+      "GeomAbs_Plane": 15
+    },
+    "curve_type_histogram": {
+      "GeomAbs_BSplineCurve": 6,
+      "GeomAbs_Circle": 15,
+      "GeomAbs_Ellipse": 4,
+      "GeomAbs_Line": 16
+    },
+    "bodies": [
+      {
+        "solid_index": 1,
+        "face_count": 21,
+        "edge_count": 41,
+        "vertex_count": 27,
+        "volume_mm3": 10527.80955115289,
+        "bbox_mm": [
+          -39.370000100000006,
+          -39.370000100000006,
+          -2.5400001,
+          39.370000100000006,
+          39.370000100000006,
+          12.700000099999999
+        ]
+      }
+    ],
+    "faces": [
+      {
+        "face_index": 1,
+        "surface_type": "GeomAbs_Plane",
+        "area_mm2": 3.87095999999999,
+        "bbox_mm": [
+          -4.445,
+          29.3630452561248,
+          11.43,
+          -4.444999999999994,
+          32.4110452561248,
+          12.700000000000003
+        ],
+        "edge_indices": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "orientation": "TopAbs_REVERSED"
+      },
+      {
+        "face_index": 2,
+        "surface_type": "GeomAbs_Plane",
+        "area_mm2": 11.290299999999965,
+        "bbox_mm": [
+          -4.445,
+          29.3630452561248,
+          11.43,
+          4.445,
+          29.3630452561248,
+          12.700000000000003
+        ],
+        "edge_indices": [
+          3,
+          5,
+          6,
+          7
+        ],
+        "orientation": "TopAbs_FORWARD"
+      },
+      {
+        "face_index": 3,
+        "surface_type": "GeomAbs_Plane",
+        "area_mm2": 11.290299999999965,
+        "bbox_mm": [
+          -4.445,
+          32.4110452561248,
+          11.43,
+          4.445,
+          32.4110452561248,
+          12.700000000000003
+        ],
+        "edge_indices": [
+          1,
+          8,
+          9,
+          10
+        ],
+        "orientation": "TopAbs_REVERSED"
+      },
+      {
+        "face_index": 4,
+        "surface_type": "GeomAbs_Plane",
+        "area_mm2": 1451.7092825889645,
+        "bbox_mm": [
+          -34.6970453,
+          -34.6970453,
+          12.7,
+          34.6970453,
+          34.6970453,
+          12.7
+        ],
+        "edge_indices": [
+          2,
+          6,
+          9,
+          11,
+          12,
+          13
+        ],
+        "orientation": "TopAbs_FORWARD"
+      },
+      {
+        "face_index": 5,
+        "surface_type": "GeomAbs_Plane",
+        "area_mm2": 1021.1105185860406,
+        "bbox_mm": [
+          -33.72254,
+          -33.72254,
+          11.43,
+          33.72254,
+          33.72254,
+          11.43
+        ],
+        "edge_indices": [
+          4,
+          5,
+          10,
+          14,
+          15,
+          16
+        ],
+        "orientation": "TopAbs_REVERSED"
+      },
+      {
+        "face_index": 6,
+        "surface_type": "GeomAbs_Plane",
+        "area_mm2": 470.56258416162564,
+        "bbox_mm": [
+          -39.370000000000005,
+          -39.370000000000005,
+          2.54,
+          39.370000000000005,
+          39.370000000000005,
+          2.54
+        ],
+        "edge_indices": [
+          17,
+          18
+        ],
+        "orientation": "TopAbs_FORWARD"
+      },
+      {
+        "face_index": 7,
+        "surface_type": "GeomAbs_Plane",
+        "area_mm2": 309.0915622494749,
+        "bbox_mm": [
+          -39.370000000000005,
+          -39.370000000000005,
+          -2.54,
+          39.370000000000005,
+          39.370000000000005,
+          -2.54
+        ],
+        "edge_indices": [
+          19,
+          20
+        ],
+        "orientation": "TopAbs_REVERSED"
+      },
+      {
+        "face_index": 8,
+        "surface_type": "GeomAbs_Cylinder",
+        "area_mm2": 1256.6345481617946,
+        "bbox_mm": [
+          -39.370000100000006,
+          -39.370000100000006,
+          -2.5400001,
+          39.370000100000006,
+          39.370000100000006,
+          2.5400001
+        ],
+        "edge_indices": [
+          18,
+          20,
+          21
+        ],
+        "orientation": "TopAbs_FORWARD"
+      },
+      {
+        "face_index": 9,
+        "surface_type": "GeomAbs_Cylinder",
+        "area_mm2": 912.0734623754962,
+        "bbox_mm": [
+          -38.1000001,
+          -38.1000001,
+          -2.5400001,
+          38.1000001,
+          38.1000001,
+          1.2700001
+        ],
+        "edge_indices": [
+          19,
+          22,
+          23
+        ],
+        "orientation": "TopAbs_REVERSED"
+      },
+      {
+        "face_index": 10,
+        "surface_type": "GeomAbs_Cone",
+        "area_mm2": 2383.0555639623917,
+        "bbox_mm": [
+          -37.419409200000004,
+          -37.419409200000004,
+          2.5399998878056578,
+          37.419409200000004,
+          37.419409200000004,
+          12.700000099999999
+        ],
+        "edge_indices": [
+          12,
+          17,
+          24
+        ],
+        "orientation": "TopAbs_FORWARD"
+      },
+      {
+        "face_index": 11,
+        "surface_type": "GeomAbs_Cylinder",
+        "area_mm2": 598.2804519916665,
+        "bbox_mm": [
+          -27.077045400000006,
+          -27.077045400000006,
+          6.349999895644118,
+          27.077045400000006,
+          27.077045400000003,
+          12.700000099999999
+        ],
+        "edge_indices": [
+          11,
+          25,
+          26,
+          27,
+          28,
+          29
+        ],
+        "orientation": "TopAbs_REVERSED"
+      },
+      {
+        "face_index": 12,
+        "surface_type": "GeomAbs_Plane",
+        "area_mm2": 810.9552030438246,
+        "bbox_mm": [
+          -26.321927779848803,
+          6.35,
+          6.35,
+          26.321927779848803,
+          27.0770453,
+          6.35
+        ],
+        "edge_indices": [
+          26,
+          30
+        ],
+        "orientation": "TopAbs_FORWARD"
+      },
+      {
+        "face_index": 13,
+        "surface_type": "GeomAbs_Plane",
+        "area_mm2": 1336.21051717009,
+        "bbox_mm": [
+          -27.077045300000005,
+          -27.077045300000005,
+          11.43,
+          27.077045300000005,
+          3.4170606380536697,
+          11.43
+        ],
+        "edge_indices": [
+          28,
+          31
+        ],
+        "orientation": "TopAbs_FORWARD"
+      },
+      {
+        "face_index": 14,
+        "surface_type": "GeomAbs_Plane",
+        "area_mm2": 328.82366880981067,
+        "bbox_mm": [
+          -28.219710422588527,
+          2.68382579064588,
+          5.0799999962949105,
+          28.219710422588527,
+          5.616765160268325,
+          10.16
+        ],
+        "edge_indices": [
+          32,
+          33,
+          34,
+          35
+        ],
+        "orientation": "TopAbs_REVERSED"
+      },
+      {
+        "face_index": 15,
+        "surface_type": "GeomAbs_Plane",
+        "area_mm2": 1414.1506447166362,
+        "bbox_mm": [
+          -28.347045299999998,
+          -28.347045299999998,
+          10.16,
+          28.347045299999998,
+          2.6838257947998767,
+          10.16
+        ],
+        "edge_indices": [
+          32,
+          36,
+          37
+        ],
+        "orientation": "TopAbs_REVERSED"
+      },
+      {
+        "face_index": 16,
+        "surface_type": "GeomAbs_Plane",
+        "area_mm2": 945.8799336213493,
+        "bbox_mm": [
+          -27.785012620134232,
+          5.61676515812918,
+          5.08,
+          27.785012620134232,
+          28.347045299999998,
+          5.08
+        ],
+        "edge_indices": [
+          34,
+          38
+        ],
+        "orientation": "TopAbs_REVERSED"
+      },
+      {
+        "face_index": 17,
+        "surface_type": "GeomAbs_Cylinder",
+        "area_mm2": 636.2595271156254,
+        "bbox_mm": [
+          -28.3470454,
+          -28.3470454,
+          5.07999989629491,
+          28.3470454,
+          28.3470454,
+          11.430000099999999
+        ],
+        "edge_indices": [
+          15,
+          33,
+          35,
+          36,
+          37,
+          38,
+          39
+        ],
+        "orientation": "TopAbs_FORWARD"
+      },
+      {
+        "face_index": 18,
+        "surface_type": "GeomAbs_Cone",
+        "area_mm2": 2318.6513931094723,
+        "bbox_mm": [
+          -36.4449039,
+          -36.4449039,
+          1.2699998939693338,
+          36.4449039,
+          36.4449039,
+          11.430000099999999
+        ],
+        "edge_indices": [
+          14,
+          40,
+          41
+        ],
+        "orientation": "TopAbs_REVERSED"
+      },
+      {
+        "face_index": 19,
+        "surface_type": "GeomAbs_Plane",
+        "area_mm2": 387.6065191940261,
+        "bbox_mm": [
+          -38.1,
+          -38.1,
+          1.27,
+          38.1,
+          38.1,
+          1.27
+        ],
+        "edge_indices": [
+          23,
+          41
+        ],
+        "orientation": "TopAbs_REVERSED"
+      },
+      {
+        "face_index": 20,
+        "surface_type": "GeomAbs_Plane",
+        "area_mm2": 3.87095999999999,
+        "bbox_mm": [
+          4.444999999999999,
+          29.3630452561248,
+          11.43,
+          4.4450000000000065,
+          32.4110452561248,
+          12.700000000000003
+        ],
+        "edge_indices": [
+          7,
+          8,
+          13,
+          16
+        ],
+        "orientation": "TopAbs_FORWARD"
+      },
+      {
+        "face_index": 21,
+        "surface_type": "GeomAbs_Plane",
+        "area_mm2": 312.2887987766849,
+        "bbox_mm": [
+          -26.860567357362978,
+          3.41706063251671,
+          6.349999995644119,
+          26.860567357362978,
+          6.350000002514881,
+          11.43
+        ],
+        "edge_indices": [
+          27,
+          29,
+          30,
+          31
+        ],
+        "orientation": "TopAbs_FORWARD"
+      }
+    ],
+    "edges": [
+      {
+        "edge_index": 1,
+        "curve_type": "GeomAbs_Line",
+        "length_mm": 1.269999999999996,
+        "first_parameter": 111.1332062003749,
+        "last_parameter": 112.4032062003749
+      },
+      {
+        "edge_index": 2,
+        "curve_type": "GeomAbs_Line",
+        "length_mm": 3.048000000000002,
+        "first_parameter": -50.7661773900697,
+        "last_parameter": -47.7181773900697
+      },
+      {
+        "edge_index": 3,
+        "curve_type": "GeomAbs_Line",
+        "length_mm": 1.269999999999996,
+        "first_parameter": 111.1332062003749,
+        "last_parameter": 112.4032062003749
+      },
+      {
+        "edge_index": 4,
+        "curve_type": "GeomAbs_Line",
+        "length_mm": 3.048000000000002,
+        "first_parameter": -32.4110452561248,
+        "last_parameter": -29.3630452561248
+      },
+      {
+        "edge_index": 5,
+        "curve_type": "GeomAbs_Line",
+        "length_mm": 8.89,
+        "first_parameter": -4.444999999999997,
+        "last_parameter": 4.445000000000004
+      },
+      {
+        "edge_index": 6,
+        "curve_type": "GeomAbs_Line",
+        "length_mm": 8.89,
+        "first_parameter": -5.6310696527362,
+        "last_parameter": 3.2589303472638003
+      },
+      {
+        "edge_index": 7,
+        "curve_type": "GeomAbs_Line",
+        "length_mm": 1.269999999999996,
+        "first_parameter": 111.1332062003749,
+        "last_parameter": 112.4032062003749
+      },
+      {
+        "edge_index": 8,
+        "curve_type": "GeomAbs_Line",
+        "length_mm": 1.269999999999996,
+        "first_parameter": 111.1332062003749,
+        "last_parameter": 112.4032062003749
+      },
+      {
+        "edge_index": 9,
+        "curve_type": "GeomAbs_Line",
+        "length_mm": 8.89,
+        "first_parameter": -4.445000000000043,
+        "last_parameter": 4.444999999999958
+      },
+      {
+        "edge_index": 10,
+        "curve_type": "GeomAbs_Line",
+        "length_mm": 8.89,
+        "first_parameter": -4.444999999999997,
+        "last_parameter": 4.445000000000004
+      },
+      {
+        "edge_index": 11,
+        "curve_type": "GeomAbs_Circle",
+        "length_mm": 170.13009319079606,
+        "first_parameter": 0.0,
+        "last_parameter": 6.283185307179586
+      },
+      {
+        "edge_index": 12,
+        "curve_type": "GeomAbs_Circle",
+        "length_mm": 218.0079652315045,
+        "first_parameter": 0.0,
+        "last_parameter": 6.283185307179586
+      },
+      {
+        "edge_index": 13,
+        "curve_type": "GeomAbs_Line",
+        "length_mm": 3.048000000000002,
+        "first_parameter": -58.147090089983,
+        "last_parameter": -55.099090089983
+      },
+      {
+        "edge_index": 14,
+        "curve_type": "GeomAbs_Circle",
+        "length_mm": 211.8849678487759,
+        "first_parameter": 0.0,
+        "last_parameter": 6.283185307179586
+      },
+      {
+        "edge_index": 15,
+        "curve_type": "GeomAbs_Circle",
+        "length_mm": 178.10973853091414,
+        "first_parameter": 0.0,
+        "last_parameter": 6.283185307179586
+      },
+      {
+        "edge_index": 16,
+        "curve_type": "GeomAbs_Line",
+        "length_mm": 3.048000000000002,
+        "first_parameter": -32.4110452561248,
+        "last_parameter": -29.3630452561248
+      },
+      {
+        "edge_index": 17,
+        "curve_type": "GeomAbs_Circle",
+        "length_mm": 235.11308146046213,
+        "first_parameter": 0.0,
+        "last_parameter": 6.283185307179586
+      },
+      {
+        "edge_index": 18,
+        "curve_type": "GeomAbs_Circle",
+        "length_mm": 247.3690055436604,
+        "first_parameter": 0.0,
+        "last_parameter": 6.283185307179586
+      },
+      {
+        "edge_index": 19,
+        "curve_type": "GeomAbs_Circle",
+        "length_mm": 239.38936020354225,
+        "first_parameter": 0.0,
+        "last_parameter": 6.283185307179586
+      },
+      {
+        "edge_index": 20,
+        "curve_type": "GeomAbs_Circle",
+        "length_mm": 247.3690055436604,
+        "first_parameter": 0.0,
+        "last_parameter": 6.283185307179586
+      },
+      {
+        "edge_index": 21,
+        "curve_type": "GeomAbs_BSplineCurve",
+        "length_mm": 5.079999999999999,
+        "first_parameter": -5.08,
+        "last_parameter": 0.0
+      },
+      {
+        "edge_index": 22,
+        "curve_type": "GeomAbs_BSplineCurve",
+        "length_mm": 3.81,
+        "first_parameter": -5.08,
+        "last_parameter": -1.27
+      },
+      {
+        "edge_index": 23,
+        "curve_type": "GeomAbs_Circle",
+        "length_mm": 239.38936020354225,
+        "first_parameter": 0.0,
+        "last_parameter": 6.283185307179586
+      },
+      {
+        "edge_index": 24,
+        "curve_type": "GeomAbs_BSplineCurve",
+        "length_mm": 10.518405994234605,
+        "first_parameter": -13.148007479852303,
+        "last_parameter": -2.629601485617698
+      },
+      {
+        "edge_index": 25,
+        "curve_type": "GeomAbs_BSplineCurve",
+        "length_mm": 6.35000000217794,
+        "first_parameter": -6.35,
+        "last_parameter": 2.177940494618724e-09
+      },
+      {
+        "edge_index": 26,
+        "curve_type": "GeomAbs_Circle",
+        "length_mm": 72.2456556008866,
+        "first_parameter": 0.0,
+        "last_parameter": 2.6681513732551387
+      },
+      {
+        "edge_index": 27,
+        "curve_type": "GeomAbs_Ellipse",
+        "length_mm": 5.8913407275867655,
+        "first_parameter": 4.4756683400672514,
+        "last_parameter": 4.585853896404929
+      },
+      {
+        "edge_index": 28,
+        "curve_type": "GeomAbs_Circle",
+        "length_mm": 91.91743899298504,
+        "first_parameter": 0.11018555626755246,
+        "last_parameter": 3.504848377656895
+      },
+      {
+        "edge_index": 29,
+        "curve_type": "GeomAbs_Ellipse",
+        "length_mm": 5.8913407275867655,
+        "first_parameter": 1.6973314107746575,
+        "last_parameter": 1.8075169671123352
+      },
+      {
+        "edge_index": 30,
+        "curve_type": "GeomAbs_Line",
+        "length_mm": 52.6438554743942,
+        "first_parameter": -26.3219277371971,
+        "last_parameter": 26.3219277371971
+      },
+      {
+        "edge_index": 31,
+        "curve_type": "GeomAbs_Line",
+        "length_mm": 53.7211346282236,
+        "first_parameter": -26.8605673141118,
+        "last_parameter": 26.8605673141118
+      },
+      {
+        "edge_index": 32,
+        "curve_type": "GeomAbs_Line",
+        "length_mm": 56.4394207581278,
+        "first_parameter": -28.2197103790639,
+        "last_parameter": 28.2197103790639
+      },
+      {
+        "edge_index": 33,
+        "curve_type": "GeomAbs_Ellipse",
+        "length_mm": 5.882657118164309,
+        "first_parameter": 4.5129261102667995,
+        "last_parameter": 4.6175695174486115
+      },
+      {
+        "edge_index": 34,
+        "curve_type": "GeomAbs_Line",
+        "length_mm": 55.570025154257806,
+        "first_parameter": -27.785012577128903,
+        "last_parameter": 27.785012577128903
+      },
+      {
+        "edge_index": 35,
+        "curve_type": "GeomAbs_Ellipse",
+        "length_mm": 5.882657118164319,
+        "first_parameter": 1.665615789730975,
+        "last_parameter": 1.7702591969127872
+      },
+      {
+        "edge_index": 36,
+        "curve_type": "GeomAbs_Circle",
+        "length_mm": 91.74272087500573,
+        "first_parameter": 3.046773190710935,
+        "last_parameter": 6.283185307179586
+      },
+      {
+        "edge_index": 37,
+        "curve_type": "GeomAbs_Circle",
+        "length_mm": 2.6878516095486598,
+        "first_parameter": 6.283185307179586,
+        "last_parameter": 6.378004770058444
+      },
+      {
+        "edge_index": 38,
+        "curve_type": "GeomAbs_Circle",
+        "length_mm": 77.74650324249842,
+        "first_parameter": 0.199462869997224,
+        "last_parameter": 2.942129783592569
+      },
+      {
+        "edge_index": 39,
+        "curve_type": "GeomAbs_BSplineCurve",
+        "length_mm": 1.2699999999999996,
+        "first_parameter": -5.08,
+        "last_parameter": -3.8100000000000005
+      },
+      {
+        "edge_index": 40,
+        "curve_type": "GeomAbs_BSplineCurve",
+        "length_mm": 10.5184059942346,
+        "first_parameter": -12.173502211499903,
+        "last_parameter": -1.6550962172653012
+      },
+      {
+        "edge_index": 41,
+        "curve_type": "GeomAbs_Circle",
+        "length_mm": 228.99008407773346,
+        "first_parameter": 0.0,
+        "last_parameter": 6.283185307179586
+      }
+    ],
+    "face_adjacency": {
+      "shared_edge_pair_count": 32,
+      "shared_edge_pairs": [
+        {
+          "left_face_index": 11,
+          "right_face_index": 12,
+          "shared_edge_count": 1
+        },
+        {
+          "left_face_index": 11,
+          "right_face_index": 13,
+          "shared_edge_count": 1
+        },
+        {
+          "left_face_index": 11,
+          "right_face_index": 21,
+          "shared_edge_count": 2
+        },
+        {
+          "left_face_index": 12,
+          "right_face_index": 21,
+          "shared_edge_count": 1
+        },
+        {
+          "left_face_index": 13,
+          "right_face_index": 21,
+          "shared_edge_count": 1
+        },
+        {
+          "left_face_index": 14,
+          "right_face_index": 15,
+          "shared_edge_count": 1
+        },
+        {
+          "left_face_index": 14,
+          "right_face_index": 16,
+          "shared_edge_count": 1
+        },
+        {
+          "left_face_index": 14,
+          "right_face_index": 17,
+          "shared_edge_count": 2
+        },
+        {
+          "left_face_index": 15,
+          "right_face_index": 17,
+          "shared_edge_count": 2
+        },
+        {
+          "left_face_index": 16,
+          "right_face_index": 17,
+          "shared_edge_count": 1
+        },
+        {
+          "left_face_index": 18,
+          "right_face_index": 19,
+          "shared_edge_count": 1
+        },
+        {
+          "left_face_index": 1,
+          "right_face_index": 2,
+          "shared_edge_count": 1
+        },
+        {
+          "left_face_index": 1,
+          "right_face_index": 3,
+          "shared_edge_count": 1
+        },
+        {
+          "left_face_index": 1,
+          "right_face_index": 4,
+          "shared_edge_count": 1
+        },
+        {
+          "left_face_index": 1,
+          "right_face_index": 5,
+          "shared_edge_count": 1
+        },
+        {
+          "left_face_index": 2,
+          "right_face_index": 20,
+          "shared_edge_count": 1
+        },
+        {
+          "left_face_index": 2,
+          "right_face_index": 4,
+          "shared_edge_count": 1
+        },
+        {
+          "left_face_index": 2,
+          "right_face_index": 5,
+          "shared_edge_count": 1
+        },
+        {
+          "left_face_index": 3,
+          "right_face_index": 20,
+          "shared_edge_count": 1
+        },
+        {
+          "left_face_index": 3,
+          "right_face_index": 4,
+          "shared_edge_count": 1
+        },
+        {
+          "left_face_index": 3,
+          "right_face_index": 5,
+          "shared_edge_count": 1
+        },
+        {
+          "left_face_index": 4,
+          "right_face_index": 10,
+          "shared_edge_count": 1
+        },
+        {
+          "left_face_index": 4,
+          "right_face_index": 11,
+          "shared_edge_count": 1
+        },
+        {
+          "left_face_index": 4,
+          "right_face_index": 20,
+          "shared_edge_count": 1
+        },
+        {
+          "left_face_index": 5,
+          "right_face_index": 17,
+          "shared_edge_count": 1
+        },
+        {
+          "left_face_index": 5,
+          "right_face_index": 18,
+          "shared_edge_count": 1
+        },
+        {
+          "left_face_index": 5,
+          "right_face_index": 20,
+          "shared_edge_count": 1
+        },
+        {
+          "left_face_index": 6,
+          "right_face_index": 10,
+          "shared_edge_count": 1
+        },
+        {
+          "left_face_index": 6,
+          "right_face_index": 8,
+          "shared_edge_count": 1
+        },
+        {
+          "left_face_index": 7,
+          "right_face_index": 8,
+          "shared_edge_count": 1
+        },
+        {
+          "left_face_index": 7,
+          "right_face_index": 9,
+          "shared_edge_count": 1
+        },
+        {
+          "left_face_index": 9,
+          "right_face_index": 19,
+          "shared_edge_count": 1
+        }
+      ],
+      "non_manifold_edges": []
+    },
+    "p1_graph_status": "summary_only"
+  }
+}

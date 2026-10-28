@@ -1,0 +1,430 @@
+{
+  "plan_hash": "f201c9dfe6a29b7186c9170c68c25f32acaef63dd3214190bcbeb27de1f9ac3b",
+  "recognizer": "exact-analytic-dag-1",
+  "features": [
+    {
+      "solid_index": 1,
+      "method": "verified_meridian_revolution",
+      "node_sources": {
+        "solid_01_section_01_loop_01_edge_001": {
+          "entity_id": "solid_01.section_01.inferred_revolution",
+          "loop_index": 0,
+          "edge_index": 1,
+          "curve_evidence": {
+            "start": [
+              0.0,
+              -52.10529600417149
+            ],
+            "end": [
+              0.0,
+              -54.645296004171485
+            ]
+          }
+        },
+        "solid_01_section_01_loop_01_edge_002": {
+          "entity_id": "solid_01.section_01.inferred_revolution",
+          "loop_index": 0,
+          "edge_index": 7,
+          "curve_evidence": {
+            "start": [
+              0.0,
+              -54.6452960041715
+            ],
+            "end": [
+              27.94,
+              -54.6452960041715
+            ]
+          }
+        },
+        "solid_01_section_01_loop_01_edge_003": {
+          "entity_id": "solid_01.section_01.inferred_revolution",
+          "loop_index": 0,
+          "edge_index": 6,
+          "curve_evidence": {
+            "start": [
+              27.94,
+              -54.6452960041715
+            ],
+            "end": [
+              27.94,
+              -52.1052960041715
+            ]
+          }
+        },
+        "solid_01_section_01_loop_01_edge_004": {
+          "entity_id": "solid_01.section_01.inferred_revolution",
+          "loop_index": 0,
+          "edge_index": 5,
+          "curve_evidence": {
+            "start": [
+              27.939999999102056,
+              -52.10529600408171
+            ],
+            "end": [
+              38.10000000000001,
+              49.49470399582867
+            ]
+          }
+        },
+        "solid_01_section_01_loop_01_edge_005": {
+          "entity_id": "solid_01.section_01.inferred_revolution",
+          "loop_index": 0,
+          "edge_index": 4,
+          "curve_evidence": {
+            "start": [
+              38.1,
+              49.4947039958286
+            ],
+            "end": [
+              35.56,
+              49.4947039958286
+            ]
+          }
+        },
+        "solid_01_section_01_loop_01_edge_006": {
+          "entity_id": "solid_01.section_01.inferred_revolution",
+          "loop_index": 0,
+          "edge_index": 3,
+          "curve_evidence": {
+            "start": [
+              35.56000000000001,
+              49.49470399582873
+            ],
+            "end": [
+              25.39999999910205,
+              -52.10529600408171
+            ]
+          }
+        },
+        "solid_01_section_01_loop_01_edge_007": {
+          "entity_id": "solid_01.section_01.inferred_revolution",
+          "loop_index": 0,
+          "edge_index": 2,
+          "curve_evidence": {
+            "start": [
+              25.4,
+              -52.1052960041715
+            ],
+            "end": [
+              0.0,
+              -52.1052960041715
+            ]
+          }
+        }
+      },
+      "selected": {
+        "axis_source_face_index": 2,
+        "origin_mm": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "axis": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "bbox_error_mm": 1.0000000116860974e-07,
+        "coarse_bbox_rejection_tolerance_mm": 0.14986000034237296,
+        "coarse_volume_relative_error": 8.825342429173758e-16,
+        "status": "recognized",
+        "symmetric_difference_relative": 0.0,
+        "section_face_count": 1,
+        "section_profile_ids": [
+          "solid_01_section_01_profile"
+        ]
+      },
+      "attempts": [
+        {
+          "axis_source_face_index": 2,
+          "origin_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "bbox_error_mm": 1.0000000116860974e-07,
+          "coarse_bbox_rejection_tolerance_mm": 0.14986000034237296,
+          "coarse_volume_relative_error": 8.825342429173758e-16,
+          "status": "recognized",
+          "symmetric_difference_relative": 0.0,
+          "section_face_count": 1,
+          "section_profile_ids": [
+            "solid_01_section_01_profile"
+          ]
+        }
+      ],
+      "candidate_selection_rule": "unique analytic surface axes in imported face order; deterministic axis sign",
+      "history_recovered": false,
+      "coordinate_frame": {
+        "selected_frame": {
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "x_axis": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "y_axis": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "z_axis": [
+            0.0,
+            -1.0,
+            0.0
+          ]
+        },
+        "application": "meridian coordinates transformed once; revolve axis in world frame",
+        "adjustments": []
+      },
+      "profile_nodes": [
+        "solid_01_section_01_loop_01_edge_001",
+        "solid_01_section_01_loop_01_edge_002",
+        "solid_01_section_01_loop_01_edge_003",
+        "solid_01_section_01_loop_01_edge_004",
+        "solid_01_section_01_loop_01_edge_005",
+        "solid_01_section_01_loop_01_edge_006",
+        "solid_01_section_01_loop_01_edge_007"
+      ],
+      "source_face_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "source_topology": {
+        "face_count": 6,
+        "edge_count": 8,
+        "faces": [
+          {
+            "face_index": 1,
+            "edge_indices": [
+              1
+            ]
+          },
+          {
+            "face_index": 2,
+            "edge_indices": [
+              2,
+              3,
+              4
+            ]
+          },
+          {
+            "face_index": 3,
+            "edge_indices": [
+              4,
+              5,
+              6
+            ]
+          },
+          {
+            "face_index": 4,
+            "edge_indices": [
+              1,
+              7,
+              8
+            ]
+          },
+          {
+            "face_index": 5,
+            "edge_indices": [
+              6,
+              8
+            ]
+          },
+          {
+            "face_index": 6,
+            "edge_indices": [
+              2
+            ]
+          }
+        ]
+      },
+      "axis_candidate_count": 1,
+      "axis_candidate_limit": 8,
+      "approximation": "line/circle/arc or bounded kernel B-spline replay; no converter fitting; kernel section accuracy checked against source",
+      "spline_curve_count": 0,
+      "prior_attempts": {
+        "prism": {
+          "solid_index": 1,
+          "surface_types": {
+            "GeomAbs_Plane": 3,
+            "GeomAbs_Cylinder": 1,
+            "GeomAbs_Cone": 2
+          },
+          "planar_faces": 3,
+          "candidate_limit": 64,
+          "attempts": [
+            {
+              "face_index": 6,
+              "face_area_mm2": 2452.4641988318886,
+              "distance_origin_kind": "measured",
+              "distance_method": "parallel_cap_separation",
+              "opposite_face_index": 5,
+              "status": "not_recognized",
+              "reason": "UnsupportedGeometry: Cap prism does not match the source bounding box"
+            },
+            {
+              "face_index": 1,
+              "face_area_mm2": 2026.8299163899912,
+              "distance_origin_kind": "measured",
+              "distance_method": "parallel_cap_separation",
+              "opposite_face_index": 6,
+              "status": "not_recognized",
+              "reason": "UnsupportedGeometry: Cap prism does not match the source bounding box"
+            },
+            {
+              "face_index": 5,
+              "face_area_mm2": 587.780675753098,
+              "distance_origin_kind": "measured",
+              "distance_method": "parallel_cap_separation",
+              "opposite_face_index": 6,
+              "status": "not_recognized",
+              "reason": "UnsupportedGeometry: Cap prism differs from source: relative difference=1.8049360690170781"
+            }
+          ]
+        }
+      },
+      "replay_check": {
+        "symmetric_difference_relative": 0.0,
+        "plan_hash": "f201c9dfe6a29b7186c9170c68c25f32acaef63dd3214190bcbeb27de1f9ac3b"
+      }
+    }
+  ],
+  "source_solid_count": 1,
+  "output_map": [
+    {
+      "body_id": "body_001",
+      "source_solid_index": 1,
+      "output_node": "body_001_world",
+      "source_face_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    }
+  ],
+  "node_sources": {
+    "solid_01_section_01_loop_01_edge_001": {
+      "entity_id": "solid_01.section_01.inferred_revolution",
+      "loop_index": 0,
+      "edge_index": 1,
+      "curve_evidence": {
+        "start": [
+          0.0,
+          -52.10529600417149
+        ],
+        "end": [
+          0.0,
+          -54.645296004171485
+        ]
+      }
+    },
+    "solid_01_section_01_loop_01_edge_002": {
+      "entity_id": "solid_01.section_01.inferred_revolution",
+      "loop_index": 0,
+      "edge_index": 7,
+      "curve_evidence": {
+        "start": [
+          0.0,
+          -54.6452960041715
+        ],
+        "end": [
+          27.94,
+          -54.6452960041715
+        ]
+      }
+    },
+    "solid_01_section_01_loop_01_edge_003": {
+      "entity_id": "solid_01.section_01.inferred_revolution",
+      "loop_index": 0,
+      "edge_index": 6,
+      "curve_evidence": {
+        "start": [
+          27.94,
+          -54.6452960041715
+        ],
+        "end": [
+          27.94,
+          -52.1052960041715
+        ]
+      }
+    },
+    "solid_01_section_01_loop_01_edge_004": {
+      "entity_id": "solid_01.section_01.inferred_revolution",
+      "loop_index": 0,
+      "edge_index": 5,
+      "curve_evidence": {
+        "start": [
+          27.939999999102056,
+          -52.10529600408171
+        ],
+        "end": [
+          38.10000000000001,
+          49.49470399582867
+        ]
+      }
+    },
+    "solid_01_section_01_loop_01_edge_005": {
+      "entity_id": "solid_01.section_01.inferred_revolution",
+      "loop_index": 0,
+      "edge_index": 4,
+      "curve_evidence": {
+        "start": [
+          38.1,
+          49.4947039958286
+        ],
+        "end": [
+          35.56,
+          49.4947039958286
+        ]
+      }
+    },
+    "solid_01_section_01_loop_01_edge_006": {
+      "entity_id": "solid_01.section_01.inferred_revolution",
+      "loop_index": 0,
+      "edge_index": 3,
+      "curve_evidence": {
+        "start": [
+          35.56000000000001,
+          49.49470399582873
+        ],
+        "end": [
+          25.39999999910205,
+          -52.10529600408171
+        ]
+      }
+    },
+    "solid_01_section_01_loop_01_edge_007": {
+      "entity_id": "solid_01.section_01.inferred_revolution",
+      "loop_index": 0,
+      "edge_index": 2,
+      "curve_evidence": {
+        "start": [
+          25.4,
+          -52.1052960041715
+        ],
+        "end": [
+          0.0,
+          -52.1052960041715
+        ]
+      }
+    }
+  },
+  "history_recovered": false
+}
