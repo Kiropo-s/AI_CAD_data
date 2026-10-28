@@ -1,5 +1,7 @@
 # step2scapi v0.1 验证记录
 
+> 历史记录：本文件描述 0.x 阶段。其 `out/` 逐例产物已于 2026-10-28 清理；保留的测试日志见 [legacy-logs](results/legacy-logs/)，清理范围见 [PRUNE_LOG](results/PRUNE_LOG.md)。文内指向 `../out/...` 的链接为当时路径，已不再存在。
+
 日期：2026-10-26。运行环境：本机 `envs/simplecad`，Python 3.13.14、SimpleCADAPI 2.2.6、cadquery-ocp 7.9.3.1.1。
 
 ## 验证结果
@@ -7,7 +9,7 @@
 - 生成代码额外通过 Python `-I` 隔离模式验证：不依赖项目模块即可 build；顶部圆半径乘以 1.1 后，体积比实测为 1.21。
 - 15 项 unittest 全部通过；其中端到端测试覆盖 12 类真实 OCC 几何，均以导出的独立 STEP 为输入并生成独立 SCAPI。
 - 12 类样例的全部产物保存于 [readable-review-v1](../out/readable-review-v1/summary.json)。已审阅尺寸常量、profile/feature/build 层次、显式传参及多实体 body 数据流；圆、孔、混合线弧、大圆弧和倾斜平面额外检查了草图表达。
-- 测试日志：[unittest.log](../out/unittest.log)。测试包含世界坐标下平移和缩放错误的拒绝、必需度量异常的 provisional、子进程超时/崩溃隔离和输出目录保护。
+- 测试日志：[unittest.log](results/legacy-logs/validation-unittest.log)。测试包含世界坐标下平移和缩放错误的拒绝、必需度量异常的 provisional、子进程超时/崩溃隔离和输出目录保护。
 - ABC 前 20 例：5 个 train_ready、15 个 provisional，后者均因 unsupported_geometry。没有运行全量 1,000 例。
 - 批量报告：[summary.json](../out/abc-first20-v1/summary.json)；最新 CLI 单例复核：[00000007](../out/abc-00000007-final/summary.json)。
 

@@ -1,5 +1,7 @@
 # STEP 完整旋转扩展验证（0.3.0）
 
+> 历史记录：本文件描述 0.x 阶段。其 `out/` 逐例产物已于 2026-10-28 清理；保留的测试日志见 [legacy-logs](results/legacy-logs/)，清理范围见 [PRUNE_LOG](results/PRUNE_LOG.md)。文内指向 `../out/...` 的链接为当时路径，已不再存在。
+
 验证日期：2026-10-26。规则仍为 `step-readable-v1`，识别器为 `analytic-prism-revolution-v3`。本次结果用于几何重建，不代表恢复了原始建模历史或装配层级。
 
 ## 本次实现
@@ -21,7 +23,7 @@
 
 ## 自动测试与保存样例
 
-37 项 unittest 全部通过，用时 14.007 秒，包含旋转、混合实体顺序、独立尺寸/位置编辑、错误旋转拒绝、能力上限、派生截面来源、带权三次 B 样条、部分覆盖拒绝、负体积拒绝、非法计划语义拒绝，以及独立解释器运行/确定性。见 [测试日志](../out/extension-unittest.log)。
+37 项 unittest 全部通过，用时 14.007 秒，包含旋转、混合实体顺序、独立尺寸/位置编辑、错误旋转拒绝、能力上限、派生截面来源、带权三次 B 样条、部分覆盖拒绝、负体积拒绝、非法计划语义拒绝，以及独立解释器运行/确定性。见 [测试日志](results/legacy-logs/extension-unittest.log)。
 
 10 个单独保存的合成 STEP 能力样例全部 train_ready：sphere、cone、frustum、torus、stepped_shaft、hollow_sphere、oblique_frustum、rational_spline_revolution、mixed_prism_first、mixed_rotation_first。它们与真实 ABC 输入分开统计；每例均实际 build、导出回读、核查源覆盖并进行几何验收。见 [能力样例报告](../out/rotation-review-v3/run/summary.json) 和 [代码结构审阅](../out/rotation-review-v3/run/structure-review.json)。
 

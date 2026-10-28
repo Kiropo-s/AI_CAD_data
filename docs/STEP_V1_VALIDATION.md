@@ -1,10 +1,12 @@
 # STEP 可读代码 v1 验证记录
 
+> 历史记录：本文件描述 0.x 阶段。其 `out/` 逐例产物已于 2026-10-28 清理；保留的测试日志见 [legacy-logs](results/legacy-logs/)，清理范围见 [PRUNE_LOG](results/PRUNE_LOG.md)。文内指向 `../out/...` 的链接为当时路径，已不再存在。
+
 日期：2026-10-26。版本：step2scapi 0.2.0 / analytic-prism-v2 / step-prism-emitter-v1。环境：已有 `F:\AI_CAD\envs\simplecad`，Python 3.13.14、SimpleCADAPI 2.2.6、cadquery-ocp 7.9.3.1.1；实际依赖版本见逐例 report 的 runtime_versions。
 
 ## 回归范围及结论
 
-- 26 项 unittest 全部通过：[测试日志](../out/step-readable-v1-unittest.log)。覆盖原有 15 项和新加入的模板、实例尺寸独立、定位/方向编辑、覆盖错配/缺失、单位转换、游离几何拒绝、保存后的编辑及 Python `-I` 隔离执行。
+- 26 项 unittest 全部通过：[测试日志](results/legacy-logs/step-readable-v1-unittest.log)。覆盖原有 15 项和新加入的模板、实例尺寸独立、定位/方向编辑、覆盖错配/缺失、单位转换、游离几何拒绝、保存后的编辑及 Python `-I` 隔离执行。
 - 12 类不同结构样例均实际 build、导出回读并通过 world CD/IoU/V 和逐实体覆盖检查：[样例报告](../out/readable-review-step-v1/summary.json)、[结构审阅](../out/readable-review-step-v1/structure-review.json)。草图、轮廓/孔、混合线弧、斜平面、多实体和重叠实体表达沿用明确函数层次。
 - 真实输入为 `F:\AI_CAD\datasets\abc\step\abc_0000`，按文件名排序取前 20 个 STEP（00000000–00000019），未递归、未修改源数据。
 - 每例独立进程，120 秒限时；world 模式，参考与候选各 8192 点，seed=0；保持 CD/L≤0.01、IoU≥0.999、相对 V 误差≤0.001。候选回读检查始终为 world。

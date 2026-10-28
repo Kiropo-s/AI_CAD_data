@@ -1,0 +1,2273 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:step2code:step-plan:1",
+  "title": "STEP Plan 1 structural schema",
+  "description": "Graph references, dimensions, finite values, geometry and kernel topology require the semantic validator as well.",
+  "type": "object",
+  "properties": {
+    "format": {
+      "const": "step-plan"
+    },
+    "version": {
+      "type": "integer",
+      "const": 1
+    },
+    "units": {
+      "type": "object",
+      "properties": {
+        "length": {
+          "const": "mm"
+        },
+        "angle": {
+          "const": "rad"
+        }
+      },
+      "required": [
+        "length",
+        "angle"
+      ],
+      "additionalProperties": false
+    },
+    "parameters": {
+      "type": "object",
+      "propertyNames": {
+        "type": "string",
+        "pattern": "^[A-Za-z][A-Za-z0-9_]*$"
+      },
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "enum": [
+              "number",
+              "integer",
+              "boolean",
+              "winding",
+              "point2",
+              "point3",
+              "direction3",
+              "interval",
+              "points2",
+              "numbers",
+              "integers"
+            ]
+          },
+          "unit": {
+            "enum": [
+              "mm",
+              "rad",
+              "1"
+            ]
+          },
+          "value": {},
+          "editability": {
+            "enum": [
+              "independent",
+              "fixed"
+            ]
+          }
+        },
+        "required": [
+          "type",
+          "unit",
+          "value",
+          "editability"
+        ],
+        "additionalProperties": false,
+        "allOf": [
+          {
+            "if": {
+              "properties": {
+                "type": {
+                  "const": "number"
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "value": {
+                  "$ref": "#/$defs/number"
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "type": {
+                  "const": "integer"
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "value": {
+                  "$ref": "#/$defs/integer"
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "type": {
+                  "const": "boolean"
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "value": {
+                  "$ref": "#/$defs/boolean"
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "type": {
+                  "const": "winding"
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "value": {
+                  "$ref": "#/$defs/winding"
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "type": {
+                  "const": "point2"
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "value": {
+                  "$ref": "#/$defs/point2"
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "type": {
+                  "const": "point3"
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "value": {
+                  "$ref": "#/$defs/point3"
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "type": {
+                  "const": "direction3"
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "value": {
+                  "$ref": "#/$defs/direction3"
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "type": {
+                  "const": "interval"
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "value": {
+                  "$ref": "#/$defs/interval"
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "type": {
+                  "const": "points2"
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "value": {
+                  "$ref": "#/$defs/points2"
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "type": {
+                  "const": "numbers"
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "value": {
+                  "$ref": "#/$defs/numbers"
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "type": {
+                  "const": "integers"
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "value": {
+                  "$ref": "#/$defs/integers"
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    "nodes": {
+      "type": "object",
+      "minProperties": 1,
+      "propertyNames": {
+        "type": "string",
+        "pattern": "^[A-Za-z][A-Za-z0-9_]*$"
+      },
+      "additionalProperties": {
+        "oneOf": [
+          {
+            "type": "object",
+            "properties": {
+              "op": {
+                "const": "curve.line2"
+              },
+              "inputs": {
+                "type": "object",
+                "properties": {},
+                "required": [],
+                "additionalProperties": false
+              },
+              "args": {
+                "type": "object",
+                "properties": {
+                  "start": {
+                    "oneOf": [
+                      {
+                        "type": "object",
+                        "properties": {
+                          "literal": {
+                            "$ref": "#/$defs/point2"
+                          }
+                        },
+                        "required": [
+                          "literal"
+                        ],
+                        "additionalProperties": false
+                      },
+                      {
+                        "type": "object",
+                        "properties": {
+                          "param": {
+                            "type": "string",
+                            "pattern": "^[A-Za-z][A-Za-z0-9_]*$"
+                          }
+                        },
+                        "required": [
+                          "param"
+                        ],
+                        "additionalProperties": false
+                      }
+                    ]
+                  },
+                  "end": {
+                    "oneOf": [
+                      {
+                        "type": "object",
+                        "properties": {
+                          "literal": {
+                            "$ref": "#/$defs/point2"
+                          }
+                        },
+                        "required": [
+                          "literal"
+                        ],
+                        "additionalProperties": false
+                      },
+                      {
+                        "type": "object",
+                        "properties": {
+                          "param": {
+                            "type": "string",
+                            "pattern": "^[A-Za-z][A-Za-z0-9_]*$"
+                          }
+                        },
+                        "required": [
+                          "param"
+                        ],
+                        "additionalProperties": false
+                      }
+                    ]
+                  }
+                },
+                "required": [
+                  "start",
+                  "end"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "required": [
+              "op",
+              "inputs",
+              "args"
+            ],
+            "additionalProperties": false
+          },
+          {
+            "type": "object",
+            "properties": {
+              "op": {
+                "const": "curve.circle2"
+              },
+              "inputs": {
+                "type": "object",
+                "properties": {},
+                "required": [],
+                "additionalProperties": false
+              },
+              "args": {
+                "type": "object",
+                "properties": {
+                  "center": {
+                    "oneOf": [
+                      {
+                        "type": "object",
+                        "properties": {
+                          "literal": {
+                            "$ref": "#/$defs/point2"
+                          }
+                        },
+                        "required": [
+                          "literal"
+                        ],
+                        "additionalProperties": false
+                      },
+                      {
+                        "type": "object",
+                        "properties": {
+                          "param": {
+                            "type": "string",
+                            "pattern": "^[A-Za-z][A-Za-z0-9_]*$"
+                          }
+                        },
+                        "required": [
+                          "param"
+                        ],
+                        "additionalProperties": false
+                      }
+                    ]
+                  },
+                  "radius": {
+                    "oneOf": [
+                      {
+                        "type": "object",
+                        "properties": {
+                          "literal": {
+                            "type": "number",
+                            "exclusiveMinimum": 0
+                          }
+                        },
+                        "required": [
+                          "literal"
+                        ],
+                        "additionalProperties": false
+                      },
+                      {
+                        "type": "object",
+                        "properties": {
+                          "param": {
+                            "type": "string",
+                            "pattern": "^[A-Za-z][A-Za-z0-9_]*$"
+                          }
+                        },
+                        "required": [
+                          "param"
+                        ],
+                        "additionalProperties": false
+                      }
+                    ]
+                  },
+                  "winding": {
+                    "oneOf": [
+                      {
+                        "type": "object",
+                        "properties": {
+                          "literal": {
+                            "$ref": "#/$defs/winding"
+                          }
+                        },
+                        "required": [
+                          "literal"
+                        ],
+                        "additionalProperties": false
+                      },
+                      {
+                        "type": "object",
+                        "properties": {
+                          "param": {
+                            "type": "string",
+                            "pattern": "^[A-Za-z][A-Za-z0-9_]*$"
+                          }
+                        },
+                        "required": [
+                          "param"
+                        ],
+                        "additionalProperties": false
+                      }
+                    ]
+                  }
+                },
+                "required": [
+                  "center",
+                  "radius",
+                  "winding"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "required": [
+              "op",
+              "inputs",
+              "args"
+            ],
+            "additionalProperties": false
+          },
+          {
+            "type": "object",
+            "properties": {
+              "op": {
+                "const": "curve.ellipse2"
+              },
+              "inputs": {
+                "type": "object",
+                "properties": {},
+                "required": [],
+                "additionalProperties": false
+              },
+              "args": {
+                "type": "object",
+                "properties": {
+                  "center": {
+                    "oneOf": [
+                      {
+                        "type": "object",
+                        "properties": {
+                          "literal": {
+                            "$ref": "#/$defs/point2"
+                          }
+                        },
+                        "required": [
+                          "literal"
+                        ],
+                        "additionalProperties": false
+                      },
+                      {
+                        "type": "object",
+                        "properties": {
+                          "param": {
+                            "type": "string",
+                            "pattern": "^[A-Za-z][A-Za-z0-9_]*$"
+                          }
+                        },
+                        "required": [
+                          "param"
+                        ],
+                        "additionalProperties": false
+                      }
+                    ]
+                  },
+                  "major_radius": {
+                    "oneOf": [
+                      {
+                        "type": "object",
+                        "properties": {
+                          "literal": {
+                            "$ref": "#/$defs/number"
+                          }
+                        },
+                        "required": [
+                          "literal"
+                        ],
+                        "additionalProperties": false
+                      },
+                      {
+                        "type": "object",
+                        "properties": {
+                          "param": {
+                            "type": "string",
+                            "pattern": "^[A-Za-z][A-Za-z0-9_]*$"
+                          }
+                        },
+                        "required": [
+                          "param"
+                        ],
+                        "additionalProperties": false
+                      }
+                    ]
+                  },
+                  "minor_radius": {
+                    "oneOf": [
+                      {
+                        "type": "object",
+                        "properties": {
+                          "literal": {
+                            "$ref": "#/$defs/number"
+                          }
+                        },
+                        "required": [
+                          "literal"
+                        ],
+                        "additionalProperties": false
+                      },
+                      {
+                        "type": "object",
+                        "properties": {
+                          "param": {
+                            "type": "string",
+                            "pattern": "^[A-Za-z][A-Za-z0-9_]*$"
+                          }
+                        },
+                        "required": [
+                          "param"
+                        ],
+                        "additionalProperties": false
+                      }
+                    ]
+                  },
+                  "major_axis_angle": {
+                    "oneOf": [
+                      {
+                        "type": "object",
+                        "properties": {
+                          "literal": {
+                            "$ref": "#/$defs/number"
+                          }
+                        },
+                        "required": [
+                          "literal"
+                        ],
+                        "additionalProperties": false
+                      },
+                      {
+                        "type": "object",
+                        "properties": {
+                          "param": {
+                            "type": "string",
+                            "pattern": "^[A-Za-z][A-Za-z0-9_]*$"
+                          }
+                        },
+                        "required": [
+                          "param"
+                        ],
+                        "additionalProperties": false
+                      }
+                    ]
+                  },
+                  "winding": {
+                    "oneOf": [
+                      {
+                        "type": "object",
+                        "properties": {
+                          "literal": {
+                            "$ref": "#/$defs/winding"
+                          }
+                        },
+                        "required": [
+                          "literal"
+                        ],
+                        "additionalProperties": false
+                      },
+                      {
+                        "type": "object",
+                        "properties": {
+                          "param": {
+                            "type": "string",
+                            "pattern": "^[A-Za-z][A-Za-z0-9_]*$"
+                          }
+                        },
+                        "required": [
+                          "param"
+                        ],
+                        "additionalProperties": false
+                      }
+                    ]
+                  }
+                },
+                "required": [
+                  "center",
+                  "major_radius",
+                  "minor_radius",
+                  "major_axis_angle",
+                  "winding"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "required": [
+              "op",
+              "inputs",
+              "args"
+            ],
+            "additionalProperties": false
+          },
+          {
+            "type": "object",
+            "properties": {
+              "op": {
+                "const": "curve.arc2"
+              },
+              "inputs": {
+                "type": "object",
+                "properties": {},
+                "required": [],
+                "additionalProperties": false
+              },
+              "args": {
+                "type": "object",
+                "properties": {
+                  "center": {
+                    "oneOf": [
+                      {
+                        "type": "object",
+                        "properties": {
+                          "literal": {
+                            "$ref": "#/$defs/point2"
+                          }
+                        },
+                        "required": [
+                          "literal"
+                        ],
+                        "additionalProperties": false
+                      },
+                      {
+                        "type": "object",
+                        "properties": {
+                          "param": {
+                            "type": "string",
+                            "pattern": "^[A-Za-z][A-Za-z0-9_]*$"
+                          }
+                        },
+                        "required": [
+                          "param"
+                        ],
+                        "additionalProperties": false
+                      }
+                    ]
+                  },
+                  "radius": {
+                    "oneOf": [
+                      {
+                        "type": "object",
+                        "properties": {
+                          "literal": {
+                            "type": "number",
+                            "exclusiveMinimum": 0
+                          }
+                        },
+                        "required": [
+                          "literal"
+                        ],
+                        "additionalProperties": false
+                      },
+                      {
+                        "type": "object",
+                        "properties": {
+                          "param": {
+                            "type": "string",
+                            "pattern": "^[A-Za-z][A-Za-z0-9_]*$"
+                          }
+                        },
+                        "required": [
+                          "param"
+                        ],
+                        "additionalProperties": false
+                      }
+                    ]
+                  },
+                  "start_angle": {
+                    "oneOf": [
+                      {
+                        "type": "object",
+                        "properties": {
+                          "literal": {
+                            "$ref": "#/$defs/number"
+                          }
+                        },
+                        "required": [
+                          "literal"
+                        ],
+                        "additionalProperties": false
+                      },
+                      {
+                        "type": "object",
+                        "properties": {
+                          "param": {
+                            "type": "string",
+                            "pattern": "^[A-Za-z][A-Za-z0-9_]*$"
+                          }
+                        },
+                        "required": [
+                          "param"
+                        ],
+                        "additionalProperties": false
+                      }
+                    ]
+                  },
+                  "sweep_angle": {
+                    "oneOf": [
+                      {
+                        "type": "object",
+                        "properties": {
+                          "literal": {
+                            "$ref": "#/$defs/number"
+                          }
+                        },
+                        "required": [
+                          "literal"
+                        ],
+                        "additionalProperties": false
+                      },
+                      {
+                        "type": "object",
+                        "properties": {
+                          "param": {
+                            "type": "string",
+                            "pattern": "^[A-Za-z][A-Za-z0-9_]*$"
+                          }
+                        },
+                        "required": [
+                          "param"
+                        ],
+                        "additionalProperties": false
+                      }
+                    ]
+                  }
+                },
+                "required": [
+                  "center",
+                  "radius",
+                  "start_angle",
+                  "sweep_angle"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "required": [
+              "op",
+              "inputs",
+              "args"
+            ],
+            "additionalProperties": false
+          },
+          {
+            "type": "object",
+            "properties": {
+              "op": {
+                "const": "curve.bspline2"
+              },
+              "inputs": {
+                "type": "object",
+                "properties": {},
+                "required": [],
+                "additionalProperties": false
+              },
+              "args": {
+                "type": "object",
+                "properties": {
+                  "degree": {
+                    "oneOf": [
+                      {
+                        "type": "object",
+                        "properties": {
+                          "literal": {
+                            "$ref": "#/$defs/integer"
+                          }
+                        },
+                        "required": [
+                          "literal"
+                        ],
+                        "additionalProperties": false
+                      },
+                      {
+                        "type": "object",
+                        "properties": {
+                          "param": {
+                            "type": "string",
+                            "pattern": "^[A-Za-z][A-Za-z0-9_]*$"
+                          }
+                        },
+                        "required": [
+                          "param"
+                        ],
+                        "additionalProperties": false
+                      }
+                    ]
+                  },
+                  "poles": {
+                    "oneOf": [
+                      {
+                        "type": "object",
+                        "properties": {
+                          "literal": {
+                            "$ref": "#/$defs/points2"
+                          }
+                        },
+                        "required": [
+                          "literal"
+                        ],
+                        "additionalProperties": false
+                      },
+                      {
+                        "type": "object",
+                        "properties": {
+                          "param": {
+                            "type": "string",
+                            "pattern": "^[A-Za-z][A-Za-z0-9_]*$"
+                          }
+                        },
+                        "required": [
+                          "param"
+                        ],
+                        "additionalProperties": false
+                      }
+                    ]
+                  },
+                  "knots": {
+                    "oneOf": [
+                      {
+                        "type": "object",
+                        "properties": {
+                          "literal": {
+                            "$ref": "#/$defs/numbers"
+                          }
+                        },
+                        "required": [
+                          "literal"
+                        ],
+                        "additionalProperties": false
+                      },
+                      {
+                        "type": "object",
+                        "properties": {
+                          "param": {
+                            "type": "string",
+                            "pattern": "^[A-Za-z][A-Za-z0-9_]*$"
+                          }
+                        },
+                        "required": [
+                          "param"
+                        ],
+                        "additionalProperties": false
+                      }
+                    ]
+                  },
+                  "multiplicities": {
+                    "oneOf": [
+                      {
+                        "type": "object",
+                        "properties": {
+                          "literal": {
+                            "$ref": "#/$defs/integers"
+                          }
+                        },
+                        "required": [
+                          "literal"
+                        ],
+                        "additionalProperties": false
+                      },
+                      {
+                        "type": "object",
+                        "properties": {
+                          "param": {
+                            "type": "string",
+                            "pattern": "^[A-Za-z][A-Za-z0-9_]*$"
+                          }
+                        },
+                        "required": [
+                          "param"
+                        ],
+                        "additionalProperties": false
+                      }
+                    ]
+                  },
+                  "weights": {
+                    "oneOf": [
+                      {
+                        "type": "object",
+                        "properties": {
+                          "literal": {
+                            "$ref": "#/$defs/numbers"
+                          }
+                        },
+                        "required": [
+                          "literal"
+                        ],
+                        "additionalProperties": false
+                      },
+                      {
+                        "type": "object",
+                        "properties": {
+                          "param": {
+                            "type": "string",
+                            "pattern": "^[A-Za-z][A-Za-z0-9_]*$"
+                          }
+                        },
+                        "required": [
+                          "param"
+                        ],
+                        "additionalProperties": false
+                      }
+                    ]
+                  },
+                  "periodic": {
+                    "oneOf": [
+                      {
+                        "type": "object",
+                        "properties": {
+                          "literal": {
+                            "$ref": "#/$defs/boolean"
+                          }
+                        },
+                        "required": [
+                          "literal"
+                        ],
+                        "additionalProperties": false
+                      },
+                      {
+                        "type": "object",
+                        "properties": {
+                          "param": {
+                            "type": "string",
+                            "pattern": "^[A-Za-z][A-Za-z0-9_]*$"
+                          }
+                        },
+                        "required": [
+                          "param"
+                        ],
+                        "additionalProperties": false
+                      }
+                    ]
+                  },
+                  "trim": {
+                    "oneOf": [
+                      {
+                        "type": "object",
+                        "properties": {
+                          "literal": {
+                            "$ref": "#/$defs/interval"
+                          }
+                        },
+                        "required": [
+                          "literal"
+                        ],
+                        "additionalProperties": false
+                      },
+                      {
+                        "type": "object",
+                        "properties": {
+                          "param": {
+                            "type": "string",
+                            "pattern": "^[A-Za-z][A-Za-z0-9_]*$"
+                          }
+                        },
+                        "required": [
+                          "param"
+                        ],
+                        "additionalProperties": false
+                      }
+                    ]
+                  },
+                  "reversed": {
+                    "oneOf": [
+                      {
+                        "type": "object",
+                        "properties": {
+                          "literal": {
+                            "$ref": "#/$defs/boolean"
+                          }
+                        },
+                        "required": [
+                          "literal"
+                        ],
+                        "additionalProperties": false
+                      },
+                      {
+                        "type": "object",
+                        "properties": {
+                          "param": {
+                            "type": "string",
+                            "pattern": "^[A-Za-z][A-Za-z0-9_]*$"
+                          }
+                        },
+                        "required": [
+                          "param"
+                        ],
+                        "additionalProperties": false
+                      }
+                    ]
+                  }
+                },
+                "required": [
+                  "degree",
+                  "poles",
+                  "knots",
+                  "multiplicities",
+                  "weights",
+                  "periodic",
+                  "trim",
+                  "reversed"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "required": [
+              "op",
+              "inputs",
+              "args"
+            ],
+            "additionalProperties": false
+          },
+          {
+            "type": "object",
+            "properties": {
+              "op": {
+                "const": "wire.loop2"
+              },
+              "inputs": {
+                "type": "object",
+                "properties": {
+                  "curves": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "pattern": "^[A-Za-z][A-Za-z0-9_]*$"
+                    },
+                    "minItems": 1
+                  }
+                },
+                "required": [
+                  "curves"
+                ],
+                "additionalProperties": false
+              },
+              "args": {
+                "type": "object",
+                "properties": {},
+                "required": [],
+                "additionalProperties": false
+              }
+            },
+            "required": [
+              "op",
+              "inputs",
+              "args"
+            ],
+            "additionalProperties": false
+          },
+          {
+            "type": "object",
+            "properties": {
+              "op": {
+                "const": "profile.face2"
+              },
+              "inputs": {
+                "type": "object",
+                "properties": {
+                  "outer": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "pattern": "^[A-Za-z][A-Za-z0-9_]*$"
+                    },
+                    "minItems": 1,
+                    "maxItems": 1
+                  },
+                  "holes": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "pattern": "^[A-Za-z][A-Za-z0-9_]*$"
+                    },
+                    "minItems": 0
+                  }
+                },
+                "required": [
+                  "outer",
+                  "holes"
+                ],
+                "additionalProperties": false
+              },
+              "args": {
+                "type": "object",
+                "properties": {},
+                "required": [],
+                "additionalProperties": false
+              }
+            },
+            "required": [
+              "op",
+              "inputs",
+              "args"
+            ],
+            "additionalProperties": false
+          },
+          {
+            "type": "object",
+            "properties": {
+              "op": {
+                "const": "frame.rigid3"
+              },
+              "inputs": {
+                "type": "object",
+                "properties": {},
+                "required": [],
+                "additionalProperties": false
+              },
+              "args": {
+                "type": "object",
+                "properties": {
+                  "origin": {
+                    "oneOf": [
+                      {
+                        "type": "object",
+                        "properties": {
+                          "literal": {
+                            "$ref": "#/$defs/point3"
+                          }
+                        },
+                        "required": [
+                          "literal"
+                        ],
+                        "additionalProperties": false
+                      },
+                      {
+                        "type": "object",
+                        "properties": {
+                          "param": {
+                            "type": "string",
+                            "pattern": "^[A-Za-z][A-Za-z0-9_]*$"
+                          }
+                        },
+                        "required": [
+                          "param"
+                        ],
+                        "additionalProperties": false
+                      }
+                    ]
+                  },
+                  "x_axis": {
+                    "oneOf": [
+                      {
+                        "type": "object",
+                        "properties": {
+                          "literal": {
+                            "$ref": "#/$defs/direction3"
+                          }
+                        },
+                        "required": [
+                          "literal"
+                        ],
+                        "additionalProperties": false
+                      },
+                      {
+                        "type": "object",
+                        "properties": {
+                          "param": {
+                            "type": "string",
+                            "pattern": "^[A-Za-z][A-Za-z0-9_]*$"
+                          }
+                        },
+                        "required": [
+                          "param"
+                        ],
+                        "additionalProperties": false
+                      }
+                    ]
+                  },
+                  "y_axis": {
+                    "oneOf": [
+                      {
+                        "type": "object",
+                        "properties": {
+                          "literal": {
+                            "$ref": "#/$defs/direction3"
+                          }
+                        },
+                        "required": [
+                          "literal"
+                        ],
+                        "additionalProperties": false
+                      },
+                      {
+                        "type": "object",
+                        "properties": {
+                          "param": {
+                            "type": "string",
+                            "pattern": "^[A-Za-z][A-Za-z0-9_]*$"
+                          }
+                        },
+                        "required": [
+                          "param"
+                        ],
+                        "additionalProperties": false
+                      }
+                    ]
+                  }
+                },
+                "required": [
+                  "origin",
+                  "x_axis",
+                  "y_axis"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "required": [
+              "op",
+              "inputs",
+              "args"
+            ],
+            "additionalProperties": false
+          },
+          {
+            "type": "object",
+            "properties": {
+              "op": {
+                "const": "solid.extrude"
+              },
+              "inputs": {
+                "type": "object",
+                "properties": {
+                  "profile": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "pattern": "^[A-Za-z][A-Za-z0-9_]*$"
+                    },
+                    "minItems": 1,
+                    "maxItems": 1
+                  }
+                },
+                "required": [
+                  "profile"
+                ],
+                "additionalProperties": false
+              },
+              "args": {
+                "type": "object",
+                "properties": {
+                  "distance": {
+                    "oneOf": [
+                      {
+                        "type": "object",
+                        "properties": {
+                          "literal": {
+                            "type": "number",
+                            "exclusiveMinimum": 0
+                          }
+                        },
+                        "required": [
+                          "literal"
+                        ],
+                        "additionalProperties": false
+                      },
+                      {
+                        "type": "object",
+                        "properties": {
+                          "param": {
+                            "type": "string",
+                            "pattern": "^[A-Za-z][A-Za-z0-9_]*$"
+                          }
+                        },
+                        "required": [
+                          "param"
+                        ],
+                        "additionalProperties": false
+                      }
+                    ]
+                  }
+                },
+                "required": [
+                  "distance"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "required": [
+              "op",
+              "inputs",
+              "args"
+            ],
+            "additionalProperties": false
+          },
+          {
+            "type": "object",
+            "properties": {
+              "op": {
+                "const": "solid.revolve"
+              },
+              "inputs": {
+                "type": "object",
+                "properties": {
+                  "profile": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "pattern": "^[A-Za-z][A-Za-z0-9_]*$"
+                    },
+                    "minItems": 1,
+                    "maxItems": 1
+                  }
+                },
+                "required": [
+                  "profile"
+                ],
+                "additionalProperties": false
+              },
+              "args": {
+                "type": "object",
+                "properties": {
+                  "angle": {
+                    "oneOf": [
+                      {
+                        "type": "object",
+                        "properties": {
+                          "literal": {
+                            "$ref": "#/$defs/number"
+                          }
+                        },
+                        "required": [
+                          "literal"
+                        ],
+                        "additionalProperties": false
+                      },
+                      {
+                        "type": "object",
+                        "properties": {
+                          "param": {
+                            "type": "string",
+                            "pattern": "^[A-Za-z][A-Za-z0-9_]*$"
+                          }
+                        },
+                        "required": [
+                          "param"
+                        ],
+                        "additionalProperties": false
+                      }
+                    ]
+                  }
+                },
+                "required": [
+                  "angle"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "required": [
+              "op",
+              "inputs",
+              "args"
+            ],
+            "additionalProperties": false
+          },
+          {
+            "type": "object",
+            "properties": {
+              "op": {
+                "const": "solid.box"
+              },
+              "inputs": {
+                "type": "object",
+                "properties": {},
+                "required": [],
+                "additionalProperties": false
+              },
+              "args": {
+                "type": "object",
+                "properties": {
+                  "width": {
+                    "oneOf": [
+                      {
+                        "type": "object",
+                        "properties": {
+                          "literal": {
+                            "type": "number",
+                            "exclusiveMinimum": 0
+                          }
+                        },
+                        "required": [
+                          "literal"
+                        ],
+                        "additionalProperties": false
+                      },
+                      {
+                        "type": "object",
+                        "properties": {
+                          "param": {
+                            "type": "string",
+                            "pattern": "^[A-Za-z][A-Za-z0-9_]*$"
+                          }
+                        },
+                        "required": [
+                          "param"
+                        ],
+                        "additionalProperties": false
+                      }
+                    ]
+                  },
+                  "depth": {
+                    "oneOf": [
+                      {
+                        "type": "object",
+                        "properties": {
+                          "literal": {
+                            "type": "number",
+                            "exclusiveMinimum": 0
+                          }
+                        },
+                        "required": [
+                          "literal"
+                        ],
+                        "additionalProperties": false
+                      },
+                      {
+                        "type": "object",
+                        "properties": {
+                          "param": {
+                            "type": "string",
+                            "pattern": "^[A-Za-z][A-Za-z0-9_]*$"
+                          }
+                        },
+                        "required": [
+                          "param"
+                        ],
+                        "additionalProperties": false
+                      }
+                    ]
+                  },
+                  "height": {
+                    "oneOf": [
+                      {
+                        "type": "object",
+                        "properties": {
+                          "literal": {
+                            "type": "number",
+                            "exclusiveMinimum": 0
+                          }
+                        },
+                        "required": [
+                          "literal"
+                        ],
+                        "additionalProperties": false
+                      },
+                      {
+                        "type": "object",
+                        "properties": {
+                          "param": {
+                            "type": "string",
+                            "pattern": "^[A-Za-z][A-Za-z0-9_]*$"
+                          }
+                        },
+                        "required": [
+                          "param"
+                        ],
+                        "additionalProperties": false
+                      }
+                    ]
+                  }
+                },
+                "required": [
+                  "width",
+                  "depth",
+                  "height"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "required": [
+              "op",
+              "inputs",
+              "args"
+            ],
+            "additionalProperties": false
+          },
+          {
+            "type": "object",
+            "properties": {
+              "op": {
+                "const": "solid.cylinder"
+              },
+              "inputs": {
+                "type": "object",
+                "properties": {},
+                "required": [],
+                "additionalProperties": false
+              },
+              "args": {
+                "type": "object",
+                "properties": {
+                  "radius": {
+                    "oneOf": [
+                      {
+                        "type": "object",
+                        "properties": {
+                          "literal": {
+                            "type": "number",
+                            "exclusiveMinimum": 0
+                          }
+                        },
+                        "required": [
+                          "literal"
+                        ],
+                        "additionalProperties": false
+                      },
+                      {
+                        "type": "object",
+                        "properties": {
+                          "param": {
+                            "type": "string",
+                            "pattern": "^[A-Za-z][A-Za-z0-9_]*$"
+                          }
+                        },
+                        "required": [
+                          "param"
+                        ],
+                        "additionalProperties": false
+                      }
+                    ]
+                  },
+                  "height": {
+                    "oneOf": [
+                      {
+                        "type": "object",
+                        "properties": {
+                          "literal": {
+                            "type": "number",
+                            "exclusiveMinimum": 0
+                          }
+                        },
+                        "required": [
+                          "literal"
+                        ],
+                        "additionalProperties": false
+                      },
+                      {
+                        "type": "object",
+                        "properties": {
+                          "param": {
+                            "type": "string",
+                            "pattern": "^[A-Za-z][A-Za-z0-9_]*$"
+                          }
+                        },
+                        "required": [
+                          "param"
+                        ],
+                        "additionalProperties": false
+                      }
+                    ]
+                  }
+                },
+                "required": [
+                  "radius",
+                  "height"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "required": [
+              "op",
+              "inputs",
+              "args"
+            ],
+            "additionalProperties": false
+          },
+          {
+            "type": "object",
+            "properties": {
+              "op": {
+                "const": "solid.cone"
+              },
+              "inputs": {
+                "type": "object",
+                "properties": {},
+                "required": [],
+                "additionalProperties": false
+              },
+              "args": {
+                "type": "object",
+                "properties": {
+                  "radius_bottom": {
+                    "oneOf": [
+                      {
+                        "type": "object",
+                        "properties": {
+                          "literal": {
+                            "type": "number",
+                            "minimum": 0
+                          }
+                        },
+                        "required": [
+                          "literal"
+                        ],
+                        "additionalProperties": false
+                      },
+                      {
+                        "type": "object",
+                        "properties": {
+                          "param": {
+                            "type": "string",
+                            "pattern": "^[A-Za-z][A-Za-z0-9_]*$"
+                          }
+                        },
+                        "required": [
+                          "param"
+                        ],
+                        "additionalProperties": false
+                      }
+                    ]
+                  },
+                  "radius_top": {
+                    "oneOf": [
+                      {
+                        "type": "object",
+                        "properties": {
+                          "literal": {
+                            "type": "number",
+                            "minimum": 0
+                          }
+                        },
+                        "required": [
+                          "literal"
+                        ],
+                        "additionalProperties": false
+                      },
+                      {
+                        "type": "object",
+                        "properties": {
+                          "param": {
+                            "type": "string",
+                            "pattern": "^[A-Za-z][A-Za-z0-9_]*$"
+                          }
+                        },
+                        "required": [
+                          "param"
+                        ],
+                        "additionalProperties": false
+                      }
+                    ]
+                  },
+                  "height": {
+                    "oneOf": [
+                      {
+                        "type": "object",
+                        "properties": {
+                          "literal": {
+                            "type": "number",
+                            "exclusiveMinimum": 0
+                          }
+                        },
+                        "required": [
+                          "literal"
+                        ],
+                        "additionalProperties": false
+                      },
+                      {
+                        "type": "object",
+                        "properties": {
+                          "param": {
+                            "type": "string",
+                            "pattern": "^[A-Za-z][A-Za-z0-9_]*$"
+                          }
+                        },
+                        "required": [
+                          "param"
+                        ],
+                        "additionalProperties": false
+                      }
+                    ]
+                  }
+                },
+                "required": [
+                  "radius_bottom",
+                  "radius_top",
+                  "height"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "required": [
+              "op",
+              "inputs",
+              "args"
+            ],
+            "additionalProperties": false
+          },
+          {
+            "type": "object",
+            "properties": {
+              "op": {
+                "const": "solid.sphere"
+              },
+              "inputs": {
+                "type": "object",
+                "properties": {},
+                "required": [],
+                "additionalProperties": false
+              },
+              "args": {
+                "type": "object",
+                "properties": {
+                  "radius": {
+                    "oneOf": [
+                      {
+                        "type": "object",
+                        "properties": {
+                          "literal": {
+                            "type": "number",
+                            "exclusiveMinimum": 0
+                          }
+                        },
+                        "required": [
+                          "literal"
+                        ],
+                        "additionalProperties": false
+                      },
+                      {
+                        "type": "object",
+                        "properties": {
+                          "param": {
+                            "type": "string",
+                            "pattern": "^[A-Za-z][A-Za-z0-9_]*$"
+                          }
+                        },
+                        "required": [
+                          "param"
+                        ],
+                        "additionalProperties": false
+                      }
+                    ]
+                  }
+                },
+                "required": [
+                  "radius"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "required": [
+              "op",
+              "inputs",
+              "args"
+            ],
+            "additionalProperties": false
+          },
+          {
+            "type": "object",
+            "properties": {
+              "op": {
+                "const": "solid.torus"
+              },
+              "inputs": {
+                "type": "object",
+                "properties": {},
+                "required": [],
+                "additionalProperties": false
+              },
+              "args": {
+                "type": "object",
+                "properties": {
+                  "major_radius": {
+                    "oneOf": [
+                      {
+                        "type": "object",
+                        "properties": {
+                          "literal": {
+                            "type": "number",
+                            "exclusiveMinimum": 0
+                          }
+                        },
+                        "required": [
+                          "literal"
+                        ],
+                        "additionalProperties": false
+                      },
+                      {
+                        "type": "object",
+                        "properties": {
+                          "param": {
+                            "type": "string",
+                            "pattern": "^[A-Za-z][A-Za-z0-9_]*$"
+                          }
+                        },
+                        "required": [
+                          "param"
+                        ],
+                        "additionalProperties": false
+                      }
+                    ]
+                  },
+                  "minor_radius": {
+                    "oneOf": [
+                      {
+                        "type": "object",
+                        "properties": {
+                          "literal": {
+                            "type": "number",
+                            "exclusiveMinimum": 0
+                          }
+                        },
+                        "required": [
+                          "literal"
+                        ],
+                        "additionalProperties": false
+                      },
+                      {
+                        "type": "object",
+                        "properties": {
+                          "param": {
+                            "type": "string",
+                            "pattern": "^[A-Za-z][A-Za-z0-9_]*$"
+                          }
+                        },
+                        "required": [
+                          "param"
+                        ],
+                        "additionalProperties": false
+                      }
+                    ]
+                  }
+                },
+                "required": [
+                  "major_radius",
+                  "minor_radius"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "required": [
+              "op",
+              "inputs",
+              "args"
+            ],
+            "additionalProperties": false
+          },
+          {
+            "type": "object",
+            "properties": {
+              "op": {
+                "const": "boolean.union"
+              },
+              "inputs": {
+                "type": "object",
+                "properties": {
+                  "operands": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "pattern": "^[A-Za-z][A-Za-z0-9_]*$"
+                    },
+                    "minItems": 2
+                  }
+                },
+                "required": [
+                  "operands"
+                ],
+                "additionalProperties": false
+              },
+              "args": {
+                "type": "object",
+                "properties": {},
+                "required": [],
+                "additionalProperties": false
+              }
+            },
+            "required": [
+              "op",
+              "inputs",
+              "args"
+            ],
+            "additionalProperties": false
+          },
+          {
+            "type": "object",
+            "properties": {
+              "op": {
+                "const": "boolean.cut"
+              },
+              "inputs": {
+                "type": "object",
+                "properties": {
+                  "target": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "pattern": "^[A-Za-z][A-Za-z0-9_]*$"
+                    },
+                    "minItems": 1,
+                    "maxItems": 1
+                  },
+                  "tool": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "pattern": "^[A-Za-z][A-Za-z0-9_]*$"
+                    },
+                    "minItems": 1,
+                    "maxItems": 1
+                  }
+                },
+                "required": [
+                  "target",
+                  "tool"
+                ],
+                "additionalProperties": false
+              },
+              "args": {
+                "type": "object",
+                "properties": {},
+                "required": [],
+                "additionalProperties": false
+              }
+            },
+            "required": [
+              "op",
+              "inputs",
+              "args"
+            ],
+            "additionalProperties": false
+          },
+          {
+            "type": "object",
+            "properties": {
+              "op": {
+                "const": "boolean.intersect"
+              },
+              "inputs": {
+                "type": "object",
+                "properties": {
+                  "operands": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "pattern": "^[A-Za-z][A-Za-z0-9_]*$"
+                    },
+                    "minItems": 2,
+                    "maxItems": 2
+                  }
+                },
+                "required": [
+                  "operands"
+                ],
+                "additionalProperties": false
+              },
+              "args": {
+                "type": "object",
+                "properties": {},
+                "required": [],
+                "additionalProperties": false
+              }
+            },
+            "required": [
+              "op",
+              "inputs",
+              "args"
+            ],
+            "additionalProperties": false
+          },
+          {
+            "type": "object",
+            "properties": {
+              "op": {
+                "const": "shape.transform"
+              },
+              "inputs": {
+                "type": "object",
+                "properties": {
+                  "shape": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "pattern": "^[A-Za-z][A-Za-z0-9_]*$"
+                    },
+                    "minItems": 1,
+                    "maxItems": 1
+                  },
+                  "frame": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "pattern": "^[A-Za-z][A-Za-z0-9_]*$"
+                    },
+                    "minItems": 1,
+                    "maxItems": 1
+                  }
+                },
+                "required": [
+                  "shape",
+                  "frame"
+                ],
+                "additionalProperties": false
+              },
+              "args": {
+                "type": "object",
+                "properties": {},
+                "required": [],
+                "additionalProperties": false
+              }
+            },
+            "required": [
+              "op",
+              "inputs",
+              "args"
+            ],
+            "additionalProperties": false
+          },
+          {
+            "type": "object",
+            "properties": {
+              "op": {
+                "const": "shape.uniform_scale"
+              },
+              "inputs": {
+                "type": "object",
+                "properties": {
+                  "shape": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "pattern": "^[A-Za-z][A-Za-z0-9_]*$"
+                    },
+                    "minItems": 1,
+                    "maxItems": 1
+                  }
+                },
+                "required": [
+                  "shape"
+                ],
+                "additionalProperties": false
+              },
+              "args": {
+                "type": "object",
+                "properties": {
+                  "factor": {
+                    "oneOf": [
+                      {
+                        "type": "object",
+                        "properties": {
+                          "literal": {
+                            "type": "number",
+                            "exclusiveMinimum": 0
+                          }
+                        },
+                        "required": [
+                          "literal"
+                        ],
+                        "additionalProperties": false
+                      },
+                      {
+                        "type": "object",
+                        "properties": {
+                          "param": {
+                            "type": "string",
+                            "pattern": "^[A-Za-z][A-Za-z0-9_]*$"
+                          }
+                        },
+                        "required": [
+                          "param"
+                        ],
+                        "additionalProperties": false
+                      }
+                    ]
+                  },
+                  "center": {
+                    "oneOf": [
+                      {
+                        "type": "object",
+                        "properties": {
+                          "literal": {
+                            "$ref": "#/$defs/point3"
+                          }
+                        },
+                        "required": [
+                          "literal"
+                        ],
+                        "additionalProperties": false
+                      },
+                      {
+                        "type": "object",
+                        "properties": {
+                          "param": {
+                            "type": "string",
+                            "pattern": "^[A-Za-z][A-Za-z0-9_]*$"
+                          }
+                        },
+                        "required": [
+                          "param"
+                        ],
+                        "additionalProperties": false
+                      }
+                    ]
+                  }
+                },
+                "required": [
+                  "factor",
+                  "center"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "required": [
+              "op",
+              "inputs",
+              "args"
+            ],
+            "additionalProperties": false
+          }
+        ]
+      }
+    },
+    "outputs": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[A-Za-z][A-Za-z0-9_]*$"
+          },
+          "node": {
+            "type": "string",
+            "pattern": "^[A-Za-z][A-Za-z0-9_]*$"
+          },
+          "expected_kind": {
+            "const": "solid"
+          }
+        },
+        "required": [
+          "id",
+          "node",
+          "expected_kind"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "format",
+    "version",
+    "units",
+    "parameters",
+    "nodes",
+    "outputs"
+  ],
+  "additionalProperties": false,
+  "$defs": {
+    "number": {
+      "type": "number"
+    },
+    "integer": {
+      "type": "integer"
+    },
+    "boolean": {
+      "type": "boolean"
+    },
+    "winding": {
+      "enum": [
+        "cw",
+        "ccw"
+      ]
+    },
+    "point2": {
+      "type": "array",
+      "items": {
+        "type": "number"
+      },
+      "minItems": 2,
+      "maxItems": 2
+    },
+    "point3": {
+      "type": "array",
+      "items": {
+        "type": "number"
+      },
+      "minItems": 3,
+      "maxItems": 3
+    },
+    "direction3": {
+      "type": "array",
+      "items": {
+        "type": "number"
+      },
+      "minItems": 3,
+      "maxItems": 3
+    },
+    "interval": {
+      "type": "array",
+      "items": {
+        "type": "number"
+      },
+      "minItems": 2,
+      "maxItems": 2
+    },
+    "points2": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/point2"
+      },
+      "minItems": 2
+    },
+    "numbers": {
+      "type": "array",
+      "items": {
+        "type": "number"
+      },
+      "minItems": 1
+    },
+    "integers": {
+      "type": "array",
+      "items": {
+        "type": "integer"
+      },
+      "minItems": 1
+    }
+  }
+}

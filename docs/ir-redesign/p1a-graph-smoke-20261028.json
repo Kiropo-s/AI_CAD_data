@@ -1,0 +1,86 @@
+{
+  "cases": [
+    {
+      "case_label": "detailed",
+      "detail_status": "complete",
+      "elapsed_seconds": 0.041,
+      "entity_counts": {
+        "curve_count": 41,
+        "edge_count": 41,
+        "edge_occurrence_count": 82,
+        "face_count": 21,
+        "loop_count": 28,
+        "shell_count": 1,
+        "solid_count": 1,
+        "surface_count": 21,
+        "vertex_count": 27
+      },
+      "graph_hash": "12990688241e658e81c255e7958716a47ea0663ca9be9f74ee0176d81f5b8759",
+      "source": "00000008_9b3d6a97e8de4aa193b81000_step_000.step",
+      "status": {
+        "signature": {
+          "bbox_mm": [
+            -39.370000100000006,
+            -39.370000100000006,
+            -2.5400001,
+            39.370000100000006,
+            39.370000100000006,
+            12.700000099999999
+          ],
+          "bodies": [
+            {
+              "bbox_mm": [
+                -39.370000100000006,
+                -39.370000100000006,
+                -2.5400001,
+                39.370000100000006,
+                39.370000100000006,
+                12.700000099999999
+              ],
+              "valid": true,
+              "volume_mm3": 10527.80955115289
+            }
+          ],
+          "edge_occurrences": 82,
+          "face_count": 21,
+          "solid_count": 1,
+          "valid": true,
+          "volume_mm3": 10527.80955115289
+        },
+        "valid": true
+      },
+      "warning_count": 0
+    },
+    {
+      "case_label": "summary_large",
+      "detail_status": "summary_only",
+      "elapsed_seconds": 15.771,
+      "entity_counts": {
+        "curve_count": 18355,
+        "edge_count": 18355,
+        "edge_occurrence_count": 36614,
+        "face_count": 7510,
+        "loop_count": 8426,
+        "shell_count": 252,
+        "solid_count": 252,
+        "surface_count": 7510,
+        "vertex_count": 11561
+      },
+      "graph_hash": "ed1636b6302013a53cd0c41f899cbead22f041830b03aaf73ee74b3fef63586a",
+      "source": "00000055_666139e3bff64d4e8a6ce183_step_004.step",
+      "status": {
+        "reason": "large_shape_signature_skipped",
+        "valid": null
+      },
+      "warning_count": 0
+    }
+  ],
+  "contract": {
+    "large_source_detail_policy": "summary_only_with_explicit_status",
+    "plan_generation": false,
+    "read_only": true
+  },
+  "date": "2026-10-28",
+  "format": "step-brep-graph-p1a-smoke",
+  "version": 1
+}

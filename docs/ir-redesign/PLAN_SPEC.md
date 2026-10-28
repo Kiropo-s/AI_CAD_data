@@ -1,6 +1,6 @@
-# STEP Plan 1：新的执行语义契约（设计稿）
+# STEP Plan 1：执行语义契约
 
-本契约是全新的格式，不是旧 CAD IR 或 STEP plan 的增量版本。尚未实现的 schema/loader/executor 不应被宣称为现有能力。实施时以本规范形成类型定义与独立 JSON Schema；二者必须有一致性测试。
+本契约是全新的格式，不是旧 CAD IR 或 STEP plan 的增量版本。2026-10-26 起由 step2code 1.0 实现，生产 loader 只接受 step-plan/1。类型注册表、严格语义校验和独立 JSON Schema 已建立一致性测试。具体后端能力与本轮验证范围见 [IMPLEMENTED.md](IMPLEMENTED.md)。
 
 ## 1. 目标与范围
 
@@ -51,6 +51,7 @@ Value 只有二选一：`{"literal": value}` 或 `{"param": "parameter_id"}`。a
 | --- | --- | --- |
 | curve.line2 | 无 | start、end：两个不同 2D 点，方向从 start 到 end |
 | curve.circle2 | 无 | center、radius>0、winding=ccw/cw；一整圈，不用两点是否相等推断周期 |
+| curve.ellipse2 | 无 | center、major_radius>=minor_radius>0、major_axis_angle、winding=ccw/cw；完整 OCC 椭圆，保持原生精确曲线 |
 | curve.arc2 | 无 | center、radius>0、start_angle、sweep_angle；0<abs(sweep)<2π，带符号 sweep 明确大弧和方向 |
 | curve.bspline2 | 无 | degree、poles、knots、multiplicities、weights、periodic、trim、reversed；必须保留裁剪和方向，无拟合回退 |
 | wire.loop2 | curves=[Curve2...] | 无；至少一条，有序、闭合，允许整圆独占一个环 |
@@ -147,3 +148,13 @@ evidence/checks.json 按阶段记录实际测量，采用 plan/code/export hash 
 生产 loader 只支持上述一种格式。首个版本未实现前允许修改设计；开始产生正式输出后冻结语义，未知版本 fail fast。未来确实需要新版本时新建 loader 或重建数据，不预先构建兼容框架。
 
 旧数据读取仅允许审计脚本留在 docs/tools，不得被主运行时 import。历史基线靠输入 SHA256 和几何结果比较，不靠让旧 payload 继续走新 emitter。
+
+## 13. 1.0 的具体实现约束
+
+- JSON 上限 32 MiB、最大结构嵌套 64；ID 规则与未知字段限制见正文。
+- B 样条 degree 1–25、最多 256 poles；内核进一步检查真实 active domain。原生精确裁剪/反向，SCAPI 在编译时精确展开。需要运行时重验证的可编辑轮廓暂为 backend capability 拒绝。
+- prepare 返回同一不可变计划、preparation 和独立原生 Execution；当前不进行显式点焊接、舍入或拟合，adjustments 为空。原生接线连续性上限为 1e-6 mm，内核 wire/face 检查仍必须通过。
+- 识别结束显式展平关联 union 并移除因此失去引用的中间 union。此 pass 发生在权威 plan 形成之前；几何验证依据实际的新图。编译器不会暗中更改已保存计划。
+- 当前每个源实体公开整体尺度和世界刚性变换；局部曲线与工具尺寸默认 literal。非识别器产出的合法计划也可独立加载、重放和编译，受相同能力检查。
+- 逐体 native replay 与生成覆盖额外进行相对体积交叉检查（1e-7），用于发现双向 Cut 零差但积分体积不一致的情况；报告保留两个测量值。整体 CD/IoU/V 阈值没有放宽。
+- 检查点 key 使用源内容、完整配置、内核/依赖和所有执行源码的保守指纹；当前不实现跨代码版本的细粒度分层缓存。

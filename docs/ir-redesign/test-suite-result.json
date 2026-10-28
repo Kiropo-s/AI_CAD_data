@@ -1,0 +1,27 @@
+{
+  "date": "2026-10-27",
+  "tests": 71,
+  "elapsed_seconds": 29.929,
+  "result": "pass",
+  "command": "envs/simplecad/Scripts/python.exe -m unittest discover -s step2code/tests -p test_*.py -v",
+  "implementation_fingerprint": "a3db37fa0d6020bf0d672f9b62ae06e4173fd754a78b1d64e2264b6e19083b47",
+  "dependencies": {
+    "python": "3.13.14",
+    "simplecadapi": "2.2.6",
+    "cadquery-ocp": "7.9.3.1.1",
+    "numpy": "2.5.4",
+    "scipy": "1.18.1"
+  },
+  "test_source_hashes": {
+    "fixtures.py": "e517669b9d17da3280c6657dc93a702599f4395206d5c33786c7be45119af1cc",
+    "helpers.py": "3be266e3742ef3dc95aa077edc0cf839c3652d187c095290cb5fce2313c7687c",
+    "run_abc_regression.py": "031e8b06de5a79bee4273595a60b61131c747dab9b6cc3d261bdf5c8c45fe440",
+    "test_batch.py": "cf8f05a7dc8eeef1cede0fbe588deb7287b2fbacee7a1b60aeaf2dcaba17f63f",
+    "test_codegen.py": "bac676084cb6d847e9e0633cd3e8d6ac364bdf4f03bd8bdbdddc17c3ce3432aa",
+    "test_kernel.py": "91332309c082f3416aeb20cc25f6a86f21c1fe0aa751acf4b034797381210f5d",
+    "test_pipeline.py": "165ff30d3badbfb3bf000cbd44dd17c32687e95eac8a8a7966c6704e0881c5f9",
+    "test_plan.py": "bbdd7edab5f7be930f206fd62e7124791c227bb942dc70c04ca640b1c4bc6e32"
+  },
+  "log_sha256": "1adc66ce848bf687576e13464b48d05d4933e9a31f085ea4f442e2a25d3d228c",
+  "note": "Finite fixture parameter edits are tested here; per-case batch parameter_edit remains not_run."
+}

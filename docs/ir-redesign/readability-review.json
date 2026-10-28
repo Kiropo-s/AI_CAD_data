@@ -1,0 +1,156 @@
+{
+  "format": "step-readable-review-1",
+  "implementation_fingerprint": "9e749b2352d3ed1fff2dced1b157440ec62f9da31455b40d5e3f371869be7f4e",
+  "cases": [
+    {
+      "id": "00000005",
+      "plan_hash": "97a40cac3912df018d1f09e3ed1ca4da2a90af32323611a1f7b9deb63f28f161",
+      "code_text_sha256": "de0ea23bf828204aff5ef7620f54788ddd8f2209a28ab15987ad6ed657535896",
+      "code_text_hash_verified": true,
+      "artifact_sha256": "47bf038b2a71de82b057cc2aefe6aa3132cce15091be5537b585c2b0d2d3e4ec",
+      "structure": {
+        "lines": 413,
+        "profile_count": 8,
+        "body_count": 10,
+        "build_lines": 16,
+        "max_function_lines": 16
+      },
+      "review": "Explicit profile/body/build hierarchy; independent runtime body parameters; named SCAPI calls and ordered booleans; identity assembly wrapper. Fixed helpers and long numeric literals remain an optimization opportunity."
+    },
+    {
+      "id": "00000006",
+      "plan_hash": "b43a86be786d3f82c0bb9b46945e230bc4f911af1c6ca2a78c2208352026964f",
+      "code_text_sha256": "6edecd483ebd4ea491f560eb7a0efc6dcec0cec7131c74110949bd6d367a6607",
+      "code_text_hash_verified": true,
+      "artifact_sha256": "123f60e1ffd9c5fdff6436395c9e929c7eafc5544da5086c4758bc09ae454045",
+      "structure": {
+        "lines": 160,
+        "profile_count": 1,
+        "body_count": 1,
+        "build_lines": 7,
+        "max_function_lines": 21
+      },
+      "review": "Explicit profile/body/build hierarchy; independent runtime body parameters; named SCAPI calls and ordered booleans; identity assembly wrapper. Fixed helpers and long numeric literals remain an optimization opportunity."
+    },
+    {
+      "id": "00000007",
+      "plan_hash": "137fa9cefb54d5a535a08fd59942f2b9f8c8028d062faa1357cb9c0c797366cc",
+      "code_text_sha256": "367cc19fd6523802979bc9f488150d39203fc20bd26cd78c4d0dd029209c767b",
+      "code_text_hash_verified": true,
+      "artifact_sha256": "e91b57b4ca2868882e5eb75601ed98d8f8ca573f326f44c467fe843195cd5227",
+      "structure": {
+        "lines": 150,
+        "profile_count": 1,
+        "body_count": 1,
+        "build_lines": 7,
+        "max_function_lines": 14
+      },
+      "review": "Explicit profile/body/build hierarchy; independent runtime body parameters; named SCAPI calls and ordered booleans; identity assembly wrapper. Fixed helpers and long numeric literals remain an optimization opportunity."
+    },
+    {
+      "id": "00000008",
+      "plan_hash": "f0a3ca78636ada294e63462a03dca51ddfeaa309aa8d68ebd0396efa6fc715e8",
+      "code_text_sha256": "dca49c48974976c6ea59f965385ebcf6b7389aaf5767fd25c2a5eba46dd2d169",
+      "code_text_hash_verified": true,
+      "artifact_sha256": "f393e30dcdffbb85be99ea6b7e1b13fdb62d599950a9b2b01d38539173d278f4",
+      "structure": {
+        "lines": 415,
+        "profile_count": 11,
+        "body_count": 1,
+        "build_lines": 7,
+        "max_function_lines": 76
+      },
+      "review": "Explicit profile/body/build hierarchy; independent runtime body parameters; named SCAPI calls and ordered booleans; identity assembly wrapper. Fixed helpers and long numeric literals remain an optimization opportunity."
+    },
+    {
+      "id": "00000009",
+      "plan_hash": "f201c9dfe6a29b7186c9170c68c25f32acaef63dd3214190bcbeb27de1f9ac3b",
+      "code_text_sha256": "66eeb6a67168104d072bbdc9f0f983f61d6c4a438e140feff67d9334e351eb10",
+      "code_text_hash_verified": true,
+      "artifact_sha256": "99ec7f1fcd36f924b58fabcb65718c415f082ef3d6f1203afd3df73becbee5d1",
+      "structure": {
+        "lines": 147,
+        "profile_count": 1,
+        "body_count": 1,
+        "build_lines": 7,
+        "max_function_lines": 11
+      },
+      "review": "Explicit profile/body/build hierarchy; independent runtime body parameters; named SCAPI calls and ordered booleans; identity assembly wrapper. Fixed helpers and long numeric literals remain an optimization opportunity."
+    },
+    {
+      "id": "00000017",
+      "plan_hash": "0db72fc3dcdb510191c4babd7cbbc957413c05116908ca4831f2da8c23d1d2b7",
+      "code_text_sha256": "9ab520993cfd9a888550d07539baf982f150d32c38f16e1c2aaedeef2041bab1",
+      "code_text_hash_verified": true,
+      "artifact_sha256": "3cb8706be8c4d3c5bd412c38f3468986534b9c83434984640d56f4fbcdffc66a",
+      "structure": {
+        "lines": 1229,
+        "profile_count": 15,
+        "body_count": 64,
+        "build_lines": 70,
+        "max_function_lines": 70
+      },
+      "review": "Explicit profile/body/build hierarchy; independent runtime body parameters; named SCAPI calls and ordered booleans; identity assembly wrapper. Fixed helpers and long numeric literals remain an optimization opportunity."
+    },
+    {
+      "id": "00000018",
+      "plan_hash": "78d3ea7d9960af8cc36cb9cd3a26bfd475f0852567a43f28780ee4f2a833a1a2",
+      "code_text_sha256": "8ab2e2dbd3288dbac4c4d45f863ca014886b130cb0b7c434067c2a748e4c6720",
+      "code_text_hash_verified": true,
+      "artifact_sha256": "c0a866f444f82e9199b710ec95b292159ec436bec530bc368f38c3d830b08676",
+      "structure": {
+        "lines": 665,
+        "profile_count": 16,
+        "body_count": 16,
+        "build_lines": 22,
+        "max_function_lines": 29
+      },
+      "review": "Explicit profile/body/build hierarchy; independent runtime body parameters; named SCAPI calls and ordered booleans; identity assembly wrapper. Fixed helpers and long numeric literals remain an optimization opportunity."
+    },
+    {
+      "id": "00000019",
+      "plan_hash": "78d3ea7d9960af8cc36cb9cd3a26bfd475f0852567a43f28780ee4f2a833a1a2",
+      "code_text_sha256": "8ab2e2dbd3288dbac4c4d45f863ca014886b130cb0b7c434067c2a748e4c6720",
+      "code_text_hash_verified": true,
+      "artifact_sha256": "c0a866f444f82e9199b710ec95b292159ec436bec530bc368f38c3d830b08676",
+      "structure": {
+        "lines": 665,
+        "profile_count": 16,
+        "body_count": 16,
+        "build_lines": 22,
+        "max_function_lines": 29
+      },
+      "review": "Explicit profile/body/build hierarchy; independent runtime body parameters; named SCAPI calls and ordered booleans; identity assembly wrapper. Fixed helpers and long numeric literals remain an optimization opportunity."
+    },
+    {
+      "id": "00000022",
+      "plan_hash": "9a10488bdd314d7cb6c7caa2c9f7deacf21ce2b3391677126b2e08ad7df866a1",
+      "code_text_sha256": "32c94f9b141cc791a3bb39b0cf988c58467323371c2845683472827cc90b7840",
+      "code_text_hash_verified": true,
+      "artifact_sha256": "327294f93317f22d136db5e57905becfd8313900a187dd720cca64020d01d9fd",
+      "structure": {
+        "lines": 144,
+        "profile_count": 1,
+        "body_count": 1,
+        "build_lines": 7,
+        "max_function_lines": 8
+      },
+      "review": "Explicit profile/body/build hierarchy; independent runtime body parameters; named SCAPI calls and ordered booleans; identity assembly wrapper. Fixed helpers and long numeric literals remain an optimization opportunity."
+    },
+    {
+      "id": "00000029",
+      "plan_hash": "e5f8102acde4d672e9acfd03cf4c844909a80a29dcebdb5e0edb5d09838c9946",
+      "code_text_sha256": "2979d27d885e9047954bf789ce8dbc3b8479cb6de5c07a9b2e3e923e5474e2c3",
+      "code_text_hash_verified": true,
+      "artifact_sha256": "fbed99a68c8fd166165b84eaa3002a9e413f499e7981f1674e489a2021512adc",
+      "structure": {
+        "lines": 187,
+        "profile_count": 2,
+        "body_count": 2,
+        "build_lines": 8,
+        "max_function_lines": 20
+      },
+      "review": "Explicit profile/body/build hierarchy; independent runtime body parameters; named SCAPI calls and ordered booleans; identity assembly wrapper. Fixed helpers and long numeric literals remain an optimization opportunity."
+    }
+  ]
+}

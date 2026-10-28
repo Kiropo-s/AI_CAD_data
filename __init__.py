@@ -1,2 +1,2 @@
-"""STEP boundary geometry to standalone readable SimpleCADAPI programs."""
-__version__ = "0.4.0"
+"""Exact STEP reconstruction through the self-contained STEP Plan 1 contract."""
+__version__ = "1.0.0"

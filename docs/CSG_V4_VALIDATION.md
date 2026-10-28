@@ -1,5 +1,7 @@
 # CSG 与草图拉伸混合验证（0.4.0）
 
+> 历史记录：本文件描述 0.x 阶段。其 `out/` 逐例产物已于 2026-10-28 清理；保留的测试日志见 [legacy-logs](results/legacy-logs/)，清理范围见 [PRUNE_LOG](results/PRUNE_LOG.md)。文内指向 `../out/...` 的链接为当时路径，已不再存在。
+
 日期：2026-10-26。工具为 step2scapi 0.4.0，识别器为 analytic-prism-revolution-csg-v4，代码结构规则仍为 step-readable-v1。使用现有 `F:\AI_CAD\envs\simplecad\Scripts\python.exe`，修改限于 step2code，未改 json2scapi 或安装新依赖。
 
 ## 实现范围
@@ -18,7 +20,7 @@
 
 ## 测试和最终回归
 
-- **44 项 unittest 全部通过**，19.813 秒；包含实际几何、导出回读、混合孔、盲孔、局部凸台、锥面多边形、参数独立性、限额、非法 recipe 拒绝、确定性与隔离解释器运行。见 [测试日志](../out/csg-unittest-final.log)。
+- **44 项 unittest 全部通过**，19.813 秒；包含实际几何、导出回读、混合孔、盲孔、局部凸台、锥面多边形、参数独立性、限额、非法 recipe 拒绝、确定性与隔离解释器运行。见 [测试日志](results/legacy-logs/csg-unittest-final.log)。
 - **4 个保存的合成混合样例全部 train_ready**：blind_hole、crossed_blind_holes、localized_boss、tapered_polygon。每例实际 build、导出回读并验收，独立于真实 ABC 统计。见 [样例报告](../out/csg-review-v4/run/summary.json)。
 - **真实 ABC 同一前 20 例：8 train_ready / 12 provisional / 0 rejected**。原 0.3.0 的 6 个通过样本全部保留，新增 00000006 与 00000008。20 个源文件 SHA256 与基线全部一致；原 6 个通过样本的生成 Python 代码字节也保持一致。
 - **回归检查 pass，无 worker_error、超时或进程崩溃**；12 个 provisional 均为 unsupported_geometry。有限搜索未找到解不表示数学上无解。
