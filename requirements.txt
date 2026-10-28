@@ -1,0 +1,5 @@
+numpy==2.5.4
+scipy==1.18.1
+cadquery-ocp==7.9.3.1.1
+simplecadapi==2.2.6
+jsonschema==4.26.0

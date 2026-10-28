@@ -1,0 +1,20 @@
+envs/
+__pycache__/
+*.step
+*.stl
+*.scadpkg
+__marimo__/
+# Reproducible Python test/runtime caches
+.pytest_cache/
+*.py[cod]
+datasets/
+
+# Local-only material that is not part of this repository
+.git-backup/
+release/
+.simplecad/
+.vscode/
+src/
+research/
+deepcad_official/
+docs/DeepCAD.pdf
