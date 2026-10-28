@@ -53,6 +53,7 @@ class State:
     steps: tuple
     missing: float
     extra: float
+    nonmonotone_steps: int = 0
 
     @property
     def error(self):
@@ -111,6 +112,11 @@ def _axis_frame(origin, direction, x_axis=None):
 
 def _primitive_shape(kind, p):
     if kind == 'box':
+        if 'origin' in p:
+            frame = _axis_frame(p['origin'], p['axis'], p['x_axis'])
+            maker = BRepPrimAPI_MakeBox(frame, p['width'], p['height'], p['depth'])
+            maker.Build()
+            return maker.Shape()
         center=p['bottom_face_center']
         return BRepPrimAPI_MakeBox(gp_Pnt(center[0]-p['width']/2,center[1]-p['height']/2,center[2]),
                                   p['width'],p['height'],p['depth']).Shape()
@@ -134,7 +140,7 @@ def _signature(kind, params):
 
 def generate_atoms(solid, index, options, deadline, diagnostics):
     """Measure only analytic source surfaces and valid planar cap wires."""
-    primitives, prisms, seen = [], [], set()
+    primitives, revolutions, prisms, seen = [], [], [], set()
     faces = [TopoDS.Face_s(f) for f in explore(solid,TopAbs_FACE)]
     planar = []
     errors = diagnostics['atom_errors']
@@ -148,7 +154,8 @@ def generate_atoms(solid, index, options, deadline, diagnostics):
         shape = _primitive_shape(kind,parameters)
         if _valid_single(shape):
             primitives.append(Atom(kind,shape,parameters,{'source_face_index':face_index,
-                'parameter_origin':'measured_analytic_surface_and_trim_bounds'},role))
+                'parameter_origin':'measured_analytic_surface_and_trim_bounds',
+                'feature_role':'subtractive' if role == 'cut' else ('clip' if role == 'intersect' else 'additive')},role))
 
     # A measured world bounding box is an explicit inferred clipping/base operand.
     # It is never accepted without exact source differences and the final metrics.
@@ -196,6 +203,38 @@ def generate_atoms(solid, index, options, deadline, diagnostics):
                     params = dict(origin=bottom.tolist(),axis=axis.tolist(),height=height,
                                   bottom_radius=max(0.0,r1),top_radius=max(0.0,r2))
                     primitive_kind = 'cone'
+                    add_primitive(primitive_kind,params,face_index,role)
+                    # A trimmed conical face often exposes only the final shell's
+                    # short V interval. Also offer the same analytic cone over the
+                    # source solid's axis projection. This covers constructions
+                    # such as a polygonal blank intersected with a cone whose
+                    # useful extent is larger than the visible cone face.
+                    try:
+                        corners = np.array([[x,y,z] for x in (bounds[0],bounds[3])
+                                                   for y in (bounds[1],bounds[4])
+                                                   for z in (bounds[2],bounds[5])], dtype=float)
+                        location = np.array(analytic.Location().Coord(), dtype=float)
+                        axis_unit = np.array(analytic.Axis().Direction().Coord(), dtype=float)
+                        projections = corners @ axis_unit
+                        extended_first, extended_last = float(projections.min()), float(projections.max())
+                        base_projection = float(bottom @ axis_unit)
+                        if extended_last-extended_first > height+options.length_tolerance:
+                            slope = (r2-r1)/max(height, options.length_tolerance)
+                            er1 = r1 + (extended_first-base_projection)*slope
+                            er2 = r1 + (extended_last-base_projection)*slope
+                            if min(er1,er2) >= -options.length_tolerance:
+                                extended_origin = location + (extended_first-float(location @ axis_unit))*axis_unit
+                                extended = dict(origin=extended_origin.tolist(),
+                                                axis=axis_unit.tolist(),
+                                                height=extended_last-extended_first,
+                                                bottom_radius=max(0.0,er1),
+                                                top_radius=max(0.0,er2))
+                                add_primitive('cone',extended,face_index,role)
+                    except Exception as exc:
+                        if len(errors)<24:
+                            errors.append({'face_index':face_index,
+                                           'error':f'extended_cone:{type(exc).__name__}: {exc}'})
+                    continue
                 # Normalize axis sign only for deduplication and readable parameters.
                 leading = next((v for v in axis if abs(v)>1e-12),1)
                 if leading < 0:
@@ -223,6 +262,52 @@ def generate_atoms(solid, index, options, deadline, diagnostics):
         except Exception as exc:
             if len(errors)<24:
                 errors.append({'face_index':face_index,'error':f'{type(exc).__name__}: {exc}'})
+
+    # Recover bounded solids from true OCC SurfaceOfRevolution faces before
+    # generic atom search.  The native shape and the emitted spline profile
+    # share the same measured basis curve; no mesh approximation is used.
+    try:
+        from step2code_direct.revolution import generate_revolution_atoms
+        recovered, revolution_errors = generate_revolution_atoms(
+            solid, index, options, deadline, Atom)
+        revolutions.extend(recovered[:options.max_revolution_atoms])
+        errors.extend(revolution_errors)
+    except Exception as exc:
+        if len(errors) < 24:
+            errors.append({'stage':'revolution_recovery',
+                           'error':f'{type(exc).__name__}: {exc}'})
+
+    # A planar source face can define a finite, editable half-space clip.
+    # The broad oriented box is only a search operand; exact OCC differences
+    # and the final CD/IoU/V checks still authorize every accepted program.
+    if len(primitives) < primitive_limit:
+        bounds = np.array(bbox(solid), dtype=float)
+        center = (bounds[:3] + bounds[3:]) / 2.0
+        diagonal = float(np.linalg.norm(bounds[3:] - bounds[:3]))
+        seen_planes = set()
+        for face_area, face_index, face, plane in planar:
+            if len(primitives) >= primitive_limit or len(seen_planes) >= 12:
+                break
+            normal = np.array(plane.Axis().Direction().Coord(), dtype=float)
+            normal /= np.linalg.norm(normal)
+            position = float(np.dot(np.array(plane.Location().Coord()), normal))
+            key = (tuple(np.round(normal, 9)), round(position, 7))
+            if key in seen_planes:
+                continue
+            seen_planes.add(key)
+            if float(np.dot(center - np.array(plane.Location().Coord()), normal)) < 0:
+                normal = -normal
+            seed = np.eye(3)[int(np.argmin(np.abs(normal)))]
+            x_axis = seed - normal * float(seed @ normal)
+            x_axis /= np.linalg.norm(x_axis)
+            y_axis = np.cross(normal, x_axis)
+            origin = np.array(plane.Location().Coord()) - diagonal * (x_axis + y_axis)
+            add_primitive('box', dict(width=2.0 * diagonal, height=2.0 * diagonal,
+                                      depth=2.0 * diagonal, origin=origin.tolist(),
+                                      axis=normal.tolist(), x_axis=x_axis.tolist(),
+                                      y_axis=y_axis.tolist()), face_index, 'intersect')
+            if primitives:
+                primitives[-1].evidence['parameter_origin'] = 'measured_planar_halfspace_clip'
 
     planar.sort(key=lambda item:(-item[0],tuple(item[3].Location().Coord()),tuple(item[3].Axis().Direction().Coord()),item[1]))
     prism_limit = options.max_hybrid_atoms-len(primitives)
@@ -270,17 +355,25 @@ def generate_atoms(solid, index, options, deadline, diagnostics):
                     evidence = dict(source_face_index=face_index,source_solid_index=index,
                                     distance_origin_kind='measured',distance_method='parallel_cap_separation',
                                     filled_holes=filled_holes,method='cap_extrusion_operand')
+                    role = 'cut' if str(source_face.Orientation()).endswith('REVERSED') else 'union'
+                    evidence['feature_role'] = 'subtractive' if role == 'cut' else 'additive'
                     native = NativePrism(face,list(anchor.Coord()),x_axis.tolist(),y_axis.tolist(),distance,evidence)
                     key = ('prism',face_index,round(distance,12),filled_holes)
                     if key in seen:
                         continue
                     seen.add(key)
-                    prisms.append(Atom('extrusion',shape,{},evidence,'union',native))
+                    prisms.append(Atom('extrusion',shape,{},evidence,role,native))
                 except Exception as exc:
                     if len(errors)<24:
                         errors.append({'face_index':face_index,'error':f'{type(exc).__name__}: {exc}'})
-    diagnostics.update(primitive_atom_count=len(primitives),extrusion_atom_count=len(prisms))
-    return primitives+prisms
+    # Keep the more structural operands ahead of clipping boxes and noisy
+    # extrusion variants.  The search can still use every retained atom.
+    atoms = primitives + revolutions + prisms
+    diagnostics.update(primitive_atom_count=len(primitives),
+                       revolution_atom_count=len(revolutions),
+                       extrusion_atom_count=len(prisms),
+                       atom_count=len(atoms))
+    return atoms[:options.max_hybrid_atoms]
 
 
 def _recognize_legacy(solid,index,options,on_progress=None):

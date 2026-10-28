@@ -13,10 +13,11 @@ import traceback
 from OCP.BRepCheck import BRepCheck_Analyzer
 from json2scapi.evaluation.metrics import volume, solid_count, read_step, symmetric_difference_volume
 from json2scapi.runtime.worker import returned_shapes, compound, export_step
-from step2code.step_import import read_reference
-from step2code.validation import evaluate
+from step2code_direct.compat.import_step import read_reference
+from step2code_direct.compat.validation import evaluate
 from step2code_direct import __version__, CAPABILITIES
 from step2code_direct.geometry import Options, UnsupportedGeometry, source_solids, recognize_prism
+from step2code_direct.surface_analysis import analyze_solid, failure_category
 from step2code_direct.emitter import DirectEmitter, CODE_STRUCTURE_SPEC
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -45,8 +46,8 @@ def file_hash(path):
 
 def implementation_fingerprints():
     """Freeze source identities for comparisons even when the baseline evolves."""
-    files = ['step2code_direct/'+name for name in ('__init__.py', 'geometry.py', 'emitter.py', 'hybrid.py', 'hybrid_search.py', 'occupancy_search.py', 'search_guidance.py', 'hybrid_codegen.py', 'pipeline.py', 'cli.py')]
-    files += ['step2code/step_import.py', 'step2code/validation.py', 'json2scapi/runtime/worker.py',
+    files = ['step2code_direct/'+name for name in ('__init__.py', 'geometry.py', 'surface_analysis.py', 'revolution.py', 'partition.py', 'emitter.py', 'hybrid.py', 'hybrid_search.py', 'csg_first.py', 'occupancy_search.py', 'search_guidance.py', 'hybrid_codegen.py', 'pipeline.py', 'cli.py')]
+    files += ['step2code_direct/compat/import_step.py', 'step2code_direct/compat/validation.py', 'json2scapi/runtime/worker.py',
               'json2scapi/evaluation/metrics.py', 'json2scapi/evaluation/policy.py',
               'json2scapi/evaluation/registration.py', 'json2scapi/evaluation/similarity.py']
     return {name: file_hash(ROOT/name) for name in files}
@@ -113,9 +114,17 @@ def convert_case(source, output, *, samples=8192, mode='world', options=None):
         sources = source_solids(reference, options)
         checkpoint('recognize_and_emit')
         emitter = DirectEmitter()
-        report['recognition'] = {'recognizer':'direct-prism-hybrid-'+options.hybrid_search+'-v4' if options.enable_hybrid else 'direct-analytic-prism-v1', 'features':[],
-                                 'source_solid_count':len(sources), 'source_coverage':'pending'}
+        surface_analyses = [analyze_solid(solid, options.length_tolerance) for solid in sources]
+        report['recognition'] = {'recognizer':'direct-prism-hybrid-partition-'+options.hybrid_search+'-v6' if options.enable_hybrid else 'direct-analytic-prism-v2', 'features':[],
+                                 'source_solid_count':len(sources), 'source_coverage':'pending',
+                                 'surface_analysis':surface_analyses}
         for index, solid in enumerate(sources, 1):
+            analysis = surface_analyses[index-1]
+            if options.freeform_gate and analysis['recoverability'] == 'freeform_dominant':
+                raise UnsupportedGeometry(
+                    f'Solid {index}: freeform-dominant surface set is outside the exact analytic route',
+                    {'source_solid_index':index, 'surface_analysis':analysis,
+                     'failure_category':'freeform_surface', 'stage':'surface_gate'})
             try:
                 native = recognize_prism(solid, index, options)
             except UnsupportedGeometry as prism_failure:
@@ -130,9 +139,30 @@ def convert_case(source, output, *, samples=8192, mode='world', options=None):
                     hybrid = recognize_hybrid(solid,index,options,on_progress=progress,
                                               seed_prisms=prism_failure.native_candidates)
                 except UnsupportedGeometry as hybrid_failure:
-                    raise UnsupportedGeometry(str(hybrid_failure),
-                        {'source_solid_index':index,'prism':prism_failure.diagnostics,
-                         'hybrid':hybrid_failure.diagnostics}) from hybrid_failure
+                    if not options.enable_partition:
+                        details = {'source_solid_index':index,'surface_analysis':analysis,
+                                   'failure_category':failure_category(analysis, hybrid_failure.diagnostics),
+                                   'prism':prism_failure.diagnostics,
+                                   'hybrid':hybrid_failure.diagnostics}
+                        raise UnsupportedGeometry(str(hybrid_failure), details) from hybrid_failure
+                    try:
+                        from step2code_direct.partition import recognize_partition
+                        from step2code_direct.hybrid_codegen import add_partition
+                        partition = recognize_partition(
+                            solid, index, options,
+                            initial_failure={'prism':prism_failure.diagnostics,
+                                             'hybrid':hybrid_failure.diagnostics})
+                    except UnsupportedGeometry as partition_failure:
+                        details = {'source_solid_index':index,'surface_analysis':analysis,
+                                   'failure_category':failure_category(analysis, {'hybrid':hybrid_failure.diagnostics,
+                                                                                  'partition':partition_failure.diagnostics}),
+                                   'prism':prism_failure.diagnostics,
+                                   'hybrid':hybrid_failure.diagnostics,
+                                   'partition':partition_failure.diagnostics}
+                        raise UnsupportedGeometry(str(partition_failure), details) from partition_failure
+                    add_partition(emitter, partition, index)
+                    report['recognition']['features'].append(partition.evidence)
+                    continue
                 add_hybrid(emitter,hybrid,index)
                 evidence = dict(hybrid.evidence,prior_prism_attempt=prism_failure.diagnostics)
                 report['recognition']['features'].append(evidence)

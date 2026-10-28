@@ -30,6 +30,10 @@ def _seed_order(atoms, guidance):
         missing, extra = guidance.difference(mask)
         return (missing + extra, missing, index)
     ordered = sorted(range(len(atoms)), key=rank)
+    # Structural/additive bases first; subtractive tools and clipping boxes
+    # are admitted after a plausible exterior has been scored.
+    role_rank = {'additive': 0, 'base': 0, 'subtractive': 2, 'clip': 3}
+    ordered = sorted(ordered, key=lambda i: (role_rank.get(atoms[i].evidence.get('feature_role'), 1), rank(i)))
     exterior = [i for i in ordered if atoms[i].kind not in ('box', 'extrusion')
                 and atoms[i].preferred_operation == 'union']
     if guidance:
@@ -41,7 +45,7 @@ def _seed_order(atoms, guidance):
     return list(dict.fromkeys(first + ordered))
 
 
-def _proposals(work, atoms, guidance, tolerance):
+def _proposals(work, atoms, guidance, tolerance, auxiliary_limit=None):
     proposals = []
     for index, atom in enumerate(atoms):
         if index == work.state.base:
@@ -63,6 +67,17 @@ def _proposals(work, atoms, guidance, tolerance):
             proposals.append((approximate, int(operation != atom.preferred_operation),
                               index, operation, mask))
     proposals.sort(key=lambda item: item[:4])
+    if auxiliary_limit is not None and guidance is not None and work.mask is not None:
+        # Bound sampled sketch branching; unclassified operands remain eligible.
+        selected, count = [], 0
+        for item in proposals:
+            index = item[2]
+            if atoms[index].kind == 'extrusion' and index in guidance.atoms:
+                if count >= auxiliary_limit:
+                    continue
+                count += 1
+            selected.append(item)
+        proposals = selected
     return proposals
 
 
@@ -92,7 +107,8 @@ def recognize_guided(solid, index, options, on_progress=None, seed_prisms=()):
         operation_errors=[], max_boolean_steps=options.max_boolean_steps,
         max_boolean_trials=options.max_boolean_trials, time_budget_seconds=options.hybrid_timeout_seconds,
         boolean_trials=0, valid_trials=0, exact_score_calls=0, seed_score_calls=0,
-        best_symmetric_difference_relative=None, sampled_atoms=0, sampling_points=0,
+        nonmonotone_admissions=0, best_symmetric_difference_relative=None,
+        sampled_atoms=0, sampling_points=0,
         stage_times_seconds={}, operation_counts={})
 
     def progress(stage, operation=None):
@@ -104,10 +120,10 @@ def recognize_guided(solid, index, options, on_progress=None, seed_prisms=()):
         if on_progress:
             on_progress(dict(diagnostics))
 
-    def measured(stage, function, *args):
+    def measured(stage, function, *args, **kwargs):
         call_started = time.monotonic()
         try:
-            return function(*args)
+            return function(*args, **kwargs)
         finally:
             timings = diagnostics['stage_times_seconds']
             timings[stage] = timings.get(stage, 0.0) + time.monotonic() - call_started
@@ -115,6 +131,24 @@ def recognize_guided(solid, index, options, on_progress=None, seed_prisms=()):
             counts[stage] = counts.get(stage, 0) + 1
 
     exact_scores = {}
+
+    def can_score_atom(atom):
+        # A reconstructed revolution profile may be a valid large carrier
+        # solid while still being a poor base for this source.  Avoid sending
+        # such candidates into expensive OCC double-cut measurement; they
+        # remain available as tools after a plausible base is found.
+        if atom.kind != 'revolution':
+            return True
+        try:
+            ratio = volume(atom.shape) / source_volume
+        except Exception:
+            return False
+        if ratio > 2.25 or ratio < 1e-4:
+            diagnostics.setdefault('skipped_atoms', []).append({
+                'kind': atom.kind, 'reason': 'implausible_seed_volume',
+                'volume_ratio': ratio})
+            return False
+        return True
 
     def score(shape, seed=False):
         cached = exact_scores.get(id(shape))
@@ -145,10 +179,14 @@ def recognize_guided(solid, index, options, on_progress=None, seed_prisms=()):
         return HybridResult(atoms[state.base], tuple((op, atoms[n]) for op, n in state.steps),
                             state.shape, dict(diagnostics))
 
+    if options.hybrid_search == 'csg-first':
+        diagnostics.update(method='native_hybrid_csg_first_v1',
+                           search_algorithm='primitive_first_residual_extrusions')
+
     progress('generate_atoms')
     source_volume = measured('reference_volume', volume, solid)
     atoms = measured('generate_atoms', generate_atoms, solid, index, options, deadline, diagnostics)
-    if options.hybrid_search == 'lookahead' and seed_prisms:
+    if options.hybrid_search in ('lookahead', 'csg-first') and seed_prisms:
         from OCP.BRepLib import BRepLib
         from OCP.BRepPrimAPI import BRepPrimAPI_MakePrism
         from OCP.TopoDS import TopoDS
@@ -163,7 +201,8 @@ def recognize_guided(solid, index, options, on_progress=None, seed_prisms=()):
             try:
                 shape = TopoDS.Solid_s(BRepPrimAPI_MakePrism(native.face, gp_Vec(*direction)).Shape())
                 if BRepLib.OrientClosedSolid_s(shape) and _valid_single(shape):
-                    retained.append(Atom('extrusion', shape, {}, dict(native.evidence), 'union', native))
+                    role = 'cut' if native.evidence.get('feature_role') == 'subtractive' else 'union'
+                    retained.append(Atom('extrusion', shape, {}, dict(native.evidence), role, native))
             except Exception as exc:
                 diagnostics['atom_errors'].append({'retained_prism': str(exc)})
         atoms = retained + atoms[:max(0, options.max_hybrid_atoms - len(retained))]
@@ -186,6 +225,8 @@ def recognize_guided(solid, index, options, on_progress=None, seed_prisms=()):
                 break
             progress('single_atom_scoring', {'atom_index': n})
             try:
+                if not can_score_atom(atoms[n]):
+                    continue
                 missing, extra = score(atoms[n].shape, seed=True)
                 single = State(atoms[n].shape, n, (), missing, extra)
                 remember(single)
@@ -256,8 +297,29 @@ def recognize_guided(solid, index, options, on_progress=None, seed_prisms=()):
         progress('guided_fallback')
     if options.hybrid_search == 'lookahead':
         diagnostics['solution_route'] = 'guided_fallback'
+    staged_states = []
+    if options.hybrid_search == 'csg-first':
+        from step2code_direct.csg_first import search_csg_first
+        staged_states = search_csg_first(atoms, guidance, options, deadline, diagnostics,
+                                         score, remember, progress, measured)
+        if staged_states and staged_states[0].error <= tolerance:
+            return accepted(staged_states[0])
+        diagnostics['solution_route'] = 'csg_guided_fallback'
     seed_order = _seed_order(atoms, guidance)
+    if options.hybrid_search == 'csg-first':
+        primitive_seeds = [i for i in seed_order if atoms[i].kind != 'extrusion']
+        sketch_seeds = [i for i in seed_order if atoms[i].kind == 'extrusion']
+        seed_order = list(dict.fromkeys(primitive_seeds[:4] + sketch_seeds[:2] + seed_order))
     queue, serial, seen = [], 0, set()
+    for state in staged_states:
+        if not state.steps:
+            continue
+        mask = guidance.atoms.get(state.base) if guidance else None
+        for operation, index in state.steps:
+            mask = guidance.combine(mask, index, operation) if guidance else None
+        heapq.heappush(queue, (state.error, serial, Work(state, mask)))
+        seen.add((state.base, state.steps))
+        serial += 1
     seed_target = max(4, options.hybrid_beam_width * 2)
     seeds_scored = 0
     batch_size = max(4, options.hybrid_beam_width * 2)
@@ -270,6 +332,8 @@ def recognize_guided(solid, index, options, on_progress=None, seed_prisms=()):
             seeds_scored += 1
             progress('seed_scoring', {'atom_index': n})
             try:
+                if not can_score_atom(atoms[n]):
+                    continue
                 missing, extra = score(atoms[n].shape, seed=True)
                 state = State(atoms[n].shape, n, (), missing, extra)
                 remember(state)
@@ -293,7 +357,8 @@ def recognize_guided(solid, index, options, on_progress=None, seed_prisms=()):
         if len(state.steps) >= options.max_boolean_steps:
             continue
         if work.proposals is None:
-            work.proposals = _proposals(work, atoms, guidance, tolerance)
+            work.proposals = _proposals(work, atoms, guidance, tolerance,
+                                        auxiliary_limit=4 if options.hybrid_search == 'csg-first' else None)
         attempts = 0
         while work.cursor < len(work.proposals) and attempts < batch_size:
             if diagnostics['boolean_trials'] >= options.max_boolean_trials or time.monotonic() >= deadline:
@@ -316,8 +381,18 @@ def recognize_guided(solid, index, options, on_progress=None, seed_prisms=()):
                 remember(child)
                 if child.error <= tolerance:
                     return accepted(child)
-                if child.error < state.error - max(tolerance * 0.01, 1e-12):
-                    heapq.heappush(queue, (child.error, serial, Work(child, mask)))
+                improved = child.error < state.error - max(tolerance * 0.01, 1e-12)
+                admissible_nonmonotone = (
+                    options.allow_nonmonotone_search
+                    and state.nonmonotone_steps < 1
+                    and len(state.steps) < max(1, options.max_boolean_steps - 1)
+                    and child.error <= state.error * (1.0 + options.nonmonotone_regression)
+                    and operation == atoms[n].preferred_operation)
+                if improved or admissible_nonmonotone:
+                    if admissible_nonmonotone and not improved:
+                        child.nonmonotone_steps = state.nonmonotone_steps + 1
+                        diagnostics['nonmonotone_admissions'] += 1
+                    heapq.heappush(queue, (child.error + (0.002 if not improved else 0.0), serial, Work(child, mask)))
                     serial += 1
             except Exception as exc:
                 if len(diagnostics['operation_errors']) < 16:

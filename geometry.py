@@ -36,16 +36,31 @@ class Options:
     hybrid_beam_width: int = 3
     hybrid_timeout_seconds: float = 20.0
     hybrid_search: str = 'lookahead'
+    enable_partition: bool = True
+    max_partition_axes: int = 2
+    max_partition_parts: int = 32
+    partition_timeout_seconds: float = 20.0
+    partition_overlap_mm: float = 0.0
+    allow_nonmonotone_search: bool = True
+    nonmonotone_regression: float = 0.12
+    max_revolution_atoms: int = 8
+    partition_score_min: float = 0.0
+    freeform_gate: bool = False
 
     def __post_init__(self):
-        if self.hybrid_search not in ('lookahead', 'guided', 'legacy'):
-            raise ValueError('hybrid_search must be lookahead, guided or legacy')
-        for name in ('length_tolerance', 'reconstruction_relative_tolerance', 'hybrid_timeout_seconds'):
+        if self.hybrid_search not in ('lookahead', 'guided', 'legacy', 'csg-first'):
+            raise ValueError('hybrid_search must be lookahead, guided, legacy or csg-first')
+        for name in ('length_tolerance', 'reconstruction_relative_tolerance', 'hybrid_timeout_seconds', 'partition_timeout_seconds'):
             value = getattr(self, name)
             if not math.isfinite(value) or value <= 0:
                 raise ValueError(f'{name} must be positive and finite')
+        if not math.isfinite(self.partition_overlap_mm) or self.partition_overlap_mm < 0:
+            raise ValueError('partition_overlap_mm must be finite and nonnegative')
+        if not math.isfinite(self.nonmonotone_regression) or self.nonmonotone_regression < 0:
+            raise ValueError('nonmonotone_regression must be finite and nonnegative')
         if min(self.max_candidates, self.max_solids, self.max_hybrid_atoms, self.max_boolean_steps,
-               self.max_boolean_trials, self.hybrid_beam_width) < 1:
+               self.max_boolean_trials, self.hybrid_beam_width, self.max_partition_axes,
+               self.max_partition_parts, self.max_revolution_atoms) < 1:
             raise ValueError('recognition limits must be positive')
 
 
@@ -172,7 +187,7 @@ def recognize_prism(solid, index, options):
             difference = symmetric_difference_volume(solid, prism)/source_volume
             first = BRepAdaptor_Curve(wire_edges(face_wires(face)[0], face)[0])
             anchor = first.Circle().Location() if first.GetType() == GeomAbs_Circle else first.Value(first.FirstParameter())
-            if (options.hybrid_search == 'lookahead' and options.enable_hybrid
+            if (options.hybrid_search in ('lookahead', 'csg-first') and options.enable_hybrid
                     and math.isfinite(difference) and difference <= 0.25):
                 evidence = dict(record, method='retained_near_prism', source_solid_index=index,
                                 distance_mm=distance, symmetric_difference_relative=difference)

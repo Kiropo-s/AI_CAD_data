@@ -1,0 +1,98 @@
+{
+  "schema": "step2scapi-direct-validation-1",
+  "date": "2026-10-27",
+  "version": "0.5.1",
+  "test_count": 50,
+  "test_result": "passed",
+  "test_log_sha256": "d05b65dba8e1e47c3ca8fc97cffb8e90bb76b40b1797da91237bcb9711ced122",
+  "abc": {
+    "input_count": 20,
+    "completed_count": 20,
+    "counts": {
+      "provisional": 12,
+      "train_ready": 8
+    },
+    "accepted_ids": [
+      "00000005",
+      "00000006",
+      "00000007",
+      "00000009",
+      "00000016",
+      "00000017",
+      "00000018",
+      "00000019"
+    ],
+    "samples": 8192,
+    "validation_mode": "world",
+    "hybrid_search": "lookahead",
+    "hybrid_timeout_seconds": 20.0,
+    "run_directory": "F:\\AI_CAD\\step2code_direct\\out\\abc-first20-direct-0.5.1-20261027"
+  },
+  "change": {
+    "name": "extended_cone_operands",
+    "source_file": "hybrid.py",
+    "behavior": "retain the trimmed analytic cone and add a candidate extended along its axis to the source-solid bounding-box projection",
+    "acceptance": "candidate-only search hint; exact OCC double-cut, generated SCAPI build, STEP roundtrip and CD/IoU/V remain mandatory",
+    "new_case": "00000006"
+  },
+  "comparison": {
+    "previous_complete_direct_run": "out/abc-first20-hybrid-final-v2/summary.json",
+    "previous_train_ready": 6,
+    "current_train_ready": 8,
+    "newly_accepted": [
+      "00000006",
+      "00000016"
+    ],
+    "retained_previous": [
+      "00000005",
+      "00000007",
+      "00000009",
+      "00000017",
+      "00000018",
+      "00000019"
+    ],
+    "note": "00000016 was already present in the current 0.5.0 lookahead experiment; the extended-cone change directly adds 00000006. The comparison run is a development first-20 set, not a dataset-wide estimate."
+  },
+  "source_hashes": {
+    "00000000": "73411ebbcc0afa5fa742b331ce1be4450b34c9b367b75aedccc47e21798fb6dc",
+    "00000001": "8f27522538b086ecc9bfb6e458207bea0f8f9715b2d76bb8dbd93a5083e8a018",
+    "00000002": "c190144c83c811a48c1a7892c299fc60a85332ee21535c630518637d9f325688",
+    "00000003": "532f0f0687407346f43f9a28e7934c9927df0d269dd4d097864be1e060368734",
+    "00000004": "a7be17878aea45cc9a1aa0b68901756a8ad70d6988a9c42fb2ee6c8525a32195",
+    "00000005": "7a970a7f10b5f7ef783e20a8713358f3a8c9cd005cf4355a586a19e72ca32de5",
+    "00000006": "5b0a309b468874e023681903bd6208479f6ea80064d9c17e08873e921732a0fe",
+    "00000007": "02616fa80edaf4d8a1aa03619e3488fa42158da3874ccca3289b9af700fe07cf",
+    "00000008": "84c7687d1acf464c406a6648e379893f21f0c9ed358ea0dee92be7e10b882f47",
+    "00000009": "34a7b399bef7d25ce7b85357d06210ec7c06fe6a39a6b20bc7369dc1abd40b77",
+    "00000010": "79a1916b709d95e5aa5b79694f9d988bcd97c1c1c2e9abb9eaa428f2a22026b6",
+    "00000011": "490701d7fca1db71dc912bc6e1d7a3a1ef1792aeb030cfb1ead764abcf7e6920",
+    "00000012": "29da96fd0b52e262036807b162b8c5d02cb74ab640dbef47d373433ad80ca046",
+    "00000013": "0af8f4f012b3355dd0f2232b9f04df45cdd2ee13c5d36368176b0a50e5c5a5e6",
+    "00000014": "7c7190f868acd93951fd6302313d1f818828f44da6a5716b7434c0059e0802b0",
+    "00000015": "4460d2d68643db57c164e1ede21817a037fcb9881a974943906348ca31aa7e40",
+    "00000016": "767992134bf890032be8ef450710d7ddbd69b1bc49a11904b29e0fae328e286a",
+    "00000017": "ff5d59a91a341035c7604987eb5e54503710bfedf4962608c658f4d985ea0112",
+    "00000018": "a446e05fcda2dba53fcea363e826fe497130aa9a68ed16a00f3d2bad90c04a3a",
+    "00000019": "605617ea94f22724a0689faf740f6bf8767cf12604a6cfb162115c1016bbd83e"
+  },
+  "implementation_sha256": {
+    "step2code_direct/__init__.py": "bd0c149d79d134fd5e96c23b2f375f5633104719930ec1a454998676455ed5ce",
+    "step2code_direct/geometry.py": "45502926dbafef046f40b69041f3ee866c7f4d87a3875935f773802b5098d038",
+    "step2code_direct/emitter.py": "2c76e57a7f42135669059932a96b88a26577e2f59398f5d8f736c39b455e97d4",
+    "step2code_direct/hybrid.py": "ba32e3ff67e9d7b5c11451d70da29bfba4163416ac161e525ca62529c80beeef",
+    "step2code_direct/hybrid_search.py": "e619e1cc5d93442cdbdcf46deffd955bdd60d17709a88e41d1b270cd0799e8fa",
+    "step2code_direct/csg_first.py": "d57cb1321952aaebd4c1a5ec9bb318e663d9439d9578fc4ede686db9ba5b4c10",
+    "step2code_direct/occupancy_search.py": "de724ef70f929fec9648bd2b0be4529e98dddaf4dc32aa68d5e48411a8b38e49",
+    "step2code_direct/search_guidance.py": "d6217f22f60fdb10cab048bb1dc33fcb7613f5d30080d0cdfa6a6e28c931c044",
+    "step2code_direct/hybrid_codegen.py": "c354131580ffde78f05b045f3b4456fdf686fe763fb4c29f44dc0cd1f1bf901b",
+    "step2code_direct/pipeline.py": "85b1cf3e28d64c668680d4c66d7c4d7324b0426318e1008e9cbb41cd8b586d5f",
+    "step2code_direct/cli.py": "3d54e445e72c5b099d3b7e4f45c91a499bdc3be6c5213abb2f6676f7ae01cb73",
+    "step2code_direct/compat/import_step.py": "55f55413e153d2da97a081590aa8da8c2d8137aa190a6869f07580baa7c50bd6",
+    "step2code_direct/compat/validation.py": "b8405a13344910ad803ab5212e3d6dba51434f623ac8dd5aa82845646dfded4b",
+    "json2scapi/runtime/worker.py": "1efd700c374ea92c1a382c7b8dbac19f82607bf8539317140df4d4e7ed9d724f",
+    "json2scapi/evaluation/metrics.py": "3c29cddaa0fa33d1f315f7d8288f315e7afe5cf20bb5fefd48504b84719105f3",
+    "json2scapi/evaluation/policy.py": "a2c127c97a6a53dd12af7a45c579512e9b92165c5dbb2fa15f98ef8b3af0be48",
+    "json2scapi/evaluation/registration.py": "a0afd55b1bd9429932fa0b92a44fa1a73368ed8d4efeffd66722155d02b20edb",
+    "json2scapi/evaluation/similarity.py": "e21c86a1f1ac48adaaf75201f91653ebe1bddb94a3a54e1416b15efdbb6fc3fb"
+  }
+}

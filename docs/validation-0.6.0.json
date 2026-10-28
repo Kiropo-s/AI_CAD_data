@@ -1,0 +1,95 @@
+{
+  "version": "0.6.0",
+  "case": "00000008_9b3d6a97e8de4aa193b81000_step_000",
+  "status": "train_ready",
+  "recognizer": "direct-prism-hybrid-partition-lookahead-v5",
+  "feature": {
+    "status": "recognized",
+    "source_solid_index": 1,
+    "strategy": "verified_planar_partition_union",
+    "candidate_count": 8,
+    "attempts": [
+      {
+        "candidate_index": 1,
+        "axes": [
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "interval_counts": [
+          7
+        ],
+        "expected_parts": 7,
+        "status": "verified",
+        "symmetric_difference_relative": 0.0,
+        "actual_parts": 10
+      }
+    ],
+    "part_limit": 32,
+    "axis_limit": 2,
+    "time_budget_seconds": 45.0,
+    "selected_candidate": 1,
+    "part_count": 10,
+    "piece_order": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "symmetric_difference_relative": 0.0,
+    "elapsed_seconds": 2.889981699998316
+  },
+  "build": {
+    "valid": true,
+    "body_count": 1,
+    "solid_count": 1
+  },
+  "source_coverage_validation": {
+    "instances": [
+      {
+        "source_solid_index": 1,
+        "output_body_index": 0,
+        "symmetric_difference_relative": 0.0,
+        "passed": true
+      }
+    ],
+    "decision": {
+      "status": "train_ready",
+      "reason": "source_body_coverage_complete"
+    }
+  },
+  "roundtrip_decision": {
+    "status": "train_ready",
+    "reason": "accepted",
+    "failed_checks": []
+  },
+  "geometry_decision": {
+    "status": "train_ready",
+    "reason": "accepted",
+    "failed_checks": []
+  },
+  "geometry_metrics": {
+    "volume_relative_error": 1.6666033406129348e-09,
+    "volume_iou": 1.0000000017052937,
+    "chamfer_relative": 0.006530110188940124,
+    "symmetric_difference_relative": 0.0
+  },
+  "stage_times_seconds": {
+    "read_reference": 0.02048790000117151,
+    "recognize_and_emit": 13.067885800002841,
+    "build": 1.0112654999975348,
+    "source_coverage": 0.4804932999977609,
+    "export": 0.033227600004465785,
+    "roundtrip": 0.4209493000016664,
+    "validate": 0.8060256999960984
+  },
+  "tests": "51 passed"
+}

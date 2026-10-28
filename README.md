@@ -1,6 +1,10 @@
 # step2code_direct：直接 STEP → SCAPI，支持草图拉伸与 CSG 混合重建
 
-当前版本 **0.4.0**。目录独立于原 `step2code`，使用现有 `F:\AI_CAD\envs\simplecad` 环境。
+当前版本 **0.6.0**。目录独立于原 `step2code`，使用现有 `F:\AI_CAD\envs\simplecad` 环境。
+
+0.6.0 增加平面分块 fallback：整体 prism 和 hybrid CSG 都失败时，按源实体的平面法向与层级切成有限 slab，每个分块重新走 direct prism/hybrid 识别，最后用原生 OCC union 验证覆盖，再生成一个 source body。分块中的倾斜平面会转成可编辑的定向盒半空间候选；候选仍必须经过精确 OCC、SCAPI build、STEP 回读以及 CD/IoU/V 验收。ABC `00000008` 已通过 10 个分块、单 body 输出和零相对对称差验证。
+
+0.5.1 针对截锥面裁剪参数过短的问题增加了延伸截锥候选：保留原始裁剪候选，同时沿解析锥轴扩展到源实体包围盒投影范围。候选仍只用于搜索，必须通过精确 OCC 差分、实际 SCAPI build、STEP 回读和 CD/IoU/V 验收。固定首 20 例从上一版完整结果的 6/20 提升到 8/20，新增通过 00000006 和 00000016，原有成功案例全部保留。
 
 0.4.0 新增默认 lookahead 搜索，保留 guided / legacy 开关。固定首 20 例中，当前 guided 通过 6 例，lookahead 审计后通过 7 例（30%→35%），新增 00000016，原有成功案例保留。该例因报告文件锁中断而重跑，报告实现差异和原始记录详见验证文档。lookahead 在采样占据上先规划短 CSG 序列，再构造真实几何并精确验收。历史 0.3.0 对照仍保留于 [搜索对照记录](docs/SEARCH_IMPROVEMENT.md)，本版见 [前瞻搜索记录](docs/LOOKAHEAD_VALIDATION.md)。
 
@@ -8,6 +12,7 @@
 STEP / STP（显式导入为 mm）
   → 优先验证单次草图拉伸
   → 不支持时：提取原生拉伸/基本体候选，进行有预算的 CSG 搜索
+  → 整体 CSG 失败时：按平面层级分块，分别重建后做验证 union
   → 将选中的原生几何和运算直接展开成可读 SCAPI 源码
   → 执行 build()、逐源实体核查、STEP 导出回读
   → CD / IoU / V 验收
@@ -16,6 +21,27 @@ STEP / STP（显式导入为 mm）
 不调用现有 CAD IR 识别器、schema、prepare_ir、StructuredEmitter 或 StepEmitter，不输出 `*.ir.json`。识别和搜索会使用瞬时原生几何对象以及候选运算记录；这不是“完全没有中间数据”，也不是旧 IR 换名。不存在可序列化的通用 CAD 操作图或运行时指令解释器。
 
 最终 `model.scapi.py` **只导入 `simplecadapi`**，不读取原始 STEP、BREP、IR、symbols、项目源码或网络。诊断中的残差几何不会被嵌入输出。
+
+## CSG 主导实验模式（0.5.0）
+
+`--hybrid-search csg-first` 保留一次拉伸完整重建的快速路径。进入混合搜索后，将同一候选集合划分为基本体与辅助拉伸体两池：先规划基本体之间的并/差/交；没有精确解时，根据每个中间形状的采样缺失/多余区域，每种操作最多引入 2 个相关拉伸体；最后使用剩余预算进行 guided 回退，每次扩展最多保留 4 个有采样信息的拉伸操作提案。未完成分类的候选仍能进入回退。
+
+基本体阶段最多使用规划开始时剩余软时间的 25%，基本体加残差拉伸阶段最多到 75%；两阶段累计布尔次数额度分别为总预算的 25% 和 75%（至少一次）。最多分别精确评分 6 和 20 个程序，公共前缀与失败前缀按实际操作序列缓存。阶段只能在原生调用之间检查时间，单次 OCC 调用仍可能超出软预算。没有增加全局预算、放宽验收或引入通用 CSG 子树。
+
+默认仍为 `lookahead`。本版保持相同候选生成器与候选总上限，实验主要改变搜索调度与辅助拉伸分支筛选；没有新增一般旋转、样条轮廓或定向盒体。
+
+```powershell
+Set-Location 'F:\AI_CAD'
+& .\envs\simplecad\Scripts\python.exe -m step2code_direct `
+  --input .\datasets\abc\step\abc_0000 --limit 20 `
+  --hybrid-search csg-first --hybrid-timeout 20 `
+  --samples 8192 --timeout 120
+
+# 固定首20例 + 29/71/78/80/83/99，逐例交替比较两种模式
+& .\envs\simplecad\Scripts\python.exe -m step2code_direct.experiments.compare_csg_first
+```
+
+为避免原项目重构导致启动失败，本版固定使用 `compat/` 内的旧导入器和评估器快照，来源和 SHA256 记录在 `compat/ORIGIN.json`；底层仍使用共享 json2scapi 度量及运行时，并记录这些文件的指纹。快照来自原仓库的已提交版本，不假设与历史 100 例的未提交工作区字节一致。新对照两臂使用完全相同的快照。
 
 ## 运行
 
@@ -29,6 +55,11 @@ STEP / STP（显式导入为 mm）
   --input .\datasets\abc\step\abc_0000 --limit 20 `
   --samples 8192 --timeout 120 `
   --out .\step2code_direct\out\my-hybrid-run
+
+# 可按需关闭分块，或调整分块轴数、分块数量和单实体预算。默认已启用。
+& .\envs\simplecad\Scripts\python.exe -m step2code_direct `
+  --input .\datasets\abc\step\abc_0000 --limit 20 `
+  --partition-timeout 20 --max-partition-axes 2 --max-partition-parts 32
 
 # 同一套当前代码和评估器，关闭混合策略做消融对照。
 & .\envs\simplecad\Scripts\python.exe -m step2code_direct `
@@ -152,6 +183,8 @@ body = scad.cut_rsolid(body, hole_tool)
 
 ## 验证记录
 
+0.5.1 当前有 51 项测试通过；本轮首 20 例机器记录见 [validation-0.5.1.json](docs/validation-0.5.1.json)；ABC `00000008` 的分块验证见 [validation-0.6.0.json](docs/validation-0.6.0.json)，运行输出见 `out/abc-first20-direct-0.5.1-20261027`。
+
 ```powershell
 & .\envs\simplecad\Scripts\python.exe -X utf8 -m unittest discover -s step2code_direct\tests -v
 ```
@@ -160,3 +193,7 @@ body = scad.cut_rsolid(body, hole_tool)
 - [0.3.0 搜索改进与对照](docs/SEARCH_IMPROVEMENT.md)
 - [0.2.0 混合版验证记录](docs/HYBRID_VALIDATION.md)
 - [旧 0.1.0 直接拉伸版验证记录](docs/VALIDATION.md)，旧报告和输出保留。
+
+## 0.7.0 路线改进
+
+增加曲面诊断、SurfaceOfRevolution B-spline 恢复、有限非单调搜索和评分式 partition；ABC 回归固定为前 20 例。

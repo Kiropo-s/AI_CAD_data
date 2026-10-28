@@ -34,8 +34,18 @@ def parser():
     result.add_argument('--max-boolean-trials', type=int, default=256)
     result.add_argument('--hybrid-beam-width', type=int, default=3)
     result.add_argument('--hybrid-timeout', type=float, default=20.0, help='Seconds per source solid for bounded hybrid search')
-    result.add_argument('--hybrid-search', choices=('lookahead', 'guided', 'legacy'), default='lookahead',
-                        help='Occupancy lookahead, guided sampled ranking or original exact-scored search')
+    result.add_argument('--hybrid-search', choices=('lookahead', 'guided', 'legacy', 'csg-first'), default='lookahead',
+                        help='Primitive-first CSG with residual sketches, occupancy lookahead, guided or legacy')
+    result.add_argument('--no-partition', action='store_true', help='Disable the planar partition fallback')
+    result.add_argument('--max-partition-axes', type=int, default=2)
+    result.add_argument('--max-partition-parts', type=int, default=32)
+    result.add_argument('--partition-timeout', type=float, default=20.0,
+                        help='Seconds per source solid for the verified planar partition fallback')
+    result.add_argument('--no-nonmonotone', action='store_true', help='Disable one bounded non-monotone CSG admission')
+    result.add_argument('--nonmonotone-regression', type=float, default=0.12)
+    result.add_argument('--max-revolution-atoms', type=int, default=8)
+    result.add_argument('--partition-score-min', type=float, default=0.0)
+    result.add_argument('--freeform-gate', action='store_true', help='Stop early on freeform-dominant solids')
     result.add_argument('--_worker', action='store_true', help=argparse.SUPPRESS)
     return result
 
@@ -104,10 +114,11 @@ def main(argv=None):
     argument_parser = parser()
     args = argument_parser.parse_args(argv)
     for value, name in ((args.timeout, 'timeout'), (args.length_tolerance, 'length tolerance'),
-                        (args.reconstruction_relative_tolerance, 'reconstruction tolerance'), (args.hybrid_timeout, 'hybrid timeout')):
+                        (args.reconstruction_relative_tolerance, 'reconstruction tolerance'), (args.hybrid_timeout, 'hybrid timeout'),
+                        (args.partition_timeout, 'partition timeout')):
         if not math.isfinite(value) or value <= 0:
             argument_parser.error(f'{name} must be positive and finite')
-    if args.samples < 256 or min(args.max_candidates, args.max_solids, args.max_hybrid_atoms, args.max_boolean_steps, args.max_boolean_trials, args.hybrid_beam_width) < 1 or (args.limit is not None and args.limit < 1):
+    if args.samples < 256 or min(args.max_candidates, args.max_solids, args.max_hybrid_atoms, args.max_boolean_steps, args.max_boolean_trials, args.hybrid_beam_width, args.max_partition_axes, args.max_partition_parts) < 1 or (args.limit is not None and args.limit < 1):
         argument_parser.error('samples must be >=256; limits must be positive')
     source = args.input.resolve()
     configuration = dict(samples=args.samples, mode=args.validation_mode, recognition={
@@ -117,7 +128,14 @@ def main(argv=None):
         'enable_hybrid':not args.no_hybrid, 'max_hybrid_atoms':args.max_hybrid_atoms,
         'max_boolean_steps':args.max_boolean_steps, 'max_boolean_trials':args.max_boolean_trials,
         'hybrid_beam_width':args.hybrid_beam_width, 'hybrid_timeout_seconds':args.hybrid_timeout,
-        'hybrid_search':args.hybrid_search})
+        'hybrid_search':args.hybrid_search, 'enable_partition':not args.no_partition,
+        'max_partition_axes':args.max_partition_axes, 'max_partition_parts':args.max_partition_parts,
+        'partition_timeout_seconds':args.partition_timeout,
+        'allow_nonmonotone_search':not args.no_nonmonotone,
+        'nonmonotone_regression':args.nonmonotone_regression,
+        'max_revolution_atoms':args.max_revolution_atoms,
+        'partition_score_min':args.partition_score_min,
+        'freeform_gate':args.freeform_gate})
     if args._worker:
         if args.out is None:
             argument_parser.error('worker requires --out')
@@ -144,8 +162,10 @@ def main(argv=None):
     output.mkdir(parents=True, exist_ok=True)
     from step2code_direct.pipeline import write_json, implementation_fingerprints
     summary = dict(tool='step2scapi-direct', version=__version__, cad_ir_used=False,
-        capabilities=CAPABILITIES, enabled_strategies=['direct_prism']+([] if args.no_hybrid else ['hybrid_csg']), validation_mode=args.validation_mode, samples=args.samples,
+        capabilities=CAPABILITIES, validation_mode=args.validation_mode, samples=args.samples,
         configuration=configuration, timeout_seconds=args.timeout, implementation_sha256=implementation_fingerprints(),
+        enabled_strategies=['direct_prism'] + ([] if args.no_hybrid else ['hybrid_csg']) +
+                           ['surface_analysis', 'revolution_atoms'] + ([] if args.no_partition else ['scored_planar_partition']),
         input_directory=str(source), input_count=len(inputs), completed_count=0, run_status='running', counts={}, cases=[])
     for index, input_path in enumerate(inputs, 1):
         case_output = output/'cases'/f'{index:05d}_{input_path.stem}'
@@ -157,9 +177,19 @@ def main(argv=None):
             '--max-solids', str(args.max_solids), '--max-hybrid-atoms', str(args.max_hybrid_atoms),
             '--max-boolean-steps', str(args.max_boolean_steps), '--max-boolean-trials', str(args.max_boolean_trials),
             '--hybrid-beam-width', str(args.hybrid_beam_width), '--hybrid-timeout', str(args.hybrid_timeout),
-            '--hybrid-search', args.hybrid_search]
+            '--hybrid-search', args.hybrid_search, '--max-partition-axes', str(args.max_partition_axes),
+            '--max-partition-parts', str(args.max_partition_parts), '--partition-timeout', str(args.partition_timeout),
+            '--nonmonotone-regression', str(args.nonmonotone_regression),
+            '--max-revolution-atoms', str(args.max_revolution_atoms),
+            '--partition-score-min', str(args.partition_score_min)]
         if args.no_hybrid:
             command.append('--no-hybrid')
+        if args.no_partition:
+            command.append('--no-partition')
+        if args.no_nonmonotone:
+            command.append('--no-nonmonotone')
+        if args.freeform_gate:
+            command.append('--freeform-gate')
         report = run_case(command, case_output, configuration, input_path, args.timeout)
         summary['cases'].append(case_row(report, case_output/'report.json'))
         summary['counts'] = dict(Counter(case['status'] for case in summary['cases']))

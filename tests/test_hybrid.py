@@ -16,6 +16,7 @@ from OCP.gp import gp_Ax2,gp_Dir,gp_Pnt
 from json2scapi.runtime.worker import export_step,returned_shapes,compound
 from json2scapi.evaluation.metrics import volume,bbox,symmetric_difference_volume
 from step2code_direct.geometry import Options,UnsupportedGeometry,source_solids
+from step2code_direct.compat.import_step import read_reference
 from step2code_direct.hybrid import recognize_hybrid
 from step2code_direct.hybrid_codegen import add_hybrid
 from step2code_direct.emitter import DirectEmitter
@@ -58,6 +59,18 @@ def emit_hybrid(shape,options=None):
 
 
 class HybridTests(unittest.TestCase):
+    def test_abc06_uses_extended_cone_operand(self):
+        source_path = next((Path(__file__).resolve().parents[2] / 'datasets' / 'abc' / 'step' / 'abc_0000').glob('00000006_*.step'))
+        reference, _ = read_reference(source_path)
+        solid = source_solids(reference, Options())[0]
+        result = recognize_hybrid(solid, 1, Options(hybrid_search='lookahead'))
+        self.assertLess(symmetric_difference_volume(solid, result.shape) / volume(solid), 1e-7)
+        self.assertEqual(result.steps[0][0], 'intersect')
+        self.assertEqual(result.base.kind, 'cone')
+        self.assertGreater(result.base.parameters['height'], 1.0)
+        self.assertEqual(result.steps[0][1].kind, 'extrusion')
+        self.assertEqual(result.evidence['status'], 'recognized')
+
     def test_real_hybrid_build_export_metrics_and_explicit_operations(self):
         required={'boss_union':'union','countersink_cut':'cut','hemisphere_intersect':'intersect'}
         with tempfile.TemporaryDirectory() as tmp:
@@ -201,6 +214,26 @@ class HybridTests(unittest.TestCase):
                 self.assertIn(evidence['stop_reason'],('time_budget','boolean_trial_budget'))
         with self.assertRaises(ValueError):
             Options(max_boolean_steps=0)
+
+    def test_abc08_planar_partition_union_is_single_verified_body(self):
+        source_path = next((Path(__file__).resolve().parents[2] / 'datasets' / 'abc' / 'step' / 'abc_0000').glob('00000008_*.step'))
+        with tempfile.TemporaryDirectory() as tmp:
+            result = convert_case(source_path, Path(tmp) / 'abc08',
+                                  options=Options(partition_timeout_seconds=45.0,
+                                                  hybrid_timeout_seconds=10.0,
+                                                  max_partition_parts=32))
+            self.assertEqual(result['status'], 'train_ready',
+                             json.dumps(result, ensure_ascii=False)[-8000:])
+            feature = result['recognition']['features'][0]
+            self.assertEqual(feature['strategy'], 'verified_planar_partition_union')
+            self.assertEqual(feature['part_count'], 10)
+            self.assertLessEqual(feature['symmetric_difference_relative'], 1e-7)
+            self.assertEqual(result['build']['body_count'], 1)
+            self.assertEqual(result['source_coverage_validation']['decision']['status'], 'train_ready')
+            self.assertFalse(list((Path(tmp) / 'abc08').glob('*.ir.json')))
+            text = (Path(tmp) / 'abc08' / 'model.scapi.py').read_text(encoding='utf-8')
+            self.assertIn('boolean_rsolidlist', text)
+            self.assertIn('verified planar partition union', text)
 
     def test_wrong_output_and_extra_bodies_still_fail_coverage(self):
         from step2code_direct.pipeline import verify_bodies

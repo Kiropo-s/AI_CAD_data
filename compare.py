@@ -78,7 +78,11 @@ def compare_runs(baseline_path, direct_path):
         shared_modules = ('step2code/step_import.py', 'step2code/validation.py', 'json2scapi/runtime/worker.py',
                           'json2scapi/evaluation/metrics.py', 'json2scapi/evaluation/policy.py',
                           'json2scapi/evaluation/registration.py', 'json2scapi/evaluation/similarity.py')
-        versions = [(a['implementation'].get(name), b['implementation'].get(name)) for name in shared_modules]
+        aliases = {'step2code/step_import.py': 'step2code_direct/compat/import_step.py',
+                   'step2code/validation.py': 'step2code_direct/compat/validation.py'}
+        def fingerprint(run, name):
+            return run['implementation'].get(name) or run['implementation'].get(aliases.get(name))
+        versions = [(fingerprint(a, name), fingerprint(b, name)) for name in shared_modules]
         evaluator_equal = all(x == y for x, y in versions) if all(x and y for x, y in versions) else None
         row = dict(input=br['input'], input_sha256=key[1], baseline_status=ar['status'], direct_status=br['status'],
             baseline_reason=ar.get('reason'), direct_reason=br.get('reason'),

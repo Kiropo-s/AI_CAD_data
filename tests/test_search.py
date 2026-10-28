@@ -73,7 +73,7 @@ class SearchTests(unittest.TestCase):
             root = Path(tmp)
             source = root / 'sphere.step'
             export_step([BRepPrimAPI_MakeSphere(5).Shape()], source)
-            for mode in ('lookahead', 'guided', 'legacy'):
+            for mode in ('lookahead', 'guided', 'legacy', 'csg-first'):
                 output = root / mode
                 result = subprocess.run([sys.executable, '-X', 'utf8', '-m', 'step2code_direct',
                     '--input', str(source), '--out', str(output), '--samples', '256',
